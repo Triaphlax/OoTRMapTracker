@@ -86,6 +86,116 @@
                       "gossips"
                     ]
                   }
+                },
+                {
+                  "title": "Dungeons",
+                  "icon": "images/skulltula.png",
+                  "content": {
+                    "type": "tabbed",
+                    "dock": "top",
+                    "tabs": [
+                      {
+                        "title": "Deku Tree",
+                        "icon": "images/emerald.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "dekutree"
+                          ]
+                        }
+                      },                      {
+                        "title": "Dodongo's",
+                        "icon": "images/ruby.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "dodongoscavern"
+                          ]
+                        }
+                      },                      {
+                        "title": "Jabu-Jabu",
+                        "icon": "images/sapphire.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "jabujabu"
+                          ]
+                        }
+                      },                      {
+                        "title": "Forest",
+                        "icon": "images/forestmedallion.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "foresttemple"
+                          ]
+                        }
+                      },                      {
+                        "title": "Fire",
+                        "icon": "images/firemedallion.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "firetemple"
+                          ]
+                        }
+                      },                      {
+                        "title": "Water",
+                        "icon": "images/watermedallion.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "watertemple"
+                          ]
+                        }
+                      },                      {
+                        "title": "Shadow",
+                        "icon": "images/shadowmedallion.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "shadowtemple"
+                          ]
+                        }
+                      },                      {
+                        "title": "Spirit",
+                        "icon": "images/spiritmedallion.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "spirittemple"
+                          ]
+                        }
+                      },                      {
+                        "title": "Well",
+                        "icon": "images/lens.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "bottomofthewell"
+                          ]
+                        }
+                      },                      {
+                        "title": "Ice Cavern",
+                        "icon": "images/ironboots.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "icecavern"
+                          ]
+                        }
+                      },                      {
+                        "title": "GTG",
+                        "icon": "images/icearrow.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "gerudotraininggrounds"
+                          ]
+                        }
+                      }
+                    ]
+                  }
                 }
               ]
             }
@@ -125,7 +235,7 @@
                   "h_alignment": "stretch",
                   "content": {
                     "type": "layout",
-                    "key": "options_wide",
+                    "key": "options_wide"
                   }
                 }
               ]
