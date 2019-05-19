@@ -3,10 +3,5 @@
   "game_name": "Ocarina of Time Randomizer",
   "package_version": "2.4.0.2",
   "package_uid": "ootrando_overworldmap_hamsda_triaplax",
-  "author": "Hamsda (edits by Triaphlax)",
-  "variants": {
-    "var_keysanity": {
-      "display_name": "Keysanity + Entrance Randomizer Map Tracker"
-    },
-  }
+  "author": "Hamsda (edits by Triaphlax)"
 }
