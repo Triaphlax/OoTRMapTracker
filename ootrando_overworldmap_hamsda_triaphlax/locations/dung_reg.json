@@ -6,71 +6,168 @@
       "deku_reg,open_forest",
       "deku_reg,sword1,shield1"
     ],
-    "sections": [
+    "children": [
       {
-        "name": "Lobby Chest",
-        "short_name": "Map",
-        "item_count": 1
+        "name": "Lobby",
+        "sections": [
+          {
+            "name": "Map",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "dekutree",
+            "x": 1280,
+            "y": 565
+          }
+        ]
       },
       {
         "name": "Slingshot Room",
-        "short_name": "Slingshot",
-        "access_rules": [
-          "shield1"
+        "sections": [
+          {
+            "name": "Slingshot",
+            "access_rules": [
+              "shield1"
+            ],
+            "item_count": 1
+          }
         ],
-        "item_count": 2
+        "map_locations": [
+          {
+            "map": "dekutree",
+            "x": 365,
+            "y": 470
+          }
+        ]
+      },
+      {
+        "name": "Slingshot Room",
+        "sections": [
+          {
+            "name": "Small Chest",
+            "access_rules": [
+              "shield1"
+            ],
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "dekutree",
+            "x": 390,
+            "y": 450
+          }
+        ]
       },
       {
         "name": "Compass Room",
-        "short_name": "Compass",
-        "item_count": 2
+        "sections": [
+          {
+            "name": "Small Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "dekutree",
+            "x": 755,
+            "y": 240
+          }
+        ]
       },
       {
-        "name": "Basement Chest",
-        "short_name": "Basement",
-        "item_count": 1
+        "name": "Compass Room",
+        "sections": [
+          {
+            "name": "Compass",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "dekutree",
+            "x": 750,
+            "y": 150
+          }
+        ]
+      },
+      {
+        "name": "Basement",
+        "sections": [
+          {
+            "name": "Small Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "dekutree",
+            "x": 1350,
+            "y": 1275
+          }
+        ]
       },
       {
         "name": "Queen Gohma",
-        "access_rules": [
-          "[sling],shield1"
+        "sections": [
+          {
+            "name": "Heart Container",
+            "capture_item": true,
+            "hosted_item": "deku",
+            "chest_unopened_img": "images/HC.png",
+            "chest_opened_img": "images/HC_grey.png",
+            "item_count": 1
+          }
         ],
-        "hosted_item": "deku",
-        "chest_unopened_img": "images/HC.png",
-        "chest_opened_img": "images/HC_grey.png",
-        "item_count": 1
+        "map_locations": [
+          {
+            "map": "dekutree",
+            "x": 1650,
+            "y": 1520
+          }
+        ]
       }
+    ]
+  },
+  {
+    "name": "Deku Tree - Gold Skulltulas",
+    "parent": "Kokiri Forest",
+    "visibility_rules": [
+      "setting_skulltulas_dungeons"
     ],
-    "map_locations": [
-      {
-        "map": "child",
-        "visibility_rules": [
-          "deku_reg"
-        ],
-        "x": 2426,
-        "y": 830
-      }
+    "access_rules": [
+      "deku_reg,open_forest",
+      "deku_reg,sword1,shield1"
     ],
     "children": [
       {
-        "name": "Deku Tree Skulltulas",
-        "access_rules": [
-          "setting_skulltulas_dungeons"
-        ],
+        "name": "Compass Room",
         "sections": [
           {
-            "name": "GS8 - Compass Room",
-            "short_name": "Compass Room",
-            "access_rules": [
-              "$can_child_attack"
-            ],
-            "chest_unopened_img": "images/skulltula.png",
-            "chest_opened_img": "images/skulltula_token.png",
-            "item_count": 1
-          },
+          "name": "GS8",
+          "access_rules": [
+            "$can_child_attack"
+          ],
+          "chest_unopened_img": "images/skulltula.png",
+          "chest_opened_img": "images/skulltula_token.png",
+          "item_count": 1
+          }
+        ],
+        "map_locations": [
           {
-            "name": "GS9 - Basement Vines",
-            "short_name": "Vines",
+            "map": "dekutree",
+            "x": 725,
+            "y": 245
+          }
+        ]
+      },
+      {
+        "name": "Basement Vines",
+        "sections": [
+          {
+            "name": "GS9",
             "access_rules": [
               "sticks,[sling]",
               "sticks,[$has_explosives]",
@@ -88,20 +185,42 @@
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
             "item_count": 1
-          },
+          }
+        ],
+        "map_locations": [
           {
-            "name": "GS10 - Basement Gate",
-            "short_name": "Gate",
+            "map": "dekutree",
+            "x": 1300,
+            "y": 1260
+          }
+        ]
+      },
+      {
+        "name": "Basement Gate",
+        "sections": [
+          {
+            "name": "GS10",
             "access_rules": [
               "$can_child_attack"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
             "item_count": 1
-          },
+          }
+        ],
+        "map_locations": [
           {
-            "name": "GS11 - Basement Back Room",
-            "short_name": "Back Room",
+            "map": "dekutree",
+            "x": 1300,
+            "y": 1225
+          }
+        ]
+      },
+      {
+        "name": "Basement Back Room",
+        "sections": [
+          {
+            "name": "GS11",
             "access_rules": [
               "sticks,$has_explosives,boomerang,[sling]",
               "dinsfire,magic,$has_explosives,boomerang,[sling]",
@@ -116,12 +235,9 @@
         ],
         "map_locations": [
           {
-            "map": "child",
-            "visibility_rules": [
-              "deku_reg,setting_skulltulas_dungeons"
-            ],
-            "x": 2460,
-            "y": 830
+            "map": "dekutree",
+            "x": 490,
+            "y": 750
           }
         ]
       }
@@ -202,7 +318,7 @@
           "@Dodongos Cavern/Chest Above King Dodongo,bombs,sword2",
           "@Dodongos Cavern/Chest Above King Dodongo,bombchu,[bombs],sticks",
           "@Dodongos Cavern/Chest Above King Dodongo,bombchu,[bombs],sword1",
-          "@Dodongos Cavern/Chest Above King Dodongo,bombchu,[bombs],sword2",
+          "@Dodongos Cavern/Chest Above King Dodongo,bombchu,[bombs],sword2"
         ],
         "hosted_item": "dodongo",
         "chest_unopened_img": "images/HC.png",
