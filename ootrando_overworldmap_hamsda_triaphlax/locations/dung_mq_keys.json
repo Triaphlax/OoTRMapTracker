@@ -16,8 +16,8 @@
         "name": "Boss Key Chest",
         "short_name": "Boss Key",
         "access_rules": [
-          "lift1",
-          "bombchu,[lift1]"
+          "forest_small_keys:2,[forest_small_keys:3],lift1",
+          "forest_small_keys:2,[forest_small_keys:3],bombchu,[lift1]"
         ],
         "chest_unopened_img": "images/chest_golden_closed.png",
         "chest_opened_img": "images/chest_golden_open.png",
@@ -27,9 +27,9 @@
         "name": "Redead Chest",
         "short_name": "Redead",
         "access_rules": [
-          "hoverboots",
-          "lift1",
-          "bombchu,[lift1]"
+          "forest_small_keys:1,hoverboots",
+          "forest_small_keys:1,lift1",
+          "forest_small_keys:1,bombchu,[lift1]"
         ],
         "item_count": 1
       },
@@ -37,7 +37,7 @@
         "name": "Well Chest",
         "short_name": "Well",
         "access_rules": [
-          "bow"
+          "forest_small_keys:1,bow"
         ],
         "item_count": 1
       },
@@ -45,10 +45,10 @@
         "name": "NE Outdoors Upper Chest",
         "short_name": "Balcony",
         "access_rules": [
-          "bow,[firearrow]",
-          "bow,[longshot]",
-          "bow,[ocarina],[time]",
-          "bow,[hoverboots]",
+          "forest_small_keys:1,bow,[firearrow]",
+          "forest_small_keys:1,bow,[longshot]",
+          "forest_small_keys:1,bow,[ocarina],[time]",
+          "forest_small_keys:1,bow,[hoverboots]",
           "@Forest Temple MQ/Redead Chest,longshot",
           "@Forest Temple MQ/Redead Chest,ironboots,[ocarina],[time]",
           "@Forest Temple MQ/Redead Chest,ironboots,[hoverboots]",
@@ -61,7 +61,7 @@
         "name": "Bow Chest",
         "short_name": "Bow",
         "access_rules": [
-          "@Forest Temple MQ/Boss Key Chest"
+          "@Forest Temple MQ/Boss Key Chest,forest_small_keys:3,[forest_small_keys:4]"
         ],
         "item_count": 1
       },
@@ -69,7 +69,7 @@
         "name": "Chest Behind Lobby",
         "short_name": "Wolfos",
         "access_rules": [
-          "ocarina,time",
+          "forest_small_keys:1,ocarina,time",
           "@Forest Temple MQ/Bow Chest"
         ],
         "item_count": 1
@@ -94,9 +94,9 @@
         "name": "Falling Room Chest",
         "short_name": "Checkerboard",
         "access_rules": [
-          "@Forest Temple MQ/Bow Chest,bow",
-          "@Forest Temple MQ/Bow Chest,dinsfire,magic",
-          "bow,longshot,ocarina,time"
+          "@Forest Temple MQ/Bow Chest,forest_small_keys:5,bow",
+          "@Forest Temple MQ/Bow Chest,forest_small_keys:5,dinsfire,magic",
+          "forest_small_keys:1,bow,longshot,ocarina,time"
         ],
         "item_count": 1
       },
@@ -104,7 +104,7 @@
         "name": "NE Outdoors Lower Chest",
         "short_name": "Island",
         "access_rules": [
-          "bow,longshot",
+          "forest_small_keys:1,bow,longshot",
           "@Forest Temple MQ/Redead Chest,longshot",
           "@Forest Temple MQ/Falling Room Chest"
         ],
@@ -114,14 +114,15 @@
         "name": "Near Boss Chest",
         "short_name": "Basement",
         "access_rules": [
-          "@Forest Temple MQ/Falling Room Chest,@Forest Temple MQ/Bow Chest,bow"
+          "@Forest Temple MQ/Falling Room Chest,@Forest Temple MQ/Bow Chest,forest_small_keys:6,bow",
+          "@Forest Temple MQ/Bow Chest,forest_small_keys:4,[forest_small_keys:6],bow,longshot,ocarina,time"
         ],
         "item_count": 1
       },
       {
         "name": "Phantom Ganon",
         "access_rules": [
-          "@Forest Temple MQ/Near Boss Chest"
+          "@Forest Temple MQ/Near Boss Chest,forest_boss_key"
         ],
         "hosted_item": "forest",
         "chest_unopened_img": "images/HC.png",
@@ -156,6 +157,9 @@
           {
             "name": "GS61 - Block Push Room",
             "short_name": "Block Push",
+            "access_rules": [
+              "forest_small_keys:1"
+            ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
             "item_count": 1
@@ -165,7 +169,7 @@
             "short_name": "Outdoor West",
             "access_rules": [
               "@Forest Temple MQ/Redead Chest",
-              "bow"
+              "forest_small_keys:1,bow"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -178,7 +182,7 @@
               "@Forest Temple MQ/Redead Chest,ironboots",
               "@Forest Temple MQ/Redead Chest,longshot",
               "@Forest Temple MQ/Redead Chest,scale2",
-              "bow"
+              "forest_small_keys:1,bow"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -189,7 +193,7 @@
             "short_name": "Well",
             "access_rules": [
               "@Forest Temple MQ/Redead Chest,ironboots",
-              "bow"
+              "forest_small_keys:1,bow"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -234,6 +238,9 @@
       {
         "name": "Megaton Hammer Chest",
         "short_name": "Hammer",
+        "access_rules": [
+          "fire_small_keys:1,[fire_small_keys:5]"
+        ],
         "item_count": 1
       },
       {
@@ -266,7 +273,7 @@
         "name": "Maze Lower Chest",
         "short_name": "Maze Lower",
         "access_rules": [
-          "hammer,$has_fire,[redtunic]"
+          "hammer,fire_small_keys:1,[fire_small_keys:2],$has_fire,[redtunic]"
         ],
         "item_count": 1
       },
@@ -298,7 +305,7 @@
         "name": "Freestanding Key",
         "short_name": "Flare Dancer 2",
         "access_rules": [
-          "@Fire Temple MQ/Maze Upper Chest,bow"
+          "@Fire Temple MQ/Maze Upper Chest,fire_small_keys:2,[fire_small_keys:3],bow"
         ],
         "chest_unopened_img": "images/small_key.png",
         "chest_opened_img": "images/small_key_check.png",
@@ -308,7 +315,7 @@
         "name": "West Tower Top Chest",
         "short_name": "West Tower Top",
         "access_rules": [
-          "@Fire Temple MQ/Freestanding Key",
+          "@Fire Temple MQ/Freestanding Key,fire_small_keys:3,[fire_small_keys:4]",
           "{$hintable}"
         ],
         "capture_item": true,
@@ -317,8 +324,8 @@
       {
         "name": "Volvagia",
         "access_rules": [
-          "@Fire Temple MQ/Freestanding Key,hammer,$has_fire",
-          "[hoverboots],hammer,$has_fire,[redtunic]"
+          "@Fire Temple MQ/Freestanding Key,hammer,fire_boss_key,$has_fire",
+          "[hoverboots],hammer,fire_boss_key,$has_fire,[redtunic]"
         ],
         "hosted_item": "fire",
         "chest_unopened_img": "images/HC.png",
@@ -379,7 +386,7 @@
             "name": "GS68 - Above Fire Wall Maze",
             "short_name": "Above Fire Maze",
             "access_rules": [
-              "@Fire Temple MQ/Freestanding Key",
+              "@Fire Temple MQ/Freestanding Key,fire_small_keys:4,[fire_small_keys:5]",
               "{$hintable}"
             ],
             "capture_item": true,
@@ -457,7 +464,7 @@
         "name": "Boss Key Chest",
         "short_name": "Boss Key",
         "access_rules": [
-          "longshot,ironboots,dinsfire,magic",
+          "water_small_keys:1,longshot,ironboots,dinsfire,magic",
           "{$hintable}"
         ],
         "capture_item": true,
@@ -469,8 +476,8 @@
         "name": "Freestanding Key",
         "short_name": "Key",
         "access_rules": [
-          "longshot,ironboots,dinsfire,magic,hoverboots",
-          "longshot,ironboots,dinsfire,magic,ocarina,[scarecrow]",
+          "water_small_keys:1,longshot,ironboots,dinsfire,magic,hoverboots",
+          "water_small_keys:1,longshot,ironboots,dinsfire,magic,ocarina,[scarecrow]",
           "{$hintable}"
         ],
         "capture_item": true,
@@ -481,7 +488,7 @@
       {
         "name": "Morpha",
         "access_rules": [
-          "longshot"
+          "longshot,water_boss_key"
         ],
         "hosted_item": "water",
         "chest_unopened_img": "images/HC.png",
@@ -510,8 +517,8 @@
             "name": "GS73 - South Basement",
             "short_name": "South Basement",
             "access_rules": [
-              "longshot,ironboots,dinsfire,magic,hoverboots,bow,firearrow",
-              "longshot,ironboots,dinsfire,magic,ocarina,[scarecrow],bow,firearrow"
+              "water_small_keys:1,longshot,ironboots,dinsfire,magic,hoverboots,bow,firearrow",
+              "water_small_keys:1,longshot,ironboots,dinsfire,magic,ocarina,[scarecrow],bow,firearrow"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -521,7 +528,7 @@
             "name": "GS74 - North Basement",
             "short_name": "North Basement",
             "access_rules": [
-              "@Water Temple MQ/Freestanding Key",
+              "@Water Temple MQ/Freestanding Key,water_small_keys:2",
               "{$hintable}"
             ],
             "capture_item": true,
@@ -533,7 +540,7 @@
             "name": "GS75 - Serpent River",
             "short_name": "River",
             "access_rules": [
-              "longshot,ironboots"
+              "water_small_keys:1,longshot,ironboots"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -587,7 +594,7 @@
         "name": "Compass Chest",
         "short_name": "Compass",
         "access_rules": [
-          "$has_explosives"
+          "$has_explosives,shadow_small_keys:1,[shadow_small_keys:6]"
         ],
         "item_count": 1
       },
@@ -628,7 +635,7 @@
         "name": "Falling Spikes Lower Chest",
         "short_name": "Crusher Lower",
         "access_rules": [
-          "@Shadow Temple MQ/Map Chest,$has_explosives"
+          "@Shadow Temple MQ/Map Chest,$has_explosives,shadow_small_keys:1,[shadow_small_keys:2]"
         ],
         "item_count": 1
       },
@@ -660,7 +667,7 @@
         "name": "Invisible Spikes Chest",
         "short_name": "Invisible Spikes",
         "access_rules": [
-          "@Shadow Temple MQ/Falling Spikes Lower Chest,hoverboots"
+          "@Shadow Temple MQ/Falling Spikes Lower Chest,shadow_small_keys:2,[shadow_small_keys:3],hoverboots"
         ],
         "item_count": 1
       },
@@ -676,7 +683,7 @@
         "name": "Wind Hint Chest",
         "short_name": "Wind Hint",
         "access_rules": [
-          "@Shadow Temple MQ/Stalfos Room Chest"
+          "@Shadow Temple MQ/Stalfos Room Chest,shadow_small_keys:3,[shadow_small_keys:4]"
         ],
         "item_count": 1
       },
@@ -692,7 +699,7 @@
         "name": "Freestanding Key",
         "short_name": "Triple Skull",
         "access_rules": [
-          "@Shadow Temple MQ/Wind Hint Chest,ocarina,lullaby,bow,time,longshot"
+          "@Shadow Temple MQ/Wind Hint Chest,shadow_small_keys:4,[shadow_small_keys:5],ocarina,lullaby,bow,time,longshot"
         ],
         "chest_unopened_img": "images/small_key.png",
         "chest_opened_img": "images/small_key_check.png",
@@ -712,7 +719,7 @@
         "name": "Boss Key Chest",
         "short_name": "Boss Key",
         "access_rules": [
-          "@Shadow Temple MQ/Freestanding Key,dinsfire,magic"
+          "@Shadow Temple MQ/Freestanding Key,shadow_small_keys:5,[shadow_small_keys:6],dinsfire,magic"
         ],
         "chest_unopened_img": "images/chest_golden_closed.png",
         "chest_opened_img": "images/chest_golden_open.png",
@@ -729,8 +736,8 @@
       {
         "name": "Bongo Bongo",
         "access_rules": [
-          "@Shadow Temple MQ/Wind Hint Chest,ocarina,lullaby,bow",
-          "@Shadow Temple MQ/Wind Hint Chest,ocarina,lullaby,bombchu,[bow]"
+          "@Shadow Temple MQ/Wind Hint Chest,shadow_small_keys:4,[shadow_small_keys:5],shadow_boss_key,ocarina,lullaby,bow",
+          "@Shadow Temple MQ/Wind Hint Chest,shadow_small_keys:4,[shadow_small_keys:5],shadow_boss_key,ocarina,lullaby,bombchu,[bow]"
         ],
         "hosted_item": "shadow",
         "chest_unopened_img": "images/HC.png",
@@ -791,7 +798,7 @@
             "name": "GS84 - After Ship",
             "short_name": "After Ship",
             "access_rules": [
-              "@Shadow Temple MQ/Wind Hint Chest,ocarina,lullaby"
+              "@Shadow Temple MQ/Wind Hint Chest,shadow_small_keys:4,[shadow_small_keys:5],ocarina,lullaby"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -877,9 +884,9 @@
         "name": "Silver Block Hallway Chest",
         "short_name": "Silver Block",
         "access_rules": [
-          "ocarina,requiem,bombchu,sling,dinsfire,magic",
-          "ocarina,requiem,bombchu,sling,sword2,longshot,lift2,bow,firearrow,magic",
-          "ocarina,requiem,bombchu,sling,sword2,longshot,lift2,bow,[firearrow],[magic],time"
+          "ocarina,requiem,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling,dinsfire,magic",
+          "ocarina,requiem,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling,sword2,longshot,lift2,bow,firearrow,magic",
+          "ocarina,requiem,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling,sword2,longshot,lift2,bow,[firearrow],[magic],time"
         ],
         "item_count": 1
       },
@@ -887,7 +894,7 @@
         "name": "Child Center Chest",
         "short_name": "Child Center",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,ocarina,requiem,hammer",
+          "sword2,lift2,longshot,bombchu,ocarina,requiem,hammer,spirit_small_keys:2,[spirit_small_keys:7]",
           "{$hintable}"
         ],
         "capture_item": true,
@@ -897,7 +904,7 @@
         "name": "Child Climb South Chest",
         "short_name": "Child Climb Ledge",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu"
+          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:7]"
         ],
         "item_count": 1
       },
@@ -921,7 +928,7 @@
         "name": "Beamos Room Chest",
         "short_name": "Beamos",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu"
+          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:5]"
         ],
         "item_count": 1
       },
@@ -947,8 +954,8 @@
         "name": "Child Climb North Chest",
         "short_name": "Child Climb Ground",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu",
-          "ocarina,requiem,bombchu"
+          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:7]",
+          "ocarina,requiem,bombchu,spirit_small_keys:1,[spirit_small_keys:7]"
         ],
         "item_count": 1
       },
@@ -957,7 +964,7 @@
         "short_name": "Compass",
         "access_rules": [
           "sword2,lift2,longshot,bombchu,bow",
-          "ocarina,requiem,bombchu,sling"
+          "ocarina,requiem,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling"
         ],
         "item_count": 1
       },
@@ -966,7 +973,7 @@
         "short_name": "Sun Block",
         "access_rules": [
           "sword2,lift2,longshot,bombchu",
-          "ocarina,requiem,bombchu,time"
+          "ocarina,requiem,bombchu,spirit_small_keys:2,time"
         ],
         "item_count": 1
       },
@@ -983,7 +990,7 @@
         "name": "Lower Adult Right Chest",
         "short_name": "Adult Right",
         "access_rules": [
-          "@Spirit Temple MQ/Lower Adult Left Chest,hammer,ocarina,time,epona,sun,storm,lullaby",
+          "@Spirit Temple MQ/Lower Adult Left Chest,spirit_small_keys:1,[spirit_small_keys:7],hammer,ocarina,time,epona,sun,storm,lullaby",
           "{$hintable}"
         ],
         "capture_item": true,
@@ -1001,7 +1008,7 @@
         "name": "Mirror Puzzle Invisible Chest",
         "short_name": "Mirror Puzzle",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,ocarina,lullaby,hammer,$can_see_with_lens"
+          "sword2,lift2,longshot,bombchu,spirit_small_keys:2,[spirit_small_keys:6],ocarina,lullaby,hammer,$can_see_with_lens"
         ],
         "item_count": 1
       },
@@ -1009,7 +1016,7 @@
         "name": "Mirror Shield Chest",
         "short_name": "Left Hand",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,ocarina,time,$can_see_with_lens"
+          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:5],ocarina,time,$can_see_with_lens"
         ],
         "item_count": 1
       },
@@ -1017,15 +1024,16 @@
         "name": "Silver Gauntlets Chest",
         "short_name": "Right Hand",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu",
-          "ocarina,requiem,bombchu,time"
+          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:7]",
+          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:4],ocarina,time,$can_see_with_lens",
+          "ocarina,requiem,bombchu,spirit_small_keys:3,[spirit_small_keys:7],time"
         ],
         "item_count": 1
       },
       {
         "name": "Twinrova",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,ocarina,lullaby,hammer,shield3"
+          "sword2,lift2,longshot,bombchu,spirit_small_keys:2,[spirit_small_keys:6],ocarina,lullaby,hammer,shield3,spirit_boss_key"
         ],
         "hosted_item": "spirit",
         "chest_unopened_img": "images/HC.png",
@@ -1063,7 +1071,7 @@
             "short_name": "Sun Block",
             "access_rules": [
               "sword2,lift2,longshot,bombchu",
-              "[sword2],[lift2],[longshot],ocarina,requiem,bombchu,time,boomerang"
+              "[sword2],[lift2],[longshot],ocarina,requiem,bombchu,spirit_small_keys:2,time,boomerang"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -1094,7 +1102,7 @@
             "name": "GS99 - Iron Knuckle North",
             "short_name": "Iron Knuckle 1",
             "access_rules": [
-              "sword2,lift2,longshot,bombchu"
+              "sword2,lift2,longshot,bombchu,spirit_small_keys:3,[spirit_small_keys:7]"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -1104,7 +1112,7 @@
             "name": "GS100 - Iron Knuckle West",
             "short_name": "Iron Knuckle 2",
             "access_rules": [
-              "sword2,lift2,longshot,bombchu"
+              "sword2,lift2,longshot,bombchu,spirit_small_keys:3,[spirit_small_keys:7]"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -1115,7 +1123,7 @@
           {
             "map": "child",
             "visibility_rules": [
-              "spirit_mq,setting_skulltulas_dungeons"
+              "ocarina,requiem,spirit_mq,setting_skulltulas_dungeons"
             ],
             "x": 55,
             "y": 271
@@ -1185,7 +1193,7 @@
         "name": "Lens Chest",
         "short_name": "Lens",
         "access_rules": [
-          "$has_explosives"
+          "$has_explosives,botw_small_keys:1,[botw_small_keys:2]"
         ],
         "item_count": 1
       }
@@ -1232,7 +1240,7 @@
             "name": "GS80 - Coffin Room",
             "short_name": "Coffin",
             "access_rules": [
-              "$can_child_attack"
+              "$can_child_attack,botw_small_keys:1,[botw_small_keys:2]"
             ],
             "chest_unopened_img": "images/skulltula.png",
             "chest_opened_img": "images/skulltula_token.png",
@@ -1356,8 +1364,8 @@
       {
         "name": "Castle Tower",
         "access_rules": [
-          "$can_LA,lift3,ocarina,time,$has_goron_tunic,$has_bottle,$can_see_with_lens,hammer,bombchu,shield3,firearrow,longshot",
-          "$can_LA,lift3,ocarina,time,$has_goron_tunic,$has_bottle,$can_see_with_lens,hammer,bombchu,shield3,firearrow,hookshot,hoverboots"
+          "gc_small_keys:3,$can_LA,lift3,ocarina,time,$has_goron_tunic,$has_bottle,$can_see_with_lens,hammer,bombchu,shield3,firearrow,longshot",
+          "gc_small_keys:3,$can_LA,lift3,ocarina,time,$has_goron_tunic,$has_bottle,$can_see_with_lens,hammer,bombchu,shield3,firearrow,hookshot,hoverboots"
         ],
         "chest_unopened_img": "images/chest_golden_closed.png",
         "chest_opened_img": "images/chest_golden_open.png",
@@ -1516,13 +1524,16 @@
       {
         "name": "Maze Path Third Chest",
         "short_name": "Maze 3",
+        "access_rules": [
+          "gtg_small_keys:1"
+        ],
         "item_count": 1
       },
       {
         "name": "Ice Arrows Chest",
         "short_name": "Ice Arrows",
         "access_rules": [
-          "@Gerudo Training Grounds MQ/Maze Right Chests",
+          "@Gerudo Training Grounds MQ/Maze Right Chests,gtg_small_keys:3",
           "{$hintable}"
         ],
         "capture_item": true,
