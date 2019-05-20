@@ -82,5 +82,11 @@
     "location_size": 35,
     "location_border_thickness": 5,
     "img": "images/dungeon_gtg.jpg"
+  },
+  {
+    "name": "ganonscastle",
+    "location_size": 35,
+    "location_border_thickness": 5,
+    "img": "images/dungeon_gc.jpg"
   }
 ]

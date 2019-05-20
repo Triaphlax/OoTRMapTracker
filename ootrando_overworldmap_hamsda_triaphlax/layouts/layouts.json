@@ -103,7 +103,8 @@
                             "dekutree"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "Dodongo's",
                         "icon": "images/ruby.png",
                         "content": {
@@ -112,7 +113,8 @@
                             "dodongoscavern"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "Jabu-Jabu",
                         "icon": "images/sapphire.png",
                         "content": {
@@ -121,7 +123,8 @@
                             "jabujabu"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "Forest",
                         "icon": "images/forestmedallion.png",
                         "content": {
@@ -130,7 +133,8 @@
                             "foresttemple"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "Fire",
                         "icon": "images/firemedallion.png",
                         "content": {
@@ -139,7 +143,8 @@
                             "firetemple"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "Water",
                         "icon": "images/watermedallion.png",
                         "content": {
@@ -148,7 +153,8 @@
                             "watertemple"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "Shadow",
                         "icon": "images/shadowmedallion.png",
                         "content": {
@@ -157,7 +163,8 @@
                             "shadowtemple"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "Spirit",
                         "icon": "images/spiritmedallion.png",
                         "content": {
@@ -166,7 +173,8 @@
                             "spirittemple"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "Well",
                         "icon": "images/lens.png",
                         "content": {
@@ -175,7 +183,8 @@
                             "bottomofthewell"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "Ice Cavern",
                         "icon": "images/ironboots.png",
                         "content": {
@@ -184,13 +193,24 @@
                             "icecavern"
                           ]
                         }
-                      },                      {
+                      },                      
+                      {
                         "title": "GTG",
                         "icon": "images/icearrow.png",
                         "content": {
                           "type": "map",
                           "maps": [
                             "gerudotraininggrounds"
+                          ]
+                        }
+                      },                      
+                      {
+                        "title": "Ganon's Castle",
+                        "icon": "images/lift3.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "ganonscastle"
                           ]
                         }
                       }
