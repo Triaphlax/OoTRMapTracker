@@ -248,7 +248,12 @@
                 ],
                 "map_locations": [
                   {
-                    "map": "gossips",
+                    "map": "child",
+                    "x": 2090,
+                    "y": 845
+                  },
+                  {
+                    "map": "adult",
                     "x": 2090,
                     "y": 845
                   }
@@ -295,7 +300,12 @@
                 ],
                 "map_locations": [
                   {
-                    "map": "gossips",
+                    "map": "child",
+                    "x": 2390,
+                    "y": 830
+                  },
+                  {
+                    "map": "adult",
                     "x": 2390,
                     "y": 830
                   }
@@ -317,7 +327,12 @@
                 ],
                 "map_locations": [
                   {
-                    "map": "gossips",
+                    "map": "child",
+                    "x": 2490,
+                    "y": 900
+                  },
+                  {
+                    "map": "adult",
                     "x": 2490,
                     "y": 900
                   }
@@ -723,9 +738,14 @@
                 ],
                 "map_locations": [
                   {
-                    "map": "gossips",
+                    "map": "child",
                     "x": 2016,
-                    "y": 927
+                    "y": 962
+                  },
+                  {
+                    "map": "adult",
+                    "x": 2016,
+                    "y": 962
                   }
                 ]
               }
@@ -909,8 +929,13 @@
                 ],
                 "map_locations": [
                   {
-                    "map": "gossips",
-                    "x": 2190,
+                    "map": "child",
+                    "x": 2220,
+                    "y": 685
+                  },
+                  {
+                    "map": "adult",
+                    "x": 2220,
                     "y": 685
                   }
                 ]
@@ -931,8 +956,13 @@
                 ],
                 "map_locations": [
                   {
-                    "map": "gossips",
-                    "x": 2130,
+                    "map": "child",
+                    "x": 2120,
+                    "y": 635
+                  },
+                  {
+                    "map": "adult",
+                    "x": 2120,
                     "y": 635
                   }
                 ]
@@ -1745,7 +1775,12 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
+                        "x": 900,
+                        "y": 1190
+                      },
+                      {
+                        "map": "adult",
                         "x": 900,
                         "y": 1190
                       }
@@ -1767,7 +1802,12 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
+                        "x": 1200,
+                        "y": 1510
+                      },
+                      {
+                        "map": "adult",
                         "x": 1200,
                         "y": 1510
                       }
@@ -1789,7 +1829,12 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
+                        "x": 780,
+                        "y": 1415
+                      },
+                      {
+                        "map": "adult",
                         "x": 780,
                         "y": 1415
                       }
@@ -5446,7 +5491,12 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
+                        "x": 2458,
+                        "y": 298
+                      },
+                      {
+                        "map": "adult",
                         "x": 2458,
                         "y": 298
                       }
@@ -5616,7 +5666,12 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
+                        "x": 682,
+                        "y": 555
+                      },
+                      {
+                        "map": "adult",
                         "x": 682,
                         "y": 555
                       }
@@ -6165,7 +6220,12 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
+                        "x": 50,
+                        "y": 360
+                      },
+                      {
+                        "map": "adult",
                         "x": 50,
                         "y": 360
                       }
