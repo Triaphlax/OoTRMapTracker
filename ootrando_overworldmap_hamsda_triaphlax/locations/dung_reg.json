@@ -414,6 +414,31 @@
         ]
       },
       {
+        "name": "Gossip Stone",
+        "access_rules": [
+          "$hintable"
+        ],
+        "sections": [
+          {
+            "name": "Check it",
+            "access_rules": [
+              "$can_blast",
+              "lift1"
+            ],
+            "chest_unopened_img": "images/gossip_stone.png",
+            "chest_opened_img": "images/gossip_stone.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "dodongoscavern",
+            "x": 1610,
+            "y": 1655
+          }
+        ]
+      },
+      {
         "name": "Dodongos Cavern Skulltulas",
         "visibility_rules": [
           "setting_skulltulas_dungeons"

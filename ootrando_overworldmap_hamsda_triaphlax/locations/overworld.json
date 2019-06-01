@@ -3001,7 +3001,12 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
+                        "x": 2144,
+                        "y": 326
+                      },
+                      {
+                        "map": "adult",
                         "x": 2144,
                         "y": 326
                       }
@@ -3321,9 +3326,14 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
-                        "x": 1606,
-                        "y": 98
+                        "map": "child",
+                        "x": 1591,
+                        "y": 128
+                      },
+                      {
+                        "map": "adult",
+                        "x": 1591,
+                        "y": 128
                       }
                     ]
                   },
@@ -3347,9 +3357,14 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
-                        "x": 1655,
-                        "y": 130
+                        "map": "child",
+                        "x": 1631,
+                        "y": 158
+                      },
+                      {
+                        "map": "adult",
+                        "x": 1631,
+                        "y": 158
                       }
                     ]
                   }
@@ -3716,38 +3731,17 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
                         "x": 1825,
-                        "y": 94
+                        "y": 126
+                      },
+                      {
+                        "map": "adult",
+                        "x": 1825,
+                        "y": 126
                       }
                     ]
                   },
-                  {
-                    "name": "Dodongos Cavern Gossip Stone",
-                    "short_name": "DC Gossip Stone",
-                    "access_rules": [
-                      "$hintable"
-                    ],
-                    "sections": [
-                      {
-                        "name": "Check it",
-                        "access_rules": [
-                          "$can_blast",
-                          "lift1"
-                        ],
-                        "chest_unopened_img": "images/gossip_stone.png",
-                        "chest_opened_img": "images/gossip_stone.png",
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "gossips",
-                        "x": 1684,
-                        "y": 220
-                      }
-                    ]
-                  }
                 ]
               },
               {
@@ -4068,9 +4062,14 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
-                        "x": 1840,
-                        "y": 42
+                        "map": "child",
+                        "x": 1905,
+                        "y": 15
+                      },
+                      {
+                        "map": "adult",
+                        "x": 1905,
+                        "y": 15
                       }
                     ]
                   }
@@ -4412,9 +4411,14 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
                         "x": 1539,
-                        "y": 294
+                        "y": 329
+                      },
+                      {
+                        "map": "adult",
+                        "x": 1539,
+                        "y": 329
                       }
                     ]
                   }
@@ -4435,7 +4439,7 @@
                     "map_locations": [
                       {
                         "map": "child",
-                        "x": 1439,
+                        "x": 1421,
                         "y": 246
                       }
                     ]
@@ -4527,7 +4531,7 @@
                     "map_locations": [
                       {
                         "map": "child",
-                        "x": 1409,
+                        "x": 1390,
                         "y": 246
                       }
                     ]
@@ -4578,8 +4582,8 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
-                        "x": 1439,
+                        "map": "child",
+                        "x": 1456,
                         "y": 246
                       }
                     ]
@@ -4600,7 +4604,7 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
                         "x": 1380,
                         "y": 216
                       }
@@ -4718,7 +4722,7 @@
                     "map_locations": [
                       {
                         "map": "child",
-                        "x": 2094,
+                        "x": 2109,
                         "y": 481
                       }
                     ]
@@ -5043,8 +5047,13 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
-                        "x": 2094,
+                        "map": "child",
+                        "x": 2074,
+                        "y": 481
+                      },
+                      {
+                        "map": "adult",
+                        "x": 2074,
                         "y": 481
                       }
                     ]
@@ -5065,9 +5074,14 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
-                        "x": 2360,
-                        "y": 458
+                        "map": "child",
+                        "x": 2382,
+                        "y": 425
+                      },
+                      {
+                        "map": "adult",
+                        "x": 2382,
+                        "y": 425
                       }
                     ]
                   }
@@ -5150,8 +5164,13 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
-                        "x": 2624,
+                        "map": "child",
+                        "x": 2659,
+                        "y": 367
+                      },
+                      {
+                        "map": "adult",
+                        "x": 2659,
                         "y": 367
                       }
                     ]
@@ -5468,7 +5487,12 @@
                     ],
                     "map_locations": [
                       {
-                        "map": "gossips",
+                        "map": "child",
+                        "x": 2553,
+                        "y": 333
+                      },
+                      {
+                        "map": "adult",
                         "x": 2553,
                         "y": 333
                       }
