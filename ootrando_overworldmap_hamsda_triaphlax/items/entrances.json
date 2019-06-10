@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Chest Grotto",
+    "type": "consumable",
+    "img": "images/erg/chest.png",
+    "codes": "erg_chest",
+    "max_quantity": 9
+  },
+  {
+    "name": "1 Business Scrub Grotto",
+    "type": "toggle",
+    "img": "images/erg/1xbs.png",
+    "codes": "erg_1xbs"
+  },
+  {
+    "name": "2 Business Scrubs Grotto",
+    "type": "consumable",
+    "img": "images/erg/2xbs.png",
+    "codes": "erg_2xbs",
+    "max_quantity": 5
+  },
+  {
+    "name": "3 Business Scrubs Grotto",
+    "type": "consumable",
+    "img": "images/erg/3xbs.png",
+    "codes": "erg_3xbs",
+    "max_quantity": 4
+  },
+  {
+    "name": "Cow Grotto",
+    "type": "toggle",
+    "img": "images/erg/cow.png",
+    "codes": "erg_cow"
+  },
+  {
+    "name": "Skull Grotto",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erg/skull.png",
+        "codes": "erg_skull,erg_skull_c,erg_skull_a"
+      },
+      {
+        "img": "images/erg/skull.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erg_skull,erg_skull_c"
+      },
+      {
+        "img": "images/erg/skull.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erg_skull,erg_skull_a"
+      }
+    ]
+  },
+  {
+    "name": "Webs Grotto",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erg/webs.png",
+        "codes": "erg_webs,erg_webs_c,erg_webs_a"
+      },
+      {
+        "img": "images/erg/webs.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erg_webs,erg_webs_c"
+      },
+      {
+        "img": "images/erg/webs.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erg_webs,erg_webs_a"
+      }
+    ]
+  },
+  {
+    "name": "Bomb Grotto",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erg/bomb.png",
+        "codes": "erg_bomb,erg_bomb_c,erg_bomb_a"
+      },
+      {
+        "img": "images/erg/bomb.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erg_bomb,erg_bomb_c"
+      },
+      {
+        "img": "images/erg/bomb.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erg_bomb,erg_bomb_a"
+      }
+    ]
+  },
+  {
+    "name": "Dive Grotto",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erg/dive.png",
+        "codes": "erg_dive,erg_dive_c,erg_dive_a"
+      },
+      {
+        "img": "images/erg/dive.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erg_dive,erg_dive_c"
+      },
+      {
+        "img": "images/erg/dive.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erg_dive,erg_dive_a"
+      }
+    ]
+  },
+  {
+    "name": "ReDead Grotto",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erg/redead.png",
+        "codes": "erg_redead,erg_redead_c,erg_redead_a"
+      },
+      {
+        "img": "images/erg/redead.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erg_redead,erg_redead_c"
+      },
+      {
+        "img": "images/erg/redead.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erg_redead,erg_redead_a"
+      }
+    ]
+  },
+  {
+    "name": "Wolfos Grotto",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erg/wolfos.png",
+        "codes": "erg_wolfos,erg_wolfos_c,erg_wolfos_a"
+      },
+      {
+        "img": "images/erg/wolfos.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erg_wolfos,erg_wolfos_c"
+      },
+      {
+        "img": "images/erg/wolfos.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erg_wolfos,erg_wolfos_a"
+      }
+    ]
+  },
+  {
+    "name": "Deku Theater",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erg/dkth.png",
+        "codes": "erg_dkth,erg_dkth_c,erg_dkth_a"
+      },
+      {
+        "img": "images/erg/dkth.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erg_dkth,erg_dkth_c"
+      },
+      {
+        "img": "images/erg/dkth.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erg_dkth,erg_dkth_a"
+      }
+    ]
+  }
+]

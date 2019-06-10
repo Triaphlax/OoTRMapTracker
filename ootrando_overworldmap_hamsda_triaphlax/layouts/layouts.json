@@ -22,12 +22,20 @@
               }
             },
             {
-              "type": "group",
-              "header": "Settings",
-              "content": {
-                "type": "layout",
-                "key": "options_tall"
-              }
+                "type": "group",
+                "header": "Entrances",
+                "content": {
+                  "type": "layout",
+                  "key": "entrance_grid_tall"
+                }
+            },
+            {
+                "type": "group",
+                "header": "Settings",
+                "content": {
+                  "type": "layout",
+                  "key": "options_tall"
+                }
             }
           ]
         },
@@ -84,6 +92,16 @@
                     "type": "map",
                     "maps": [
                       "gossips"
+                    ]
+                  }
+                },
+                {
+                  "title": "Grottos",
+                  "icon": "images/bomb.png",
+                  "content": {
+                    "type": "map",
+                    "maps": [
+                      "grottos"
                     ]
                   }
                 },
