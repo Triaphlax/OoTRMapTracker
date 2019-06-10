@@ -634,7 +634,7 @@
         ]
       },
       {
-        "name": "Compass Chest",
+        "name": "Compass Chest (Fire Maze)",
         "access_rules": [
           "@Boulder Maze Upper Chest,fire_small_keys:6,[fire_small_keys:7]"
         ],
@@ -655,9 +655,9 @@
       {
         "name": "Highest Goron Chest",
         "access_rules": [
-          "@Compass Chest,hammer,ocarina,time,[fire_small_keys:8]",
-          "@Compass Chest,hammer,[ocarina],[time],$has_explosives",
-          "@Compass Chest,hammer,[ocarina],[time],hoverboots"
+          "@Compass Chest (Fire Maze),hammer,ocarina,time,[fire_small_keys:8]",
+          "@Compass Chest (Fire Maze),hammer,[ocarina],[time],$has_explosives",
+          "@Compass Chest (Fire Maze),hammer,[ocarina],[time],hoverboots"
         ],
         "sections": [
           {
@@ -676,8 +676,8 @@
       {
         "name": "Megaton Hammer Chest",
         "access_rules": [
-          "@Compass Chest,$has_explosives,[fire_small_keys:8]",
-          "@Compass Chest,$has_explosives,[hammer],[hoverboots]",
+          "@Compass Chest (Fire Maze),$has_explosives,[fire_small_keys:8]",
+          "@Compass Chest (Fire Maze),$has_explosives,[hammer],[hoverboots]",
           "{$hintable}"
         ],
         "sections": [
@@ -698,8 +698,8 @@
       {
         "name": "Volvagia",
         "access_rules": [
-          "fire_boss_key,hammer,@Compass Chest,[fire_small_keys:8],ocarina,time",
-          "fire_boss_key,hammer,@Compass Chest,[fire_small_keys:8],$has_explosives",
+          "fire_boss_key,hammer,@Compass Chest (Fire Maze),[fire_small_keys:8],ocarina,time",
+          "fire_boss_key,hammer,@Compass Chest (Fire Maze),[fire_small_keys:8],$has_explosives",
           "fire_boss_key,hammer,[redtunic],[hoverboots]"
         ],
         "sections": [
