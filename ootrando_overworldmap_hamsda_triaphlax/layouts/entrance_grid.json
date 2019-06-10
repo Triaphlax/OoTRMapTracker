@@ -1,0 +1,106 @@
+{
+  "entrance_grid_tall": {
+    "type": "array",
+    "orientation": "vertical",
+    "content": [
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "5,0",
+        "content": [
+          {
+            "type": "item",
+            "item": "erg_chest",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_1xbs",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_2xbs",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_3xbs",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_skull",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_bomb",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "5,0",
+        "content": [
+          {
+            "type": "item",
+            "item": "erg_webs",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_cow",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_dive",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_redead",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_wolfos",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_dkth",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          }
+        ]
+      }
+    ]
+  }
+}
