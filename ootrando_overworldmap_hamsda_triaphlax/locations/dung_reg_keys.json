@@ -634,7 +634,7 @@
         ]
       },
       {
-        "name": "Compass Chest",
+        "name": "Compass Chest (Fire Maze)",
         "access_rules": [
           "@Boulder Maze Upper Chest,fire_small_keys:6,[fire_small_keys:7]"
         ],
@@ -655,9 +655,9 @@
       {
         "name": "Highest Goron Chest",
         "access_rules": [
-          "@Compass Chest,hammer,ocarina,time,[fire_small_keys:8]",
-          "@Compass Chest,hammer,[ocarina],[time],$has_explosives",
-          "@Compass Chest,hammer,[ocarina],[time],hoverboots"
+          "@Compass Chest (Fire Maze),hammer,ocarina,time,[fire_small_keys:8]",
+          "@Compass Chest (Fire Maze),hammer,[ocarina],[time],$has_explosives",
+          "@Compass Chest (Fire Maze),hammer,[ocarina],[time],hoverboots"
         ],
         "sections": [
           {
@@ -676,8 +676,8 @@
       {
         "name": "Megaton Hammer Chest",
         "access_rules": [
-          "@Compass Chest,$has_explosives,[fire_small_keys:8]",
-          "@Compass Chest,$has_explosives,[hammer],[hoverboots]",
+          "@Compass Chest (Fire Maze),$has_explosives,[fire_small_keys:8]",
+          "@Compass Chest (Fire Maze),$has_explosives,[hammer],[hoverboots]",
           "{$hintable}"
         ],
         "sections": [
@@ -698,8 +698,8 @@
       {
         "name": "Volvagia",
         "access_rules": [
-          "fire_boss_key,hammer,@Compass Chest,[fire_small_keys:8],ocarina,time",
-          "fire_boss_key,hammer,@Compass Chest,[fire_small_keys:8],$has_explosives",
+          "fire_boss_key,hammer,@Compass Chest (Fire Maze),[fire_small_keys:8],ocarina,time",
+          "fire_boss_key,hammer,@Compass Chest (Fire Maze),[fire_small_keys:8],$has_explosives",
           "fire_boss_key,hammer,[redtunic],[hoverboots]"
         ],
         "sections": [
@@ -924,7 +924,7 @@
         "access_rules": [
           "ironboots,ocarina,lullaby,lift1",
           "[ironboots],longshot,ocarina,lullaby,lift1,bombchu",
-          "[ironboots],water_small_keys:2,[water_small_keys:6],ocarina,time,bow"
+          "[ironboots],water_small_keys:2,[water_small_keys:5],ocarina,time,bow"
         ],
         "sections": [
           {
@@ -1012,7 +1012,7 @@
       {
         "name": "Dark Link Chest",
         "access_rules": [
-          "water_small_keys:2,[water_small_keys:6]"
+          "water_small_keys:2,[water_small_keys:5]"
         ],
         "sections": [
           {
@@ -1031,7 +1031,7 @@
       {
         "name": "River Chest",
         "access_rules": [
-          "water_small_keys:2,[water_small_keys:6],ocarina,time,bow",
+          "water_small_keys:2,[water_small_keys:5],ocarina,time,bow",
           "{$hintable}"
         ],
         "sections": [
@@ -1052,15 +1052,11 @@
       {
         "name": "Boss Key Chest",
         "access_rules": [
-          "water_small_keys:2,[water_small_keys:6],ironboots,longshot,hoverboots",
-          "water_small_keys:2,[water_small_keys:6],ironboots,longshot,$has_explosives,lift1",
-          "water_small_keys:2,[water_small_keys:6],ironboots,longshot,[hoverboots]",
-          "water_small_keys:2,[water_small_keys:6],ironboots,longshot,[$has_explosives],[lift1]",
-          "water_small_keys:2,[water_small_keys:6],ironboots,hoverboots,[longshot]",
-          "water_small_keys:2,[water_small_keys:6],[ironboots],longshot,ocarina,lullaby,hoverboots",
-          "water_small_keys:2,[water_small_keys:6],[ironboots],longshot,ocarina,lullaby,$has_explosives,lift1",
-          "water_small_keys:2,[water_small_keys:6],[ironboots],longshot,ocarina,lullaby,[hoverboots]",
-          "water_small_keys:2,[water_small_keys:6],[ironboots],longshot,ocarina,lullaby,[$has_explosives],[lift1]",
+          "water_small_keys:2,[water_small_keys:5],ironboots,longshot,$has_explosives,lift1",
+          "water_small_keys:2,[water_small_keys:5],ironboots,longshot,[hoverboots]",
+          "water_small_keys:2,[water_small_keys:5],ironboots,hoverboots,[longshot]",
+          "water_small_keys:2,[water_small_keys:5],[ironboots],longshot,ocarina,lullaby,$has_explosives,lift1",
+          "water_small_keys:2,[water_small_keys:5],[ironboots],longshot,ocarina,lullaby,[hoverboots]",
           "{$hintable}"
         ],
         "sections": [
@@ -1136,7 +1132,7 @@
           {
             "name": "Serpent River",
             "access_rules": [
-              "water_small_keys:2,[water_small_keys:6],ocarina,time"
+              "water_small_keys:2,[water_small_keys:5],ocarina,time"
             ],
             "sections": [
               {
@@ -1191,7 +1187,8 @@
           {
             "name": "Falling Platform Room",
             "access_rules": [
-              "water_small_keys:1,[water_small_keys:5],longshot",
+              "water_small_keys:1,[water_small_keys:4],longshot",
+              "water_small_keys:1,[water_small_keys:4],[longshot],hookshot",
               "{water_small_keys:1,bow}"
             ],
             "sections": [
@@ -1217,9 +1214,9 @@
           {
             "name": "Near Boss Key Chest",
             "access_rules": [
-              "water_small_keys:1,[water_small_keys:5],ironboots,longshot",
-              "water_small_keys:1,[water_small_keys:5],[ironboots],longshot,ocarina,lullaby",
-              "water_small_keys:1,[water_small_keys:5],ironboots,[longshot],hoverboots"
+              "water_small_keys:1,[water_small_keys:4],ironboots,longshot",
+              "water_small_keys:1,[water_small_keys:4],[ironboots],longshot,ocarina,lullaby",
+              "water_small_keys:1,[water_small_keys:4],ironboots,[longshot],hoverboots"
             ],
             "sections": [
               {
