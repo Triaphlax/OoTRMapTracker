@@ -18,12 +18,13 @@
               "dock": "top",
               "content": {
                 "type": "layout",
-                "key": "item_grid_tall"
+                "key": "item_grid_wide"
               }
             },
             {
                 "type": "group",
                 "header": "Entrances",
+                "dock": "top",
                 "content": {
                   "type": "layout",
                   "key": "entrance_grid_tall"
@@ -34,7 +35,7 @@
                 "header": "Settings",
                 "content": {
                   "type": "layout",
-                  "key": "options_tall"
+                  "key": "options_wide"
                 }
             }
           ]
@@ -99,9 +100,29 @@
                   "title": "Grottos",
                   "icon": "images/bomb.png",
                   "content": {
-                    "type": "map",
-                    "maps": [
-                      "grottos"
+                    "type": "tabbed",
+                    "dock": "top",
+                    "tabs": [
+                      {
+                        "title": "Regular",
+                        "icon": "images/bomb.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "grottos"
+                          ]
+                        }
+                      },
+                      {
+                        "title": "Graves",
+                        "icon": "images/spooky.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "graves"
+                          ]
+                        }
+                      }
                     ]
                   }
                 },

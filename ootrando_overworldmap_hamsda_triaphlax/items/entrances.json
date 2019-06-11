@@ -178,5 +178,59 @@
         "codes": "erg_dkth,erg_dkth_a"
       }
     ]
+  },
+  {
+    "name": "Composer Grave",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erg/comp.png",
+        "codes": "erg_comp,erg_comp_c,erg_comp_a"
+      },
+      {
+        "img": "images/erg/comp.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erg_comp,erg_comp_c"
+      },
+      {
+        "img": "images/erg/comp.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erg_comp,erg_comp_a"
+      }
+    ]
+  },
+  {
+    "name": "Dampé's Grave",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erg/dampe.png",
+        "codes": "erg_dampe,erg_dampe_c,erg_dampe_a"
+      },
+      {
+        "img": "images/erg/dampe.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erg_dampe,erg_dampe_c"
+      },
+      {
+        "img": "images/erg/dampe.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erg_dampe,erg_dampe_a"
+      }
+    ]
+  },
+  {
+    "name": "Shield Grave",
+    "type": "toggle",
+    "img": "images/erg/shgr.png",
+    "codes": "erg_shgr"
+  },
+  {
+    "name": "Heart Piece Grave",
+    "type": "toggle",
+    "img": "images/erg/hpgr.png",
+    "codes": "erg_hpgr"
   }
 ]

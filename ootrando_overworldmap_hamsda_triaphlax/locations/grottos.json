@@ -136,6 +136,127 @@
             ]
           },
           {
+            "name": "Dampes Grave",
+            "access_rules": [
+              "erg_dampe"
+            ],
+            "sections": [
+              {
+                "name": "Hookshot Chest",
+                "short_name": "Hookshot",
+                "item_count": 1
+              },
+              {
+                "name": "Freestanding PoH",
+                "short_name": "HP",
+                "chest_unopened_img": "images/HP.png",
+                "chest_opened_img": "images/HP_grey.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 755,
+                "y": 265
+              }
+            ]
+          },
+          {
+            "name": "Composer Grave Song",
+            "short_name": "Royal Tomb",
+            "sections": [
+              {
+                "name": "Song",
+                "access_rules": [
+                  "erg_comp_a,sword2",
+                  "erg_comp_c,sword1",
+                  "erg_comp_c,sticks",
+                  "erg_comp_c,sling",
+                  "erg_comp_c,boomerang",
+                  "erg_comp,$has_explosives",
+                  "{$hintable}"
+                ],
+                "capture_item": true,
+                "chest_unopened_img": "images/grey_note.png",
+                "chest_opened_img": "images/grey_note_check.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 1090,
+                "y": 800
+              }
+            ]
+          },
+          {
+            "name": "Composer Grave Chest",
+            "short_name": "Royal Tomb",
+            "sections": [
+              {
+                "name": "Torches",
+                "access_rules": [
+                  "erg_comp,dins,magic",
+                  "erg_comp_c,sticks,[dins],[magic]",
+                  "erg_comp_a,magic,bow,firearrow",
+                  "{$hintable}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 335,
+                "y": 1080
+              }
+            ]
+          },
+          {
+            "name": "Heart Piece Grave",
+            "short_name": "Redead Grave",
+            "sections": [
+              {
+                "name": "Play Suns Song",
+                "access_rules": [
+                  "erg_hpgr,ocarina,sun",
+                  "{$hintable}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 1350,
+                "y": 925
+              }
+            ]
+          },
+          {
+            "name": "Shield Grave",
+            "sections": [
+              {
+                "name": "Chest",
+                "access_rules": [
+                  "erg_shgr"
+                ],
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 870,
+                "y": 1125
+              }
+            ]
+          },
+          {
             "name": "Field Kakariko Grotto",
             "access_rules": [
               "setting_skulltulas_all"
@@ -312,17 +433,11 @@
           {
             "name": "Field Near Lake Inside Fence Grotto",
             "short_name": "Grotto Inside Fence",
-            "access_rules": [
-              "setting_scrub_shuffle_yes"
-            ],
             "sections": [
               {
                 "name": "Deku Scrub",
                 "access_rules": [
                   "erg_1xbs,$can_stun_deku"
-                ],
-                "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
                 ],
                 "chest_unopened_img": "images/deku_scrub.png",
                 "chest_opened_img": "images/deku_scrub_grey.png",

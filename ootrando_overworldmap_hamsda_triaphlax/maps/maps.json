@@ -24,6 +24,12 @@
     "img": "images/erg/map_grottos.png"
   },
   {
+    "name": "graves",
+    "location_size": 35,
+    "location_border_thickness": 5,
+    "img": "images/erg/map_graves.png"
+  },
+  {
     "name": "dekutree",
     "location_size": 35,
     "location_border_thickness": 5,

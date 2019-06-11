@@ -49,6 +49,20 @@
             "margin": "1,2",
             "width": 32,
             "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_comp",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_dampe",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
           }
         ]
       },
@@ -95,6 +109,20 @@
           {
             "type": "item",
             "item": "erg_dkth",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_shgr",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erg_hpgr",
             "margin": "1,2",
             "width": 32,
             "height": 24
