@@ -87,16 +87,6 @@
                   }
                 },
                 {
-                  "title": "Gossip Stones",
-                  "icon": "images/gossip_stone.png",
-                  "content": {
-                    "type": "map",
-                    "maps": [
-                      "gossips"
-                    ]
-                  }
-                },
-                {
                   "title": "Grottos",
                   "icon": "images/bomb.png",
                   "content": {

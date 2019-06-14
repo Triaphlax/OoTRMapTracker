@@ -51,11 +51,13 @@
                 ]
               },
               {
-                "name": "Kokiri Forest Storms Grotto",
+                "name": "Kokiri Forest Storms Grotto Entrance",
                 "short_name": "Kokiri Storms Grotto",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Chest",
+                    "name": "CHILD & ADULT",
                     "access_rules": [
                       "ocarina,storm"
                     ],
@@ -260,31 +262,6 @@
                 ]
               },
               {
-                "name": "Kokiri Forest Storms Grotto Gossip Stone",
-                "short_name": "Kokiri Storms Grotto Gossip Stone",
-                "access_rules": [
-                  "$hintable"
-                ],
-                "sections": [
-                  {
-                    "name": "Check it",
-                    "access_rules": [
-                      "ocarina,storm"
-                    ],
-                    "chest_unopened_img": "images/gossip_stone.png",
-                    "chest_opened_img": "images/gossip_stone.png",
-                    "item_count": 1
-                  }
-                ],
-                "map_locations": [
-                  {
-                    "map": "gossips",
-                    "x": 2120,
-                    "y": 845
-                  }
-                ]
-              },
-              {
                 "name": "Deku Tree Gossip Stone (Left)",
                 "short_name": "DT Gossip Stone (Left)",
                 "access_rules": [
@@ -372,13 +349,22 @@
                 ]
               },
               {
-                "name": "Lost Woods Generic Grotto",
+                "name": "Lost Woods Generic Grotto Entrance",
                 "short_name": "Goron City Grotto",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Blast it",
+                    "name": "CHILD",
                     "access_rules": [
-                      "$can_blast"
+                      "$has_explosives"
+                    ],
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,$can_blast"
                     ],
                     "item_count": 1
                   }
@@ -394,6 +380,9 @@
                   },
                   {
                     "map": "adult",
+                    "visibility_rules": [
+                      "sword2,$can_blast"
+                    ],
                     "x": 2149,
                     "y": 776
                   }
@@ -439,30 +428,35 @@
                 ]
               },
               {
-                "name": "Deku Theater",
+                "name": "Deku Theater Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Skull Mask",
-                    "access_rules": [
-                      "skullmask",
-                      "{$hintable}"
-                    ],
-                    "capture_item": true,
+                    "name": "CHILD",
                     "item_count": 1
                   },
                   {
-                    "name": "Mask of Truth",
+                    "name": "ADULT",
                     "access_rules": [
-                      "maskoftruth",
-                      "{$hintable}"
+                      "sword2,[ocarina],[saria]",
+                      "sword2,[ocarina],[minuet]"
                     ],
-                    "capture_item": true,
                     "item_count": 1
                   }
                 ],
                 "map_locations": [
                   {
                     "map": "child",
+                    "x": 2078,
+                    "y": 740
+                  },
+                  {
+                    "map": "adult",
+                    "visibility_rules": [
+                      "sword2,[ocarina],[saria]",
+                      "sword2,[ocarina],[minuet]"
+                    ],
                     "x": 2078,
                     "y": 740
                   }
@@ -531,32 +525,24 @@
                 ]
               },
               {
-                "name": "Lost Woods Sales Grotto",
+                "name": "Lost Woods Sales Grotto Entrance",
                 "short_name": "Sales Grotto",
-                "access_rules": [
-                  "$has_explosives",
-                  "sword2,hammer,[ocarina],[saria]",
-                  "sword2,hammer,[ocarina],[minuet]"
-                ],
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "LW Grotto Deku Scrub Deku Nut Upgrade",
-                    "short_name": "Nut Capacity",
-                    "chest_unopened_img": "images/deku_scrub.png",
-                    "chest_opened_img": "images/deku_scrub_grey.png",
+                    "name": "CHILD",
+                    "access_rules": [
+                      "$has_explosives"
+                    ],
                     "item_count": 1
                   },
                   {
-                    "name": "LW Grotto Deku Scrub Arrows",
-                    "short_name": "Arrows",
+                    "name": "ADULT",
                     "access_rules": [
-                      "setting_scrub_shuffle_yes"
+                      "sword2,$can_blast,[ocarina],[saria]",
+                      "sword2,$can_blast,[ocarina],[minuet]"
                     ],
-                    "visibility_rules": [
-                      "setting_scrub_shuffle_yes"
-                    ],
-                    "chest_unopened_img": "images/deku_scrub.png",
-                    "chest_opened_img": "images/deku_scrub_grey.png",
                     "item_count": 1
                   }
                 ],
@@ -571,6 +557,10 @@
                   },
                   {
                     "map": "adult",
+                    "visibility_rules": [
+                      "sword2,$can_blast,[ocarina],[saria]",
+                      "sword2,$can_blast,[ocarina],[minuet]"
+                    ],
                     "x": 2192,
                     "y": 724
                   }
@@ -698,31 +688,6 @@
                 ]
               },
               {
-                "name": "Lost Woods Generic Grotto Gossip Stone",
-                "short_name": "Goron City Grotto Gossip Stone",
-                "access_rules": [
-                  "$hintable"
-                ],
-                "sections": [
-                  {
-                    "name": "Check it",
-                    "access_rules": [
-                      "$can_blast"
-                    ],
-                    "chest_unopened_img": "images/gossip_stone.png",
-                    "chest_opened_img": "images/gossip_stone.png",
-                    "item_count": 1
-                  }
-                ],
-                "map_locations": [
-                  {
-                    "map": "gossips",
-                    "x": 2149,
-                    "y": 776
-                  }
-                ]
-              },
-              {
                 "name": "Lost Woods Gossip Stone",
                 "short_name": "LW Gossip Stone",
                 "access_rules": [
@@ -755,16 +720,24 @@
             "name": "Sacred Forest Meadow",
             "children": [
               {
-                "name": "Front of Meadow Grotto",
+                "name": "Front of Meadow Grotto Entrance",
                 "short_name": "Wolfos Grotto",
-                "access_rules": [
-                  "$has_explosives",
-                  "sword2,hammer,[ocarina],[saria]",
-                  "sword2,hammer,[ocarina],[minuet]"
-                ],
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Kill them",
+                    "name": "CHILD",
+                    "access_rules": [
+                      "$has_explosives"
+                    ],
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,$can_blast,[ocarina],[saria]",
+                      "sword2,$can_blast,[ocarina],[minuet]"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -779,6 +752,10 @@
                   },
                   {
                     "map": "adult",
+                    "visibility_rules": [
+                      "sword2,$can_blast,[ocarina],[saria]",
+                      "sword2,$can_blast,[ocarina],[minuet]"
+                    ],
                     "x": 2180,
                     "y": 686
                   }
@@ -836,44 +813,104 @@
                 ]
               },
               {
-                "name": "Meadow Storms Grotto",
-                "access_rules": [
-                  "setting_scrub_shuffle_yes,ocarina,storm"
-                ],
+                "name": "Meadow Forest Grotto Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Deku Scrubs",
+                    "name": "CHILD",
                     "access_rules": [
                       "sling",
                       "sticks",
                       "$has_explosives",
                       "sword1",
                       "dinsfire,magic",
-                      "minuet,nuts",
-                      "minuet,shield1",
+                      "minuet"
+                    ],
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
                       "sword2,[minuet]",
                       "sword2,[saria]"
                     ],
-                    "visibility_rules": [
-                      "setting_scrub_shuffle_yes"
-                    ],
-                    "chest_unopened_img": "images/deku_scrub.png",
-                    "chest_opened_img": "images/deku_scrub_grey.png",
-                    "clear_as_group": false,
-                    "item_count": 2
+                    "item_count": 1
                   }
                 ],
                 "map_locations": [
                   {
                     "map": "child",
+                    "visibility_rules": [
+                      "sling",
+                      "sticks",
+                      "$has_explosives",
+                      "sword1",
+                      "dinsfire,magic",
+                      "minuet"
+                    ],
+                    "x": 2140,
+                    "y": 665
+                  },
+                  {
+                    "map": "adult",
+                    "visibility_rules": [
+                      "sword2,[minuet]",
+                      "sword2,[saria]"
+                    ],
+                    "x": 2140,
+                    "y": 665
+                  }
+                ]
+              },
+              {
+                "name": "Meadow Storms Grotto Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "access_rules": [
+                  "ocarina,storm"
+                ],
+                "sections": [
+                  {
+                    "name": "CHILD",
+                    "access_rules": [
+                      "sling",
+                      "sticks",
+                      "$has_explosives",
+                      "sword1",
+                      "dinsfire,magic",
+                      "minuet"
+                    ],
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,[minuet]",
+                      "sword2,[saria]"
+                    ],
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "visibility_rules": [
+                      "sling",
+                      "sticks",
+                      "$has_explosives",
+                      "sword1",
+                      "dinsfire,magic",
+                      "minuet"
+                    ],
                     "x": 2190,
                     "y": 635
                   },
                   {
                     "map": "adult",
                     "visibility_rules": [
-                      "sword2,[ocarina],[minuet]",
-                      "sword2,[ocarina],[saria]"
+                      "sword2,[minuet]",
+                      "sword2,[saria]"
                     ],
                     "x": 2190,
                     "y": 635
@@ -908,7 +945,7 @@
                   {
                     "map": "adult",
                     "x": 2230,
-                    "y": 664
+                    "y": 645
                   }
                 ]
               },
@@ -1033,22 +1070,63 @@
                 ]
               },
               {
-                "name": "Field North Lon Lon Grotto",
-                "short_name": "Tektite Grotto",
-                "access_rules": [
-                  "$can_blast"
-                ],
+                "name": "Field Far West Castle Town Grotto Entrance",
+                "short_name": "Far West Castle Town Grotto",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Dive down",
+                    "name": "CHILD",
                     "access_rules": [
-                      "scale2",
-                      "sword2,ironboots",
-                      "{}"
+                      "$has_explosives"
                     ],
-                    "capture_item": true,
-                    "chest_unopened_img": "images/HP.png",
-                    "chest_opened_img": "images/HP_grey.png",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,$can_blast"
+                    ],
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "visibility_rules": [
+                      "$has_explosives"
+                    ],
+                    "x": 1205,
+                    "y": 395
+                  },
+                  {
+                    "map": "adult",
+                    "visibility_rules": [
+                      "sword2,$can_blast"
+                    ],
+                    "x": 1205,
+                    "y": 395
+                  }
+                ]
+              },
+              {
+                "name": "Field North Lon Lon Grotto Entrance",
+                "short_name": "North Lon Lon Grotto",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "sections": [
+                  {
+                    "name": "CHILD",
+                    "access_rules": [
+                      "$has_explosives"
+                    ],
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,$can_blast"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -1063,28 +1141,36 @@
                   },
                   {
                     "map": "adult",
+                    "visibility_rules": [
+                      "sword2,$can_blast"
+                    ],
                     "x": 1152,
                     "y": 481
                   }
                 ]
               },
               {
-                "name": "Field Near Lake Inside Fence Grotto",
+                "name": "Field Near Lake Inside Fence Grotto Entrance",
                 "short_name": "Grotto Inside Fence",
-                "access_rules": [
-                  "$can_blast"
-                ],
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Deku Scrub",
+                    "name": "CHILD",
                     "access_rules": [
-                      "$can_stun_deku"
+                      "$has_explosives"
                     ],
-                    "chest_unopened_img": "images/deku_scrub.png",
-                    "chest_opened_img": "images/deku_scrub_grey.png",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,$can_blast"
+                    ],
                     "item_count": 1
                   }
                 ],
+
                 "map_locations": [
                   {
                     "map": "child",
@@ -1096,17 +1182,22 @@
                   },
                   {
                     "map": "adult",
+                    "visibility_rules": [
+                      "sword2,$can_blast"
+                    ],
                     "x": 1141,
                     "y": 999
                   }
                 ]
               },
               {
-                "name": "Field Near Lake Outside Fence Grotto",
+                "name": "Field Near Lake Outside Fence Grotto Entrance",
                 "short_name": "Grotto Outside Fence",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Chest",
+                    "name": "CHILD & ADULT",
                     "item_count": 1
                   }
                 ],
@@ -1124,40 +1215,21 @@
                 ]
               },
               {
-                "name": "Field West Castle Town Grotto",
-                "short_name": "Grotto near Bridge",
+                "name": "Remote Southern Grotto Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Boulda",
+                    "name": "CHILD",
                     "access_rules": [
-                      "$can_blast"
-                    ],
-                    "item_count": 1
-                  }
-                ],
-                "map_locations": [
-                  {
-                    "map": "child",
-                    "visibility_rules": [
                       "$has_explosives"
                     ],
-                    "x": 1372,
-                    "y": 440
+                    "item_count": 1
                   },
                   {
-                    "map": "adult",
-                    "x": 1372,
-                    "y": 440
-                  }
-                ]
-              },
-              {
-                "name": "Remote Southern Grotto",
-                "sections": [
-                  {
-                    "name": "Blast it",
+                    "name": "ADULT",
                     "access_rules": [
-                      "$can_blast"
+                      "sword2,$can_blast"
                     ],
                     "item_count": 1
                   }
@@ -1173,6 +1245,9 @@
                   },
                   {
                     "map": "adult",
+                    "visibility_rules": [
+                      "sword2,$can_blast"
+                    ],
                     "x": 1427,
                     "y": 925
                   }
@@ -1198,26 +1273,22 @@
                 ]
               },
               {
-                "name": "Field Kakariko Grotto",
-                "access_rules": [
-                  "setting_skulltulas_all,$can_blast"
-                ],
+                "name": "Field Kakariko Grotto Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "GS12",
+                    "name": "CHILD",
                     "access_rules": [
-                      "$has_explosives,boomerang",
-                      "{$has_explosives,sling}",
-                      "sword2,hookshot",
-                      "{sword2,bow}",
-                      "{dinsfire,magic}"
+                      "$has_explosives"
                     ],
-                    "visibility_rules": [
-                      "setting_skulltulas_all"
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,$can_blast"
                     ],
-                    "capture_item": true,
-                    "chest_unopened_img": "images/skulltula.png",
-                    "chest_opened_img": "images/skulltula_token.png",
                     "item_count": 1
                   }
                 ],
@@ -1233,7 +1304,7 @@
                   {
                     "map": "adult",
                     "visibility_rules": [
-                      "$can_blast,sword2"
+                      "sword2,$can_blast"
                     ],
                     "x": 1552,
                     "y": 406
@@ -1241,37 +1312,22 @@
                 ]
               },
               {
-                "name": "Field Valley Grotto",
+                "name": "Field Valley Grotto Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "GS13",
+                    "name": "CHILD",
                     "access_rules": [
-                      "setting_skulltulas_all,$has_explosives,dinsfire,magic,boomerang",
-                      "{setting_skulltulas_all,$has_explosives,dinsfire,magic}",
-                      "setting_skulltulas_all,sword2,hammer,$has_fire,hookshot",
-                      "{setting_skulltulas_all,sword2,hammer,$has_fire}",
-                      "{setting_skulltulas_all,$hintable}"
+                      "$has_explosives"
                     ],
-                    "visibility_rules": [
-                      "setting_skulltulas_all"
-                    ],
-                    "capture_item": true,
-                    "chest_unopened_img": "images/skulltula.png",
-                    "chest_opened_img": "images/skulltula_token.png",
                     "item_count": 1
                   },
                   {
-                    "name": "HF Grotto Cow",
-                    "short_name": "Cow",
+                    "name": "ADULT",
                     "access_rules": [
-                      "$has_explosives,dinsfire,magic,ocarina,epona,setting_cowsanity_yes",
-                      "sword2,hammer,$has_fire,ocarina,epona,setting_cowsanity_yes"
+                      "sword2,hammer,$has_explosives"
                     ],
-                    "visibility_rules": [
-                      "setting_cowsanity_yes"
-                    ],
-                    "chest_unopened_img": "images/cow.png",
-                    "chest_opened_img": "images/bottle_milk.png",
                     "item_count": 1
                   }
                 ],
@@ -1279,8 +1335,7 @@
                   {
                     "map": "child",
                     "visibility_rules": [
-                      "$has_explosives,dinsfire,magic",
-                      "{$hintable}"
+                      "$has_explosives"
                     ],
                     "x": 972,
                     "y": 658
@@ -1288,8 +1343,7 @@
                   {
                     "map": "adult",
                     "visibility_rules": [
-                      "sword2,hammer,$has_fire",
-                      "{$hintable}"
+                      "sword2,hammer,$has_explosives"
                     ],
                     "x": 972,
                     "y": 658
@@ -1297,100 +1351,42 @@
                 ]
               },
               {
-                "name": "Field Near Lake Outside Fence Grotto Gossip Stone",
-                "short_name": "Grotto Outside Fence Gossip Stone",
-                "access_rules": [
-                  "$hintable"
-                ],
+                "name": "Field West Castle Town Grotto Entrance",
+                "short_name": "Grotto near Bridge",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Check it",
-                    "chest_unopened_img": "images/gossip_stone.png",
-                    "chest_opened_img": "images/gossip_stone.png",
-                    "item_count": 1
-                  }
-                ],
-                "map_locations": [
-                  {
-                    "map": "gossips",
-                    "x": 1206,
-                    "y": 997
-                  }
-                ]
-              },
-              {
-                "name": "Field West Castle Town Grotto Gossip Stone",
-                "short_name": "Grotto near Bridge Gossip Stone",
-                "access_rules": [
-                  "$hintable"
-                ],
-                "sections": [
-                  {
-                    "name": "Check it",
+                    "name": "CHILD",
                     "access_rules": [
-                      "$can_blast"
+                      "$has_explosives"
                     ],
-                    "chest_unopened_img": "images/gossip_stone.png",
-                    "chest_opened_img": "images/gossip_stone.png",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,$can_blast"
+                    ],
                     "item_count": 1
                   }
                 ],
                 "map_locations": [
                   {
-                    "map": "gossips",
+                    "map": "child",
+                    "visibility_rules": [
+                      "$has_explosives"
+                    ],
                     "x": 1372,
                     "y": 440
-                  }
-                ]
-              },
-              {
-                "name": "Remote Southern Grotto Gossip Stone",
-                "short_name": "Open Grotto Gossip Stone",
-                "access_rules": [
-                  "$hintable"
-                ],
-                "sections": [
+                  },
                   {
-                    "name": "Check it",
-                    "access_rules": [
-                      "$can_blast"
+                    "map": "adult",
+                    "visibility_rules": [
+                      "sword2,$can_blast"
                     ],
-                    "chest_unopened_img": "images/gossip_stone.png",
-                    "chest_opened_img": "images/gossip_stone.png",
-                    "item_count": 1
-                  }
-                ],
-                "map_locations": [
-                  {
-                    "map": "gossips",
-                    "x": 1427,
-                    "y": 925
-                  }
-                ]
-              },
-              {
-                "name": "Field Valley Grotto Gossip Stone",
-                "short_name": "Field Valley Grotto Gossip Stone",
-                "access_rules": [
-                  "$hintable"
-                ],
-                "sections": [
-                  {
-                    "name": "Check it",
-                    "access_rules": [
-                      "$has_explosives,dinsfire,magic",
-                      "sword2,hammer,$has_fire"
-                    ],
-                    "chest_unopened_img": "images/gossip_stone.png",
-                    "chest_opened_img": "images/gossip_stone.png",
-                    "item_count": 1
-                  }
-                ],
-                "map_locations": [
-                  {
-                    "map": "gossips",
-                    "x": 972,
-                    "y": 658
+                    "x": 1372,
+                    "y": 440
                   }
                 ]
               },
@@ -1584,21 +1580,14 @@
                     ]
                   },
                   {
-                    "name": "Lake Hylia Grotto",
+                    "name": "Lake Hylia Grotto Entrance",
                     "short_name": "Under Gravestone",
-                    "access_rules": [
-                      "setting_scrub_shuffle_yes,$can_stun_deku"
-                    ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Deku Scrubs",
-                        "visibility_rules": [
-                          "setting_scrub_shuffle_yes"
-                        ],
-                        "chest_unopened_img": "images/deku_scrub.png",
-                        "chest_opened_img": "images/deku_scrub_grey.png",
-                        "clear_as_group": false,
-                        "item_count": 3
+                        "name": "CHILD & ADULT",
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
@@ -1951,25 +1940,13 @@
                     ]
                   },
                   {
-                    "name": "Lon Lon Grotto",
-                    "access_rules": [
-                      "setting_scrub_shuffle_yes"
-                    ],
+                    "name": "Lon Lon Grotto Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Deku Scrubs",
-                        "access_rules": [
-                          "$can_child_attack",
-                          "nuts",
-                          "shield1"
-                        ],
-                        "visibility_rules": [
-                          "setting_scrub_shuffle_yes"
-                        ],
-                        "chest_unopened_img": "images/deku_scrub.png",
-                        "chest_opened_img": "images/deku_scrub_grey.png",
-                        "clear_as_group": false,
-                        "item_count": 3
+                        "name": "CHILD",
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
@@ -2102,19 +2079,22 @@
             "color": "#6909a0",
             "children": [
               {
-                "name": "Kakariko Bombable Grotto",
+                "name": "Kakariko Bombable Grotto Entrance",
                 "short_name": "Center Grotto",
-                "access_rules": [
-                  "$can_blast"
-                ],
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Kill them",
+                    "name": "CHILD",
                     "access_rules": [
-                      "sword2",
-                      "sticks",
-                      "sword1",
-                      "dinsfire,magic"
+                      "$has_explosives"
+                    ],
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,$can_blast"
                     ],
                     "item_count": 1
                   }
@@ -2130,17 +2110,22 @@
                   },
                   {
                     "map": "adult",
+                    "visibility_rules": [
+                      "sword2,$can_blast"
+                    ],
                     "x": 1787,
                     "y": 381
                   }
                 ]
               },
               {
-                "name": "Kakariko Back Grotto",
+                "name": "Kakariko Back Grotto Entrance",
                 "short_name": "Back Grotto",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Chest",
+                    "name": "CHILD & ADULT",
                     "item_count": 1
                   }
                 ],
@@ -2699,28 +2684,6 @@
                 ]
               },
               {
-                "name": "Kakariko Back Grotto Gossip Stone",
-                "short_name": "Back Grotto Gossip Stone",
-                "access_rules": [
-                  "$hintable"
-                ],
-                "sections": [
-                  {
-                    "name": "Check it",
-                    "chest_unopened_img": "images/gossip_stone.png",
-                    "chest_opened_img": "images/gossip_stone.png",
-                    "item_count": 1
-                  }
-                ],
-                "map_locations": [
-                  {
-                    "map": "gossips",
-                    "x": 1865,
-                    "y": 326
-                  }
-                ]
-              },
-              {
                 "name": "Graveyard",
                 "children": [
                   {
@@ -2742,21 +2705,15 @@
                     ]
                   },
                   {
-                    "name": "Dampes Grave",
+                    "name": "Dampes Grave Entrance",
                     "access_rules": [
                       "sword2"
                     ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Hookshot Chest",
-                        "short_name": "Hookshot",
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Freestanding PoH",
-                        "short_name": "HP",
-                        "chest_unopened_img": "images/HP.png",
-                        "chest_opened_img": "images/HP_grey.png",
+                        "name": "ADULT",
                         "item_count": 1
                       }
                     ],
@@ -2769,10 +2726,12 @@
                     ]
                   },
                   {
-                    "name": "Shield Grave",
+                    "name": "Shield Grave Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Chest",
+                        "name": "CHILD & ADULT",
                         "item_count": 1
                       }
                     ],
@@ -2790,16 +2749,13 @@
                     ]
                   },
                   {
-                    "name": "Heart Piece Grave",
+                    "name": "Heart Piece Grave Entrance",
                     "short_name": "Redead Grave",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Play Suns Song",
-                        "access_rules": [
-                          "ocarina,sun",
-                          "{$hintable}"
-                        ],
-                        "capture_item": true,
+                        "name": "CHILD & ADULT",
                         "item_count": 1
                       }
                     ],
@@ -2851,39 +2807,16 @@
                     ]
                   },
                   {
-                    "name": "Composer Grave",
+                    "name": "Composer Grave Entrance",
                     "short_name": "Royal Tomb",
                     "access_rules": [
-                      "ocarina,lullaby",
-                      "{$hintable}"
+                      "ocarina,lullaby"
                     ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Song from Composer Grave",
-                        "short_name": "Song",
-                        "access_rules": [
-                          "sword2",
-                          "sword1",
-                          "sticks",
-                          "sling",
-                          "boomerang",
-                          "$has_explosives",
-                          "{$hintable}"
-                        ],
-                        "capture_item": true,
-                        "chest_unopened_img": "images/grey_note.png",
-                        "chest_opened_img": "images/grey_note_check.png",
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Composer Grave Chest",
-                        "short_name": "Torches",
-                        "access_rules": [
-                          "$has_fire",
-                          "sticks,[$has_fire]",
-                          "{$hintable}"
-                        ],
-                        "capture_item": true,
+                        "name": "CHILD & ADULT",
                         "item_count": 1
                       }
                     ],
@@ -3172,26 +3105,24 @@
                     ]
                   },
                   {
-                    "name": "Goron City Grotto",
+                    "name": "Goron City Grotto Entrance",
                     "short_name": "Lava Room Grotto",
                     "access_rules": [
-                      "setting_scrub_shuffle_yes,sword2"
+                      "sword2"
                     ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Deku Scrubs",
+                        "name": "ADULT",
                         "access_rules": [
+                          "ocarina,time,redtunic",
+                          "ocarina,time,longshot",
+                          "ocarina,time,nayruslove,magic",
                           "hookshot,redtunic",
-                          "hookshot,nayruslove,magic",
-                          "ocarina,time"
+                          "hookshot,nayruslove,magic"
                         ],
-                        "visibility_rules": [
-                          "setting_scrub_shuffle_yes"
-                        ],
-                        "chest_unopened_img": "images/deku_scrub.png",
-                        "chest_opened_img": "images/deku_scrub_grey.png",
-                        "clear_as_group": false,
-                        "item_count": 3
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
@@ -3432,12 +3363,26 @@
                     ]
                   },
                   {
-                    "name": "Mountain Storms Grotto",
+                    "name": "Mountain Storms Grotto Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "access_rules": [
+                      "ocarina,storm"
+                    ],
                     "sections": [
                       {
-                        "name": "Play Song of Storms",
+                        "name": "CHILD",
                         "access_rules": [
-                          "ocarina,storm"
+                          "postzelda",
+                          "$has_explosives",
+                          "dinsfire,magic"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
                         ],
                         "item_count": 1
                       }
@@ -3445,11 +3390,19 @@
                     "map_locations": [
                       {
                         "map": "child",
+                        "visibility_rules": [
+                          "postzelda",
+                          "$has_explosives",
+                          "dinsfire,magic"
+                        ],
                         "x": 1705,
                         "y": 158
                       },
                       {
                         "map": "adult",
+                        "visibility_rules": [
+                          "sword2"
+                        ],
                         "x": 1705,
                         "y": 158
                       }
@@ -3527,19 +3480,22 @@
                     ]
                   },
                   {
-                    "name": "Mountain Bombable Grotto",
+                    "name": "Mountain Bombable Grotto Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "DMT Grotto Cow",
-                        "short_name": "Cow",
+                        "name": "CHILD",
                         "access_rules": [
-                          "$can_blast,ocarina,epona,setting_cowsanity_yes"
+                          "$has_explosives"
                         ],
-                        "visibility_rules": [
-                          "setting_cowsanity_yes"
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2,$can_blast"
                         ],
-                        "chest_unopened_img": "images/cow.png",
-                        "chest_opened_img": "images/bottle_milk.png",
                         "item_count": 1
                       }
                     ],
@@ -3554,6 +3510,9 @@
                       },
                       {
                         "map": "adult",
+                        "visibility_rules": [
+                          "sword2,$can_blast"
+                        ],
                         "x": 1730,
                         "y": 190
                       }
@@ -3683,31 +3642,6 @@
                     ]
                   },
                   {
-                    "name": "Mountain Storms Grotto Gossip Stone",
-                    "short_name": "DMT Grotto Gossip Stone",
-                    "access_rules": [
-                      "$hintable"
-                    ],
-                    "sections": [
-                      {
-                        "name": "Check it",
-                        "access_rules": [
-                          "ocarina,storm"
-                        ],
-                        "chest_unopened_img": "images/gossip_stone.png",
-                        "chest_opened_img": "images/gossip_stone.png",
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "gossips",
-                        "x": 1705,
-                        "y": 158
-                      }
-                    ]
-                  },
-                  {
                     "name": "Death Mountain Trail Gossip Stone",
                     "short_name": "DMT Gossip Stone",
                     "access_rules": [
@@ -3748,12 +3682,21 @@
                 "name": "Death Mountain Crater",
                 "children": [
                   {
-                    "name": "Top of Crater Grotto",
+                    "name": "Top of Crater Grotto Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Blast it",
+                        "name": "CHILD",
                         "access_rules": [
-                          "$can_blast"
+                          "$has_explosives"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2,$can_blast"
                         ],
                         "item_count": 1
                       }
@@ -3769,6 +3712,9 @@
                       },
                       {
                         "map": "adult",
+                        "visibility_rules": [
+                          "sword2,$can_blast"
+                        ],
                         "x": 1798,
                         "y": 42
                       }
@@ -3870,28 +3816,17 @@
                     ]
                   },
                   {
-                    "name": "DMC Hammer Grotto",
+                    "name": "DMC Hammer Grotto Entrance",
                     "short_name": "Hammer Grotto",
                     "access_rules": [
-                      "setting_scrub_shuffle_yes,sword2,hammer"
+                      "sword2,hammer"
                     ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Deku Scrubs",
-                        "access_rules": [
-                          "$link_the_goron",
-                          "ocarina,bolero,hookshot",
-                          "ocarina,bolero,setting_plant_no,beans",
-                          "ocarina,bolero,bean_crater_yes",
-                          "hoverboots"
-                        ],
-                        "visibility_rules": [
-                          "setting_scrub_shuffle_yes"
-                        ],
-                        "chest_unopened_img": "images/deku_scrub.png",
-                        "chest_opened_img": "images/deku_scrub_grey.png",
-                        "clear_as_group": false,
-                        "item_count": 3
+                        "name": "ADULT",
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
@@ -4015,31 +3950,6 @@
                         "map": "child",
                         "x": 1871,
                         "y": 66
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Top of Crater Grotto Gossip Stone",
-                    "short_name": "DMC Grotto Gossip Stone",
-                    "access_rules": [
-                      "$hintable"
-                    ],
-                    "sections": [
-                      {
-                        "name": "Check it",
-                        "access_rules": [
-                          "$can_blast"
-                        ],
-                        "chest_unopened_img": "images/gossip_stone.png",
-                        "chest_opened_img": "images/gossip_stone.png",
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "gossips",
-                        "x": 1798,
-                        "y": 42
                       }
                     ]
                   },
@@ -4537,24 +4447,15 @@
                     ]
                   },
                   {
-                    "name": "Castle Storms Grotto",
-                    "access_rules": [
-                      "setting_skulltulas_all"
-                    ],
+                    "name": "Castle Storms Grotto Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "GS16",
+                        "name": "CHILD",
                         "access_rules": [
-                          "ocarina,storm,boomerang,$has_explosives",
-                          "{ocarina,storm,$has_explosives}",
-                          "{$hintable}"
+                          "ocarina,storm"
                         ],
-                        "visibility_rules": [
-                          "setting_skulltulas_all"
-                        ],
-                        "capture_item": true,
-                        "chest_unopened_img": "images/skulltula.png",
-                        "chest_opened_img": "images/skulltula_token.png",
                         "item_count": 1
                       }
                     ],
@@ -4610,31 +4511,6 @@
                       }
                     ]
                   },
-                  {
-                    "name": "Castle Storms Grotto Gossip Stone",
-                    "short_name": "HC Storms Gossip Stone",
-                    "access_rules": [
-                      "$hintable"
-                    ],
-                    "sections": [
-                      {
-                        "name": "Check it",
-                        "access_rules": [
-                          "ocarina,storm,$has_explosives"
-                        ],
-                        "chest_unopened_img": "images/gossip_stone.png",
-                        "chest_opened_img": "images/gossip_stone.png",
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "gossips",
-                        "x": 1479,
-                        "y": 206
-                      }
-                    ]
-                  }
                 ]
               },
               {
@@ -4749,14 +4625,22 @@
                     ]
                   },
                   {
-                    "name": "Zora River Plateau Open Grotto",
+                    "name": "Zora River Plateau Open Grotto Entrance",
                     "short_name": "Plateau Grotto",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Jump in",
+                        "name": "CHILD",
                         "access_rules": [
                           "$has_explosives",
-                          "scale1",
+                          "scale1"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
                           "sword2"
                         ],
                         "item_count": 1
@@ -4774,8 +4658,51 @@
                       },
                       {
                         "map": "adult",
+                        "visibility_rules": [
+                          "sword2"
+                        ],
                         "x": 2092,
                         "y": 540
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Zora River Plateau Bombable Grotto Entrance",
+                    "short_name": "Plateau Bombable Grotto",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "sections": [
+                      {
+                        "name": "CHILD",
+                        "access_rules": [
+                          "$has_explosives"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2,$can_blast"
+                        ],
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "child",
+                        "visibility_rules": [
+                          "$has_explosives"
+                        ],
+                        "x": 2127,
+                        "y": 525
+                      },
+                      {
+                        "map": "adult",
+                        "visibility_rules": [
+                          "sword2,$can_blast"
+                        ],
+                        "x": 2127,
+                        "y": 525
                       }
                     ]
                   },
@@ -4852,25 +4779,27 @@
                     ]
                   },
                   {
-                    "name": "Zora River Storms Grotto",
+                    "name": "Zora River Storms Grotto Entrance",
                     "access_rules": [
-                      "setting_scrub_shuffle_yes,ocarina,storm"
+                      "ocarina,storm"
                     ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Deku Scrubs",
+                        "name": "CHILD",
                         "access_rules": [
                           "$has_explosives",
-                          "scale1",
+                          "scale1"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
                           "sword2"
                         ],
-                        "visibility_rules": [
-                          "setting_scrub_shuffle_yes"
-                        ],
-                        "chest_unopened_img": "images/deku_scrub.png",
-                        "chest_opened_img": "images/deku_scrub_grey.png",
-                        "clear_as_group": false,
-                        "item_count": 2
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
@@ -4885,6 +4814,9 @@
                       },
                       {
                         "map": "adult",
+                        "visibility_rules": [
+                          "sword2"
+                        ],
                         "x": 1940,
                         "y": 505
                       }
@@ -5005,33 +4937,6 @@
                     ]
                   },
                   {
-                    "name": "Zora River Plateau Open Grotto Gossip Stone",
-                    "short_name": "Plateau Grotto Gossip Stone",
-                    "access_rules": [
-                      "$hintable"
-                    ],
-                    "sections": [
-                      {
-                        "name": "Check it",
-                        "access_rules": [
-                          "sword2",
-                          "$has_explosives",
-                          "scale1"
-                        ],
-                        "chest_unopened_img": "images/gossip_stone.png",
-                        "chest_opened_img": "images/gossip_stone.png",
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "gossips",
-                        "x": 2092,
-                        "y": 540
-                      },
-                    ]
-                  },
-                  {
                     "name": "Zoras River Plateau Gossip Stone",
                     "short_name": "ZR Plateau Gossip Stone",
                     "access_rules": [
@@ -5126,6 +5031,27 @@
                         "map": "child",
                         "x": 2556,
                         "y": 429
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Zoras Domain Storms Grotto Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "access_rules": [
+                      "ocarina, storm"
+                    ],
+                    "sections": [
+                      {
+                        "name": "CHILD",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "child",
+                        "x": 2540,
+                        "y": 480
                       }
                     ]
                   },
@@ -5566,6 +5492,28 @@
                     ]
                   },
                   {
+                    "name": "Gerudo Valley Octorok Grotto Entrance",
+                    "short_name": "Octorok Grotto",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "sections": [
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2,lift2"
+                        ],
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "adult",
+                        "x": 689,
+                        "y": 633
+                      }
+                    ]
+                  },
+                  {
                     "name": "Gerudo Valley Waterfall",
                     "short_name": "Valley Waterfall",
                     "sections": [
@@ -5748,23 +5696,16 @@
                     ]
                   },
                   {
-                    "name": "Gerudo Valley Storms Grotto",
-                    "access_rules": [
-                      "setting_scrub_shuffle_yes"
-                    ],
+                    "name": "Gerudo Valley Storms Grotto Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Deku Scrubs",
+                        "name": "ADULT",
                         "access_rules": [
-                          "ocarina,storm"
+                          "ocarina, storm"
                         ],
-                        "visibility_rules": [
-                          "setting_scrub_shuffle_yes"
-                        ],
-                        "chest_unopened_img": "images/deku_scrub.png",
-                        "chest_opened_img": "images/deku_scrub_grey.png",
-                        "clear_as_group": false,
-                        "item_count": 2
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
@@ -5859,6 +5800,27 @@
                             "map": "adult",
                             "x": 544,
                             "y": 358
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Gerudo Fortress Storms Grotto Entrance",
+                        "chest_unopened_img": "images/unknown.png",
+                        "chest_opened_img": "images/map.png",
+                        "sections": [
+                          {
+                            "name": "ADULT",
+                            "access_rules": [
+                              "ocarina, storm"
+                            ],
+                            "item_count": 1
+                          }
+                        ],
+                        "map_locations": [
+                          {
+                            "map": "adult",
+                            "x": 503,
+                            "y": 357
                           }
                         ]
                       },
@@ -6102,21 +6064,16 @@
                     ]
                   },
                   {
-                    "name": "Desert Colossus Grotto",
-                    "short_name": "Under Silver Rock",
+                    "name": "Desert Colossus Grotto Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Deku Scrubs",
+                        "name": "ADULT",
                         "access_rules": [
-                          "setting_scrub_shuffle_yes,$colossus,sword2,lift2"
+                          "$colossus, lift2"
                         ],
-                        "visibility_rules": [
-                          "setting_scrub_shuffle_yes"
-                        ],
-                        "chest_unopened_img": "images/deku_scrub.png",
-                        "chest_opened_img": "images/deku_scrub_grey.png",
-                        "clear_as_group": false,
-                        "item_count": 2
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
