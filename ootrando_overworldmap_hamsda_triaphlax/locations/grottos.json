@@ -39,8 +39,7 @@
            ]
         },
         {
-            "name": "Front of Meadow Grotto",
-            "short_name": "Wolfos Grotto",
+            "name": "Wolfos Grotto",
             "access_rules": [
               "erg_wolfos_c,$can_child_attack",
               "erg_wolfos_a,sword2"
@@ -60,8 +59,7 @@
             ]
           },
           {
-            "name": "Kakariko Bombable Grotto",
-            "short_name": "Center Grotto",
+            "name": "ReDead Grotto",
             "access_rules": [
               "erg_redead_c,sticks",
               "erg_redead_c,sword1",
@@ -83,7 +81,7 @@
             ]
           },
           {
-            "name": "Mountain Bombable Grotto",
+            "name": "Cow Grotto",
             "access_rules": [
               "setting_cowsanity_yes"
             ],
@@ -111,8 +109,7 @@
             ]
           },
           {
-            "name": "Field North Lon Lon Grotto",
-            "short_name": "Tektite Grotto",
+            "name": "Tektite Grotto",
             "sections": [
               {
                 "name": "Dive down",
@@ -257,7 +254,7 @@
             ]
           },
           {
-            "name": "Field Kakariko Grotto",
+            "name": "Skulltula Grotto",
             "access_rules": [
               "setting_skulltulas_all"
             ],
@@ -289,7 +286,7 @@
             ]
           },
           {
-            "name": "Field Valley Grotto GS",
+            "name": "Webs Grotto GS",
             "access_rules": [
               "setting_skulltulas_all"
             ],
@@ -297,10 +294,12 @@
               {
                 "name": "GS13",
                 "access_rules": [
-                  "erg_webs_c,boomerang",
-                  "{erg_webs_c,sling}",
-                  "erg_webs_a,sword2,hookshot",
-                  "{erg_webs_a,sword2,bow}",
+                  "erg_webs_c,dinsfire,magic,boomerang",
+                  "{erg_webs_c,dinsfire,magic,sling}",
+                  "erg_webs_a,dinsfire,magic,sword2,hookshot",
+                  "erg_webs_a,bow,firearrow,magic,sword2,hookshot",
+                  "{erg_webs_a,dinsfire,magic,sword2,bow}",
+                  "{erg_webs_a,bow,firearrow,magic,sword2,bow}",
                   "{erg_webs,dinsfire,magic}"
                 ],
                 "visibility_rules": [
@@ -321,7 +320,7 @@
             ]
           },
           {
-            "name": "Field Valley Grotto Cow",
+            "name": "Webs Grotto Cow",
             "short_name": "Field Valley Grotto Cow",
             "access_rules": [
               "setting_cowsanity_yes"
@@ -330,7 +329,8 @@
               {
                 "name": "Check it",
                 "access_rules": [
-                  "erg_webs,$has_fire,ocarina,epona"
+                  "erg_webs,magic,dins,ocarina,epona",
+                  "erg_webs_a,magic,bow,firearrow,ocarina,epona"
                 ],
                 "visibility_rules": [
                   "setting_cowsanity_yes"
@@ -349,7 +349,7 @@
             ]
           },
           {
-            "name": "Field Valley Grotto Gossip Stone",
+            "name": "Webs Grotto Gossip Stone",
             "short_name": "Field Valley Grotto Gossip Stone",
             "access_rules": [
               "$hintable"
@@ -358,7 +358,8 @@
               {
                 "name": "Check it",
                 "access_rules": [
-                  "erg_webs,$has_fire"
+                  "erg_webs,magic,dins",
+                  "erg_webs_a,magic,bow,firearrow"
                 ],
                 "chest_unopened_img": "images/gossip_stone.png",
                 "chest_opened_img": "images/gossip_stone.png",
@@ -373,7 +374,7 @@
               }
             ]
           },    {
-            "name": "Castle Storms Grotto GS",
+            "name": "Bomb Grotto GS",
             "access_rules": [
               "setting_skulltulas_all"
             ],
@@ -405,8 +406,7 @@
             ]
           },
           {
-            "name": "Castle Storms Grotto Gossip Stone",
-            "short_name": "HC Storms Gossip Stone",
+            "name": "Bomb Grotto Gossip Stone",
             "access_rules": [
               "$hintable"
             ],
@@ -431,8 +431,7 @@
             ]
           },
           {
-            "name": "Field Near Lake Inside Fence Grotto",
-            "short_name": "Grotto Inside Fence",
+            "name": "1× Business Scrub Grotto",
             "sections": [
               {
                 "name": "Deku Scrub",
@@ -453,7 +452,7 @@
             ]
           },
           {
-            "name": "2× Business Scrubs Grottos",
+            "name": "2× Business Scrub Grottos",
             "access_rules": [
               "setting_scrub_shuffle_yes"
             ],
@@ -520,7 +519,7 @@
             ]
           },
           {
-            "name": "3× Business Scrubs Grottos",
+            "name": "3× Business Scrub Grottos",
             "access_rules": [
               "setting_scrub_shuffle_yes"
             ],
