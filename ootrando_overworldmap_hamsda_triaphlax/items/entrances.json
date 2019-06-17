@@ -232,5 +232,349 @@
     "type": "toggle",
     "img": "images/erg/hpgr.png",
     "codes": "erg_hpgr"
+  },
+  {
+    "name": "Link's House",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/link.png",
+        "codes": "eri_link,eri_link_c,eri_link_a"
+      },
+      {
+        "img": "images/eri/link.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_link,eri_link_c"
+      },
+      {
+        "img": "images/eri/link.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_link,eri_link_a"
+      }
+    ]
+  },
+  {
+    "name": "Temple of Time",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/tot.png",
+        "codes": "eri_tot,eri_tot_c,eri_tot_a"
+      },
+      {
+        "img": "images/eri/tot.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_tot,eri_tot_c"
+      },
+      {
+        "img": "images/eri/tot.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_tot,eri_tot_a"
+      }
+    ]
+  },
+  {
+    "name": "Mido House",
+    "type": "toggle",
+    "img": "images/eri/mido.png",
+    "codes": "eri_mido"
+  },
+  {
+    "name": "Kokiri Shop",
+    "type": "toggle",
+    "img": "images/eri/koksh.png",
+    "codes": "eri_koksh"
+  },
+  {
+    "name": "Lake Hylia Lab",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/lab.png",
+        "codes": "eri_lab,eri_lab_c,eri_lab_a"
+      },
+      {
+        "img": "images/eri/lab.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_lab,eri_lab_c"
+      },
+      {
+        "img": "images/eri/lab.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_lab,eri_lab_a"
+      }
+    ]
+  },
+  {
+    "name": "Fishing Hole",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/fishing.png",
+        "codes": "eri_fishing,eri_fishing_c,eri_fishing_a"
+      },
+      {
+        "img": "images/eri/fishing.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_fishing,eri_fishing_c"
+      },
+      {
+        "img": "images/eri/fishing.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_fishing,eri_fishing_a"
+      }
+    ]
+  },
+  {
+    "name": "Talon House",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/cucco.png",
+        "codes": "eri_cucco,eri_cucco_c,eri_cucco_a"
+      },
+      {
+        "img": "images/eri/cucco.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_cucco,eri_cucco_c"
+      },
+      {
+        "img": "images/eri/cucco.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_cucco,eri_cucco_a"
+      }
+    ]
+  },
+  {
+    "name": "Ingo Barn",
+    "type": "toggle",
+    "img": "images/eri/stable.png",
+    "codes": "eri_stable"
+  },
+  {
+    "name": "Lon Lon Corner Tower",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/tower.png",
+        "codes": "eri_tower,eri_tower_c,eri_tower_a"
+      },
+      {
+        "img": "images/eri/tower.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_tower,eri_tower_c"
+      },
+      {
+        "img": "images/eri/tower.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_tower,eri_tower_a"
+      }
+    ]
+  },
+  {
+    "name": "Castle Town Bazaar",
+    "type": "toggle",
+    "img": "images/eri/chbaz.png",
+    "codes": "eri_chbaz"
+  },
+  {
+    "name": "Castle Town Shooting Gallery",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/chsg.png",
+        "codes": "eri_chsg,eri_chsg_c,eri_chsg_a"
+      },
+      {
+        "img": "images/eri/chsg.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_chsg,eri_chsg_c"
+      },
+      {
+        "img": "images/eri/chsg.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_chsg,eri_chsg_a"
+      }
+    ]
+  },
+  {
+    "name": "Castle Town Rupee Room",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/guard.png",
+        "codes": "eri_guard,eri_guard_c,eri_guard_a"
+      },
+      {
+        "img": "images/eri/guard.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_guard,eri_guard_c"
+      },
+      {
+        "img": "images/eri/guard.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_guard,eri_guard_a"
+      }
+    ]
+  },
+  {
+    "name": "Castle Town Mask Shop",
+    "type": "toggle",
+    "img": "images/eri/hms.png",
+    "codes": "eri_hms"
+  },
+  {
+    "name": "Castle Town Bombchu Bowling",
+    "type": "toggle",
+    "img": "images/eri/bowl.png",
+    "codes": "eri_bowl"
+  },
+  {
+    "name": "Castle Town Potion Shop",
+    "type": "toggle",
+    "img": "images/eri/chpot.png",
+    "codes": "eri_chpot"
+  },
+  {
+    "name": "Castle Town Treasure Chest Game",
+    "type": "toggle",
+    "img": "images/eri/tcg.png",
+    "codes": "eri_tcg"
+  },
+  {
+    "name": "Castle Town Bombchu Shop",
+    "type": "toggle",
+    "img": "images/eri/chush.png",
+    "codes": "eri_chush"
+  },
+  {
+    "name": "Fairy Fountain",
+    "type": "consumable",
+    "img": "images/eri/ff.png",
+    "codes": "eri_ff",
+    "max_quantity": 6
+  },
+  {
+    "name": "Kakariko Bazaar",
+    "type": "toggle",
+    "img": "images/eri/adbaz.png",
+    "codes": "eri_adbaz"
+  },
+  {
+    "name": "Kakariko Shooting Gallery",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/adsg.png",
+        "codes": "eri_adsg,eri_adsg_c,eri_adsg_a"
+      },
+      {
+        "img": "images/eri/adsg.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_adsg,eri_adsg_c"
+      },
+      {
+        "img": "images/eri/adsg.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_adsg,eri_adsg_a"
+      }
+    ]
+  },
+  {
+    "name": "Carpenter Boss House",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/talon.png",
+        "codes": "eri_talon,eri_talon_c,eri_talon_a"
+      },
+      {
+        "img": "images/eri/talon.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_talon,eri_talon_c"
+      },
+      {
+        "img": "images/eri/talon.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_talon,eri_talon_a"
+      }
+    ]
+  },
+  {
+    "name": "Impa House",
+    "type": "toggle",
+    "img": "images/eri/cagef.png",
+    "codes": "eri_cagef"
+  },
+  {
+    "name": "Impa House Back",
+    "type": "toggle",
+    "img": "images/eri/cageb.png",
+    "codes": "eri_cageb"
+  },
+  {
+    "name": "Odd Medicine Building",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/witch.png",
+        "codes": "eri_witch,eri_witch_c,eri_witch_a"
+      },
+      {
+        "img": "images/eri/witch.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_witch,eri_witch_c"
+      },
+      {
+        "img": "images/eri/witch.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_witch,eri_witch_a"
+      }
+    ]
+  },
+  {
+    "name": "Windmill",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/mill.png",
+        "codes": "eri_mill,eri_mill_c,eri_mill_a"
+      },
+      {
+        "img": "images/eri/mill.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_mill,eri_mill_c"
+      },
+      {
+        "img": "images/eri/mill.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_mill,eri_mill_a"
+      }
+    ]
+  },
+  {
+    "name": "Goron Shop",
+    "type": "toggle",
+    "img": "images/eri/gorsh.png",
+    "codes": "eri_gorsh",
+    "max_quantity": 6
+  },
+  {
+    "name": "Zora Shop",
+    "type": "toggle",
+    "img": "images/eri/zorsh.png",
+    "codes": "eri_zorsh"
   }
 ]

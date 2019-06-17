@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Indoors",
+    "parent": "World",
+    "color": "#7C5A2F",
+    "children": [
+      {
+      }
+    ]
+  }
+]
