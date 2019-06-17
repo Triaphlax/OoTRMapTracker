@@ -126,6 +126,13 @@
             "margin": "1,2",
             "width": 32,
             "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_hos",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
           }
         ]
       },

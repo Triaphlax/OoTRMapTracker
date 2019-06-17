@@ -234,6 +234,12 @@
     "codes": "erg_hpgr"
   },
   {
+    "name": "House of Skulltula",
+    "type": "toggle",
+    "img": "images/eri/hos.png",
+    "codes": "eri_hos"
+  },
+  {
     "name": "Link's House",
     "type": "progressive_toggle",
     "loop": true,
