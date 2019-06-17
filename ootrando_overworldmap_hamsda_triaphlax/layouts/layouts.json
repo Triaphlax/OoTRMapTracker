@@ -88,7 +88,7 @@
                 },
                 {
                   "title": "Grottos",
-                  "icon": "images/bomb.png",
+                  "icon": "images/hammer.png",
                   "content": {
                     "type": "tabbed",
                     "dock": "top",
@@ -110,6 +110,36 @@
                           "type": "map",
                           "maps": [
                             "graves"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Indoors",
+                  "icon": "images/small_key.png",
+                  "content": {
+                    "type": "tabbed",
+                    "dock": "top",
+                    "tabs": [
+                      {
+                        "title": "Indoors 1",
+                        "icon": "images/rupee.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "indoors1"
+                          ]
+                        }
+                      },
+                      {
+                        "title": "Indoors 2",
+                        "icon": "images/sword2.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "indoors2"
                           ]
                         }
                       }
