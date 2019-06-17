@@ -12,10 +12,22 @@
     "img": "images/overworld_map.png"
   },
   {
-    "name": "gossips",
+    "name": "grottos",
     "location_size": 35,
     "location_border_thickness": 5,
-    "img": "images/overworld_map.png"
+    "img": "images/erg/map_grottos.png"
+  },
+  {
+    "name": "graves",
+    "location_size": 35,
+    "location_border_thickness": 5,
+    "img": "images/erg/map_graves.png"
+  },
+  {
+    "name": "grottos",
+    "location_size": 35,
+    "location_border_thickness": 5,
+    "img": "images/erg/map_grottos.png"
   },
   {
     "name": "dekutree",

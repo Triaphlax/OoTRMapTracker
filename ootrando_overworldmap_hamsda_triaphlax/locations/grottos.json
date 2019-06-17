@@ -1,0 +1,736 @@
+[
+    {
+      "name": "Grottos",
+      "parent": "World",
+      "color": "#808080",
+      "children": [
+        {
+          "name": "Deku Theater",
+          "access_rules": [
+              "erg_dkth_c",
+              "{$hintable}"
+          ],
+          "sections": [
+            {
+              "name": "Skull Mask",
+              "access_rules": [
+                "skullmask",
+                "{$hintable}"
+              ],
+              "capture_item": true,
+              "item_count": 1
+              },
+              {
+                "name": "Mask of Truth",
+                "access_rules": [
+                  "maskoftruth",
+                  "{$hintable}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 1270,
+                "y": 915
+              }
+           ]
+        },
+        {
+            "name": "Front of Meadow Grotto",
+            "short_name": "Wolfos Grotto",
+            "access_rules": [
+              "erg_wolfos_c,$can_child_attack",
+              "erg_wolfos_a,sword2"
+            ],
+            "sections": [
+              {
+                "name": "Kill them",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 930,
+                "y": 900
+              }
+            ]
+          },
+          {
+            "name": "Kakariko Bombable Grotto",
+            "short_name": "Center Grotto",
+            "access_rules": [
+              "erg_redead_c,sticks",
+              "erg_redead_c,sword1",
+              "erg_redead_c,dins,magic",
+              "erg_redead_a,sword2"
+            ],
+            "sections": [
+              {
+                "name": "Kill them",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 600,
+                "y": 885
+              }
+            ]
+          },
+          {
+            "name": "Mountain Bombable Grotto",
+            "access_rules": [
+              "setting_cowsanity_yes"
+            ],
+            "sections": [
+              {
+                "name": "DMT Grotto Cow",
+                "short_name": "Cow",
+                "access_rules": [
+                  "erg_cow,ocarina,epona,setting_cowsanity_yes"
+                ],
+                "visibility_rules": [
+                  "setting_cowsanity_yes"
+                ],
+                "chest_unopened_img": "images/cow.png",
+                "chest_opened_img": "images/bottle_milk.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 1415,
+                "y": 490
+              }
+            ]
+          },
+          {
+            "name": "Field North Lon Lon Grotto",
+            "short_name": "Tektite Grotto",
+            "sections": [
+              {
+                "name": "Dive down",
+                "access_rules": [
+                  "{erg_dive}",
+                  "erg_dive,scale2",
+                  "erg_dive_a,ironboots"
+                ],
+                "capture_item": true,
+                "chest_unopened_img": "images/HP.png",
+                "chest_opened_img": "images/HP_grey.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 275,
+                "y": 945
+              }
+            ]
+          },
+          {
+            "name": "Dampes Grave",
+            "access_rules": [
+              "erg_dampe"
+            ],
+            "sections": [
+              {
+                "name": "Hookshot Chest",
+                "short_name": "Hookshot",
+                "item_count": 1
+              },
+              {
+                "name": "Freestanding PoH",
+                "short_name": "HP",
+                "chest_unopened_img": "images/HP.png",
+                "chest_opened_img": "images/HP_grey.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 755,
+                "y": 265
+              }
+            ]
+          },
+          {
+            "name": "Composer Grave Song",
+            "short_name": "Royal Tomb",
+            "sections": [
+              {
+                "name": "Song",
+                "access_rules": [
+                  "erg_comp_a,sword2",
+                  "erg_comp_c,sword1",
+                  "erg_comp_c,sticks",
+                  "erg_comp_c,sling",
+                  "erg_comp_c,boomerang",
+                  "erg_comp,$has_explosives",
+                  "{$hintable}"
+                ],
+                "capture_item": true,
+                "chest_unopened_img": "images/grey_note.png",
+                "chest_opened_img": "images/grey_note_check.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 1090,
+                "y": 800
+              }
+            ]
+          },
+          {
+            "name": "Composer Grave Chest",
+            "short_name": "Royal Tomb",
+            "sections": [
+              {
+                "name": "Torches",
+                "access_rules": [
+                  "erg_comp,dins,magic",
+                  "erg_comp_c,sticks,[dins],[magic]",
+                  "erg_comp_a,magic,bow,firearrow",
+                  "{$hintable}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 335,
+                "y": 1080
+              }
+            ]
+          },
+          {
+            "name": "Heart Piece Grave",
+            "short_name": "Redead Grave",
+            "sections": [
+              {
+                "name": "Play Suns Song",
+                "access_rules": [
+                  "erg_hpgr,ocarina,sun",
+                  "{$hintable}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 1350,
+                "y": 925
+              }
+            ]
+          },
+          {
+            "name": "Shield Grave",
+            "sections": [
+              {
+                "name": "Chest",
+                "access_rules": [
+                  "erg_shgr"
+                ],
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "graves",
+                "x": 870,
+                "y": 1125
+              }
+            ]
+          },
+          {
+            "name": "Field Kakariko Grotto",
+            "access_rules": [
+              "setting_skulltulas_all"
+            ],
+            "sections": [
+              {
+                "name": "GS12",
+                "access_rules": [
+                  "erg_skull_c,boomerang",
+                  "{erg_skull_c,sling}",
+                  "erg_skull_a,sword2,hookshot",
+                  "{erg_skull_a,sword2,bow}",
+                  "{erg_skull,dinsfire,magic}"
+                ],
+                "visibility_rules": [
+                  "setting_skulltulas_all"
+                ],
+                "capture_item": true,
+                "chest_unopened_img": "images/skulltula.png",
+                "chest_opened_img": "images/skulltula_token.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 315,
+                "y": 465
+              }
+            ]
+          },
+          {
+            "name": "Field Valley Grotto GS",
+            "access_rules": [
+              "setting_skulltulas_all"
+            ],
+            "sections": [
+              {
+                "name": "GS13",
+                "access_rules": [
+                  "erg_webs_c,boomerang",
+                  "{erg_webs_c,sling}",
+                  "erg_webs_a,sword2,hookshot",
+                  "{erg_webs_a,sword2,bow}",
+                  "{erg_webs,dinsfire,magic}"
+                ],
+                "visibility_rules": [
+                  "setting_skulltulas_all"
+                ],
+                "capture_item": true,
+                "chest_unopened_img": "images/skulltula.png",
+                "chest_opened_img": "images/skulltula_token.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 1115,
+                "y": 530
+              }
+            ]
+          },
+          {
+            "name": "Field Valley Grotto Cow",
+            "short_name": "Field Valley Grotto Cow",
+            "access_rules": [
+              "setting_cowsanity_yes"
+            ],
+            "sections": [
+              {
+                "name": "Check it",
+                "access_rules": [
+                  "erg_webs,$has_fire,ocarina,epona"
+                ],
+                "visibility_rules": [
+                  "setting_cowsanity_yes"
+                ],
+                "chest_unopened_img": "images/cow.png",
+                "chest_opened_img": "images/bottle_milk.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 1045,
+                "y": 550
+              }
+            ]
+          },
+          {
+            "name": "Field Valley Grotto Gossip Stone",
+            "short_name": "Field Valley Grotto Gossip Stone",
+            "access_rules": [
+              "$hintable"
+            ],
+            "sections": [
+              {
+                "name": "Check it",
+                "access_rules": [
+                  "erg_webs,$has_fire"
+                ],
+                "chest_unopened_img": "images/gossip_stone.png",
+                "chest_opened_img": "images/gossip_stone.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 885,
+                "y": 485
+              }
+            ]
+          },    {
+            "name": "Castle Storms Grotto GS",
+            "access_rules": [
+              "setting_skulltulas_all"
+            ],
+            "sections": [
+              {
+                "name": "GS16",
+                "access_rules": [
+                  "erg_bomb_c,boomerang,$has_explosives",
+                  "erg_bomb_a,hookshot,$has_explosives",
+                  "{erg_bomb,$has_explosives}",
+                  "{erg_bomb_a,hammer,bow}",
+                  "{$hintable}"
+                ],
+                "visibility_rules": [
+                  "setting_skulltulas_all"
+                ],
+                "capture_item": true,
+                "chest_unopened_img": "images/skulltula.png",
+                "chest_opened_img": "images/skulltula_token.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 400,
+                "y": 490
+              }
+            ]
+          },
+          {
+            "name": "Castle Storms Grotto Gossip Stone",
+            "short_name": "HC Storms Gossip Stone",
+            "access_rules": [
+              "$hintable"
+            ],
+            "sections": [
+              {
+                "name": "Check it",
+                "access_rules": [
+                  "erg_bomb,$has_explosives",
+                  "erg_bomb_a,hammer"
+                ],
+                "chest_unopened_img": "images/gossip_stone.png",
+                "chest_opened_img": "images/gossip_stone.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 655,
+                "y": 490
+              }
+            ]
+          },
+          {
+            "name": "Field Near Lake Inside Fence Grotto",
+            "short_name": "Grotto Inside Fence",
+            "sections": [
+              {
+                "name": "Deku Scrub",
+                "access_rules": [
+                  "erg_1xbs,$can_stun_deku"
+                ],
+                "chest_unopened_img": "images/deku_scrub.png",
+                "chest_opened_img": "images/deku_scrub_grey.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 635,
+                "y": 165
+              }
+            ]
+          },
+          {
+            "name": "2× Business Scrubs Grottos",
+            "access_rules": [
+              "setting_scrub_shuffle_yes"
+            ],
+            "chest_unopened_img": "images/deku_scrub.png",
+            "chest_opened_img": "images/deku_scrub_grey.png",
+            "sections": [
+              {
+                "name": "Grotto 1",
+                "access_rules": [
+                  "erg_2xbs:1"
+                ],
+                "visibility_rules": [
+                  "setting_scrub_shuffle_yes"
+                ],
+                "item_count": 2
+              },
+              {
+                "name": "Grotto 2",
+                "access_rules": [
+                  "erg_2xbs:2"
+                ],
+                "visibility_rules": [
+                  "setting_scrub_shuffle_yes"
+                ],
+                "item_count": 2
+              },
+              {
+                "name": "Grotto 3",
+                "access_rules": [
+                  "erg_2xbs:3"
+                ],
+                "visibility_rules": [
+                  "setting_scrub_shuffle_yes"
+                ],
+                "item_count": 2
+              },
+              {
+                "name": "Grotto 4",
+                "access_rules": [
+                  "erg_2xbs:4"
+                ],
+                "visibility_rules": [
+                  "setting_scrub_shuffle_yes"
+                ],
+                "item_count": 2
+              },
+              {
+                "name": "Grotto 5",
+                "access_rules": [
+                  "erg_2xbs:5"
+                ],
+                "visibility_rules": [
+                  "setting_scrub_shuffle_yes"
+                ],
+                "item_count": 2
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 960,
+                "y": 170
+              }
+            ]
+          },
+          {
+            "name": "3× Business Scrubs Grottos",
+            "access_rules": [
+              "setting_scrub_shuffle_yes"
+            ],
+            "chest_unopened_img": "images/deku_scrub.png",
+            "chest_opened_img": "images/deku_scrub_grey.png",
+            "sections": [
+              {
+                "name": "Grotto 1",
+                "access_rules": [
+                  "erg_3xbs:1"
+                ],
+                "visibility_rules": [
+                  "setting_scrub_shuffle_yes"
+                ],
+                "item_count": 3
+              },
+              {
+                "name": "Grotto 2",
+                "access_rules": [
+                  "erg_3xbs:2"
+                ],
+                "visibility_rules": [
+                  "setting_scrub_shuffle_yes"
+                ],
+                "item_count": 3
+              },
+              {
+                "name": "Grotto 3",
+                "access_rules": [
+                  "erg_3xbs:3"
+                ],
+                "visibility_rules": [
+                  "setting_scrub_shuffle_yes"
+                ],
+                "item_count": 3
+              },
+              {
+                "name": "Grotto 4",
+                "access_rules": [
+                  "erg_3xbs:4"
+                ],
+                "visibility_rules": [
+                  "setting_scrub_shuffle_yes"
+                ],
+                "item_count": 3
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 1300,
+                "y": 185
+              }
+            ]
+          },
+          {
+            "name": "Chest Grottos Gossip Stones",
+            "access_rules": [
+              "$hintable"
+            ],
+            "chest_unopened_img": "images/gossip_stone.png",
+            "chest_opened_img": "images/gossip_stone.png",
+            "sections": [
+              {
+                "name": "Stone 1",
+                "access_rules": [
+                  "erg_chest:1"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Stone 2",
+                "access_rules": [
+                  "erg_chest:2"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Stone 3",
+                "access_rules": [
+                  "erg_chest:3"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Stone 4",
+                "access_rules": [
+                  "erg_chest:4"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Stone 5",
+                "access_rules": [
+                  "erg_chest:5"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Stone 6",
+                "access_rules": [
+                  "erg_chest:6"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Stone 7",
+                "access_rules": [
+                  "erg_chest:7"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Stone 8",
+                "access_rules": [
+                  "erg_chest:8"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Stone 9",
+                "access_rules": [
+                  "erg_chest:9"
+                ],
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 170,
+                "y": 195
+              }
+            ]
+          },
+          {
+            "name": "Chest Grottos",
+            "sections": [
+              {
+                "name": "Chest 1",
+                "access_rules": [
+                  "erg_chest:1"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Chest 2",
+                "access_rules": [
+                  "erg_chest:2"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Chest 3",
+                "access_rules": [
+                  "erg_chest:3"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Chest 4",
+                "access_rules": [
+                  "erg_chest:4"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Chest 5",
+                "access_rules": [
+                  "erg_chest:5"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Chest 6",
+                "access_rules": [
+                  "erg_chest:6"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Chest 7",
+                "access_rules": [
+                  "erg_chest:7"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Chest 8",
+                "access_rules": [
+                  "erg_chest:8"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Chest 9",
+                "access_rules": [
+                  "erg_chest:9"
+                ],
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "grottos",
+                "x": 260,
+                "y": 180
+              }
+            ]
+          }
+        ]
+    }
+  ]

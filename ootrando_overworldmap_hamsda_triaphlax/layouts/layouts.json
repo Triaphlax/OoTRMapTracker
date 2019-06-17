@@ -18,16 +18,25 @@
               "dock": "top",
               "content": {
                 "type": "layout",
-                "key": "item_grid_tall"
+                "key": "item_grid_wide"
               }
             },
             {
-              "type": "group",
-              "header": "Settings",
-              "content": {
-                "type": "layout",
-                "key": "options_tall"
-              }
+                "type": "group",
+                "header": "Entrances",
+                "dock": "top",
+                "content": {
+                  "type": "layout",
+                  "key": "entrance_grid_tall"
+                }
+            },
+            {
+                "type": "group",
+                "header": "Settings",
+                "content": {
+                  "type": "layout",
+                  "key": "options_wide"
+                }
             }
           ]
         },
@@ -78,12 +87,32 @@
                   }
                 },
                 {
-                  "title": "Gossip Stones",
-                  "icon": "images/gossip_stone.png",
+                  "title": "Grottos",
+                  "icon": "images/bomb.png",
                   "content": {
-                    "type": "map",
-                    "maps": [
-                      "gossips"
+                    "type": "tabbed",
+                    "dock": "top",
+                    "tabs": [
+                      {
+                        "title": "Regular",
+                        "icon": "images/bomb.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "grottos"
+                          ]
+                        }
+                      },
+                      {
+                        "title": "Graves",
+                        "icon": "images/spooky.png",
+                        "content": {
+                          "type": "map",
+                          "maps": [
+                            "graves"
+                          ]
+                        }
+                      }
                     ]
                   }
                 },
