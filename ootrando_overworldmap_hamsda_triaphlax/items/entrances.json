@@ -262,24 +262,9 @@
   },
   {
     "name": "Temple of Time",
-    "type": "progressive_toggle",
-    "loop": true,
-    "stages": [
-      {
-        "img": "images/eri/tot.png",
-        "codes": "eri_tot,eri_tot_c,eri_tot_a"
-      },
-      {
-        "img": "images/eri/tot.png",
-        "img_mods": "overlay|images/er_child.png",
-        "codes": "eri_tot,eri_tot_c"
-      },
-      {
-        "img": "images/eri/tot.png",
-        "img_mods": "overlay|images/er_adult.png",
-        "codes": "eri_tot,eri_tot_a"
-      }
-    ]
+    "type": "toggle",
+    "img": "images/eri/tot.png",
+    "codes": "eri_tot"
   },
   {
     "name": "Mido House",

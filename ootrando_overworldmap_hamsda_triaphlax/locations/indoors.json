@@ -5,6 +5,988 @@
     "color": "#7C5A2F",
     "children": [
       {
+        "name": "Kokiri Shop",
+        "access_rules": [
+          "setting_shopsanity_yes,eri_koksh"
+        ],
+        "sections": [
+          {
+            "name": "Item 1",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 2",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 3",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 4",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "visibility_rules": [
+              "setting_shopsanity_yes"
+            ],
+            "x": 955,
+            "y": 150
+          }
+        ]
+      },
+      {
+        "name": "Child Bazaar",
+        "access_rules": [
+          "setting_shopsanity_yes,eri_chbaz"
+        ],
+        "sections": [
+          {
+            "name": "Item 1",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 2",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 3",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 4",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "visibility_rules": [
+              "setting_shopsanity_yes"
+            ],
+            "x": 1337,
+            "y": 155
+          }
+        ]
+      },
+      {
+        "name": "Child Potion Shop",
+        "access_rules": [
+          "setting_shopsanity_yes,eri_chpot"
+        ],
+        "sections": [
+          {
+            "name": "Item 1",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 2",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 3",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 4",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "visibility_rules": [
+              "setting_shopsanity_yes"
+            ],
+            "x": 1770,
+            "y": 160
+          }
+        ]
+      },
+      {
+        "name": "Bombchu Shop",
+        "access_rules": [
+          "setting_shopsanity_yes,eri_chush"
+        ],
+        "sections": [
+          {
+            "name": "Item 1",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 2",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 3",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 4",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "visibility_rules": [
+              "setting_shopsanity_yes"
+            ],
+            "x": 2145,
+            "y": 145
+          }
+        ]
+      },
+      {
+        "name": "Adult Bazaar",
+        "access_rules": [
+          "setting_shopsanity_yes,eri_adbaz"
+        ],
+        "sections": [
+          {
+            "name": "Item 1",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 2",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 3",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 4",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "visibility_rules": [
+              "setting_shopsanity_yes"
+            ],
+            "x": 950,
+            "y": 500
+          }
+        ]
+      },
+      {
+        "name": "Goron Shop",
+        "access_rules": [
+          "setting_shopsanity_yes,eri_gorsh"
+        ],
+        "sections": [
+          {
+            "name": "Item 1",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 2",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 3",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 4",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "visibility_rules": [
+              "setting_shopsanity_yes"
+            ],
+            "x": 1725,
+            "y": 475
+          }
+        ]
+      },
+      {
+        "name": "Zora Shop",
+        "access_rules": [
+          "setting_shopsanity_yes,eri_zorsh"
+        ],
+        "sections": [
+          {
+            "name": "Item 1",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 2",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 3",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 4",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "visibility_rules": [
+              "setting_shopsanity_yes"
+            ],
+            "x": 2160,
+            "y": 490
+          }
+        ]
+      },
+      {
+        "name": "Mido House",
+        "access_rules": [
+          "eri_mido"
+        ],
+        "sections": [
+          {
+            "name": "Mido Chests",
+            "item_count": 4
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 570,
+            "y": 170
+          }
+        ]
+      },
+      {
+        "name": "Links House",
+        "sections": [
+          {
+            "name": "Links House Cow",
+            "short_name": "Cow",
+            "access_rules": [
+              "sword2,ocarina,epona,setting_cowsanity_yes,eri_link_a"
+            ],
+            "visibility_rules": [
+              "setting_cowsanity_yes"
+            ],
+            "chest_unopened_img": "images/cow.png",
+            "chest_opened_img": "images/bottle_milk.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 115,
+            "y": 215
+          }
+        ]
+      },
+      {
+        "name": "Happy Mask Shop",
+        "sections": [
+          {
+            "name": "Get Mask",
+            "access_rules": [
+              "soldout","eri_hms"
+            ],
+            "hosted_item": "keaton"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 200,
+            "y": 535
+          }
+        ]
+      },
+      {
+        "name": "Impa House",
+        "sections": [
+          {
+            "name": "Freestanding PoH",
+            "short_name": "HP",
+            "access_rules": [
+              "eri_cageb",
+              "{eri_cagef}"
+            ],
+            "chest_unopened_img": "images/HP.png",
+            "chest_opened_img": "images/HP_grey.png",
+            "item_count": 1
+          },
+          {
+            "name": "Impas House Cow",
+            "short_name": "Cow",
+            "access_rules": [
+              "eri_cageb,ocarina,epona,setting_cowsanity_yes"
+            ],
+            "visibility_rules": [
+              "setting_cowsanity_yes"
+            ],
+            "chest_unopened_img": "images/cow.png",
+            "chest_opened_img": "images/bottle_milk.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1265,
+            "y": 515
+          }
+        ]
+      },
+      {
+        "name": "House of Skulltula",
+        "access_rules": [
+          "eri_hos"
+        ],
+        "sections": [
+          {
+            "name": "10 Skulltulas",
+            "access_rules": [
+              "skulltula:10"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1065,
+            "y": 1490
+          }
+        ]
+      },
+      {
+        "name": "House of Skulltula",
+        "access_rules": [
+          "eri_hos"
+        ],
+        "sections": [
+          {
+            "name": "20 Skulltulas",
+            "access_rules": [
+              "skulltula:20",
+              "{$hintable}"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1200,
+            "y": 1440
+          }
+        ]
+      },
+      {
+        "name": "House of Skulltula",
+        "access_rules": [
+          "eri_hos"
+        ],
+        "sections": [
+          {
+            "name": "30 Skulltulas",
+            "access_rules": [
+              "skulltula:30",
+              "{$hintable}"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1015,
+            "y": 1425
+          }
+        ]
+      },
+      {
+        "name": "House of Skulltula",
+        "access_rules": [
+          "eri_hos"
+        ],
+        "sections": [
+          {
+            "name": "40 Skulltulas",
+            "access_rules": [
+              "skulltula:40",
+              "{$hintable}"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 958,
+            "y": 1460
+          }
+        ]
+      },
+      {
+        "name": "House of Skulltula",
+        "access_rules": [
+          "eri_hos"
+        ],
+        "sections": [
+          {
+            "name": "50 Skulltulas",
+            "access_rules": [
+              "skulltula:50",
+              "{$hintable}"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1120,
+            "y": 1410
+          }
+        ]
+      },
+      {
+        "name": "Fairy Fountains",
+        "access_rules": [
+          "ocarina,lullaby"
+        ],
+        "sections": [
+          {
+            "name": "Fairy Fountain 1",
+            "access_rules": [
+              "eri_ff:1"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Fairy Fountain 2",
+            "access_rules": [
+              "eri_ff:2"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Fairy Fountain 3",
+            "access_rules": [
+              "eri_ff:3"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Fairy Fountain 4",
+            "access_rules": [
+              "eri_ff:4"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Fairy Fountain 5",
+            "access_rules": [
+              "eri_ff:5"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Fairy Fountain 6",
+            "access_rules": [
+              "eri_ff:6"
+            ],
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 2120,
+            "y": 1780
+          }
+        ]
+      },
+      {
+        "name": "Child Shooting Gallery",
+        "access_rules": [
+          "eri_chsg_c"
+        ],
+        "sections": [
+          {
+            "name": "Shoot 'em",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 320,
+            "y": 1445
+          }
+        ]
+      },
+      {
+        "name": "Adult Shooting Gallery",
+        "sections": [
+          {
+            "name": "Shoot 'em",
+            "access_rules": [
+              "eri_adsg_a,sword2,bow",
+              "{$hintable}"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 305,
+            "y": 1830
+          }
+        ]
+      },
+      {
+        "name": "Bombchu Bowling",
+        "access_rules": [
+          "eri_bowl,$has_bombchus",
+          "{$hintable}"
+        ],
+        "sections": [
+          {
+            "name": "1st round",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "2nd round",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1850,
+            "y": 1065
+          }
+        ]
+      },
+      {
+        "name": "Castle Market Guard House",
+        "short_name": "Guardhouse",
+        "access_rules": [
+          "setting_skulltulas_all, eri_guard_c"
+        ],
+        "sections": [
+          {
+            "name": "GS14",
+            "visibility_rules": [
+              "setting_skulltulas_all"
+            ],
+            "chest_unopened_img": "images/skulltula.png",
+            "chest_opened_img": "images/skulltula_token.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 845,
+            "y": 1815
+          }
+        ]
+      },
+      {
+        "name": "Big Poes",
+        "sections": [
+          {
+            "name": "Happy Hunting",
+            "access_rules": [
+              "eri_guard_a,sword2,bow,[ocarina],[epona],$has_bottle",
+              "{$hintable}"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1130,
+            "y": 1830
+          }
+        ]
+      },
+      {
+        "name": "Windmill",
+        "sections": [
+          {
+            "name": "Freestanding PoH",
+            "short_name": "HP",
+            "access_rules": [
+              "erg_dampe_a,sword2,ocarina,time",
+              "eri_mill_a,sword2,[ocarina],[time],[erg_dampe_a]",
+              "eri_mill_c,boomerang",
+              "{eri_mill}"
+            ],
+            "capture_item": true,
+            "chest_unopened_img": "images/HP.png",
+            "chest_opened_img": "images/HP_grey.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1535,
+            "y": 1425
+          }
+        ]
+      },
+      {
+        "name": "Song at Windmill",
+        "short_name": "Guru-Guru",
+        "sections": [
+          {
+            "name": "Song",
+            "access_rules": [
+              "eri_mill_a,sword2,ocarina",
+              "erg_dampe_a,sword2,ocarina",
+              "{$hintable}"
+            ],
+            "capture_item": true,
+            "chest_unopened_img": "images/grey_note.png",
+            "chest_opened_img": "images/grey_note_check.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1690,
+            "y": 1520
+          }
+        ]
+      },
+      {
+        "name": "Talon House",
+        "sections": [
+          {
+            "name": "Talons Chickens",
+            "access_rules": [
+              "eri_cucco_c,postzelda"
+            ],
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 245,
+            "y": 1030
+          }
+        ]
+      },
+      {
+        "name": "Corner Tower PoH",
+        "sections": [
+          {
+            "name": "Freestanding PoH",
+            "short_name": "HP",
+            "access_rules": [
+              "eri_tower_c"
+            ],
+            "chest_unopened_img": "images/HP.png",
+            "chest_opened_img": "images/HP_grey.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1240,
+            "y": 1070
+          }
+        ]
+      },
+      {
+        "name": "Corner Tower Cows",
+        "sections": [
+          {
+            "name": "Cows",
+            "short_name": "Cows",
+            "access_rules": [
+              "eri_tower,ocarina,epona,setting_cowsanity_yes"
+            ],
+            "visibility_rules": [
+              "setting_cowsanity_yes"
+            ],
+            "chest_unopened_img": "images/cow.png",
+            "chest_opened_img": "images/bottle_milk.png",
+            "item_count": 2
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1420,
+            "y": 1080
+          }
+        ]
+      },
+      {
+        "name": "Lon Lon Ranch Stables",
+        "sections": [
+          {
+            "name": "Cows",
+            "access_rules": [
+              "eri_stable,ocarina,epona,setting_cowsanity_yes"
+            ],
+            "visibility_rules": [
+              "setting_cowsanity_yes"
+            ],
+            "chest_unopened_img": "images/cow.png",
+            "chest_opened_img": "images/bottle_milk.png",
+            "item_count": 2
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 890,
+            "y": 1105
+          }
+        ]
+      },
+      {
+        "name": "Fishing Hole",
+        "sections": [
+          {
+            "name": "Child Fishing",
+            "access_rules": [
+              "eri_fishing_c"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Adult Fishing",
+            "access_rules": [
+              "eri_fishing_a, sword2"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors2",
+            "x": 1090,
+            "y": 535
+          }
+        ]
+      },
+      {
+        "name": "Lake Hylia Lab",
+        "short_name": "Lakeside Lab",
+        "sections": [
+          {
+            "name": "Diving in the Lab",
+            "short_name": "Dive down",
+            "access_rules": [
+              "eri_lab,scale2",
+              "eri_lab_a,sword2,hookshot,ironboots,[scale2]"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Trade",
+            "access_rules": [
+              "eri_lab_a,sword2,speedfrog"
+            ],
+            "hosted_item": "eyedrops"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors2",
+            "x": 190,
+            "y": 415
+          }
+        ]
+      },
+      {
+        "name": "Lab Underwater Crate",
+        "short_name": "Lab Crate",
+        "access_rules": [
+          "setting_skulltulas_all, eri_lab_a"
+        ],
+        "sections": [
+          {
+            "name": "GS59",
+            "access_rules": [
+              "sword2,ironboots,hookshot"
+            ],
+            "visibility_rules": [
+              "setting_skulltulas_all"
+            ],
+            "chest_unopened_img": "images/skulltula.png",
+            "chest_opened_img": "images/skulltula_token.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors2",
+            "x": 190,
+            "y": 520
+          }
+        ]
+      },
+      {
+        "name": "Treasure Chest Game",
+        "sections": [
+          {
+            "name": "Cheater",
+            "access_rules": [
+              "eri_tcg,[lens],[magic]",
+              "{$hintable}"
+            ],
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors2",
+            "x": 180,
+            "y": 1035
+          }
+        ]
+      },
+      {
+        "name": "Temple of Time Prelude of Light",
+        "sections": [
+          {
+            "name": "Sheik at Temple",
+            "access_rules": [
+              "eri_tot,sword2,forestmed",
+              "{$hintable}"
+            ],
+            "capture_item": true,
+            "chest_unopened_img": "images/grey_note.png",
+            "chest_opened_img": "images/grey_note_check.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors2",
+            "x": 1815,
+            "y": 1185
+          }
+        ]
+      },
+      {
+        "name": "Temple of Time Light Arrows",
+        "sections": [
+          {
+            "name": "Zelda",
+            "access_rules": [
+              "eri_tot,sword2,lacs_meds:2"
+            ],
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors2",
+            "x": 1315,
+            "y": 1370
+          }
+        ]
+      },
+      {
+        "name": "Door of Time",
+        "access_rules": [
+          "eri_tot"
+        ],
+        "sections": [
+          {
+            "name": "Open Sesame",
+            "access_rules": [
+              "open_door",
+              "ocarina,time"
+            ],
+            "hosted_item": "sword2"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors2",
+            "x": 1960,
+            "y": 1110
+          }
+        ]
+      },
+      {
+        "name": "Old Hag",
+        "sections": [
+          {
+            "name": "Trade",
+            "access_rules": [
+              "eri_witch_a,sword2,mushroom"
+            ],
+            "hosted_item": "oddpotion"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 660,
+            "y": 1435
+          }
+        ]
       }
     ]
   }

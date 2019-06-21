@@ -44,6 +44,7 @@ else
 
   Tracker:AddLocations("locations/overworld.json")
   Tracker:AddLocations("locations/grottos.json")
+  Tracker:AddLocations("locations/indoors.json")
   Tracker:AddLocations("locations/dung_reg.json")
   Tracker:AddLocations("locations/dung_reg_keys.json")
   --Tracker:AddLocations("locations/dung_mq.json")

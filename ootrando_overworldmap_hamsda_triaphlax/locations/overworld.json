@@ -2330,7 +2330,7 @@
                   {
                     "name": "Trade",
                     "access_rules": [
-                      "sword2,pocketcucco"
+                      "eri_talon_a,sword2,pocketcucco"
                     ],
                     "hosted_item": "cojiro"
                   }
@@ -3675,7 +3675,7 @@
                         "y": 126
                       }
                     ]
-                  },
+                  }
                 ]
               },
               {
@@ -4510,7 +4510,7 @@
                         "y": 216
                       }
                     ]
-                  },
+                  }
                 ]
               },
               {
