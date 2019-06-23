@@ -18,16 +18,28 @@
     "img": "images/erg/map_grottos.png"
   },
   {
+    "name": "grottos",
+    "location_size": 35,
+    "location_border_thickness": 5,
+    "img": "images/erg/map_grottos.png"
+  },
+  {
     "name": "graves",
     "location_size": 35,
     "location_border_thickness": 5,
     "img": "images/erg/map_graves.png"
   },
   {
-    "name": "grottos",
+    "name": "indoors1",
     "location_size": 35,
     "location_border_thickness": 5,
-    "img": "images/erg/map_grottos.png"
+    "img": "images/eri/map_indoors1.png"
+  },
+  {
+    "name": "indoors2",
+    "location_size": 35,
+    "location_border_thickness": 5,
+    "img": "images/eri/map_indoors2.png"
   },
   {
     "name": "dekutree",

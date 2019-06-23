@@ -126,6 +126,223 @@
             "margin": "1,2",
             "width": 32,
             "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_hos",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "5,0",
+        "content": [
+          {
+            "type": "item",
+            "item": "eri_link",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_tot",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_mido",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_koksh",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_cucco",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_stable",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_tower",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_lab",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_fishing",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "5,0",
+        "content": [
+          {
+            "type": "item",
+            "item": "eri_chbaz",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_chsg",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_guard",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_hms",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_bowl",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_chpot",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_tcg",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_chush",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_ff",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "5,0",
+        "content": [
+          {
+            "type": "item",
+            "item": "eri_adbaz",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_adsg",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_talon",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_cagef",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_cageb",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_witch",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_mill",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_gorsh",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_zorsh",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
           }
         ]
       }

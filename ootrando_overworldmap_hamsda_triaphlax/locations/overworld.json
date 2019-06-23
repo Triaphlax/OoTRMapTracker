@@ -30,11 +30,13 @@
                 ]
               },
               {
-                "name": "Mido House",
+                "name": "Mido House Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Mido Chests",
-                    "item_count": 4
+                    "name": "CHILD & ADULT",
+                    "item_count": 1
                   }
                 ],
                 "map_locations": [
@@ -78,69 +80,44 @@
                 ]
               },
               {
-                "name": "Kokiri Shop",
-                "access_rules": [
-                  "setting_shopsanity_yes"
-                ],
+                "name": "Kokiri Shop Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Item 1",
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Item 2",
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Item 3",
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Item 4",
-                    "capture_item": true,
+                    "name": "CHILD & ADULT",
                     "item_count": 1
                   }
                 ],
                 "map_locations": [
                   {
                     "map": "child",
-                    "visibility_rules": [
-                      "setting_shopsanity_yes"
-                    ],
                     "x": 2220,
                     "y": 917
                   },
                   {
                     "map": "adult",
-                    "visibility_rules": [
-                      "setting_shopsanity_yes"
-                    ],
                     "x": 2220,
                     "y": 917
                   }
                 ]
               },
               {
-                "name": "Links House",
+                "name": "Links House Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Links House Cow",
-                    "short_name": "Cow",
-                    "access_rules": [
-                      "sword2,ocarina,epona,setting_cowsanity_yes"
-                    ],
-                    "visibility_rules": [
-                      "setting_cowsanity_yes"
-                    ],
-                    "chest_unopened_img": "images/cow.png",
-                    "chest_opened_img": "images/bottle_milk.png",
+                    "name": "CHILD & ADULT",
                     "item_count": 1
                   }
                 ],
                 "map_locations": [
+                  {
+                    "map": "child",
+                    "x": 2175,
+                    "y": 1000
+                  },
                   {
                     "map": "adult",
                     "x": 2175,
@@ -173,6 +150,75 @@
                     "map": "child",
                     "x": 2055,
                     "y": 958
+                  }
+                ]
+              },
+              {
+                "name": "Know It All House Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "sections": [
+                  {
+                    "name": "CHILD & ADULT",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "x": 2085,
+                    "y": 958
+                  },
+                  {
+                    "map": "adult",
+                    "x": 2085,
+                    "y": 958
+                  }
+                ]
+              },
+              {
+                "name": "Saria House Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "sections": [
+                  {
+                    "name": "CHILD & ADULT",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "x": 2220,
+                    "y": 985
+                  },
+                  {
+                    "map": "adult",
+                    "x": 2220,
+                    "y": 985
+                  }
+                ]
+              },
+              {
+                "name": "House of Twins Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "sections": [
+                  {
+                    "name": "CHILD & ADULT",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "x": 2265,
+                    "y": 975
+                  },
+                  {
+                    "map": "adult",
+                    "x": 2265,
+                    "y": 975
                   }
                 ]
               },
@@ -1416,11 +1462,22 @@
                     ]
                   },
                   {
-                    "name": "Child Fishing",
+                    "name": "Fishing Hole Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Bite pls",
-                        "capture_item": true,
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2,ocarina,[scarecrow],hookshot",
+                          "sword2,water",
+                          "sword2,setting_plant_no,beans",
+                          "sword2,bean_lake_yes"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -1429,28 +1486,15 @@
                         "map": "child",
                         "x": 1270,
                         "y": 1215
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Adult Fishing",
-                    "sections": [
+                      },
                       {
-                        "name": "Bite pls",
-                        "access_rules": [
+                        "map": "adult",
+                        "visibility_rules": [
                           "sword2,ocarina,[scarecrow],hookshot",
                           "sword2,water",
                           "sword2,setting_plant_no,beans",
-                          "sword2,bean_lake_yes",
-                          "{$hintable}"
+                          "sword2,bean_lake_yes"
                         ],
-                        "capture_item": true,
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "adult",
                         "x": 1270,
                         "y": 1215
                       }
@@ -1505,32 +1549,19 @@
                     ]
                   },
                   {
-                    "name": "Lake Hylia Lab",
+                    "name": "Lake Hylia Lab Entrance",
                     "short_name": "Lakeside Lab",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Diving in the Lab",
-                        "short_name": "Dive down",
-                        "access_rules": [
-                          "scale2",
-                          "sword2,hookshot,ironboots,[scale2]"
-                        ],
+                        "name": "CHILD & ADULT",
                         "item_count": 1
-                      },
-                      {
-                        "name": "Trade",
-                        "access_rules": [
-                          "sword2,speedfrog"
-                        ],
-                        "hosted_item": "eyedrops"
                       }
                     ],
                     "map_locations": [
                       {
                         "map": "child",
-                        "visibility_rules": [
-                          "scale2"
-                        ],
                         "x": 961,
                         "y": 1200
                       },
@@ -1721,34 +1752,6 @@
                     ]
                   },
                   {
-                    "name": "Lab Underwater Crate",
-                    "short_name": "Lab Crate",
-                    "access_rules": [
-                      "setting_skulltulas_all"
-                    ],
-                    "sections": [
-                      {
-                        "name": "GS59",
-                        "access_rules": [
-                          "sword2,ironboots,hookshot"
-                        ],
-                        "visibility_rules": [
-                          "setting_skulltulas_all"
-                        ],
-                        "chest_unopened_img": "images/skulltula.png",
-                        "chest_opened_img": "images/skulltula_token.png",
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "adult",
-                        "x": 959,
-                        "y": 1229
-                      }
-                    ]
-                  },
-                  {
                     "name": "Lake Hylia Lab Gossip Stone",
                     "short_name": "LH Lab Gossip Stone",
                     "access_rules": [
@@ -1858,13 +1861,12 @@
                     ]
                   },
                   {
-                    "name": "Talon House",
+                    "name": "Talon House Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Talons Chickens",
-                        "access_rules": [
-                          "postzelda"
-                        ],
+                        "name": "CHILD & ADULT",
                         "item_count": 1
                       }
                     ],
@@ -1877,27 +1879,13 @@
                     ]
                   },
                   {
-                    "name": "Corner Tower",
+                    "name": "Corner Tower Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Freestanding PoH",
-                        "short_name": "HP",
-                        "chest_unopened_img": "images/HP.png",
-                        "chest_opened_img": "images/HP_grey.png",
+                        "name": "CHILD & ADULT",
                         "item_count": 1
-                      },
-                      {
-                        "name": "LLR Tower Cows",
-                        "short_name": "Cows",
-                        "access_rules": [
-                          "ocarina,epona,setting_cowsanity_yes"
-                        ],
-                        "visibility_rules": [
-                          "setting_cowsanity_yes"
-                        ],
-                        "chest_unopened_img": "images/cow.png",
-                        "chest_opened_img": "images/bottle_milk.png",
-                        "item_count": 2
                       }
                     ],
                     "map_locations": [
@@ -1909,21 +1897,13 @@
                     ]
                   },
                   {
-                    "name": "Ingo Barn",
-                    "short_name": "Stables",
+                    "name": "Ingo Barn Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "LLR Stables Cows",
-                        "short_name": "Cows",
-                        "access_rules": [
-                          "ocarina,epona,setting_cowsanity_yes"
-                        ],
-                        "visibility_rules": [
-                          "setting_cowsanity_yes"
-                        ],
-                        "chest_unopened_img": "images/cow.png",
-                        "chest_opened_img": "images/bottle_milk.png",
-                        "item_count": 2
+                        "name": "CHILD & ADULT",
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
@@ -2105,7 +2085,7 @@
                     "visibility_rules": [
                       "$has_explosives"
                     ],
-                    "x": 1787,
+                    "x": 1767,
                     "y": 381
                   },
                   {
@@ -2113,7 +2093,7 @@
                     "visibility_rules": [
                       "sword2,$can_blast"
                     ],
-                    "x": 1787,
+                    "x": 1767,
                     "y": 381
                   }
                 ]
@@ -2143,26 +2123,35 @@
                 ]
               },
               {
-                "name": "Impa House",
+                "name": "Impa House Front Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Freestanding PoH",
-                    "short_name": "HP",
-                    "chest_unopened_img": "images/HP.png",
-                    "chest_opened_img": "images/HP_grey.png",
+                    "name": "CHILD & ADULT",
                     "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "x": 1792,
+                    "y": 431
                   },
                   {
-                    "name": "Impas House Cow",
-                    "short_name": "Cow",
-                    "access_rules": [
-                      "ocarina,epona,setting_cowsanity_yes"
-                    ],
-                    "visibility_rules": [
-                      "setting_cowsanity_yes"
-                    ],
-                    "chest_unopened_img": "images/cow.png",
-                    "chest_opened_img": "images/bottle_milk.png",
+                    "map": "adult",
+                    "x": 1792,
+                    "y": 431
+                  }
+                ]
+              },
+              {
+                "name": "Impa House Back Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "sections": [
+                  {
+                    "name": "CHILD & ADULT",
                     "item_count": 1
                   }
                 ],
@@ -2176,6 +2165,29 @@
                     "map": "adult",
                     "x": 1827,
                     "y": 431
+                  }
+                ]
+              },
+              {
+                "name": "Carpenter Boss House Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "sections": [
+                  {
+                    "name": "CHILD & ADULT",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "x": 1795,
+                    "y": 371
+                  },
+                  {
+                    "map": "adult",
+                    "x": 1795,
+                    "y": 371
                   }
                 ]
               },
@@ -2204,15 +2216,12 @@
                 ]
               },
               {
-                "name": "Kakariko Shooting Gallery",
+                "name": "Kakariko Shooting Gallery Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Adult Shooting Gallery",
-                    "access_rules": [
-                      "sword2,bow",
-                      "{$hintable}"
-                    ],
-                    "capture_item": true,
+                    "name": "ADULT",
                     "item_count": 1
                   }
                 ],
@@ -2225,19 +2234,12 @@
                 ]
               },
               {
-                "name": "Windmill",
+                "name": "Windmill Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Freestanding PoH",
-                    "short_name": "HP",
-                    "access_rules": [
-                      "sword2,[ocarina],[time]",
-                      "boomerang",
-                      "{}"
-                    ],
-                    "capture_item": true,
-                    "chest_unopened_img": "images/HP.png",
-                    "chest_opened_img": "images/HP_grey.png",
+                    "name": "CHILD & ADULT",
                     "item_count": 1
                   }
                 ],
@@ -2251,30 +2253,6 @@
                     "map": "adult",
                     "x": 1935,
                     "y": 346
-                  }
-                ]
-              },
-              {
-                "name": "Song at Windmill",
-                "short_name": "Guru-Guru",
-                "sections": [
-                  {
-                    "name": "Song",
-                    "access_rules": [
-                      "sword2,ocarina",
-                      "{$hintable}"
-                    ],
-                    "capture_item": true,
-                    "chest_unopened_img": "images/grey_note.png",
-                    "chest_opened_img": "images/grey_note_check.png",
-                    "item_count": 1
-                  }
-                ],
-                "map_locations": [
-                  {
-                    "map": "adult",
-                    "x": 1945,
-                    "y": 376
                   }
                 ]
               },
@@ -2330,7 +2308,7 @@
                   {
                     "name": "Trade",
                     "access_rules": [
-                      "sword2,pocketcucco"
+                      "eri_talon_a,sword2,pocketcucco"
                     ],
                     "hosted_item": "cojiro"
                   }
@@ -2370,14 +2348,13 @@
                 ]
               },
               {
-                "name": "Old Hag",
+                "name": "Odd Medicine Building Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Trade",
-                    "access_rules": [
-                      "sword2,mushroom"
-                    ],
-                    "hosted_item": "oddpotion"
+                    "name": "ADULT",
+                    "item_count": 1
                   }
                 ],
                 "map_locations": [
@@ -2389,49 +2366,12 @@
                 ]
               },
               {
-                "name": "House of Skulltula",
+                "name": "House of Skulltula Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "10 Skulltulas",
-                    "access_rules": [
-                      "skulltula:10"
-                    ],
-                    "item_count": 1
-                  },
-                  {
-                    "name": "20 Skulltulas",
-                    "access_rules": [
-                      "skulltula:20",
-                      "{$hintable}"
-                    ],
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "30 Skulltulas",
-                    "access_rules": [
-                      "skulltula:30",
-                      "{$hintable}"
-                    ],
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "40 Skulltulas",
-                    "access_rules": [
-                      "skulltula:40",
-                      "{$hintable}"
-                    ],
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "50 Skulltulas",
-                    "access_rules": [
-                      "skulltula:50",
-                      "{$hintable}"
-                    ],
-                    "capture_item": true,
+                    "name": "CHILD & ADULT",
                     "item_count": 1
                   }
                 ],
@@ -2439,12 +2379,12 @@
                   {
                     "map": "child",
                     "x": 1797,
-                    "y": 418
+                    "y": 398
                   },
                   {
                     "map": "adult",
                     "x": 1797,
-                    "y": 418
+                    "y": 398
                   }
                 ]
               },
@@ -2487,40 +2427,20 @@
                 ]
               },
               {
-                "name": "Kakariko Bazaar",
-                "access_rules": [
-                  "setting_shopsanity_yes,sword2"
-                ],
+                "name": "Kakariko Bazaar Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Item 1",
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Item 2",
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Item 3",
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Item 4",
-                    "capture_item": true,
+                    "name": "ADULT",
                     "item_count": 1
                   }
                 ],
                 "map_locations": [
                   {
                     "map": "adult",
-                    "visibility_rules": [
-                      "setting_shopsanity_yes"
-                    ],
                     "x": 1780,
-                    "y": 347
+                    "y": 340
                   }
                 ]
               },
@@ -2847,6 +2767,29 @@
                     "map_locations": [
                       {
                         "map": "child",
+                        "x": 2000,
+                        "y": 407
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Dampé's Hut Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "sections": [
+                      {
+                        "name": "CHILD & ADULT",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "child",
+                        "x": 2000,
+                        "y": 372
+                      },
+                      {
+                        "map": "adult",
                         "x": 2000,
                         "y": 372
                       }
@@ -3187,34 +3130,28 @@
                     ]
                   },
                   {
-                    "name": "Goron Shop",
-                    "access_rules": [
-                      "setting_shopsanity_yes,$has_explosives",
-                      "setting_shopsanity_yes,lift1",
-                      "setting_shopsanity_yes,sword2,bow",
-                      "setting_shopsanity_yes,dinsfire,magic",
-                      "setting_shopsanity_yes,ocarina,lullaby,sticks,postzelda",
-                      "setting_shopsanity_yes,ocarina,lullaby,sticks,sword2,hammer"
-                    ],
+                    "name": "Goron Shop Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Item 1",
-                        "capture_item": true,
+                        "name": "CHILD",
+                        "access_rules": [
+                          "$has_explosives",
+                          "lift1",
+                          "dinsfire,magic",
+                          "ocarina,lullaby,sticks,postzelda",
+                          "ocarina,lullaby,sticks,sword2,hammer"
+                        ],
                         "item_count": 1
                       },
                       {
-                        "name": "Item 2",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 3",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 4",
-                        "capture_item": true,
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2,$has_explosives",
+                          "sword2,lift1",
+                          "sword2,bow"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -3222,7 +3159,11 @@
                       {
                         "map": "child",
                         "visibility_rules": [
-                          "setting_shopsanity_yes"
+                          "$has_explosives",
+                          "lift1",
+                          "dinsfire,magic",
+                          "ocarina,lullaby,sticks,postzelda",
+                          "ocarina,lullaby,sticks,sword2,hammer"
                         ],
                         "x": 1646,
                         "y": 128
@@ -3230,7 +3171,9 @@
                       {
                         "map": "adult",
                         "visibility_rules": [
-                          "setting_shopsanity_yes"
+                          "sword2,$has_explosives",
+                          "sword2,lift1",
+                          "sword2,bow"
                         ],
                         "x": 1646,
                         "y": 128
@@ -3409,12 +3352,21 @@
                     ]
                   },
                   {
-                    "name": "Mountain Summit Fairy",
+                    "name": "Mountain Summit Fairy Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Fairy Fountain",
+                        "name": "CHILD",
                         "access_rules": [
-                          "ocarina,lullaby,$can_blast"
+                          "$has_explosives"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2,$can_blast"
                         ],
                         "item_count": 1
                       }
@@ -3430,6 +3382,9 @@
                       },
                       {
                         "map": "adult",
+                        "visibility_rules": [
+                          "sword2,$can_blast"
+                        ],
                         "x": 1764,
                         "y": 66
                       }
@@ -3675,7 +3630,7 @@
                         "y": 126
                       }
                     ]
-                  },
+                  }
                 ]
               },
               {
@@ -3790,20 +3745,15 @@
                     ]
                   },
                   {
-                    "name": "Crater Fairy",
+                    "name": "Crater Fairy Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "access_rules": [
-                      "ocarina,lullaby,sword2,hammer"
+                      "hammer"
                     ],
                     "sections": [
                       {
-                        "name": "Fairy Fountain",
-                        "access_rules": [
-                          "$link_the_goron",
-                          "ocarina,bolero,hookshot",
-                          "ocarina,bolero,setting_plant_no,beans",
-                          "ocarina,bolero,bean_crater_yes",
-                          "hoverboots"
-                        ],
+                        "name": "ADULT",
                         "item_count": 1
                       }
                     ],
@@ -4011,11 +3961,13 @@
                     ]
                   },
                   {
-                    "name": "Castle Town Shooting Gallery",
+                    "name": "Castle Town Shooting Gallery Entrance",
                     "short_name": "Market Shooting Gallery",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Child Shooting Gallery",
+                        "name": "CHILD",
                         "item_count": 1
                       }
                     ],
@@ -4028,14 +3980,13 @@
                     ]
                   },
                   {
-                    "name": "Mask Shop",
+                    "name": "Happy Mask Shop Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Get Mask",
-                        "access_rules": [
-                          "soldout"
-                        ],
-                        "hosted_item": "keaton"
+                        "name": "CHILD",
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
@@ -4047,20 +3998,12 @@
                     ]
                   },
                   {
-                    "name": "Bombchu Bowling",
-                    "access_rules": [
-                      "$has_bombchus",
-                      "{$hintable}"
-                    ],
+                    "name": "Bombchu Bowling Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "1st round",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "2nd round",
-                        "capture_item": true,
+                        "name": "CHILD",
                         "item_count": 1
                       }
                     ],
@@ -4073,15 +4016,12 @@
                     ]
                   },
                   {
-                    "name": "Treasure Chest Game",
+                    "name": "Treasure Chest Game Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Cheater",
-                        "access_rules": [
-                          "[lens],[magic]",
-                          "{$hintable}"
-                        ],
-                        "capture_item": true,
+                        "name": "CHILD",
                         "item_count": 1
                       }
                     ],
@@ -4094,131 +4034,87 @@
                     ]
                   },
                   {
-                    "name": "Bombchu Shop",
-                    "access_rules": [
-                      "setting_shopsanity_yes"
-                    ],
+                    "name": "Man in Green House Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Item 1",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 2",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 3",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 4",
-                        "capture_item": true,
+                        "name": "CHILD",
                         "item_count": 1
                       }
                     ],
                     "map_locations": [
                       {
                         "map": "child",
-                        "visibility_rules": [
-                          "setting_shopsanity_yes"
-                        ],
+                        "x": 1393,
+                        "y": 279
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Bombchu Shop Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "sections": [
+                      {
+                        "name": "CHILD",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "child",
                         "x": 1386,
                         "y": 360
                       }
                     ]
                   },
                   {
-                    "name": "Castle Town Potion Shop",
+                    "name": "Castle Town Potion Shop Entrance",
                     "short_name": "Market Potion Shop",
-                    "access_rules": [
-                      "setting_shopsanity_yes"
-                    ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Item 1",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 2",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 3",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 4",
-                        "capture_item": true,
+                        "name": "CHILD",
                         "item_count": 1
                       }
                     ],
                     "map_locations": [
                       {
                         "map": "child",
-                        "visibility_rules": [
-                          "setting_shopsanity_yes"
-                        ],
                         "x": 1493,
                         "y": 325
                       }
                     ]
                   },
                   {
-                    "name": "Castle Town Bazaar",
+                    "name": "Castle Town Bazaar Entrance",
                     "short_name": "Market Bazaar",
-                    "access_rules": [
-                      "setting_shopsanity_yes"
-                    ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Item 1",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 2",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 3",
-                        "capture_item": true,
-                        "item_count": 1
-                      },
-                      {
-                        "name": "Item 4",
-                        "capture_item": true,
+                        "name": "CHILD",
                         "item_count": 1
                       }
                     ],
                     "map_locations": [
                       {
                         "map": "child",
-                        "visibility_rules": [
-                          "setting_shopsanity_yes"
-                        ],
                         "x": 1493,
                         "y": 355
                       }
                     ]
                   },
                   {
-                    "name": "Door of Time",
+                    "name": "Temple of Time Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Open Sesame",
-                        "access_rules": [
-                          "open_door",
-                          "ocarina,time"
-                        ],
-                        "hosted_item": "sword2"
+                        "name": "CHILD & ADULT",
+                        "item_count": 1
                       }
                     ],
                     "map_locations": [
@@ -4226,33 +4122,8 @@
                         "map": "child",
                         "x": 1539,
                         "y": 294
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Temple of Time",
-                    "sections": [
-                      {
-                        "name": "Sheik at Temple",
-                        "access_rules": [
-                          "sword2,forestmed",
-                          "{$hintable}"
-                        ],
-                        "capture_item": true,
-                        "chest_unopened_img": "images/grey_note.png",
-                        "chest_opened_img": "images/grey_note_check.png",
-                        "item_count": 1
                       },
                       {
-                        "name": "Zelda",
-                        "access_rules": [
-                          "sword2,lacs_meds:2"
-                        ],
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
                         "map": "adult",
                         "x": 1539,
                         "y": 294
@@ -4260,46 +4131,24 @@
                     ]
                   },
                   {
-                    "name": "Big Poes",
-                    "sections": [
-                      {
-                        "name": "Happy Hunting",
-                        "access_rules": [
-                          "sword2,bow,[ocarina],[epona],$has_bottle",
-                          "{$hintable}"
-                        ],
-                        "capture_item": true,
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "adult",
-                        "x": 1464,
-                        "y": 390
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Castle Market Guard House",
+                    "name": "Guard House Entrance",
                     "short_name": "Guardhouse",
-                    "access_rules": [
-                      "setting_skulltulas_all"
-                    ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "GS14",
-                        "visibility_rules": [
-                          "setting_skulltulas_all"
-                        ],
-                        "chest_unopened_img": "images/skulltula.png",
-                        "chest_opened_img": "images/skulltula_token.png",
+                        "name": "CHILD & ADULT",
                         "item_count": 1
                       }
                     ],
                     "map_locations": [
                       {
                         "map": "child",
+                        "x": 1464,
+                        "y": 390
+                      },
+                      {
+                        "map": "adult",
                         "x": 1464,
                         "y": 390
                       }
@@ -4400,13 +4249,15 @@
                     ]
                   },
                   {
-                    "name": "Hyrule Castle Fairy",
+                    "name": "Hyrule Castle Fairy Entrance",
+                    "access_rules": [
+                      "$has_explosives"
+                    ],
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Fairy Fountain",
-                        "access_rules": [
-                          "ocarina,lullaby,$has_explosives"
-                        ],
+                        "name": "CHILD",
                         "item_count": 1
                       }
                     ],
@@ -4510,7 +4361,7 @@
                         "y": 216
                       }
                     ]
-                  },
+                  }
                 ]
               },
               {
@@ -4541,13 +4392,15 @@
                     ]
                   },
                   {
-                    "name": "Ganons Castle Fairy",
+                    "name": "Ganons Castle Fairy Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "access_rules": [
+                      "lift3"
+                    ],
                     "sections": [
                       {
-                        "name": "Fairy Fountain",
-                        "access_rules": [
-                          "ocarina,lullaby,lift3,sword2"
-                        ],
+                        "name": "ADULT",
                         "item_count": 1
                       }
                     ],
@@ -5176,32 +5029,40 @@
                 ]
               },
               {
-                "name": "Zora Shop",
-                "access_rules": [
-                  "setting_shopsanity_yes,$has_explosives,[ocarina],[lullaby]",
-                  "setting_shopsanity_yes,scale1",
-                  "setting_shopsanity_yes,sword2,ocarina,lullaby,$has_bottle",
-                  "setting_shopsanity_yes,sword2,hoverboots,[ocarina],[lullaby],$has_bottle"
-                ],
+                "name": "Zora Shop Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "Item 1",
-                    "capture_item": true,
+                    "name": "CHILD",
+                    "access_rules": [
+                      "$has_explosives,[ocarina],[lullaby]",
+                      "scale1"
+                    ],
                     "item_count": 1
                   },
                   {
-                    "name": "Item 2",
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Item 3",
-                    "capture_item": true,
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Item 4",
-                    "capture_item": true,
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,ocarina,lullaby,$has_bottle,[wallet2]",
+                      "sword2,ocarina,lullaby,$has_bottle,$adult_fountain",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_open,sword2",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_vanilla,sword2,lacs_meds:2,lightarrow",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_stones,sword2,stones:3",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
+                      "sword2,ocarina,lullaby,$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,[wallet2]",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,$adult_fountain",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_open,sword2",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_vanilla,sword2,lacs_meds:2,lightarrow",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_stones,sword2,stones:3",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -5209,7 +5070,8 @@
                   {
                     "map": "child",
                     "visibility_rules": [
-                      "setting_shopsanity_yes"
+                      "$has_explosives,[ocarina],[lullaby]",
+                      "scale1"
                     ],
                     "x": 2619,
                     "y": 499
@@ -5217,7 +5079,24 @@
                   {
                     "map": "adult",
                     "visibility_rules": [
-                      "$has_bottle,setting_shopsanity_yes"
+                      "sword2,ocarina,lullaby,$has_bottle,[wallet2]",
+                      "sword2,ocarina,lullaby,$has_bottle,$adult_fountain",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_open,sword2",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_vanilla,sword2,lacs_meds:2,lightarrow",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_stones,sword2,stones:3",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
+                      "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
+                      "sword2,ocarina,lullaby,$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,[wallet2]",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,$adult_fountain",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_open,sword2",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_vanilla,sword2,lacs_meds:2,lightarrow",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_stones,sword2,stones:3",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]"
                     ],
                     "x": 2619,
                     "y": 499
@@ -5228,13 +5107,24 @@
                 "name": "Zoras Fountain",
                 "children": [
                   {
-                    "name": "Zoras Fountain Fairy",
+                    "name": "Zoras Fountain Fairy Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "access_rules": [
+                      "$has_explosives"
+                    ],
                     "sections": [
                       {
-                        "name": "Fairy Fountain",
+                        "name": "CHILD",
                         "access_rules": [
-                          "$child_fountain,ocarina,lullaby,$has_explosives",
-                          "$adult_fountain,ocarina,lullaby,$has_explosives"
+                          "$child_fountain"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "$adult_fountain"
                         ],
                         "item_count": 1
                       }
@@ -5415,12 +5305,12 @@
                       {
                         "map": "child",
                         "x": 2553,
-                        "y": 333
+                        "y": 298
                       },
                       {
                         "map": "adult",
                         "x": 2553,
-                        "y": 333
+                        "y": 298
                       }
                     ]
                   },
@@ -5691,7 +5581,25 @@
                       {
                         "map": "adult",
                         "x": 638,
-                        "y": 547
+                        "y": 567
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Carpenter Tent Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "sections": [
+                      {
+                        "name": "ADULT",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "adult",
+                        "x": 638,
+                        "y": 532
                       }
                     ]
                   },
@@ -5744,7 +5652,7 @@
                       {
                         "map": "adult",
                         "x": 635,
-                        "y": 517
+                        "y": 497
                       }
                     ]
                   },
@@ -5982,12 +5890,21 @@
                 "name": "Desert Colossus",
                 "children": [
                   {
-                    "name": "Colossus Fairy",
+                    "name": "Colossus Fairy Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "Fairy Fountain",
+                        "name": "CHILD",
                         "access_rules": [
-                          "$colossus,ocarina,lullaby,$has_explosives"
+                          "$colossus,ocarina,requiem,$has_explosives"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "$colossus,sword2,$has_explosives"
                         ],
                         "item_count": 1
                       }
@@ -5996,13 +5913,16 @@
                       {
                         "map": "child",
                         "visibility_rules": [
-                          "ocarina,requiem"
+                          "$colossus,ocarina,requiem,$has_explosives"
                         ],
                         "x": 276,
                         "y": 297
                       },
                       {
                         "map": "adult",
+                        "access_rules": [
+                          "$colossus,sword2,$has_explosives"
+                        ],
                         "x": 276,
                         "y": 297
                       }
