@@ -3,8 +3,7 @@
     "name": "Forest Temple MQ",
     "parent": "Sacred Forest Meadow",
     "access_rules": [
-      "forest_mq,sword2,hookshot,[ocarina],[saria]",
-      "forest_mq,sword2,hookshot,[ocarina],[minuet]"
+      "erd_forest,forest_mq"
     ],
     "children": [
       {
@@ -448,7 +447,7 @@
     "name": "Fire Temple MQ",
     "parent": "Death Mountain Crater",
     "access_rules": [
-      "fire_mq,$dmc_central,$has_goron_tunic"
+      "erd_fire,fire_mq"
     ],
     "children": [
       {
@@ -884,8 +883,7 @@
     "name": "Water Temple MQ",
     "parent": "Lake Hylia",
     "access_rules": [
-      "water_mq,sword2,ironboots,hookshot,$has_zora_tunic",
-      "water_mq,sword2,scale2,[ironboots],hookshot,$has_zora_tunic"
+      "erd_water,water_mq"
     ],
     "children": [
       {
@@ -1193,10 +1191,7 @@
     "name": "Shadow Temple MQ",
     "parent": "Graveyard",
     "access_rules": [
-      "shadow_mq,ocarina,nocturne,dinsfire,magic,$can_see_with_lens,sword2,hoverboots",
-      "shadow_mq,ocarina,nocturne,dinsfire,magic,$can_see_with_lens,sword2,hookshot",
-      "shadow_mq,ocarina,nocturne,bow,firearrow,[dinsfire],magic,$can_see_with_lens,sword2,hoverboots",
-      "shadow_mq,ocarina,nocturne,bow,firearrow,[dinsfire],magic,$can_see_with_lens,sword2,hookshot"
+      "erd_shadow,shadow_mq"
     ],
     "children": [
       {
@@ -1742,7 +1737,7 @@
     "name": "Spirit Temple MQ",
     "parent": "Desert Colossus",
     "access_rules": [
-      "spirit_mq,$colossus"
+      "erd_spirit,spirit_mq"
     ],
     "children": [
       {
@@ -2409,7 +2404,7 @@
     "name": "Bottom of the Well MQ",
     "parent": "Kakariko Village",
     "access_rules": [
-      "botw_mq,ocarina,storm"
+      "erd_botw_c,botw_mq"
     ],
     "children": [
       {
@@ -2919,8 +2914,7 @@
     "name": "Gerudo Training Grounds MQ",
     "parent": "Gerudo Fortress",
     "access_rules": [
-      "gtg_mq,[carpenter_rescue],$gtg_card",
-      "gtg_mq,gerudo_fortress_open,$gtg_card"
+      "erd_gtg,gtg_mq"
     ],
     "children": [
       {

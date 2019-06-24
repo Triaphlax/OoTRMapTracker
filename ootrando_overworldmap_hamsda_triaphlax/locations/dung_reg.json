@@ -3,8 +3,7 @@
     "name": "Deku Tree",
     "parent": "Kokiri Forest",
     "access_rules": [
-      "deku_reg,open_forest",
-      "deku_reg,sword1,shield1"
+      "erd_deku,deku_reg"
     ],
     "children": [
       {
@@ -257,8 +256,7 @@
     "name": "Dodongos Cavern",
     "parent": "Death Mountain",
     "access_rules": [
-      "dodongo_reg,$can_blast",
-      "dodongo_reg,lift1"
+      "erd_dodongo,dodongo_reg"
     ],
     "children": [
       {
@@ -666,9 +664,7 @@
     "name": "Jabu Jabus Belly",
     "parent": "Zoras Fountain",
     "access_rules": [
-      "jabu_reg,$child_fountain,bottle,sling",
-      "jabu_reg,$child_fountain,bottle,$has_explosives",
-      "jabu_reg,$child_fountain,bottle,boomerang"
+      "erd_jabu,jabu_reg"
     ],
     "children": [
       {
@@ -890,7 +886,7 @@
     "name": "Ice Cavern",
     "parent": "Zoras Fountain",
     "access_rules": [
-      "ice_reg,$adult_fountain,$has_bottle"
+      "erd_ice,ice_reg"
     ],
     "children": [
       {
