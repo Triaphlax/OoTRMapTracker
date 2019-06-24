@@ -18,14 +18,18 @@
           {
             "map": "dekutree",
             "x": "1280",
-            "y": "565"
+            "y": "565",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
       {
         "name": "Slingshot Chest",
         "access_rules": [
-          "shield1"
+          "erd_deku_c,shield1",
+          "erd_deku_a,shield2"
         ],
         "sections": [
           {
@@ -37,14 +41,18 @@
           {
             "map": "dekutree",
             "x": "365",
-            "y": "470"
+            "y": "470",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
       {
         "name": "Slingshot Room Small Chest",
         "access_rules": [
-          "shield1"
+          "erd_deku_c,shield1",
+          "erd_deku_a,shield2"
         ],
         "sections": [
           {
@@ -56,7 +64,10 @@
           {
             "map": "dekutree",
             "x": "390",
-            "y": "445"
+            "y": "445",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
@@ -72,7 +83,10 @@
           {
             "map": "dekutree",
             "x": "745",
-            "y": "155"
+            "y": "155",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
@@ -88,7 +102,10 @@
           {
             "map": "dekutree",
             "x": "755",
-            "y": "240"
+            "y": "240",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
@@ -97,6 +114,11 @@
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "erd_deku_c,$can_child_attack",
+              "erd_deku_c,nuts",
+              "erd_deku_a"
+            ],
             "item_count": 1
           }
         ],
@@ -104,18 +126,24 @@
           {
             "map": "dekutree",
             "x": 1350,
-            "y": 1275
+            "y": 1275,
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
       {
         "name": "Queen Gohma",
         "access_rules": [
-          "[sling],shield1"
+          "erd_deku_c,sticks,[sling],shield1",
+          "erd_deku_c,dinsfire,magic,[sling],shield1,sword1",
+          "erd_deku_a,magic,bow,firearrow,shield2",
+          "erd_deku_a,dinsfire,magic,shield2"
         ],
         "sections": [
           {
-            "name": "Heart Container",
+            "name": "Heart Container (2-3-1)",
             "capture_item": true,
             "hosted_item": "deku",
             "chest_unopened_img": "images/HC.png",
@@ -127,7 +155,10 @@
           {
             "map": "dekutree",
             "x": 1650,
-            "y": 1530
+            "y": 1530,
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
@@ -140,6 +171,7 @@
           {
             "name": "Compass Room",
             "access_rules": [
+              "erd_deku_a",
               "$can_child_attack"
             ],
             "sections": [
@@ -156,7 +188,7 @@
                 "x": "725",
                 "y": "245",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,deku_reg"
                 ]
               }
             ]
@@ -164,17 +196,23 @@
           {
             "name": "Basement Vines",
             "access_rules": [
-              "sticks,[sling]",
-              "sticks,[$has_explosives]",
-              "sticks,[boomerang]",
-              "sticks,[dinsfire],[magic]",
-              "sword1,[sling]",
-              "sword1,[$has_explosives]",
-              "sword1,[boomerang]",
-              "sword1,[dinsfire],[magic]",
-              "sling",
+              "erd_deku_c,sticks,[sling]",
+              "erd_deku_c,sticks,[boomerang]",
+              "erd_deku_c,sticks,[$has_explosives]",
+              "erd_deku_c,sticks,[dinsfire],[magic]",
+              "erd_deku_c,sword1,[sling]",
+              "erd_deku_c,sword1,[boomerang]",
+              "erd_deku_c,sword1,[$has_explosives]",
+              "erd_deku_c,sword1,[dinsfire],[magic]",
+              "erd_deku_c,sling",
+              "erd_deku_c,boomerang",
+              "erd_deku_a,[bow]",
+              "erd_deku_a,[$has_explosives]",
+              "erd_deku_a,[hookshot]",
+              "erd_deku_a,[dinsfire],[magic]",
+              "erd_deku_a,bow",
+              "erd_deku_a,hookshot",
               "$has_explosives",
-              "boomerang",
               "dinsfire,magic"
             ],
             "sections": [
@@ -191,7 +229,7 @@
                 "x": "1300",
                 "y": "1260",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,deku_reg"
                 ]
               }
             ]
@@ -199,6 +237,7 @@
           {
             "name": "Basement Gate",
             "access_rules": [
+              "erd_deku_a",
               "$can_child_attack"
             ],
             "sections": [
@@ -215,7 +254,7 @@
                 "x": "1300",
                 "y": "1220",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,deku_reg"
                 ]
               }
             ]
@@ -223,10 +262,16 @@
           {
             "name": "Basement Back Room",
             "access_rules": [
-              "sticks,$has_explosives,boomerang,[sling]",
-              "dinsfire,magic,$has_explosives,boomerang,[sling]",
-              "{sticks,$has_explosives,sling}",
-              "{dinsfire,magic,$has_explosives,sling}"
+              "erd_deku_c,sticks,[sling],$has_explosives,boomerang",
+              "erd_deku_c,dinsfire,magic,[sling],$has_explosives,boomerang",
+              "erd_deku_a,bow,magic,firearrow,$can_blast,hookshot",
+              "erd_deku_a,dinsfire,magic,bow,$can_blast,hookshot",
+              "erd_deku_c,erd_deku_a,$has_explosives,boomerang,sticks",
+              "erd_deku_c,erd_deku_a,$has_explosives,boomerang,dinsfire,magic",
+              "{erd_deku_c,sticks,$has_explosives,sling}",
+              "{erd_deku_c,dinsfire,magic,$has_explosives,sling}",
+              "{erd_deku_a,bow,magic,firearrow,$can_blast}",
+              "{erd_deku_a,dinsfire,magic,$can_blast,bow}"
             ],
             "sections": [
               {
@@ -243,7 +288,7 @@
                 "x": "490",
                 "y": "750",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,deku_reg"
                 ]
               }
             ]

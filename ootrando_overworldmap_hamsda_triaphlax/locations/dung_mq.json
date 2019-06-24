@@ -28,6 +28,7 @@
       {
         "name": "Slingshot Chest",
         "access_rules": [
+          "erd_deku_a",
           "$can_child_attack"
         ],
         "sections": [
@@ -50,7 +51,8 @@
       {
         "name": "Slingshot Room Back",
         "access_rules": [
-          "sticks",
+          "erd_deku_c,sticks",
+          "erd_deku_a,bow,firearrow,magic",
           "dinsfire,magic"
         ],
         "sections": [
@@ -71,10 +73,12 @@
         ]
       },
       {
-        "name": "Compass Chest",
+        "name": "Compass Chest (Falling Platform)",
         "access_rules": [
-          "sling,sticks",
-          "sling,dinsfire,magic"
+          "erd_deku_c,sling,sticks",
+          "erd_deku_c,erd_deku_a,sling,magic,bow,firearrow",
+          "erd_deku_c,sling,dinsfire,magic",
+          "erd_deku_a,bow"
         ],
         "sections": [
           {
@@ -94,9 +98,10 @@
         ]
       },
       {
-        "name": "Basement",
+        "name": "Basement Chest (Behind Web)",
         "access_rules": [
-          "@Slingshot Room Back"
+          "@Slingshot Room Back",
+          "erd_deku_a,bow"
         ],
         "sections": [
           {
@@ -118,7 +123,8 @@
       {
         "name": "Before Spinning Log",
         "access_rules": [
-          "@Compass Chest"
+          "@Slingshot Room Back,erd_deku_c,sling",
+          "@Slingshot Room Back,erd_deku_a,bow"
         ],
         "sections": [
           {
@@ -140,8 +146,7 @@
       {
         "name": "After Spinning Log",
         "access_rules": [
-          "@Compass Chest,ocarina,time",
-          "{$hintable}"
+          "@Before Spinning Log,ocarina,time"
         ],
         "sections": [
           {
@@ -162,10 +167,25 @@
         ]
       },
       {
+        "name": "Ledge Access as Child",
+        "access_rules": [
+          "erd_deku_c,sling,stick",
+          "erd_deku_c,sling,dinsfire,magic"
+        ]
+      },
+      {
+        "name": "Ledge Access as Adult",
+        "access_rules": [
+          "erd_deku_a"
+        ]
+      },
+      {
         "name": "Queen Gohma",
         "access_rules": [
-          "[sling],sticks,shield1",
-          "[sling],dinsfire,magic,sword1,shield1"
+          "@Ledge Access as Child,stick,shield1",
+          "@Ledge Access as Child,dinsfire,magic,shield1,sword1",
+          "@Ledge Access as Adult,bow,firearrow,magic,shield2",
+          "@Ledge Access as Adult,dinsfire,magic,shield2"
         ],
         "sections": [
           {
@@ -196,6 +216,7 @@
           {
             "name": "Crate Near Map",
             "access_rules": [
+              "erd_deku_a",
               "$can_child_attack"
             ],
             "sections": [
@@ -220,10 +241,14 @@
           {
             "name": "Compass Room",
             "access_rules": [
-              "@Compass Chest,boomerang,bombs,ocarina,time",
-              "@Compass Chest,boomerang,bombchu",
-              "{@Compass Chest,bombs,ocarina,time}",
-              "{@Compass Chest,bombchu}"
+              "@Compass Chest (Falling Platform),erd_deku_c,boomerang,bombchu",
+              "@Compass Chest (Falling Platform),erd_deku_c,boomerang,bombs,ocarina,time",
+              "@Compass Chest (Falling Platform),erd_deku_a,hookshot,bombchu",
+              "@Compass Chest (Falling Platform),erd_deku_a,hookshot,bombs",
+              "{@Compass Chest (Falling Platform),erd_deku_a,bombs}",
+              "{@Compass Chest (Falling Platform),bombs,ocarina,time}",
+              "{@Compass Chest (Falling Platform),bombs,erd_deku_a}",
+              "{@Compass Chest (Falling Platform),bombchu}"
             ],
             "sections": [
               {
@@ -248,9 +273,11 @@
           {
             "name": "Basement Ceiling",
             "access_rules": [
-              "@Compass Chest,boomerang,ocarina,time",
-              "{@Compass Chest,sling}",
-              "{$hintable}"
+              "@Before Spinning Log,erd_deku_a,longshot",
+              "@Before Spinning Log,ocarina,time,erd_deku_c,boomerang",
+              "@Before Spinning Log,ocarina,time,erd_deku_a,hookshot",
+              "{@Before Spinning Log,sling}",
+              "{@Before Spinning Log,bow}"
             ],
             "sections": [
               {
@@ -275,8 +302,14 @@
           {
             "name": "Basement Back Room",
             "access_rules": [
-              "@Compass Chest,boomerang",
-              "{@Compass Chest,sling}"
+              "@Before Spinning Log,dinsfire,magic,boomerang,erd_deku_c",
+              "{@Before Spinning Log,dinsfire,magic,sling,erd_deku_c}",
+              "@Before Spinning Log,erd_deku_c,stick,boomerang",
+              "{@Before Spinning Log,erd_deku_c,stick,sling}",
+              "@Before Spinning Log,dinsfire,magic,hookshot,erd_deku_a",
+              "{@Before Spinning Log,dinsfire,magic,bow,erd_deku_a}",
+              "@Before Spinning Log,erd_deku_a,bow,firearrow,magic,hookshot",
+              "{@Before Spinning Log,erd_deku_a,bow,firearrow,magic}"
             ],
             "sections": [
               {
@@ -307,9 +340,10 @@
         ],
         "children": [
           {
-            "name": "Basement",
+            "name": "Basement Scrub",
             "access_rules": [
-              "@Compass Chest"
+              "@Ledge Access as Child",
+              "@Ledge Access as Adult"
             ],
             "sections": [
               {
