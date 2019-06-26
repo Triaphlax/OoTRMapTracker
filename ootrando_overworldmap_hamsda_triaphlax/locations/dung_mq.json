@@ -169,7 +169,7 @@
       {
         "name": "Ledge Access as Child",
         "access_rules": [
-          "erd_deku_c,sling,stick",
+          "erd_deku_c,sling,sticks",
           "erd_deku_c,sling,dinsfire,magic"
         ]
       },
@@ -370,11 +370,35 @@
   },
   {
     "name": "Dodongos Cavern MQ",
-    "parent": "Death Mountain",
+    "parent": "World",
+    "color": "#a01009",
     "access_rules": [
-      "erd_dodongo,dodongo_mq"
+      "dodongo_mq,erd_dodongo_a,hammer,sword2",
+      "erd_dodongo,dodongo_mq,$has_explosives",
+      "erd_dodongo,dodongo_mq,lift1"
     ],
     "children": [
+      {
+        "name": "Gossip Stone",
+        "sections": [
+          {
+            "name": "Check it",
+            "chest_unopened_img": "images/gossip_stone.png",
+            "chest_opened_img": "images/gossip_stone.png",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "dodongoscavern",
+            "x": 927,
+            "y": 1520,
+            "visibility_rules": [
+              "dodongo_mq"
+            ]
+          }
+        ]
+      },
       {
         "name": "Map Chest",
         "sections": [
@@ -386,8 +410,8 @@
         "map_locations": [
           {
             "map": "dodongoscavern",
-            "x": 775,
-            "y": 369,
+            "x": 1610,
+            "y": 1655,
             "visibility_rules": [
               "dodongo_mq"
             ]
@@ -397,8 +421,8 @@
       {
         "name": "Compass Chest",
         "access_rules": [
-          "sword2",
-          "$can_child_attack",
+          "erd_dodongo_a,sword2",
+          "erd_dodongo_c,$can_child_attack",
           "nuts"
         ],
         "sections": [
@@ -410,8 +434,8 @@
         "map_locations": [
           {
             "map": "dodongoscavern",
-            "x": 469,
-            "y": 907,
+            "x": 95,
+            "y": 340,
             "visibility_rules": [
               "dodongo_mq"
             ]
@@ -419,11 +443,11 @@
         ]
       },
       {
-        "name": "Larva Room",
+        "name": "Larva Room Chest",
         "access_rules": [
-          "$has_fire",
-          "sticks,$has_explosives",
-          "sticks,lift1"
+          "erd_dodongo_c,sticks",
+          "dins,magic",
+          "erd_dodongo_a,magic,bow,firearrow"
         ],
         "sections": [
           {
@@ -434,8 +458,8 @@
         "map_locations": [
           {
             "map": "dodongoscavern",
-            "x": 846,
-            "y": 15,
+            "x": 2035,
+            "y": 635,
             "visibility_rules": [
               "dodongo_mq"
             ]
@@ -445,11 +469,12 @@
       {
         "name": "Torch Puzzle Room",
         "access_rules": [
-          "$can_blast",
-          "sticks",
+          "erd_dodongo_a,$can_blast|adult",
+          "erd_dodongo_c,$can_blast|child",
+          "erd_dodongo_c,sticks",
           "dinsfire,magic",
-          "sword2,[hoverboots]",
-          "sword2,[hookshot]"
+          "erd_dodongo_a,sword2,[hoverboots]",
+          "erd_dodongo_a,sword2,[hookshot]"
         ],
         "sections": [
           {
@@ -460,8 +485,8 @@
         "map_locations": [
           {
             "map": "dodongoscavern",
-            "x": 699,
-            "y": 723,
+            "x": 1530,
+            "y": 710,
             "visibility_rules": [
               "dodongo_mq"
             ]
@@ -469,12 +494,28 @@
         ]
       },
       {
+        "name": "Dodongos Cavern MQ Lower Right Side Through Ledge",
+        "access_rules": [
+          "erd_dodongo_a,sword2",
+          "erd_dodongo_a,erd_dodongo_c,$has_explosives"
+        ]
+      },
+      {
+        "name": "Dodongos Cavern MQ Lower Right Side Through Lobby",
+        "access_rules": [
+          "erd_dodongo_c,$can_blast|child",
+          "erd_dodongo_a,$can_blast|adult",
+          "erd_dodongo_c,sticks",
+          "magic,dins"
+        ]
+      },
+      {
         "name": "Bomb Bag Chest",
         "access_rules": [
-          "sword2",
-          "sling,sticks",
-          "sling,dinsfire,magic",
-          "sling,$has_explosives"
+          "@Dodongos Cavern MQ Lower Right Side Through Ledge",
+          "@Dodongos Cavern MQ Lower Right Side Through Lobby,sticks,sling",
+          "@Dodongos Cavern MQ Lower Right Side Through Lobby,$has_explosives,sling",
+          "@Dodongos Cavern MQ Lower Right Side Through Lobby,dins,magic,sling"
         ],
         "sections": [
           {
@@ -485,8 +526,8 @@
         "map_locations": [
           {
             "map": "dodongoscavern",
-            "x": 634,
-            "y": 195,
+            "x": 1440,
+            "y": 1690,
             "visibility_rules": [
               "dodongo_mq"
             ]
@@ -507,8 +548,8 @@
         "map_locations": [
           {
             "map": "dodongoscavern",
-            "x": 166,
-            "y": 814,
+            "x": 2940,
+            "y": 1270,
             "visibility_rules": [
               "dodongo_mq"
             ]
@@ -529,8 +570,8 @@
         "map_locations": [
           {
             "map": "dodongoscavern",
-            "x": 133,
-            "y": 959,
+            "x": "1450",
+            "y": "1200",
             "visibility_rules": [
               "dodongo_mq"
             ]
@@ -540,19 +581,19 @@
       {
         "name": "King Dodongo",
         "access_rules": [
-          "@Under Grave,lift1,sticks",
-          "@Under Grave,lift1,sword1",
-          "@Under Grave,lift1,sword2",
-          "@Under Grave,bombs,sticks",
-          "@Under Grave,bombs,sword1",
-          "@Under Grave,bombs,sword2",
-          "@Under Grave,bombchu,[bombs],sticks",
-          "@Under Grave,bombchu,[bombs],sword1",
-          "@Under Grave,bombchu,[bombs],sword2"
+          "@Under Grave,erd_dodongo_c,lift1,sticks",
+          "@Under Grave,erd_dodongo_c,lift1,sword1",
+          "@Under Grave,erd_dodongo_a,lift1,sword2",
+          "@Under Grave,erd_dodongo_c,bombs,sticks",
+          "@Under Grave,erd_dodongo_c,bombs,sword1",
+          "@Under Grave,erd_dodongo_a,bombs,sword2",
+          "@Under Grave,erd_dodongo_c,bombchu,[bombs],sticks",
+          "@Under Grave,erd_dodongo_c,bombchu,[bombs],sword1",
+          "@Under Grave,erd_dodongo_a,bombchu,[bombs],sword2"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "dodongo",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -562,8 +603,8 @@
         "map_locations": [
           {
             "map": "dodongoscavern",
-            "x": 589,
-            "y": 113,
+            "x": "1035",
+            "y": "1080",
             "visibility_rules": [
               "dodongo_mq"
             ]
@@ -579,8 +620,8 @@
           {
             "name": "Song of Time Block Room",
             "access_rules": [
-              "ocarina,time,$can_child_attack",
-              "ocarina,time,sword2"
+              "erd_dodongo_c,ocarina,time,$can_child_attack",
+              "erd_dodongo_a,ocarina,time,sword2"
             ],
             "sections": [
               {
@@ -593,8 +634,8 @@
             "map_locations": [
               {
                 "map": "dodongoscavern",
-                "x": 110,
-                "y": 590,
+                "x": 150,
+                "y": 1470,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, dodongo_mq"
                 ]
@@ -604,7 +645,7 @@
           {
             "name": "Larva Room",
             "access_rules": [
-              "@Larva Room"
+              "@Larva Room Chest"
             ],
             "sections": [
               {
@@ -617,8 +658,8 @@
             "map_locations": [
               {
                 "map": "dodongoscavern",
-                "x": 546,
-                "y": 728,
+                "x": 2110,
+                "y": 650,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, dodongo_mq"
                 ]
@@ -628,7 +669,8 @@
           {
             "name": "Lizalfos Room",
             "access_rules": [
-              "$can_blast"
+              "erd_dodongo_a,$can_blast|adult",
+              "erd_dodongo_c,$can_blast|child"
             ],
             "sections": [
               {
@@ -641,8 +683,8 @@
             "map_locations": [
               {
                 "map": "dodongoscavern",
-                "x": 239,
-                "y": 34,
+                "x": 2650,
+                "y": 825,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, dodongo_mq"
                 ]
@@ -652,16 +694,16 @@
           {
             "name": "Scrub Room",
             "access_rules": [
-              "boomerang,sling,$has_explosives",
-              "boomerang,sword2,$has_explosives",
-              "boomerang,sling,lift1,sticks",
-              "boomerang,sling,lift1,dinsfire,magic",
-              "boomerang,sling,lift1,sword2,[hoverboots]",
-              "boomerang,sling,lift1,sword2,[hammer]",
-              "sword2,hookshot,$has_explosives",
-              "sword2,hookshot,lift1",
-              "sword2,hookshot,bow",
-              "sword2,hookshot,dinsfire,magic"
+              "erd_dodongo_c,boomerang,sling,$has_explosives",
+              "erd_dodongo_c,erd_dodongo_a,boomerang,sword2,$has_explosives",
+              "erd_dodongo_c,boomerang,sling,lift1,sticks",
+              "erd_dodongo_c,boomerang,sling,lift1,dinsfire,magic",
+              "erd_dodongo_c,erd_dodongo_a,boomerang,sling,lift1,sword2,[hoverboots]",
+              "erd_dodongo_c,erd_dodongo_a,boomerang,sling,lift1,sword2,[hammer]",
+              "erd_dodongo_a,sword2,hookshot,$has_explosives",
+              "erd_dodongo_a,sword2,hookshot,lift1",
+              "erd_dodongo_a,sword2,hookshot,bow",
+              "erd_dodongo_a,sword2,hookshot,dinsfire,magic"
             ],
             "sections": [
               {
@@ -674,8 +716,8 @@
             "map_locations": [
               {
                 "map": "dodongoscavern",
-                "x": 614,
-                "y": 871,
+                "x": 2740,
+                "y": 1460,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, dodongo_mq"
                 ]
@@ -698,8 +740,8 @@
             "map_locations": [
               {
                 "map": "dodongoscavern",
-                "x": 932,
-                "y": 548,
+                "x": 2630,
+                "y": 1365,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, dodongo_mq"
                 ]
@@ -730,8 +772,8 @@
             "map_locations": [
               {
                 "map": "dodongoscavern",
-                "x": 786,
-                "y": 828,
+                "x": "745",
+                "y": "1590",
                 "visibility_rules": [
                   "setting_scrub_shuffle_yes, dodongo_mq"
                 ]
@@ -741,10 +783,8 @@
           {
             "name": "East Side",
             "access_rules": [
-              "sword2",
-              "sticks",
-              "dinsfire,magic",
-              "$has_explosives"
+              "@Dodongos Cavern MQ Lower Right Side Through Ledge",
+              "@Dodongos Cavern MQ Lower Right Side Through Lobby"
             ],
             "sections": [
               {
@@ -757,8 +797,8 @@
             "map_locations": [
               {
                 "map": "dodongoscavern",
-                "x": 861,
-                "y": 753,
+                "x": 1370,
+                "y": 2330,
                 "visibility_rules": [
                   "setting_scrub_shuffle_yes, dodongo_mq"
                 ]
@@ -781,8 +821,8 @@
             "map_locations": [
               {
                 "map": "dodongoscavern",
-                "x": 97,
-                "y": 986,
+                "x": 730,
+                "y": 120,
                 "visibility_rules": [
                   "setting_scrub_shuffle_yes, dodongo_mq"
                 ]

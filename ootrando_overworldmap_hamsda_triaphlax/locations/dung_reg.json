@@ -299,16 +299,38 @@
   },
   {
     "name": "Dodongos Cavern",
-    "parent": "Death Mountain",
+    "parent": "World",
+    "color": "#a01009",
     "access_rules": [
       "erd_dodongo,dodongo_reg"
     ],
     "children": [
       {
+        "name": "Dodongos Cavern Lobby",
+        "access_rules": [
+          "erd_dodongo_a,hammer,sword2",
+          "$has_explosives",
+          "lift1"
+        ]
+      },
+      {
+        "name": "Dodongos Cavern Ledge",
+        "access_rules": [
+          "@Dodongos Cavern Lobby,erd_dodongo_a,sword2",
+          "@Dodongos Cavern Lobby,erd_dodongo_c,sticks",
+          "@Dodongos Cavern Lobby,erd_dodongo_c,dinsfire,magic,sling",
+          "@Dodongos Cavern Lobby,erd_dodongo_c,dinsfire,magic,sword1",
+          "@Dodongos Cavern Lobby,dinsfire,magic,$has_explosives"
+        ]
+      },
+      {
         "name": "Map Chest",
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@Dodongos Cavern Lobby"
+            ],
             "item_count": 1
           }
         ],
@@ -316,18 +338,17 @@
           {
             "map": "dodongoscavern",
             "x": "920",
-            "y": "1525"
+            "y": "1525",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "Compass Chest",
         "access_rules": [
-          "sword2",
-          "sticks",
-          "dinsfire,magic,sling",
-          "dinsfire,magic,sword1",
-          "dinsfire,magic,$has_explosives"
+          "@Dodongos Cavern Ledge"
         ],
         "sections": [
           {
@@ -339,17 +360,20 @@
           {
             "map": "dodongoscavern",
             "x": "100",
-            "y": "1450"
+            "y": "1450",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "Bomb Flower Platform",
         "access_rules": [
-          "@Compass Chest,$has_explosives",
-          "@Compass Chest,lift1",
-          "@Compass Chest,dinsfire,magic",
-          "@Compass Chest,sword2,bow,[lift1]"
+          "@Dodongos Cavern Ledge,$has_explosives",
+          "@Dodongos Cavern Ledge,lift1",
+          "@Dodongos Cavern Ledge,dinsfire,magic",
+          "@Dodongos Cavern Ledge,erd_dodongo_a,sword2,bow,[lift1]"
         ],
         "sections": [
           {
@@ -361,18 +385,20 @@
           {
             "map": "dodongoscavern",
             "x": "1470",
-            "y": "793"
+            "y": "793",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "Bomb Bag Chest",
         "access_rules": [
-          "@Bomb Flower Platform,$has_explosives,[sling]",
-          "@Bomb Flower Platform,lift1,[sling]",
-          "@Bomb Flower Platform,sword2,[bow]",
-          "@Bomb Flower Platform,sword2,[hoverboots]",
-          "@Bomb Flower Platform,sword2,[longshot]"
+          "@Bomb Flower Platform,erd_dodongo_c,sling",
+          "@Bomb Flower Platform,erd_dodongo_a,sword2,[bow]",
+          "@Bomb Flower Platform,erd_dodongo_a,sword2,[hoverboots]",
+          "@Bomb Flower Platform,erd_dodongo_a,sword2,[longshot]"
         ],
         "sections": [
           {
@@ -384,14 +410,18 @@
           {
             "map": "dodongoscavern",
             "x": "1685",
-            "y": "630"
+            "y": "630",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "End of Bridge Chest",
         "access_rules": [
-          "@Bomb Bag Chest,$can_blast"
+          "@Bomb Bag Chest,$has_explosives",
+          "@Bomb Bag Chest,erd_dodongo_a,hammer"
         ],
         "sections": [
           {
@@ -403,7 +433,10 @@
           {
             "map": "dodongoscavern",
             "x": "1060",
-            "y": "360"
+            "y": "360",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
@@ -422,22 +455,25 @@
           {
             "map": "dodongoscavern",
             "x": "1450",
-            "y": "1200"
+            "y": "1200",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "King Dodongo",
         "access_rules": [
-          "@Chest Above King Dodongo,lift1,sticks",
-          "@Chest Above King Dodongo,lift1,sword1",
-          "@Chest Above King Dodongo,lift1,sword2",
-          "@Chest Above King Dodongo,bombs,sticks",
-          "@Chest Above King Dodongo,bombs,sword1",
-          "@Chest Above King Dodongo,bombs,sword2",
-          "@Chest Above King Dodongo,bombchu,[bombs],sticks",
-          "@Chest Above King Dodongo,bombchu,[bombs],sword1",
-          "@Chest Above King Dodongo,bombchu,[bombs],sword2"
+          "@Chest Above King Dodongo,erd_dodongo_c,lift1,sticks",
+          "@Chest Above King Dodongo,erd_dodongo_c,lift1,sword1",
+          "@Chest Above King Dodongo,erd_dodongo_a,lift1,sword2",
+          "@Chest Above King Dodongo,erd_dodongo_c,bombs,sticks",
+          "@Chest Above King Dodongo,erd_dodongo_c,bombs,sword1",
+          "@Chest Above King Dodongo,erd_dodongo_a,bombs,sword2",
+          "@Chest Above King Dodongo,erd_dodongo_c,bombchu,[bombs],sticks",
+          "@Chest Above King Dodongo,erd_dodongo_c,bombchu,[bombs],sword1",
+          "@Chest Above King Dodongo,erd_dodongo_a,bombchu,[bombs],sword2"
         ],
         "sections": [
           {
@@ -452,7 +488,10 @@
           {
             "map": "dodongoscavern",
             "x": "1035",
-            "y": "1080"
+            "y": "1080",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
@@ -465,8 +504,7 @@
           {
             "name": "Check it",
             "access_rules": [
-              "$can_blast",
-              "lift1"
+              "@Dodongos Cavern Lobby"
             ],
             "chest_unopened_img": "images/gossip_stone.png",
             "chest_opened_img": "images/gossip_stone.png",
@@ -477,7 +515,10 @@
           {
             "map": "dodongoscavern",
             "x": 1610,
-            "y": 1655
+            "y": 1655,
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
@@ -490,12 +531,12 @@
           {
             "name": "East Side Room",
             "access_rules": [
-              "$has_explosives",
-              "sword2",
-              "sling",
-              "boomerang",
-              "sticks",
-              "sword1"
+              "@Dodongos Cavern Lobby,$has_explosives",
+              "@Dodongos Cavern Lobby,erd_dodongo_a,sword2",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sling",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,boomerang",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sticks",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sword1"
             ],
             "sections": [
               {
@@ -511,7 +552,7 @@
                 "x": "1300",
                 "y": "2350",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -535,7 +576,7 @@
                 "x": "520",
                 "y": "135",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -559,7 +600,7 @@
                 "x": "2990",
                 "y": "1250",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -567,7 +608,7 @@
           {
             "name": "Alcove Above Stairs",
             "access_rules": [
-              "@Bomb Bag Chest,boomerang,$has_explosives",
+              "@Bomb Bag Chest,erd_dodongo_c,boomerang",
               "@Bomb Bag Chest,boomerang,lift1",
               "@Bomb Bag Chest,sword2,hookshot",
               "{@Bomb Flower Platform,sling}",
@@ -588,7 +629,7 @@
                 "x": "735",
                 "y": "85",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -596,9 +637,10 @@
           {
             "name": "Scarecrow",
             "access_rules": [
-              "sword2,[ocarina],[scarecrow],[hookshot]",
-              "sword2,longshot",
-              "{sling}"
+              "@Dodongos Cavern Lobby,erd_dodongo_a,sword2,[ocarina],[scarecrow],[hookshot]",
+              "@Dodongos Cavern Lobby,erd_dodongo_a,sword2,longshot",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,{sling}",
+              "@Dodongos Cavern Lobby,erd_dodongo_a,{bow}"
             ],
             "sections": [
               {
@@ -615,7 +657,7 @@
                 "x": "1720",
                 "y": "2057",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -630,6 +672,9 @@
         "children": [
           {
             "name": "Lobby",
+            "access_rules": [
+              "@Dodongos Cavern Lobby"
+            ],
             "sections": [
               {
                 "name": "Deku Shield",
@@ -644,7 +689,7 @@
                 "x": "745",
                 "y": "1590",
                 "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
+                  "setting_scrub_shuffle_yes,dodongo_reg"
                 ]
               }
             ]
@@ -652,11 +697,11 @@
           {
             "name": "East Side",
             "access_rules": [
-              "sword2",
-              "sword1",
-              "sticks",
-              "sling",
-              "$has_explosives"
+              "@Dodongos Cavern Lobby,erd_dodongo_a,sword2",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sword1",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sticks",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sling",
+              "@Dodongos Cavern Lobby,$has_explosives"
             ],
             "sections": [
               {
@@ -672,7 +717,7 @@
                 "x": "2760",
                 "y": "1630",
                 "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
+                  "setting_scrub_shuffle_yes,dodongo_reg"
                 ]
               }
             ]
@@ -680,7 +725,8 @@
           {
             "name": "Near Bombs",
             "access_rules": [
-              "@Bomb Flower Platform,$can_blast"
+              "@Bomb Flower Platform,$has_explosives",
+              "@Bomb Flower Platform,erd_dodongo_a,hammer"
             ],
             "sections": [
               {
@@ -696,7 +742,7 @@
                 "x": "2030",
                 "y": "635",
                 "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
+                  "setting_scrub_shuffle_yes,dodongo_reg"
                 ]
               }
             ]

@@ -31,8 +31,8 @@ function has_explosives()
   end
 end
 
-function can_blast()
-  if has("sword2") and has("hammer") then
+function can_blast(age)
+  if not (age == "child") and has("sword2") and has("hammer") then
     return 1 
   else
     return has_explosives()
