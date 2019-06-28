@@ -1251,13 +1251,23 @@
   },
   {
     "name": "Ice Cavern MQ",
-    "parent": "Zoras Fountain",
+    "parent": "World",
+    "color": "#0936a0",
     "access_rules": [
-      "erd_ice,ice_mq"
+      "erd_ice,ice_mq,$has_bottle"
     ],
     "children": [
       {
         "name": "Map Chest",
+        "access_rules": [
+          "erd_ice_a",
+          "$has_explosives,sticks",
+          "$has_explosives,sling",
+          "$has_explosives,sword1",
+          "magic,dins,sword1",
+          "magic,dins,sticks",
+          "magic,dins,$has_projectile|child"
+        ],
         "sections": [
           {
             "name": "Chest",
@@ -1267,8 +1277,8 @@
         "map_locations": [
           {
             "map": "icecavern",
-            "x": 861,
-            "y": 17,
+            "x": 1530,
+            "y": 1070,
             "visibility_rules": [
               "ice_mq"
             ]
@@ -1277,6 +1287,9 @@
       },
       {
         "name": "Compass Chest",
+        "access_rules": [
+          "erd_ice_a"
+        ],
         "sections": [
           {
             "name": "Chest",
@@ -1286,8 +1299,8 @@
         "map_locations": [
           {
             "map": "icecavern",
-            "x": 828,
-            "y": 782,
+            "x": 1990,
+            "y": 250,
             "visibility_rules": [
               "ice_mq"
             ]
@@ -1297,8 +1310,7 @@
       {
         "name": "Freestanding HP",
         "access_rules": [
-          "$has_explosives",
-          "{}"
+          "erd_ice_a,$has_explosives"
         ],
         "sections": [
           {
@@ -1312,8 +1324,8 @@
         "map_locations": [
           {
             "map": "icecavern",
-            "x": 856,
-            "y": 668,
+            "x": 2130,
+            "y": 410,
             "visibility_rules": [
               "ice_mq"
             ]
@@ -1321,33 +1333,21 @@
         ]
       },
       {
-        "name": "Iron Boots Chest",
+        "name": "Final Room MQ",
         "sections": [
           {
-            "name": "Chest",
+            "name": "Iron Boots Chest",
+            "access_rules": [
+              "erd_ice_a"
+            ],
             "item_count": 1
-          }
-        ],
-        "map_locations": [
+          },
           {
-            "map": "icecavern",
-            "x": 228,
-            "y": 163,
-            "visibility_rules": [
-              "ice_mq"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Sheik in Ice Cavern",
-        "access_rules": [
-          "$has_bottle",
-          "{$hintable}"
-        ],
-        "sections": [
-          {
-            "name": "Chest",
+            "name": "Sheik in Ice Cavern",
+            "access_rules": [
+              "erd_ice_a",
+              "{$hintable}"
+            ],
             "capture_item": true,
             "chest_unopened_img": "images/grey_note.png",
             "chest_opened_img": "images/grey_note_check.png",
@@ -1357,8 +1357,8 @@
         "map_locations": [
           {
             "map": "icecavern",
-            "x": 668,
-            "y": 320,
+            "x": 510,
+            "y": 615,
             "visibility_rules": [
               "ice_mq"
             ]
@@ -1374,7 +1374,7 @@
           {
             "name": "Red Ice",
             "access_rules": [
-              "ocarina,time"
+              "erd_ice_a,$has_bottle,ocarina,time"
             ],
             "sections": [
               {
@@ -1387,8 +1387,8 @@
             "map_locations": [
               {
                 "map": "icecavern",
-                "x": 417,
-                "y": 471,
+                "x": 1860,
+                "y": 340,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, ice_mq"
                 ]
@@ -1398,8 +1398,8 @@
           {
             "name": "Scarecrow",
             "access_rules": [
-              "hookshot,ocarina,[scarecrow]",
-              "longshot,hoverboots"
+              "erd_ice_a,hookshot,ocarina,[scarecrow]",
+              "erd_ice_a,longshot,hoverboots"
             ],
             "sections": [
               {
@@ -1412,8 +1412,8 @@
             "map_locations": [
               {
                 "map": "icecavern",
-                "x": 913,
-                "y": 366,
+                "x": 1370,
+                "y": 140,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, ice_mq"
                 ]
@@ -1422,6 +1422,9 @@
           },
           {
             "name": "Ice Block",
+            "access_rules": [
+              "erd_ice_a"
+            ],
             "sections": [
               {
                 "name": "GS72",
@@ -1433,8 +1436,8 @@
             "map_locations": [
               {
                 "map": "icecavern",
-                "x": 163,
-                "y": 594,
+                "x": 925,
+                "y": 305,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, ice_mq"
                 ]

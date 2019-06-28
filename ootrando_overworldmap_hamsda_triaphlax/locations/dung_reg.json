@@ -998,9 +998,12 @@
   },
   {
     "name": "Ice Cavern",
-    "parent": "Zoras Fountain",
+    "parent": "World",
+    "color": "#0936a0",
     "access_rules": [
-      "erd_ice,ice_reg"
+      "erd_ice_a,ice_reg",
+      "erd_ice_c,$has_explosives,ice_reg",
+      "erd_ice_c,magic,dins,ice_reg"
     ],
     "children": [
       {
@@ -1008,6 +1011,9 @@
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "erd_ice_a,$has_bottle"
+            ],
             "item_count": 1
           }
         ],
@@ -1015,7 +1021,10 @@
           {
             "map": "icecavern",
             "x": 1990,
-            "y": 250
+            "y": 250,
+            "visibility_rules": [
+              "ice_reg"
+            ]
           }
         ]
       },
@@ -1024,6 +1033,9 @@
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "$has_bottle"
+            ],
             "item_count": 1
           }
         ],
@@ -1031,7 +1043,10 @@
           {
             "map": "icecavern",
             "x": 1530,
-            "y": 1070
+            "y": 1070,
+            "visibility_rules": [
+              "ice_reg"
+            ]
           }
         ]
       },
@@ -1040,6 +1055,9 @@
         "sections": [
           {
             "name": "Heart Piece",
+            "access_rules": [
+              "$has_bottle"
+            ],
             "chest_unopened_img": "images/HP.png",
             "chest_opened_img": "images/HP_grey.png",
             "item_count": 1
@@ -1049,12 +1067,22 @@
           {
             "map": "icecavern",
             "x": 1720,
-            "y": 1020
+            "y": 1020,
+            "visibility_rules": [
+              "ice_reg"
+            ]
           }
         ]
       },
       {
         "name": "Final Room",
+        "access_rules": [
+          "erd_ice_a,$has_bottle",
+          "erd_ice_c,$has_bottle,sling",
+          "erd_ice_c,$has_bottl0,sticks",
+          "erd_ice_c,$has_bottle,sword1",
+          "erd_ice_c,$has_bottle,magic,dins"
+        ],
         "sections": [
           {
             "name": "Iron Boots Chest",
@@ -1063,7 +1091,6 @@
           {
             "name": "Sheik in Ice Cavern",
             "access_rules": [
-              "$has_bottle",
               "{$hintable}"
             ],
             "capture_item": true,
@@ -1076,7 +1103,10 @@
           {
             "map": "icecavern",
             "x": 510,
-            "y": 615
+            "y": 615,
+            "visibility_rules": [
+              "ice_reg"
+            ]
           }
         ]
       },
@@ -1089,9 +1119,11 @@
           {
             "name": "Heart Piece Room",
             "access_rules": [
-              "hookshot",
-              "{bow}",
-              "{$has_explosives}"
+              "erd_ice_a,$has_bottle,hookshot",
+              "{erd_ice_a,$has_bottle,bow}",
+              "erd_ice_c,$has_bottle,boomerang",
+              "{erd_ice_c,$has_bottle,sling}",
+              "{$has_bottle,$has_explosives}"
             ],
             "sections": [
               {
@@ -1108,7 +1140,7 @@
                 "x": 1715,
                 "y": 970,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,ice_reg"
                 ]
               }
             ]
@@ -1116,8 +1148,10 @@
           {
             "name": "Spinning Scythe Room",
             "access_rules": [
-              "hookshot",
-              "{bow}",
+              "erd_ice_a,hookshot",
+              "{erd_ice_a,bow}",
+              "erd_ice_c,boomerang",
+              "{erd_ice_c,sling}",
               "{$has_explosives}"
             ],
             "sections": [
@@ -1135,7 +1169,7 @@
                 "x": 1415,
                 "y": 675,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,ice_reg"
                 ]
               }
             ]
@@ -1143,9 +1177,11 @@
           {
             "name": "Push Block Room",
             "access_rules": [
-              "hookshot",
-              "{bow}",
-              "{$has_explosives}"
+              "erd_ice_a,$has_bottle,hookshot",
+              "{erd_ice_a,$has_bottle,bow}",
+              "erd_ice_c,$has_bottle,boomerang",
+              "{erd_ice_c,$has_bottle,sling}",
+              "{$has_bottle,$has_explosives}"
             ],
             "sections": [
               {
@@ -1162,7 +1198,7 @@
                 "x": 1180,
                 "y": 285,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,ice_reg"
                 ]
               }
             ]
