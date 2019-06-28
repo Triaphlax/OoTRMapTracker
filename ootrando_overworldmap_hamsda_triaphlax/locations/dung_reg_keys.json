@@ -17,8 +17,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 183,
-            "y": 1853
+            "x": 146,
+            "y": 1482,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -33,8 +36,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1740,
-            "y": 1525
+            "x": 1392,
+            "y": 1220,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -56,8 +62,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1515,
-            "y": 1085
+            "x": 1212,
+            "y": 868,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -78,8 +87,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 2345,
-            "y": 1745
+            "x": 1876,
+            "y": 1396,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -97,8 +109,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1500,
-            "y": 2275
+            "x": 1200,
+            "y": 1820,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -116,8 +131,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 325,
-            "y": 1410
+            "x": 260,
+            "y": 1128,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -137,8 +155,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1350,
-            "y": 570
+            "x": 1080,
+            "y": 456,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -159,8 +180,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 490,
-            "y": 1000
+            "x": 392,
+            "y": 800,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -178,8 +202,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 2010,
-            "y": 610
+            "x": 1608,
+            "y": 488,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -197,8 +224,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1780,
-            "y": 495
+            "x": 1424,
+            "y": 396,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -216,8 +246,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 2255,
-            "y": 650
+            "x": 1804,
+            "y": 520,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -239,8 +272,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 2440,
-            "y": 2030
+            "x": 1952,
+            "y": 1624,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -258,8 +294,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 315,
-            "y": 2560
+            "x": 252,
+            "y": 2048,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -270,7 +309,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "forest",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -280,8 +319,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1215,
-            "y": 2300
+            "x": 972,
+            "y": 1840,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -304,10 +346,10 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 340,
-                "y": 1855,
+                "x": 272,
+                "y": 1484,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]
@@ -325,10 +367,10 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 1405,
-                "y": 1665,
+                "x": 1124,
+                "y": 1332,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]
@@ -349,10 +391,10 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 1130,
-                "y": 920,
+                "x": 904,
+                "y": 736,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]
@@ -376,10 +418,10 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 2365,
-                "y": 1695,
+                "x": 1892,
+                "y": 1356,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]
@@ -400,10 +442,10 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 355,
-                "y": 2480,
+                "x": 284,
+                "y": 1984,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]

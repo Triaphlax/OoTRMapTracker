@@ -17,8 +17,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 798,
-            "y": 622,
+            "x": 315,
+            "y": 1515,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -88,8 +88,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 109,
-            "y": 373,
+            "x": 1720,
+            "y": 1995,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -118,8 +118,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 402,
-            "y": 612,
+            "x": 1820,
+            "y": 1155,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -163,8 +163,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 774,
-            "y": 819,
+            "x": 1392,
+            "y": 1220,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -231,8 +231,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 51,
-            "y": 442,
+            "x": 2045,
+            "y": 1620,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -255,8 +255,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 946,
-            "y": 335,
+            "x": 1875,
+            "y": 1375,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -330,8 +330,8 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 785,
-                "y": 523,
+                "x": 545,
+                "y": 1470,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, forest_mq"
                 ]
@@ -354,8 +354,8 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 256,
-                "y": 567,
+                "x": 230,
+                "y": 1310,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, forest_mq"
                 ]
@@ -379,8 +379,8 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 260,
-                "y": 549,
+                "x": 580,
+                "y": 945,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, forest_mq"
                 ]
@@ -406,8 +406,8 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 478,
-                "y": 876,
+                "x": 1675,
+                "y": 1300,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, forest_mq"
                 ]
@@ -431,8 +431,8 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 723,
-                "y": 233,
+                "x": 1215,
+                "y": 1805,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, forest_mq"
                 ]
