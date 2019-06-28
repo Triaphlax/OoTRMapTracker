@@ -753,9 +753,11 @@
   },
   {
     "name": "Jabu Jabus Belly",
-    "parent": "Zoras Fountain",
+    "parent": "World",
+    "color": "#0936a0",
     "access_rules": [
-      "erd_jabu,jabu_reg"
+      "erd_jabu_c,$has_projectile|child,jabu_reg",
+      "erd_jabu_a,$has_projectile|adult,jabu_reg"
     ],
     "children": [
       {
@@ -769,6 +771,9 @@
         "map_locations": [
           {
             "map": "jabujabu",
+            "visibility_rules": [
+              "jabu_reg"
+            ],
             "x": 2600,
             "y": 835
           }
@@ -777,7 +782,7 @@
       {
         "name": "Map Chest",
         "access_rules": [
-          "boomerang"
+          "erd_jabu_c,boomerang"
         ],
         "sections": [
           {
@@ -788,6 +793,9 @@
         "map_locations": [
           {
             "map": "jabujabu",
+            "visibility_rules": [
+              "jabu_reg"
+            ],
             "x": 1440,
             "y": 445
           }
@@ -796,7 +804,7 @@
       {
         "name": "Compass Chest",
         "access_rules": [
-          "boomerang"
+          "erd_jabu_c,boomerang"
         ],
         "sections": [
           {
@@ -807,6 +815,9 @@
         "map_locations": [
           {
             "map": "jabujabu",
+            "visibility_rules": [
+              "jabu_reg"
+            ],
             "x": 2155,
             "y": 450
           }
@@ -815,12 +826,12 @@
       {
         "name": "Barinade",
         "access_rules": [
-          "boomerang,sword1",
-          "boomerang,sticks"
+          "erd_jabu_c,boomerang,sword1",
+          "erd_jabu_c,boomerang,sticks"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "jabu",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -830,6 +841,9 @@
         "map_locations": [
           {
             "map": "jabujabu",
+            "visibility_rules": [
+              "jabu_reg"
+            ],
             "x": 2195,
             "y": 1045
           }
@@ -857,7 +871,7 @@
                 "x": 2160,
                 "y": 1865,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,jabu_reg"
                 ]
               }
             ]
@@ -865,8 +879,10 @@
           {
             "name": "Lobby Basement Lower",
             "access_rules": [
-              "boomerang",
-              "{sling}",
+              "erd_jabu_c,boomerang",
+              "erd_jabu_a,hookshot",
+              "{erd_jabu_c,sling}",
+              "{erd_jabu_a,bow}",
               "{$has_explosives}"
             ],
             "sections": [
@@ -884,7 +900,7 @@
                 "x": 2165,
                 "y": 1475,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,jabu_reg"
                 ]
               }
             ]
@@ -892,8 +908,10 @@
           {
             "name": "Lobby Basement Upper",
             "access_rules": [
-              "boomerang",
-              "{sling}",
+              "erd_jabu_c,boomerang",
+              "erd_jabu_a,hookshot",
+              "{erd_jabu_c,sling}",
+              "{erd_jabu_a,bow}",
               "{$has_explosives}"
             ],
             "sections": [
@@ -911,7 +929,7 @@
                 "x": 2065,
                 "y": 1455,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,jabu_reg"
                 ]
               }
             ]
@@ -935,7 +953,7 @@
                 "x": 1695,
                 "y": 1265,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,jabu_reg"
                 ]
               }
             ]
@@ -950,6 +968,11 @@
         "children": [
           {
             "name": "B1 Dive",
+            "access_rules": [
+              "erd_jabu_c",
+              "erd_jabu_a,scale1",
+              "erd_jabu_a,ironboots,[scale1]"
+            ],
             "sections": [
               {
                 "name": "Deku Nuts",
@@ -964,7 +987,7 @@
                 "x": 730,
                 "y": 1255,
                 "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
+                  "setting_scrub_shuffle_yes,jabu_reg"
                 ]
               }
             ]

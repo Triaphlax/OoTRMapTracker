@@ -843,7 +843,8 @@
       {
         "name": "Map Chest",
         "access_rules": [
-          "$has_explosives"
+          "erd_jabu_a,$can_blast|adult",
+          "erd_jabu_c,$can_blast|child"
         ],
         "sections": [
           {
@@ -854,8 +855,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 518,
-            "y": 858,
+            "x": 405,
+            "y": 1160,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -865,7 +866,7 @@
       {
         "name": "Entry Side Chest",
         "access_rules": [
-          "sling"
+          "erd_jabu_c,sling"
         ],
         "sections": [
           {
@@ -876,8 +877,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 814,
-            "y": 190,
+            "x": 500,
+            "y": 1165,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -898,8 +899,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 361,
-            "y": 427,
+            "x": 990,
+            "y": 1335,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -913,15 +914,15 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Kill the enemies",
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 392,
-            "y": 300,
+            "x": 730,
+            "y": 1255,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -942,8 +943,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 222,
-            "y": 585,
+            "x": 1920,
+            "y": 1610,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -964,8 +965,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 398,
-            "y": 408,
+            "x": 2240,
+            "y": 1605,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -973,21 +974,21 @@
         ]
       },
       {
-        "name": "Boomerang Chest",
+        "name": "Boomerang Chest MQ",
         "access_rules": [
           "@Entry Side Chest"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Kill the enemies",
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 996,
-            "y": 173,
+            "x": 2125,
+            "y": 1820,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -1008,8 +1009,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 199,
-            "y": 915,
+            "x": 2380,
+            "y": 1900,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -1030,8 +1031,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 791,
-            "y": 412,
+            "x": 2820,
+            "y": 480,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -1053,8 +1054,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 213,
-            "y": 527,
+            "x": 1025,
+            "y": 1015,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -1075,8 +1076,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 279,
-            "y": 325,
+            "x": 1725,
+            "y": 1205,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -1090,7 +1091,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "jabu",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -1100,8 +1101,8 @@
         "map_locations": [
           {
             "map": "jabujabu",
-            "x": 199,
-            "y": 854,
+            "x": 2195,
+            "y": 1045,
             "visibility_rules": [
               "jabu_mq"
             ]
@@ -1117,8 +1118,8 @@
           {
             "name": "Boomerang Room",
             "access_rules": [
-              "@Boomerang Chest,ocarina,time",
-              "@Boomerang Chest,boomerang,[ocarina],[time]"
+              "@Boomerang Chest MQ,ocarina,time",
+              "@Boomerang Chest MQ,boomerang,[ocarina],[time]"
             ],
             "sections": [
               {
@@ -1131,8 +1132,8 @@
             "map_locations": [
               {
                 "map": "jabujabu",
-                "x": 887,
-                "y": 700,
+                "x": 2265,
+                "y": 1910,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, jabu_mq"
                 ]
@@ -1156,8 +1157,8 @@
             "map_locations": [
               {
                 "map": "jabujabu",
-                "x": 39,
-                "y": 384,
+                "x": 2220,
+                "y": 350,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, jabu_mq"
                 ]
@@ -1168,6 +1169,7 @@
             "name": "Invisible Enemies Room",
             "access_rules": [
               "@Falling Like Like Room Chest,$can_see_with_lens",
+              "@Second Room Lower Chest,erd_jabu_a,hoverboots",
               "{$hintable}"
             ],
             "sections": [
@@ -1182,8 +1184,8 @@
             "map_locations": [
               {
                 "map": "jabujabu",
-                "x": 557,
-                "y": 513,
+                "x": 1440,
+                "y": 1540,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, jabu_mq"
                 ]
@@ -1206,10 +1208,10 @@
             "map_locations": [
               {
                 "map": "jabujabu",
-                "x": 92,
-                "y": 231,
+                "x": 1680,
+                "y": 1115,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons, jabu_mq"
+                  "setting_skulltulas_dungeons,jabu_mq"
                 ]
               }
             ]
@@ -1226,7 +1228,7 @@
             ],
             "sections": [
               {
-                "name": "Chest",
+                "name": "Cow",
                 "chest_unopened_img": "images/cow.png",
                 "chest_opened_img": "images/bottle_milk.png",
                 "item_count": 1
@@ -1235,10 +1237,10 @@
             "map_locations": [
               {
                 "map": "jabujabu",
-                "x": 733,
-                "y": 607,
+                "x": 155,
+                "y": 440,
                 "visibility_rules": [
-                  "jabu_mq"
+                  "setting_cowsanity_yes,jabu_mq"
                 ]
               }
             ]
