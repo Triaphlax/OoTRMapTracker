@@ -1398,7 +1398,7 @@
           {
             "name": "Scarecrow",
             "access_rules": [
-              "erd_ice_a,hookshot,ocarina,[scarecrow]",
+              "erd_ice_a,hookshot,ocarina,scarecrow",
               "erd_ice_a,longshot,hoverboots"
             ],
             "sections": [
