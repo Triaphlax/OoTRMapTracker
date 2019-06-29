@@ -2426,7 +2426,8 @@
   },
   {
     "name": "Bottom of the Well MQ",
-    "parent": "Kakariko Village",
+    "parent": "World",
+    "color": "#6909a0",
     "access_rules": [
       "erd_botw_c,botw_mq"
     ],
@@ -2446,8 +2447,8 @@
         "map_locations": [
           {
             "map": "bottomofthewell",
-            "x": 690,
-            "y": 944,
+            "x": 980,
+            "y": 415,
             "visibility_rules": [
               "botw_mq"
             ]
@@ -2462,7 +2463,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
             "item_count": 1
@@ -2471,8 +2472,8 @@
         "map_locations": [
           {
             "map": "bottomofthewell",
-            "x": 293,
-            "y": 477,
+            "x": 1145,
+            "y": 120,
             "visibility_rules": [
               "botw_mq"
             ]
@@ -2496,8 +2497,8 @@
         "map_locations": [
           {
             "map": "bottomofthewell",
-            "x": 523,
-            "y": 139,
+            "x": 1160,
+            "y": 740,
             "visibility_rules": [
               "botw_mq"
             ]
@@ -2512,7 +2513,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
             "item_count": 1
@@ -2521,8 +2522,8 @@
         "map_locations": [
           {
             "map": "bottomofthewell",
-            "x": 905,
-            "y": 57,
+            "x": 1340,
+            "y": 740,
             "visibility_rules": [
               "botw_mq"
             ]
@@ -2543,8 +2544,8 @@
         "map_locations": [
           {
             "map": "bottomofthewell",
-            "x": 885,
-            "y": 962,
+            "x": 955,
+            "y": 1165,
             "visibility_rules": [
               "botw_mq"
             ]
@@ -2574,8 +2575,8 @@
             "map_locations": [
               {
                 "map": "bottomofthewell",
-                "x": 404,
-                "y": 755,
+                "x": 975,
+                "y": 115,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, botw_mq"
                 ]
@@ -2598,8 +2599,8 @@
             "map_locations": [
               {
                 "map": "bottomofthewell",
-                "x": 862,
-                "y": 17,
+                "x": 920,
+                "y": 850,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, botw_mq"
                 ]
@@ -2622,8 +2623,8 @@
             "map_locations": [
               {
                 "map": "bottomofthewell",
-                "x": 841,
-                "y": 843,
+                "x": 190,
+                "y": 120,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, botw_mq"
                 ]

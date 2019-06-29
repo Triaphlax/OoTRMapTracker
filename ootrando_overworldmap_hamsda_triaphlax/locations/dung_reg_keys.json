@@ -2308,7 +2308,8 @@
   },
   {
     "name": "Bottom of the Well",
-    "parent": "Kakariko Village",
+    "parent": "World",
+    "color": "#6909a0",
     "access_rules": [
       "erd_botw_c,botw_reg"
     ],
@@ -2328,7 +2329,10 @@
           {
             "map": "bottomofthewell",
             "x": 675,
-            "y": 435
+            "y": 435,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2347,7 +2351,10 @@
           {
             "map": "bottomofthewell",
             "x": 925,
-            "y": 520
+            "y": 520,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2366,7 +2373,10 @@
           {
             "map": "bottomofthewell",
             "x": 780,
-            "y": 420
+            "y": 420,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2385,7 +2395,10 @@
           {
             "map": "bottomofthewell",
             "x": 975,
-            "y": 490
+            "y": 490,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2404,7 +2417,10 @@
           {
             "map": "bottomofthewell",
             "x": 1420,
-            "y": 620
+            "y": 620,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2423,12 +2439,18 @@
           {
             "map": "bottomofthewell",
             "x": 1270,
-            "y": 525
+            "y": 525,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
       {
         "name": "Freestanding Key",
+        "access_rules": [
+          "sticks,magic,dins"
+        ],
         "sections": [
           {
             "name": "Chest",
@@ -2441,7 +2463,10 @@
           {
             "map": "bottomofthewell",
             "x": 155,
-            "y": 165
+            "y": 165,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2460,7 +2485,10 @@
           {
             "map": "bottomofthewell",
             "x": 805,
-            "y": 745
+            "y": 745,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2479,7 +2507,10 @@
           {
             "map": "bottomofthewell",
             "x": 865,
-            "y": 235
+            "y": 235,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2501,7 +2532,10 @@
           {
             "map": "bottomofthewell",
             "x": 930,
-            "y": 1155
+            "y": 1155,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2520,7 +2554,10 @@
           {
             "map": "bottomofthewell",
             "x": 665,
-            "y": 560
+            "y": 560,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2539,7 +2576,10 @@
           {
             "map": "bottomofthewell",
             "x": 575,
-            "y": 365
+            "y": 365,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2560,7 +2600,10 @@
           {
             "map": "bottomofthewell",
             "x": 1160,
-            "y": 740
+            "y": 740,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2579,7 +2622,10 @@
           {
             "map": "bottomofthewell",
             "x": 1250,
-            "y": 770
+            "y": 770,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2611,7 +2657,7 @@
                 "x": 1285,
                 "y": 490,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,botw_reg"
                 ]
               }
             ]
@@ -2619,9 +2665,9 @@
           {
             "name": "West Inner Room",
             "access_rules": [
-              "botw_small_keys:1,[botw_small_keys:3],boomerang",
-              "{botw_small_keys:1,sling}",
-              "{botw_small_keys:1,$has_explosives}"
+              "botw_small_keys:1,[botw_small_keys:3],boomerang,$can_see_with_lens",
+              "{botw_small_keys:1,sling,$can_see_with_lens}",
+              "{botw_small_keys:1,$has_explosives,$can_see_with_lens}"
             ],
             "sections": [
               {
@@ -2638,7 +2684,7 @@
                 "x": 1025,
                 "y": 60,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,botw_reg"
                 ]
               }
             ]
@@ -2665,7 +2711,7 @@
                 "x": 1130,
                 "y": 75,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,botw_reg"
                 ]
               }
             ]
