@@ -892,16 +892,37 @@
   },
   {
     "name": "Water Temple",
-    "parent": "Lake Hylia",
+    "parent": "World",
+    "color": "#0936a0",
     "access_rules": [
-      "erd_water,water_reg"
+      "erd_water_a,water_reg"
     ],
     "children": [
       {
+        "name": "WT Dive",
+        "access_rules": [
+          "$has_zora_tunic,ironboots"
+        ]
+      },
+      {
+        "name": "WT Dark Link",
+        "access_rules": [
+          "water_small_keys:1,[water_small_keys:5],hookshot"
+        ]
+      },
+      {
+        "name": "WT Middle Water",
+        "access_rules": [
+          "@WT Dive,ocarina,lullaby,bow",
+          "@WT Dive,ocarina,lullaby,magic,dins",
+          "@WT Dive,ocarina,lullaby,erd_water_c,sticks",
+          "@WT Dive,ocarina,lullaby,water_small_keys:2,[water_small_keys:6],hookshot"
+        ]
+      },
+      {
         "name": "Map Chest",
         "access_rules": [
-          "ironboots",
-          "[ironboots],longshot"
+          "@WT Dive,[hookshot]"
         ],
         "sections": [
           {
@@ -912,16 +933,19 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2690,
-            "y": 1965
+            "x": 1882,
+            "y": 1375,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Compass Chest",
         "access_rules": [
-          "ironboots",
-          "[ironboots],longshot,ocarina,lullaby"
+          "@WT Dive,ironboots,hookshot",
+          "@WT Dive,ocarina,lullaby,hookshot"
         ],
         "sections": [
           {
@@ -932,18 +956,20 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2915,
-            "y": 1695
+            "x": 2040,
+            "y": 1186,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Torches Chest",
         "access_rules": [
-          "ironboots,ocarina,lullaby,bow",
-          "ironboots,ocarina,lullaby,dinsfire,magic",
-          "[ironboots],longshot,ocarina,lullaby,bow",
-          "[ironboots],longshot,ocarina,lullaby,dinsfire,magic"
+          "@WT Dive,ocarina,lullaby,bow",
+          "@WT Dive,ocarina,lullaby,magic,dins",
+          "@WT Dive,ocarina,lullaby,erd_water_c,sticks,sword1,magic"
         ],
         "sections": [
           {
@@ -954,17 +980,20 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2550,
-            "y": 2220
+            "x": 1785,
+            "y": 1554,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Dragon Chest",
         "access_rules": [
-          "ironboots,ocarina,lullaby,lift1",
-          "[ironboots],longshot,ocarina,lullaby,lift1,bombchu",
-          "[ironboots],water_small_keys:2,[water_small_keys:5],ocarina,time,bow"
+          "@WT Dive,ironboots,hookshot,ocarina,lullaby,lift1",
+          "@WT Dive,ironboots,[hookshot],bombchu,ocarina,lullaby,lift1",
+          "@WT Dive,ironboots,hookshot,water_small_keys:2,[water_small_keys:6],ocarina,time,bow"
         ],
         "sections": [
           {
@@ -975,65 +1004,20 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 1430,
-            "y": 880
+            "x": 1000,
+            "y": 616,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Central Pillar Chest",
         "access_rules": [
-          "ironboots,ocarina,lullaby,water_small_keys:1,[water_small_keys:5],[bluetunic]",
-          "ironboots,ocarina,lullaby,bow,[bluetunic]",
-          "ironboots,ocarina,lullaby,dinsfire,magic,[bluetunic]"
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "item_count": 1
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "watertemple",
-            "x": 2000,
-            "y": 2635
-          }
-        ]
-      },
-      {
-        "name": "Cracked Wall Chest",
-        "access_rules": [
-          "$has_explosives,ironboots,ocarina,lullaby,water_small_keys:1,[water_small_keys:5]",
-          "$has_explosives,ironboots,ocarina,lullaby,bow",
-          "$has_explosives,ironboots,ocarina,lullaby,dinsfire,magic",
-          "$has_explosives,ironboots,ocarina,lullaby,hoverboots,[bow]",
-          "$has_explosives,[ironboots],longshot,ocarina,lullaby,water_small_keys:1,[water_small_keys:5]",
-          "$has_explosives,[ironboots],longshot,ocarina,lullaby,bow",
-          "$has_explosives,[ironboots],longshot,ocarina,lullaby,dinsfire,magic",
-          "$has_explosives,[ironboots],longshot,ocarina,lullaby,hoverboots,[bow]",
-          "bombchu,[bombs],ironboots,[ocarina],[lullaby],[bow]"
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "item_count": 1
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "watertemple",
-            "x": 2380,
-            "y": 1990
-          }
-        ]
-      },
-      {
-        "name": "Central Bow Target Chest",
-        "access_rules": [
-          "ironboots,ocarina,lullaby,bow,lift1,[hoverboots]",
-          "ironboots,ocarina,lullaby,bow,lift1,[longshot]",
-          "[ironboots],longshot,ocarina,lullaby,bow,lift1"
+          "@WT Middle Water,ironboots,bluetunic,hookshot,water_small_keys:1,[water_small_keys:6]",
+          "@WT Middle Water,ironboots,bluetunic,hookshot,bow",
+          "@WT Middle Water,ironboots,bluetunic,hookshot,magic,dins"
         ],
         "sections": [
           {
@@ -1045,14 +1029,18 @@
           {
             "map": "watertemple",
             "x": 1400,
-            "y": 2275
+            "y": 1844,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
-        "name": "Dark Link Chest",
+        "name": "Cracked Wall Chest",
         "access_rules": [
-          "water_small_keys:2,[water_small_keys:5]"
+          "@WT Middle Water,$has_explosives",
+          "@WT Dive,ocarina,lullaby,hoverboots,$has_explosives,[@WT Middle Water]"
         ],
         "sections": [
           {
@@ -1063,15 +1051,63 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 1695,
-            "y": 170
+            "x": 1666,
+            "y": 1393,
+            "visibility_rules": [
+              "water_reg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Central Bow Target Chest",
+        "access_rules": [
+          "@WT Dive,bow,lift1,ocarina,lullaby,hoverboots",
+          "@WT Dive,bow,lift1,ocarina,lullaby,longshot"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "watertemple",
+            "x": 979,
+            "y": 1592,
+            "visibility_rules": [
+              "water_reg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dark Link Chest",
+        "access_rules": [
+          "@WT Dark Link,water_small_keys:2,[water_small_keys:6]"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "watertemple",
+            "x": 1186,
+            "y": 118,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "River Chest",
         "access_rules": [
-          "water_small_keys:2,[water_small_keys:5],ocarina,time,bow",
+          "@WT Dark Link,water_small_keys:2,[water_small_keys:6],ocarina,time,bow",
           "{$hintable}"
         ],
         "sections": [
@@ -1084,19 +1120,20 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 1935,
-            "y": 760
+            "x": 1354,
+            "y": 532,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Boss Key Chest",
         "access_rules": [
-          "water_small_keys:2,[water_small_keys:5],ironboots,longshot,$has_explosives,lift1",
-          "water_small_keys:2,[water_small_keys:5],ironboots,longshot,[hoverboots]",
-          "water_small_keys:2,[water_small_keys:5],ironboots,hoverboots,[longshot]",
-          "water_small_keys:2,[water_small_keys:5],[ironboots],longshot,ocarina,lullaby,$has_explosives,lift1",
-          "water_small_keys:2,[water_small_keys:5],[ironboots],longshot,ocarina,lullaby,[hoverboots]",
+          "@WT Dive,water_small_keys:2,[water_small_keys:6],longshot,$has_explosives,lift1",
+          "@WT Dive,water_small_keys:2,[water_small_keys:6],hoverboots,[longshot],$has_explosives,lift1",
+          "@WT Dive,water_small_keys:2,[water_small_keys:6],longshot,hoverboots",
           "{$hintable}"
         ],
         "sections": [
@@ -1111,8 +1148,11 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2380,
-            "y": 1288
+            "x": 1666,
+            "y": 901,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
@@ -1133,8 +1173,11 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2756,
-            "y": 935
+            "x": 1929,
+            "y": 654,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
@@ -1147,8 +1190,8 @@
           {
             "name": "South Basement",
             "access_rules": [
-              "$has_explosives,ocarina,lullaby,ironboots",
-              "$has_explosives,ocarina,lullaby,[ironboots],scale2,longshot"
+              "@WT Dive,hookshot,$has_explosives,ocarina,lullaby",
+              "@WT Dive,hoverboots,$has_explosives,ocarina,lullaby"
             ],
             "sections": [
               {
@@ -1161,10 +1204,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 835,
-                "y": 1595,
+                "x": 584,
+                "y": 1116,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]
@@ -1172,7 +1215,7 @@
           {
             "name": "Serpent River",
             "access_rules": [
-              "water_small_keys:2,[water_small_keys:5],ocarina,time"
+              "@WT Dark Link,water_small_keys:2,[water_small_keys:6],ocarina,time,ironboots"
             ],
             "sections": [
               {
@@ -1185,10 +1228,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 1965,
-                "y": 585,
+                "x": 1375,
+                "y": 409,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]
@@ -1196,12 +1239,14 @@
           {
             "name": "Central Room",
             "access_rules": [
-              "[ironboots],ocarina,lullaby,water_small_keys:1,[water_small_keys:5],longshot",
-              "ironboots,ocarina,lullaby,water_small_keys:1,[water_small_keys:5],faroreswind,magic",
-              "[ironboots],ocarina,lullaby,bow,longshot",
-              "ironboots,ocarina,lullaby,bow,faroreswind,magic",
-              "[ironboots],ocarina,lullaby,dinsfire,magic,longshot",
-              "ironboots,ocarina,lullaby,dinsfire,magic,faroreswind",
+              "@WT Middle Water,longshot,water_small_keys:1,[water_small_keys:6]",
+              "@WT Middle Water,magic,faroreswind,hookshot,water_small_keys:1,[water_small_keys:6]",
+              "@WT Middle Water,longshot,bow",
+              "@WT Middle Water,magic,faroreswind,hookshot,bow",
+              "@WT Middle Water,longshot,dins,magic",
+              "@WT Middle Water,magic,faroreswind,hookshot,dins",
+              "@WT Middle Water,erd_water_c,boomerang,faroreswind,magic,dins",
+              "@WT Middle Water,erd_water_c,boomerang,faroreswind,magic,sticks",
               "{ironboots,ocarina,lullaby,bow}"
             ],
             "sections": [
@@ -1216,10 +1261,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 1900,
-                "y": 1965,
+                "x": 1330,
+                "y": 1375,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]
@@ -1227,9 +1272,8 @@
           {
             "name": "Falling Platform Room",
             "access_rules": [
-              "water_small_keys:1,[water_small_keys:4],longshot",
-              "water_small_keys:1,[water_small_keys:4],[longshot],hookshot",
-              "{water_small_keys:1,bow}"
+              "@WT Dark Link,longshot",
+              "@WT Dark Link,hookshot,[longshot]"
             ],
             "sections": [
               {
@@ -1243,10 +1287,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 935,
-                "y": 930,
+                "x": 654,
+                "y": 651,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]
@@ -1254,9 +1298,8 @@
           {
             "name": "Near Boss Key Chest",
             "access_rules": [
-              "water_small_keys:1,[water_small_keys:4],ironboots,longshot",
-              "water_small_keys:1,[water_small_keys:4],[ironboots],longshot,ocarina,lullaby",
-              "water_small_keys:1,[water_small_keys:4],ironboots,[longshot],hoverboots"
+              "@WT Dive,water_small_keys:1,[water_small_keys:5],longshot",
+              "@WT Dive,water_small_keys:1,[water_small_keys:5],hoverboots,[longshot]"
             ],
             "sections": [
               {
@@ -1269,10 +1312,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 2205,
-                "y": 1385,
+                "x": 1543,
+                "y": 969,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]

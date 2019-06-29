@@ -881,15 +881,41 @@
   },
   {
     "name": "Water Temple MQ",
-    "parent": "Lake Hylia",
+    "parent": "World",
+    "color": "#0936a0",
     "access_rules": [
-      "erd_water,water_mq"
+      "erd_water_a,water_mq"
     ],
     "children": [
       {
+        "name": "WTMQ Dive",
+        "access_rules": [
+          "$has_zora_tunic,ironboots"
+        ]
+      },
+      {
+        "name": "WTMQ Lower Water",
+        "access_rules": [
+          "@WTMQ Dive,ocarina,lullaby"
+        ]
+      },
+      {
+        "name": "WTMQ Dark Link",
+        "access_rules": [
+          "water_small_keys:1,longshot"
+        ]
+      },
+      {
+        "name": "WTMQ Gates",
+        "access_rules": [
+          "@WTMQ Dark Link,magic,dins,ironboots,hoverboots",
+          "@WTMQ Dark Link,magic,dins,ironboots,ocarina,scarecrow"
+        ]
+      },
+      {
         "name": "Map Chest",
         "access_rules": [
-          "ironboots,$has_fire"
+          "@WTMQ Dive,$has_fire"
         ],
         "sections": [
           {
@@ -900,8 +926,8 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 24,
-            "y": 144,
+            "x": 1882,
+            "y": 1375,
             "visibility_rules": [
               "water_mq"
             ]
@@ -911,7 +937,7 @@
       {
         "name": "Longshot Chest",
         "access_rules": [
-          "[ocarina],[lullaby],ironboots"
+          "@WTMQ Lower Water,hookshot"
         ],
         "sections": [
           {
@@ -922,8 +948,8 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 215,
-            "y": 347,
+            "x": 1666,
+            "y": 1393,
             "visibility_rules": [
               "water_mq"
             ]
@@ -933,8 +959,9 @@
       {
         "name": "Compass Chest",
         "access_rules": [
-          "ocarina,lullaby,ironboots,bow",
-          "ocarina,lullaby,ironboots,dinsfire,magic"
+          "@WTMQ Lower Water,bow",
+          "@WTMQ Lower Water,magic,dins",
+          "@WTMQ Lower Water,erd_water_c,sticks,$has_explosives"
         ],
         "sections": [
           {
@@ -945,8 +972,8 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 991,
-            "y": 60,
+            "x": 1785,
+            "y": 1554,
             "visibility_rules": [
               "water_mq"
             ]
@@ -956,8 +983,8 @@
       {
         "name": "Central Pillar Chest",
         "access_rules": [
-          "ironboots,bow,firearrow,magic,[bluetunic]",
-          "ironboots,dinsfire,magic,ocarina,time,[bluetunic]"
+          "@WTMQ Dive,bluetunic,hookshot,bow,magic,firearrow",
+          "@WTMQ Dive,bluetunic,hookshot,magic,dins,ocarina,time"
         ],
         "sections": [
           {
@@ -968,8 +995,8 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 969,
-            "y": 508,
+            "x": 1400,
+            "y": 1844,
             "visibility_rules": [
               "water_mq"
             ]
@@ -979,7 +1006,7 @@
       {
         "name": "Boss Key Chest",
         "access_rules": [
-          "water_small_keys:1,longshot,ironboots,dinsfire,magic",
+          "@WTMQ Dark Link,magic,dins",
           "{$hintable}"
         ],
         "sections": [
@@ -994,8 +1021,8 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 185,
-            "y": 586,
+            "x": 880,
+            "y": 805,
             "visibility_rules": [
               "water_mq"
             ]
@@ -1005,9 +1032,7 @@
       {
         "name": "Freestanding Key",
         "access_rules": [
-          "water_small_keys:1,longshot,ironboots,dinsfire,magic,hoverboots",
-          "water_small_keys:1,longshot,ironboots,dinsfire,magic,ocarina,[scarecrow]",
-          "{$hintable}"
+          "@WTMQ Gates"
         ],
         "sections": [
           {
@@ -1021,8 +1046,8 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 838,
-            "y": 439,
+            "x": 1620,
+            "y": 905,
             "visibility_rules": [
               "water_mq"
             ]
@@ -1046,8 +1071,8 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 678,
-            "y": 539,
+            "x": 1929,
+            "y": 654,
             "visibility_rules": [
               "water_mq"
             ]
@@ -1063,8 +1088,7 @@
           {
             "name": "South Basement",
             "access_rules": [
-              "water_small_keys:1,longshot,ironboots,dinsfire,magic,hoverboots,bow,firearrow",
-              "water_small_keys:1,longshot,ironboots,dinsfire,magic,ocarina,[scarecrow],bow,firearrow"
+              "@WTMQ Gates,magic,bow,firearrow"
             ],
             "sections": [
               {
@@ -1077,8 +1101,8 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 819,
-                "y": 457,
+                "x": 605,
+                "y": 1080,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, water_mq"
                 ]
@@ -1088,7 +1112,7 @@
           {
             "name": "North Basement",
             "access_rules": [
-              "@Freestanding Key,water_small_keys:2",
+              "@WTMQ Gates,water_small_keys:2",
               "{$hintable}"
             ],
             "sections": [
@@ -1103,8 +1127,8 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 525,
-                "y": 273,
+                "x": 1880,
+                "y": 1005,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, water_mq"
                 ]
@@ -1114,7 +1138,7 @@
           {
             "name": "Serpent River",
             "access_rules": [
-              "water_small_keys:1,longshot,ironboots"
+              "@WTMQ Dark Link"
             ],
             "sections": [
               {
@@ -1127,8 +1151,8 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 152,
-                "y": 52,
+                "x": 1150,
+                "y": 440,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, water_mq"
                 ]
@@ -1138,7 +1162,7 @@
           {
             "name": "Lizalfos Hallway",
             "access_rules": [
-              "ocarina,lullaby,ironboots,dinsfire,magic"
+              "@WTMQ Lower Water,magic,dins"
             ],
             "sections": [
               {
@@ -1151,8 +1175,8 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 550,
-                "y": 622,
+                "x": 1075,
+                "y": 1585,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, water_mq"
                 ]
@@ -1162,7 +1186,7 @@
           {
             "name": "Before Upper Water Switch",
             "access_rules": [
-              "ocarina,lullaby,ironboots,longshot"
+              "@WTMQ Lower Water,longshot"
             ],
             "sections": [
               {
@@ -1175,8 +1199,8 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 300,
-                "y": 870,
+                "x": 865,
+                "y": 1000,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, water_mq"
                 ]
