@@ -1328,7 +1328,8 @@
     "name": "Shadow Temple",
     "parent": "Graveyard",
     "access_rules": [
-      "erd_shadow,shadow_reg"
+      "erd_shadow_a,hoverboots,$can_see_with_lens,shadow_reg",
+      "erd_shadow_a,hookshot,$can_see_with_lens,shadow_reg"
     ],
     "children": [
       {
@@ -1342,8 +1343,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 3130,
-            "y": 545
+            "x": 1878,
+            "y": 327,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1358,8 +1362,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 2700,
-            "y": 850
+            "x": 1620,
+            "y": 510,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1377,8 +1384,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 5025,
-            "y": 545
+            "x": 3015,
+            "y": 327,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1396,8 +1406,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4540,
-            "y": 200
+            "x": 2724,
+            "y": 120,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1415,8 +1428,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 5935,
-            "y": 735
+            "x": 3561,
+            "y": 441,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1434,8 +1450,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4785,
-            "y": 1725
+            "x": 2871,
+            "y": 1035,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1453,8 +1472,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4830,
-            "y": 1735
+            "x": 2898,
+            "y": 1041,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1472,8 +1494,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4980,
-            "y": 1605
+            "x": 2988,
+            "y": 963,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1491,19 +1516,22 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4050,
-            "y": 1420
+            "x": 2430,
+            "y": 852,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
       {
-        "name": "Freestanding Key",
+        "name": "Freestanding Key (Single Pot)",
         "access_rules": [
           "@Invisible Spikes Chest,hookshot"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
             "item_count": 1
@@ -1512,8 +1540,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 3650,
-            "y": 1570
+            "x": 2190,
+            "y": 942,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1531,8 +1562,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4435,
-            "y": 970
+            "x": 2661,
+            "y": 582,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1550,8 +1584,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 3635,
-            "y": 910
+            "x": 2181,
+            "y": 546,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1569,8 +1606,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 3805,
-            "y": 940
+            "x": 2283,
+            "y": 564,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1590,8 +1630,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 435,
-            "y": 1995
+            "x": 261,
+            "y": 1197,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1609,8 +1652,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 235,
-            "y": 2060
+            "x": 141,
+            "y": 1236,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1630,8 +1676,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 1215,
-            "y": 2330
+            "x": 729,
+            "y": 1398,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1654,8 +1703,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 2925,
-            "y": 2255
+            "x": 1755,
+            "y": 1353,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1681,10 +1733,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 5975,
-                "y": 710,
+                "x": 3585,
+                "y": 426,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -1707,10 +1759,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 4980,
-                "y": 1725,
+                "x": 2988,
+                "y": 1035,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -1718,7 +1770,7 @@
           {
             "name": "Single Giant Pot",
             "access_rules": [
-              "@Freestanding Key"
+              "@Freestanding Key (Single Pot)"
             ],
             "sections": [
               {
@@ -1731,10 +1783,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 3590,
-                "y": 1585,
+                "x": 2154,
+                "y": 951,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -1757,10 +1809,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 3235,
-                "y": 1180,
+                "x": 1941,
+                "y": 708,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -1768,7 +1820,7 @@
           {
             "name": "Triple Giant Pot",
             "access_rules": [
-              "@Boss Key Chest (Spike Walls)"
+              "@Wind Hint Chest,shadow_small_keys:4,ocarina,lullaby"
             ],
             "sections": [
               {
@@ -1781,10 +1833,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 170,
-                "y": 2360,
+                "x": 102,
+                "y": 1416,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -2453,7 +2505,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
             "item_count": 1
@@ -3206,7 +3258,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "capture_item": true,
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",

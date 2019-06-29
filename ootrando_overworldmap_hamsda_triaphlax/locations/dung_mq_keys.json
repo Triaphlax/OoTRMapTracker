@@ -678,7 +678,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
             "item_count": 1
@@ -1036,7 +1036,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "capture_item": true,
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
@@ -1215,11 +1215,12 @@
     "name": "Shadow Temple MQ",
     "parent": "Graveyard",
     "access_rules": [
-      "erd_shadow,shadow_mq"
+      "erd_shadow_a,hookshot,$can_see_with_lens,shadow_mq",
+      "erd_shadow_a,hoverboots,$can_see_with_lens,shadow_mq"
     ],
     "children": [
       {
-        "name": "Compass Chest",
+        "name": "Compass Chest (Redeads)",
         "access_rules": [
           "$has_explosives,shadow_small_keys:1,[shadow_small_keys:6]"
         ],
@@ -1232,8 +1233,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 202,
-            "y": 339,
+            "x": 1878,
+            "y": 327,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1243,7 +1244,7 @@
       {
         "name": "Hover Boots Chest",
         "access_rules": [
-          "@Compass Chest,ocarina,time,bow"
+          "@Compass Chest (Redeads),ocarina,time,bow"
         ],
         "sections": [
           {
@@ -1254,8 +1255,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 85,
-            "y": 796,
+            "x": 1620,
+            "y": 510,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1263,7 +1264,7 @@
         ]
       },
       {
-        "name": "Map Chest",
+        "name": "Map Chest (Silver Rupees)",
         "access_rules": [
           "hoverboots",
           "bow,firearrow,magic"
@@ -1277,8 +1278,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 370,
-            "y": 409,
+            "x": 2724,
+            "y": 120,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1288,7 +1289,7 @@
       {
         "name": "Near Ship Invisible Chest",
         "access_rules": [
-          "@Map Chest"
+          "@Map Chest (Silver Rupees)"
         ],
         "sections": [
           {
@@ -1299,8 +1300,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 503,
-            "y": 918,
+            "x": 1970,
+            "y": 770,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1310,7 +1311,7 @@
       {
         "name": "Early Gibdos Chest",
         "access_rules": [
-          "@Map Chest"
+          "@Map Chest (Silver Rupees)"
         ],
         "sections": [
           {
@@ -1321,8 +1322,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 954,
-            "y": 888,
+            "x": 3015,
+            "y": 327,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1330,53 +1331,15 @@
         ]
       },
       {
-        "name": "Falling Spikes Lower Chest",
+        "name": "ShT Upper Huge Pit",
         "access_rules": [
-          "@Map Chest,$has_explosives,shadow_small_keys:1,[shadow_small_keys:2]"
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "item_count": 1
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "shadowtemple",
-            "x": 439,
-            "y": 576,
-            "visibility_rules": [
-              "shadow_mq"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Falling Spikes Upper Chests",
-        "access_rules": [
-          "@Falling Spikes Lower Chest,[lift1]"
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "item_count": 2
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "shadowtemple",
-            "x": 2,
-            "y": 626,
-            "visibility_rules": [
-              "shadow_mq"
-            ]
-          }
+          "$has_explosives,shadow_small_keys:1,[shadow_small_keys:2]"
         ]
       },
       {
         "name": "Invisible Blades Chests",
         "access_rules": [
-          "@Falling Spikes Lower Chest,ocarina,time"
+          "@ShT Upper Huge Pit,ocarina,time"
         ],
         "sections": [
           {
@@ -1387,8 +1350,80 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 607,
-            "y": 999,
+            "x": 3561,
+            "y": 441,
+            "visibility_rules": [
+              "shadow_mq"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ShT Lower Huge Pit",
+        "access_rules": [
+          "@ShT Upper Huge Pit,$has_fire"
+        ]
+      },
+      {
+        "name": "Falling Spikes Lower Chest MQ",
+        "access_rules": [
+          "@ShT Lower Huge Pit"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "shadowtemple",
+            "x": 2871,
+            "y": 1035,
+            "visibility_rules": [
+              "shadow_mq"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Falling Spikes Upper Chest 1",
+        "access_rules": [
+          "@Falling Spikes Lower Chest MQ,[lift1]"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "shadowtemple",
+            "x": 2898,
+            "y": 1041,
+            "visibility_rules": [
+              "shadow_mq"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Falling Spikes Upper Chest 2",
+        "access_rules": [
+          "@Falling Spikes Lower Chest MQ,[lift1]"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "shadowtemple",
+            "x": 2988,
+            "y": 963,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1398,7 +1433,7 @@
       {
         "name": "Beamos Silver Rupees Chest",
         "access_rules": [
-          "@Falling Spikes Lower Chest,longshot"
+          "@Falling Spikes Lower Chest MQ,longshot"
         ],
         "sections": [
           {
@@ -1409,8 +1444,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 455,
-            "y": 1000,
+            "x": 2970,
+            "y": 850,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1418,9 +1453,9 @@
         ]
       },
       {
-        "name": "Invisible Spikes Chest",
+        "name": "Invisible Spikes Chest MQ",
         "access_rules": [
-          "@Falling Spikes Lower Chest,shadow_small_keys:2,[shadow_small_keys:3],hoverboots"
+          "@Falling Spikes Lower Chest MQ,shadow_small_keys:2,[shadow_small_keys:3],hoverboots"
         ],
         "sections": [
           {
@@ -1431,8 +1466,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 738,
-            "y": 550,
+            "x": 2430,
+            "y": 852,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1442,7 +1477,7 @@
       {
         "name": "Stalfos Room Chest",
         "access_rules": [
-          "@Invisible Spikes Chest,hookshot"
+          "@Invisible Spikes Chest MQ,hookshot"
         ],
         "sections": [
           {
@@ -1453,8 +1488,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 855,
-            "y": 801,
+            "x": 2115,
+            "y": 910,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1462,7 +1497,7 @@
         ]
       },
       {
-        "name": "Wind Hint Chest",
+        "name": "Wind Hint Chest MQ",
         "access_rules": [
           "@Stalfos Room Chest,shadow_small_keys:3,[shadow_small_keys:4]"
         ],
@@ -1475,8 +1510,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 847,
-            "y": 657,
+            "x": 2661,
+            "y": 582,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1484,21 +1519,21 @@
         ]
       },
       {
-        "name": "After Wind Chests",
+        "name": "After Wind Chest Enemies",
         "access_rules": [
-          "@Wind Hint Chest"
+          "@Wind Hint Chest MQ"
         ],
         "sections": [
           {
             "name": "Chest",
-            "item_count": 2
+            "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 925,
-            "y": 227,
+            "x": 2181,
+            "y": 546,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1506,13 +1541,35 @@
         ]
       },
       {
-        "name": "Freestanding Key",
+        "name": "After Wind Chest Bomb",
         "access_rules": [
-          "@Wind Hint Chest,shadow_small_keys:4,[shadow_small_keys:5],ocarina,lullaby,bow,time,longshot"
+          "@Wind Hint Chest MQ"
         ],
         "sections": [
           {
             "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "shadowtemple",
+            "x": 2283,
+            "y": 564,
+            "visibility_rules": [
+              "shadow_mq"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Freestanding Key Skulls",
+        "access_rules": [
+          "@Wind Hint Chest MQ,shadow_small_keys:4,[shadow_small_keys:5],ocarina,lullaby,bow,time,longshot"
+        ],
+        "sections": [
+          {
+            "name": "Freestanding Key",
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
             "item_count": 1
@@ -1521,8 +1578,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 766,
-            "y": 933,
+            "x": 145,
+            "y": 1440,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1532,7 +1589,7 @@
       {
         "name": "Bomb Flower Chest",
         "access_rules": [
-          "@Freestanding Key",
+          "@Freestanding Key Skulls",
           "{$hintable}"
         ],
         "sections": [
@@ -1545,8 +1602,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 972,
-            "y": 153,
+            "x": 729,
+            "y": 1398,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1554,9 +1611,9 @@
         ]
       },
       {
-        "name": "Boss Key Chest",
+        "name": "Boss Key Chest (Spikes)",
         "access_rules": [
-          "@Freestanding Key,shadow_small_keys:5,[shadow_small_keys:6],dinsfire,magic"
+          "@Freestanding Key Skulls,shadow_small_keys:5,[shadow_small_keys:6],dinsfire,magic"
         ],
         "sections": [
           {
@@ -1569,8 +1626,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 892,
-            "y": 155,
+            "x": 261,
+            "y": 1197,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1580,7 +1637,7 @@
       {
         "name": "Spike Walls Left Chest",
         "access_rules": [
-          "@Boss Key Chest"
+          "@Boss Key Chest (Spikes)"
         ],
         "sections": [
           {
@@ -1591,8 +1648,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 335,
-            "y": 909,
+            "x": 141,
+            "y": 1236,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1602,7 +1659,7 @@
       {
         "name": "Bongo Bongo",
         "access_rules": [
-          "@Wind Hint Chest,shadow_small_keys:4,[shadow_small_keys:5],shadow_boss_key,ocarina,lullaby,bow",
+          "@Wind Hint Chest MQ,shadow_small_keys:4,[shadow_small_keys:5],shadow_boss_key,ocarina,lullaby,bow",
           "@Wind Hint Chest,shadow_small_keys:4,[shadow_small_keys:5],shadow_boss_key,ocarina,lullaby,bombchu,[bow]"
         ],
         "sections": [
@@ -1617,8 +1674,8 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 832,
-            "y": 1,
+            "x": 1755,
+            "y": 1353,
             "visibility_rules": [
               "shadow_mq"
             ]
@@ -1634,7 +1691,7 @@
           {
             "name": "Crusher Room",
             "access_rules": [
-              "@Falling Spikes Lower Chest,hookshot",
+              "@Falling Spikes Lower Chest MQ,hookshot",
               "{@Falling Spikes Lower Chest}"
             ],
             "sections": [
@@ -1649,8 +1706,8 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 122,
-                "y": 991,
+                "x": 2988,
+                "y": 1035,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, shadow_mq"
                 ]
@@ -1660,7 +1717,7 @@
           {
             "name": "Wind Hint Room",
             "access_rules": [
-              "@Wind Hint Chest"
+              "@Wind Hint Chest MQ"
             ],
             "sections": [
               {
@@ -1673,8 +1730,8 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 228,
-                "y": 115,
+                "x": 2650,
+                "y": 540,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, shadow_mq"
                 ]
@@ -1684,7 +1741,7 @@
           {
             "name": "After Wind",
             "access_rules": [
-              "@Wind Hint Chest"
+              "@Wind Hint Chest MQ"
             ],
             "sections": [
               {
@@ -1697,8 +1754,8 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 543,
-                "y": 846,
+                "x": 2120,
+                "y": 550,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, shadow_mq"
                 ]
@@ -1708,7 +1765,7 @@
           {
             "name": "After Ship",
             "access_rules": [
-              "@Wind Hint Chest,shadow_small_keys:4,[shadow_small_keys:5],ocarina,lullaby"
+              "@Wind Hint Chest MQ,shadow_small_keys:4,[shadow_small_keys:5],ocarina,lullaby"
             ],
             "sections": [
               {
@@ -1721,8 +1778,8 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 535,
-                "y": 565,
+                "x": 940,
+                "y": 1170,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, shadow_mq"
                 ]
@@ -1732,7 +1789,7 @@
           {
             "name": "Near Boss",
             "access_rules": [
-              "@GS84 - After Ship,bow"
+              "@After Ship,bow"
             ],
             "sections": [
               {
@@ -1745,8 +1802,8 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 1000,
-                "y": 540,
+                "x": 1160,
+                "y": 1355,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, shadow_mq"
                 ]
@@ -2655,7 +2712,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "capture_item": true,
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
