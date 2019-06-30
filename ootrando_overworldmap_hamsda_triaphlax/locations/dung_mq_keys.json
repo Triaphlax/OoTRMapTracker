@@ -1,13 +1,152 @@
 [
   {
     "name": "Forest Temple MQ",
-    "parent": "Sacred Forest Meadow",
+    "parent": "World",
+    "color": "#18a50e",
     "access_rules": [
       "erd_forest,forest_mq"
     ],
     "children": [
       {
+        "name": "FoTMQ Central",
+        "access_rules": [
+          "forest_small_keys:1,erd_forest_a",
+          "forest_small_keys:1,$can_child_attack",
+          "forest_small_keys:1,nuts"
+        ]
+      },
+      {
+        "name": "FoTMQ After Block",
+        "access_rules": [
+          "@FoTMQ Central,erd_forest_a,lift1",
+          "@FoTMQ Central,bombchu,hookshot,erd_forest_a,[lift1]"
+        ]
+      },
+      {
+        "name": "FoTMQ Ledge",
+        "access_rules": [
+          "@FoTMQ Central,erd_forest_a,hoverboots",
+          "@FoTMQ Central,erd_forest_a,hookshot,lift1",
+          "@FoTMQ Central,erd_forest_a,hookshot,bombchu,[lift1]",
+          "@FoTMQ After Block,forest_small_keys:2,[forest_small_keys:3]"
+        ]
+      },
+      {
+        "name": "FoTMQ NW as Adult",
+        "access_rules": [
+          "@FoTMQ Central,erd_forest_a,bow",
+          "@FoTMQ Ledge"
+        ]
+      },
+      {
+        "name": "FoTMQ NW as Child",
+        "access_rules": [
+          "@FoTMQ Central,erd_forest_c,sling"
+        ]
+      },
+      {
+        "name": "FoTMQ NE Outdoors as Child",
+        "access_rules": [
+          "erd_forest_c,sling",
+          "@FoTMQ NW as Child,scale2"
+        ]
+      },
+      {
+        "name": "FoTMQ Bow",
+        "access_rules": [
+          "@FoTMQ After Block,erd_forest_a,forest_small_keys:3,[forest_small_keys:4]"
+        ]
+      },
+      
+
+      {"name":"ANEMQ0","access_rules":["@FoTMQ Central,erd_forest_a,bow","@FoTMQ NW as Adult,erd_forest_a,ironboots","@FoTMQ NW as Adult,erd_forest_a,longshot","@FoTMQ NW as Adult,erd_forest_a,scale2"]},
+      {"name":"ATopLd0","access_rules":["@FoTMQ NW as Adult,erd_forest_a,magic,firearrow,bow"]},
+      {"name":"ANELd0","access_rules":["false"]},
+      {"name":"AFall0","access_rules":["@FoTMQ Bow,erd_forest_a,forest_small_keys:5,bow","@FoTMQ Bow,erd_forest_a,forest_small_keys:5,magic,dins"]},
+
+      {"name":"ANEMQ1","access_rules":["@ATopLd0","@ANELd0"]},
+      {"name":"ATopLd1","access_rules":["@ANEMQ0,hookshot,[longshot]","@ANEMQ0,hookshot,[hoverboots]","@ANEMQ0,hookshot,[ocarina],[time]"]},
+      {"name":"ANELd1","access_rules":["@ANEMQ0,longshot","@ATopLd0,hoverboots,[longshot]","@AFall0"]},
+      {"name":"AFall1","access_rules":["@ANeLd0,ocarina,time"]},
+
+      {"name":"ANEMQ2","access_rules":["@ATopLd1","@ANELd1"]},
+      {"name":"ATopLd2","access_rules":["@ANEMQ1,hookshot,[longshot]","@ANEMQ1,hookshot,[hoverboots]","@ANEMQ1,hookshot,[ocarina],[time]"]},
+      {"name":"ANELd2","access_rules":["@ANEMQ1,longshot","@ATopLd1,hoverboots,[longshot]","@AFall1"]},
+      {"name":"AFall2","access_rules":["@ANeLd1,ocarina,time"]},
+
+      {"name":"ANEMQ3","access_rules":["@ATopLd2","@ANELd2"]},
+      {"name":"ATopLd3","access_rules":["@ANEMQ2,hookshot,[longshot]","@ANEMQ2,hookshot,[hoverboots]","@ANEMQ2,hookshot,[ocarina],[time]"]},
+      {"name":"ANELd3","access_rules":["@ANEMQ2,longshot","@ATopLd2,hoverboots,[longshot]","@AFall2"]},
+      {"name":"AFall3","access_rules":["@ANeLd2,ocarina,time"]},
+
+      {
+        "name": "FoTMQ NE Outdoors as Adult",
+        "access_rules": [
+          "@ANEMQ0",
+          "@ANEMQ1",
+          "@ANEMQ2",
+          "@ANEMQ3"
+        ]
+      },
+      {
+        "name": "FoTMQ Outdoors Top Ledges as Adult",
+        "access_rules": [
+          "@ATopLd0",
+          "@ATopLd1",
+          "@ATopLd2",
+          "@ATopLd3"
+        ]
+      },
+      {
+        "name": "FoTMQ NE Outdoors Ledge as Adult",
+        "access_rules": [
+          "@ANELd0",
+          "@ANELd1",
+          "@ANELd2",
+          "@ANELd3"
+        ]
+      },
+      {
+        "name": "FoTMQ Falling Room as Adult",
+        "access_rules": [
+          "@AFall0",
+          "@AFall1",
+          "@AFall2",
+          "@AFall3"
+        ]
+      },
+
+
+      {
+        "name": "FoTMQ Poes 1",
+        "access_rules": [
+          "@FoTMQ Bow,bow,erd_forest_a"
+        ]
+      },
+      {
+        "name": "FoTMQ Poes 2",
+        "access_rules": [
+          "@FoTMQ Falling Room as Adult,forest_small_keys:6,erd_forest_a,bow"
+        ]
+      },
+      {
+        "name": "FoTMQ Boss",
+        "access_rules": [
+          "@FoTMQ Poes 1,@FoTMQ Poes 2"
+        ]
+      },
+
+
+      {
         "name": "First Chest",
+        "access_rules": [
+          "erd_forest_a",
+          "bombs",
+          "sticks",
+          "magic,dins",
+          "sword1",
+          "sling"
+        ],
         "sections": [
           {
             "name": "Chest",
@@ -28,8 +167,7 @@
       {
         "name": "Boss Key Chest",
         "access_rules": [
-          "forest_small_keys:2,[forest_small_keys:3],lift1",
-          "forest_small_keys:2,[forest_small_keys:3],bombchu,[lift1]"
+          "@FoTMQ After Block,forest_small_keys:2,[forest_small_keys:3]"
         ],
         "sections": [
           {
@@ -42,8 +180,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 502,
-            "y": 445,
+            "x": 1080,
+            "y": 456,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -53,9 +191,7 @@
       {
         "name": "Redead Chest",
         "access_rules": [
-          "forest_small_keys:1,hoverboots",
-          "forest_small_keys:1,lift1",
-          "forest_small_keys:1,bombchu,[lift1]"
+          "@FoTMQ Ledge"
         ],
         "sections": [
           {
@@ -66,8 +202,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 817,
-            "y": 329,
+            "x": 392,
+            "y": 800,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -77,7 +213,8 @@
       {
         "name": "Well Chest",
         "access_rules": [
-          "forest_small_keys:1,bow"
+          "@FoTMQ NE Outdoors as Adult,bow",
+          "@FoTMQ NE Outdoors as Child,sling"
         ],
         "sections": [
           {
@@ -99,15 +236,7 @@
       {
         "name": "NE Outdoors Upper Chest",
         "access_rules": [
-          "forest_small_keys:1,bow,[firearrow]",
-          "forest_small_keys:1,bow,[longshot]",
-          "forest_small_keys:1,bow,[ocarina],[time]",
-          "forest_small_keys:1,bow,[hoverboots]",
-          "@Redead Chest,longshot",
-          "@Redead Chest,ironboots,[ocarina],[time]",
-          "@Redead Chest,ironboots,[hoverboots]",
-          "@Redead Chest,scale2,[ocarina],[time]",
-          "@Redead Chest,scale2,[hoverboots]"
+          "@FoTMQ Outdoors Top Ledges as Adult"
         ],
         "sections": [
           {
@@ -129,7 +258,7 @@
       {
         "name": "Bow Chest",
         "access_rules": [
-          "@Boss Key Chest,forest_small_keys:3,[forest_small_keys:4]"
+          "@FoTMQ Bow"
         ],
         "sections": [
           {
@@ -140,8 +269,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 665,
-            "y": 745,
+            "x": 1608,
+            "y": 488,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -151,8 +280,11 @@
       {
         "name": "Chest Behind Lobby",
         "access_rules": [
-          "forest_small_keys:1,ocarina,time",
-          "@Bow Chest"
+          "@FoTMQ Central,erd_forest_a,ocarina,time",
+          "@FoTMQ Central,erd_forest_c,dins,magic",
+          "@FoTMQ Central,erd_forest_c,sticks",
+          "@FoTMQ Central,erd_forest_c,sling",
+          "@FoTMQ Central,erd_forest_c,sword1"
         ],
         "sections": [
           {
@@ -174,7 +306,7 @@
       {
         "name": "Map Chest",
         "access_rules": [
-          "@Bow Chest,bow"
+          "@FoTMQ Bow,bow"
         ],
         "sections": [
           {
@@ -185,8 +317,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 706,
-            "y": 773,
+            "x": 1424,
+            "y": 396,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -196,7 +328,7 @@
       {
         "name": "Compass Chest",
         "access_rules": [
-          "@Bow Chest,bow"
+          "@FoTMQ Bow,bow"
         ],
         "sections": [
           {
@@ -207,8 +339,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 575,
-            "y": 835,
+            "x": 1804,
+            "y": 520,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -218,9 +350,7 @@
       {
         "name": "Falling Room Chest",
         "access_rules": [
-          "@Bow Chest,forest_small_keys:5,bow",
-          "@Bow Chest,forest_small_keys:5,dinsfire,magic",
-          "forest_small_keys:1,bow,longshot,ocarina,time"
+          "@FoTMQ Falling Room as Adult"
         ],
         "sections": [
           {
@@ -242,9 +372,7 @@
       {
         "name": "NE Outdoors Lower Chest",
         "access_rules": [
-          "forest_small_keys:1,bow,longshot",
-          "@Redead Chest,longshot",
-          "@Falling Room Chest"
+          "@FoTMQ NE Outdoors Ledge as Adult"
         ],
         "sections": [
           {
@@ -266,8 +394,7 @@
       {
         "name": "Near Boss Chest",
         "access_rules": [
-          "@Bow Chest,forest_small_keys:6,bow",
-          "@Bow Chest,forest_small_keys:4,[forest_small_keys:6],bow,longshot,ocarina,time"
+          "@FoTMQ Boss"
         ],
         "sections": [
           {
@@ -278,8 +405,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 71,
-            "y": 818,
+            "x": 490,
+            "y": 1975,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -289,11 +416,11 @@
       {
         "name": "Phantom Ganon",
         "access_rules": [
-          "@Near Boss Chest,forest_boss_key"
+          "@FoTMQ Boss,forest_boss_key"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "forest",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -303,8 +430,8 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 237,
-            "y": 767,
+            "x": 972,
+            "y": 1840,
             "visibility_rules": [
               "forest_mq"
             ]
@@ -319,6 +446,10 @@
         "children": [
           {
             "name": "First Hallway",
+            "access_rules": [
+              "erd_forest_c,boomerang",
+              "erd_forest_a,hookshot"
+            ],
             "sections": [
               {
                 "name": "GS60",
@@ -341,7 +472,9 @@
           {
             "name": "Block Push Room",
             "access_rules": [
-              "forest_small_keys:1"
+              "@FoTMQ Central,erd_forest_a",
+              "@FoTMQ Central,sword1",
+              "@FoTMQ Central,$can_child_attack,[sword1]"
             ],
             "sections": [
               {
@@ -365,8 +498,8 @@
           {
             "name": "Outdoor West",
             "access_rules": [
-              "@Redead Chest",
-              "forest_small_keys:1,bow"
+              "@FoTMQ NW as Adult",
+              "@FoTMQ NW as Child"
             ],
             "sections": [
               {
@@ -390,10 +523,10 @@
           {
             "name": "Outdoor East",
             "access_rules": [
-              "@Redead Chest,ironboots",
-              "@Redead Chest,longshot",
-              "@Redead Chest,scale2",
-              "forest_small_keys:1,bow"
+              "@FoTMQ NE Outdoors as Adult,hookshot",
+              "{@FoTMQ NE Outdoors as Adult,bow}",
+              "@FoTMQ NE Outdoors as Child,boomerang",
+              "{@FoTMQ NE Outdoors as Child,sling}"
             ],
             "sections": [
               {
@@ -417,8 +550,9 @@
           {
             "name": "Well",
             "access_rules": [
-              "@Redead Chest,ironboots",
-              "forest_small_keys:1,bow"
+              "@FoTMQ NE Outdoors as Adult,ironboots,hookshot",
+              "@FoTMQ NE Outdoors as Adult,bow",
+              "@FoTMQ NE Outdoors as Child,sling"
             ],
             "sections": [
               {
@@ -485,8 +619,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 565,
-            "y": 984,
+            "x": 965,
+            "y": 2425,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -507,8 +641,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 371,
-            "y": 478,
+            "x": 2220,
+            "y": 2045,
             "visibility_rules": [
               "fire_mq"
             ]

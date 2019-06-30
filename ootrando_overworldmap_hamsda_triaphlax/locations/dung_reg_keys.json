@@ -1,11 +1,121 @@
 [
   {
     "name": "Forest Temple",
-    "parent": "Sacred Forest Meadow",
+    "parent": "World",
+    "color": "#18a50e",
     "access_rules": [
       "erd_forest,forest_reg"
     ],
     "children": [
+      {
+        "name": "FoT Block Push",
+        "access_rules": [
+          "forest_small_keys:1"
+        ]
+      },
+      {
+        "name": "FoT Bow",
+        "access_rules": [
+          "@FoT Block Push,lift1,forest_small_keys:3,erd_forest_a"
+        ]
+      },
+      {
+        "name": "FoT Falling",
+        "access_rules": [
+          "@FoT Bow,forest_small_keys:5,bow,erd_forest_a",
+          "@FoT Bow,forest_small_keys:5,magic,dins"
+        ]
+      },
+      {
+        "name": "FoT Poes 1",
+        "access_rules": [
+          "@FoT Bow,bow,erd_forest_a"
+        ]
+      },
+      {
+        "name": "FoT Poes 2",
+        "access_rules": [
+          "@FoT Falling,erd_forest_a,bow"
+        ]
+      },
+      {
+        "name": "FoT Boss",
+        "access_rules": [
+          "@FoT Poes 1,@FoT Poes 2"
+        ]
+      },
+      {
+        "name": "FoT Straight Hall",
+        "access_rules": [
+          "@FoT Block Push,lift1,forest_small_keys:2,bow,erd_forest_a"
+        ]
+      },
+      {
+        "name": "FoT Ledge",
+        "access_rules": [
+          "@FoT Block Push,hoverboots,erd_forest_a",
+          "@FoT Straight Hall"
+        ]
+      },
+
+      {"name":"ANWO","access_rules":["erd_forest_a,ocarina,time","@FoT Ledge,erd_forest_a"]},
+      {"name":"ANEO","access_rules":["erd_forest_a,bow","@FoT Falling,erd_forest_a"]},
+      {"name":"ABalcO","access_rules":["false"]},
+
+      {"name":"ANW1","access_rules":["@ANEO,ironboots","@ANEO,scale2","@ABalcO"]},
+      {"name":"ANE1","access_rules":["@ABalcO"]},
+      {"name":"ABalc1","access_rules":["@ANWO","@ANEO,longshot","@ANEO,hookshot,[longshot]"]},
+
+      {"name":"ANW2","access_rules":["@ANE1,ironboots","@ANE1,scale2","@ABalc1"]},
+      {"name":"ANE2","access_rules":["@ABalc1"]},
+      {"name":"ABalc2","access_rules":["@ANW1","@ANE1,longshot","@ANE1,hookshot,[longshot]"]},
+
+      {
+        "name": "FoT NE Outdoors as Adult",
+        "access_rules": [
+          "@ANEO",
+          "@ANE1",
+          "@ANE2"
+        ]
+      },
+      {
+        "name": "FoT NW Outdoors as Adult",
+        "access_rules": [
+          "@ANWO",
+          "@ANW1",
+          "@ANW2"
+        ]
+      },
+      {
+        "name": "FoT Balconies as Adult",
+        "access_rules": [
+          "@ABalcO",
+          "@ABalc1",
+          "@ABalc2"
+        ]
+      },
+
+      {"name":"CNWO","access_rules":["erd_forest_c"]},
+      {"name":"CNEO","access_rules":["erd_forest_c,sling"]},
+      {"name":"CBalcO","access_rules":["false"]},
+
+      {"name":"CNW1","access_rules":["@CNEO,scale2","@CBalcO"]},
+      {"name":"CNE1","access_rules":["@CBalcO"]},
+      {"name":"CBalc1","access_rules":["@CNWO,$has_explosives","@CNWO,boomerang,sticks","@CNWO,boomerang,sword1","@CNWO,boomerang,sling","@CNWO,nuts,sticks","@CNWO,nuts,sword1","@CNWO,nuts,sling","@CNWO,shield1,sticks","@CNWO,shield1,sword1","@CNWO,shield1,sling"]},
+
+      {"name":"CNW2","access_rules":["@CNE1,scale2","@CBalc1"]},
+      {"name":"CNE2","access_rules":["@CBalc1"]},
+      {"name":"CBalc2","access_rules":["@CNW1,$has_explosives","@CNW1,boomerang,sticks","@CNW1,boomerang,sword2","@CNW1,boomerang,sling","@CNW1,nuts,sticks","@CNW1,nuts,sword2","@CNW1,nuts,sling","@CNW1,shield2,sticks","@CNW1,shield2,sword2","@CNW1,shield2,sling"]},
+
+      {
+        "name": "FoT Balconies as Child",
+        "access_rules": [
+          "@CBalcO",
+          "@CBalc1",
+          "@CBalc2"
+        ]
+      },
+
       {
         "name": "First Chest",
         "sections": [
@@ -30,6 +140,10 @@
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "erd_forest_a",
+              "sword1"
+            ],
             "item_count": 1
           }
         ],
@@ -47,11 +161,8 @@
       {
         "name": "Map Chest",
         "access_rules": [
-          "ocarina,time",
-          "bow,[ironboots]",
-          "bow,[scale2]",
-          "forest_small_keys:1,hoverboots",
-          "forest_small_keys:5,lift1,dinsfire,magic"
+          "@FoT Balconies as Adult",
+          "@FoT Balconies as Child"
         ],
         "sections": [
           {
@@ -72,15 +183,14 @@
       },
       {
         "name": "Outside Hookshot Chest",
-        "access_rules": [
-          "ocarina,time",
-          "bow",
-          "forest_small_keys:1,hoverboots",
-          "forest_small_keys:5,lift1,dinsfire,magic"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT NE Outdoors as Adult,hookshot",
+              "@FoT Falling",
+              "@FoT Balconies as Adult,hoverboots,[hookshot]"
+            ],
             "item_count": 1
           }
         ],
@@ -97,12 +207,13 @@
       },
       {
         "name": "Well Chest",
-        "access_rules": [
-          "@Map Chest"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Balconies as Adult",
+              "@FoT Balconies as Child"
+            ],
             "item_count": 1
           }
         ],
@@ -119,12 +230,13 @@
       },
       {
         "name": "Block Push Chest",
-        "access_rules": [
-          "forest_small_keys:1,lift1,bow"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Block Push,erd_forest_a,lift1,bow",
+              "@FoT Block Push,erd_forest_c,lift1,sling"
+            ],
             "item_count": 1
           }
         ],
@@ -141,12 +253,12 @@
       },
       {
         "name": "Boss Key Chest",
-        "access_rules": [
-          "forest_small_keys:2,bow,lift1"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Straight Hall"
+            ],
             "chest_unopened_img": "images/chest_golden_closed.png",
             "chest_opened_img": "images/chest_golden_open.png",
             "item_count": 1
@@ -165,14 +277,13 @@
       },
       {
         "name": "Floormaster Chest",
-        "access_rules": [
-          "@Boss Key Chest",
-          "forest_small_keys:1,hoverboots",
-          "{$hintable}"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Ledge",
+              "{$hintable}"
+            ],
             "capture_item": true,
             "item_count": 1
           }
@@ -190,12 +301,12 @@
       },
       {
         "name": "Bow Chest",
-        "access_rules": [
-          "forest_small_keys:3,lift1"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Bow"
+            ],
             "item_count": 1
           }
         ],
@@ -212,12 +323,12 @@
       },
       {
         "name": "Red Poe Chest",
-        "access_rules": [
-          "@Bow Chest,bow"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Bow,bow"
+            ],
             "item_count": 1
           }
         ],
@@ -234,12 +345,12 @@
       },
       {
         "name": "Blue Poe Chest",
-        "access_rules": [
-          "@Bow Chest,bow"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Bow,bow"
+            ],
             "item_count": 1
           }
         ],
@@ -256,16 +367,12 @@
       },
       {
         "name": "Falling Room Chest",
-        "access_rules": [
-          "forest_small_keys:5,lift1,bow",
-          "forest_small_keys:5,lift1,dinsfire,magic",
-          "forest_small_keys:1,hoverboots,ocarina,[scarecrow],[forest_small_keys:5],[lift1],[bow]",
-          "hoverboots,ocarina,time,[scarecrow],[forest_small_keys:5],[lift1],[bow]",
-          "bow,hoverboots,ocarina,[scarecrow],[forest_small_keys:5],[lift1],[longshot]"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Falling"
+            ],
             "item_count": 1
           }
         ],
@@ -282,12 +389,12 @@
       },
       {
         "name": "Near Boss Chest",
-        "access_rules": [
-          "@Falling Room Chest"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Boss"
+            ],
             "item_count": 1
           }
         ],
@@ -304,12 +411,12 @@
       },
       {
         "name": "Phantom Ganon",
-        "access_rules": [
-          "@Near Boss Chest,forest_boss_key"
-        ],
         "sections": [
           {
             "name": "Heart Container",
+            "access_rules": [
+              "@FoT Boss,forest_boss_key"
+            ],
             "hosted_item": "forest",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -338,6 +445,10 @@
             "sections": [
               {
                 "name": "GS60",
+                "access_rules": [
+                  "magic,dins",
+                  "$has_projectile"
+                ],
                 "chest_unopened_img": "images/skulltula.png",
                 "chest_opened_img": "images/skulltula_token.png",
                 "item_count": 1
@@ -359,6 +470,10 @@
             "sections": [
               {
                 "name": "GS61",
+                "access_rules": [
+                  "erd_forest_c,boomerang",
+                  "erd_forest_a,hookshot"
+                ],
                 "chest_unopened_img": "images/skulltula.png",
                 "chest_opened_img": "images/skulltula_token.png",
                 "item_count": 1
@@ -377,39 +492,15 @@
           },
           {
             "name": "Outdoor East",
-            "access_rules": [
-              "@Outside Hookshot Chest"
-            ],
             "sections": [
               {
                 "name": "GS62",
-                "chest_unopened_img": "images/skulltula.png",
-                "chest_opened_img": "images/skulltula_token.png",
-                "item_count": 1
-              }
-            ],
-            "map_locations": [
-              {
-                "map": "foresttemple",
-                "x": 904,
-                "y": 736,
-                "visibility_rules": [
-                  "setting_skulltulas_dungeons,forest_reg"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Outdoor West",
-            "access_rules": [
-              "@Map Chest,longshot",
-              "{@Map Chest,bow}",
-              "@Floormaster Chest,hookshot"
-            ],
-            "sections": [
-              {
-                "name": "GS63",
-                "capture_item": true,
+                "access_rules": [
+                  "@FoT NE Outdoors as Adult,hookshot",
+                  "@FoT Falling,bow",
+                  "@FoT Falling,dins,magic",
+                  "@FoT Falling,$has_explosives"
+                ],
                 "chest_unopened_img": "images/skulltula.png",
                 "chest_opened_img": "images/skulltula_token.png",
                 "item_count": 1
@@ -427,13 +518,42 @@
             ]
           },
           {
-            "name": "Basement",
-            "access_rules": [
-              "@Near Boss Chest"
+            "name": "Outdoor West",
+            "sections": [
+              {
+                "name": "GS63",
+                "access_rules": [
+                  "@FoT NW Outdoors as Adult,longshot",
+                  "{@FoT NW Outdoors as Adult,bow}",
+                  "{erd_forest_c,@FoT NW Outdoors as Child,sling}",
+                  "@FoT Ledge,hookshot"
+                ],
+                "capture_item": true,
+                "chest_unopened_img": "images/skulltula.png",
+                "chest_opened_img": "images/skulltula_token.png",
+                "item_count": 1
+              }
             ],
+            "map_locations": [
+              {
+                "map": "foresttemple",
+                "x": 904,
+                "y": 736,
+                "visibility_rules": [
+                  "setting_skulltulas_dungeons,forest_reg"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Basement",
             "sections": [
               {
                 "name": "GS64",
+                "access_rules": [
+                  "@FoT Boss,erd_forest_a,hookshot",
+                  "@FoT Boss,erd_forest_c,boomerang"
+                ],
                 "chest_unopened_img": "images/skulltula.png",
                 "chest_opened_img": "images/skulltula_token.png",
                 "item_count": 1
