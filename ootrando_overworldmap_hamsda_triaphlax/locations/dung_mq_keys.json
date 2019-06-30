@@ -579,13 +579,20 @@
   },
   {
     "name": "Fire Temple MQ",
-    "parent": "Death Mountain Crater",
+    "parent": "World",
+    "color": "#a01009",
     "access_rules": [
       "erd_fire,fire_mq"
     ],
     "children": [
       {
         "name": "Entrance Hallway Small Chest",
+        "access_rules": [
+          "erd_fire_a",
+          "sword1",
+          "sticks",
+          "sling"
+        ],
         "sections": [
           {
             "name": "Chest",
@@ -595,8 +602,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 526,
-            "y": 647,
+            "x": 1120,
+            "y": 1325,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -606,9 +613,9 @@
       {
         "name": "Chest Near Boss",
         "access_rules": [
-          "hoverboots,$has_fire",
-          "bow,[hoverboots],$has_fire",
-          "hookshot,$has_fire"
+          "erd_fire_a,hoverboots,$has_fire",
+          "erd_fire_a,bow,[hoverboots],$has_fire",
+          "erd_fire_a,hookshot,$has_fire"
         ],
         "sections": [
           {
@@ -619,8 +626,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 965,
-            "y": 2425,
+            "x": 579,
+            "y": 1455,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -628,9 +635,9 @@
         ]
       },
       {
-        "name": "Megaton Hammer Chest",
+        "name": "Megaton Hammer Chest MQ",
         "access_rules": [
-          "fire_small_keys:1,[fire_small_keys:5]"
+          "erd_fire_a,fire_small_keys:1,[fire_small_keys:5]"
         ],
         "sections": [
           {
@@ -641,8 +648,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 2220,
-            "y": 2045,
+            "x": 1332,
+            "y": 1227,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -652,7 +659,7 @@
       {
         "name": "Map Chest",
         "access_rules": [
-          "@Megaton Hammer Chest,hammer"
+          "@Megaton Hammer Chest MQ,hammer"
         ],
         "sections": [
           {
@@ -663,8 +670,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 648,
-            "y": 390,
+            "x": 1149,
+            "y": 1308,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -674,7 +681,7 @@
       {
         "name": "Boss Key Chest",
         "access_rules": [
-          "hammer,hookshot,$has_fire,[bow]"
+          "erd_fire_a,hammer,hookshot,$has_fire,[bow]"
         ],
         "sections": [
           {
@@ -687,8 +694,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 545,
-            "y": 358,
+            "x": 1785,
+            "y": 1470,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -698,7 +705,7 @@
       {
         "name": "Big Lava Room Bombable Chest",
         "access_rules": [
-          "hammer,hookshot,$has_fire,$has_explosives"
+          "erd_fire_a,hammer,hookshot,$has_fire,$has_explosives"
         ],
         "sections": [
           {
@@ -709,8 +716,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 860,
-            "y": 573,
+            "x": 1128,
+            "y": 1812,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -720,7 +727,7 @@
       {
         "name": "Maze Lower Chest",
         "access_rules": [
-          "hammer,fire_small_keys:1,[fire_small_keys:2],$has_fire,[redtunic]"
+          "erd_fire_a,hammer,fire_small_keys:1,[fire_small_keys:2],$has_fire,[redtunic]"
         ],
         "sections": [
           {
@@ -731,8 +738,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 468,
-            "y": 657,
+            "x": 1680,
+            "y": 1134,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -753,8 +760,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 415,
-            "y": 880,
+            "x": 2085,
+            "y": 894,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -775,8 +782,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 386,
-            "y": 223,
+            "x": 1584,
+            "y": 1089,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -797,8 +804,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 382,
-            "y": 738,
+            "x": 1872,
+            "y": 1344,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -806,7 +813,7 @@
         ]
       },
       {
-        "name": "Freestanding Key",
+        "name": "Freestanding Key (Fire Dancer)",
         "access_rules": [
           "@Maze Upper Chest,fire_small_keys:2,[fire_small_keys:3],bow"
         ],
@@ -821,8 +828,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 570,
-            "y": 590,
+            "x": 205,
+            "y": 620,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -832,7 +839,7 @@
       {
         "name": "West Tower Top Chest",
         "access_rules": [
-          "@Freestanding Key,fire_small_keys:3,[fire_small_keys:4]",
+          "@Freestanding Key (Fire Dancer),fire_small_keys:3,[fire_small_keys:4]",
           "{$hintable}"
         ],
         "sections": [
@@ -845,8 +852,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 706,
-            "y": 96,
+            "x": 81,
+            "y": 165,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -856,12 +863,12 @@
       {
         "name": "Volvagia",
         "access_rules": [
-          "@Freestanding Key,hammer,fire_boss_key,$has_fire",
-          "[hoverboots],hammer,fire_boss_key,$has_fire,[redtunic]"
+          "erd_fire_a,@Freestanding Key (Fire Dancer),hammer,fire_boss_key,$has_fire",
+          "erd_fire_a,[hoverboots],hammer,fire_boss_key,$has_fire,[redtunic]"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "fire",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -871,8 +878,8 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 735,
-            "y": 933,
+            "x": 306,
+            "y": 1275,
             "visibility_rules": [
               "fire_mq"
             ]
@@ -901,8 +908,8 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 195,
-                "y": 783,
+                "x": 1995,
+                "y": 1584,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, fire_mq"
                 ]
@@ -926,8 +933,8 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 521,
-                "y": 637,
+                "x": 1944,
+                "y": 486,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, fire_mq"
                 ]
@@ -937,8 +944,8 @@
           {
             "name": "Fire Wall Maze Side Room",
             "access_rules": [
-              "@Freestanding Key,ocarina,time",
-              "@Freestanding Key,hoverboots"
+              "@Freestanding Key (Fire Dancer),ocarina,time",
+              "@Freestanding Key (Fire Dancer),hoverboots"
             ],
             "sections": [
               {
@@ -951,8 +958,8 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 804,
-                "y": 494,
+                "x": 950,
+                "y": 665,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, fire_mq"
                 ]
@@ -962,7 +969,7 @@
           {
             "name": "Above Fire Wall Maze",
             "access_rules": [
-              "@Freestanding Key,fire_small_keys:4,[fire_small_keys:5]",
+              "@Freestanding Key (Fire Dancer),fire_small_keys:4,[fire_small_keys:5]",
               "{$hintable}"
             ],
             "sections": [
@@ -977,8 +984,8 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 996,
-                "y": 311,
+                "x": 570,
+                "y": 505,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, fire_mq"
                 ]
@@ -988,7 +995,7 @@
           {
             "name": "Fire Wall Maze Center",
             "access_rules": [
-              "@Freestanding Key,$has_explosives"
+              "@Freestanding Key (Fire Dancer),$has_explosives"
             ],
             "sections": [
               {
@@ -1001,8 +1008,8 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 152,
-                "y": 834,
+                "x": 540,
+                "y": 975,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, fire_mq"
                 ]

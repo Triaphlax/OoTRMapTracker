@@ -576,13 +576,17 @@
   },
   {
     "name": "Fire Temple",
-    "parent": "Death Mountain Crater",
+    "parent": "World",
+    "color": "#a01009",
     "access_rules": [
       "erd_fire,fire_reg"
     ],
     "children": [
       {
         "name": "Chest Near Boss",
+        "access_rules": [
+          "$has_goron_tunic,[erd_fire_a]"
+        ],
         "sections": [
           {
             "name": "Chest",
@@ -592,15 +596,18 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 965,
-            "y": 2425
+            "x": 579,
+            "y": 1455,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
       {
         "name": "Fire Dancer Chest",
         "access_rules": [
-          "fire_small_keys:1,[fire_small_keys:8],hammer"
+          "fire_small_keys:1,[fire_small_keys:8],hammer,erd_fire_a"
         ],
         "sections": [
           {
@@ -611,15 +618,18 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 2220,
-            "y": 2045
+            "x": 1332,
+            "y": 1227,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
       {
         "name": "Boss Key Chest",
         "access_rules": [
-          "fire_small_keys:1,[fire_small_keys:8],hammer"
+          "fire_small_keys:1,[fire_small_keys:8],hammer,erd_fire_a"
         ],
         "sections": [
           {
@@ -632,15 +642,18 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 1915,
-            "y": 2180
+            "x": 1149,
+            "y": 1308,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
       {
         "name": "Big Lava Room Open Chest",
         "access_rules": [
-          "fire_small_keys:1,[fire_small_keys:2]"
+          "fire_small_keys:1,[fire_small_keys:2],$has_goron_tunic"
         ],
         "sections": [
           {
@@ -651,15 +664,18 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 3325,
-            "y": 2640
+            "x": 1995,
+            "y": 1584,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
       {
         "name": "Big Lava Room Bombable Chest",
         "access_rules": [
-          "fire_small_keys:1,[fire_small_keys:2],$has_explosives"
+          "fire_small_keys:1,[fire_small_keys:2],$has_explosives,erd_fire_a"
         ],
         "sections": [
           {
@@ -670,8 +686,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 1880,
-            "y": 3020
+            "x": 1128,
+            "y": 1812,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -691,8 +710,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 2800,
-            "y": 1890
+            "x": 1680,
+            "y": 1134,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -710,8 +732,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 3475,
-            "y": 1490
+            "x": 2085,
+            "y": 894,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -730,8 +755,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 2000,
-            "y": 1495
+            "x": 1200,
+            "y": 897,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -749,8 +777,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 2640,
-            "y": 1815
+            "x": 1584,
+            "y": 1089,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -768,8 +799,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 3120,
-            "y": 2240
+            "x": 1872,
+            "y": 1344,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -789,8 +823,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 3240,
-            "y": 810
+            "x": 1944,
+            "y": 486,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -808,8 +845,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 1560,
-            "y": 1125
+            "x": 936,
+            "y": 675,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -829,8 +869,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 900,
-            "y": 1645
+            "x": 540,
+            "y": 987,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -851,8 +894,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 135,
-            "y": 275
+            "x": 81,
+            "y": 165,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -865,7 +911,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "fire",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -875,8 +921,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 510,
-            "y": 2125
+            "x": 306,
+            "y": 1275,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -889,7 +938,7 @@
           {
             "name": "Song of Time Room",
             "access_rules": [
-              "@Big Lava Room Open Chest,[ocarina],[time]"
+              "@Big Lava Room Open Chest,erd_fire_a,[ocarina],[time]"
             ],
             "sections": [
               {
@@ -902,10 +951,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 2950,
-                "y": 2420,
+                "x": 1770,
+                "y": 1452,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
@@ -926,10 +975,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 3470,
-                "y": 1630,
+                "x": 2082,
+                "y": 978,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
@@ -950,10 +999,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 3060,
-                "y": 1120,
+                "x": 1836,
+                "y": 672,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
@@ -974,10 +1023,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 3090,
-                "y": 836,
+                "x": 1854,
+                "y": 501,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
@@ -998,10 +1047,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 2615,
-                "y": 2125,
+                "x": 1569,
+                "y": 1275,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
