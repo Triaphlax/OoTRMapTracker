@@ -3058,15 +3058,87 @@
   },
   {
     "name": "Gerudo Training Grounds",
-    "parent": "Gerudo Fortress",
+    "parent": "World",
+    "color": "#a09509",
     "access_rules": [
       "erd_gtg,gtg_reg"
     ],
     "children": [
       {
+        "name": "GTG Heavy Block",
+        "access_rules": [
+          "erd_gtg_a,hookshot"
+        ]
+      },
+      {
+        "name": "GTG Eye Upper",
+        "access_rules": [
+          "@GTG Heavy Block,hookshot,$can_see_with_lens"
+        ]
+      },
+
+      {"name":"ALavaO","access_rules":["erd_gtg_a,$has_explosives"]},
+      {"name":"ARightO","access_rules":["erd_gtg_a,gtg_small_keys:2,[gtg_small_keys:9]"]},
+      {"name":"AHammerO","access_rules":["false"]},
+      {"name":"AEyeLowO","access_rules":["erd_gtg_a,@GTG Eye Upper"]},
+
+      {"name":"ALava1","access_rules":["@ARightO","@AHammerO"]},
+      {"name":"ARight1","access_rules":["@ALavaO,ocarina,time"]},
+      {"name":"AHammer1","access_rules":["@ARightO,hookshot","@ALavaO,longshot","@ALavaO,hookshot,hoverboots","@AEyeLowO"]},
+      {"name":"AEyeLow1","access_rules":["@AHammerO,hammer,bow"]},
+
+      {"name":"ALava2","access_rules":["@ARight1","@AHammer1"]},
+      {"name":"ARight2","access_rules":["@ALava1,ocarina,time"]},
+      {"name":"AHammer2","access_rules":["@ARight1,hookshot","@ALava1,longshot","@ALava1,hookshot,hoverboots","@AEyeLow1"]},
+      {"name":"AEyeLow2","access_rules":["@AHammer1,hammer,bow"]},
+
+      {"name":"ALava3","access_rules":["@ARight2","@AHammer2"]},
+      {"name":"ARight3","access_rules":["@ALava2,ocarina,time"]},
+      {"name":"AHammer3","access_rules":["@ARight2,hookshot","@ALava2,longshot","@ALava2,hookshot,hoverboots","@AEyeLow2"]},
+      {"name":"AEyeLow3","access_rules":["@AHammer2,hammer,bow"]},
+
+      {
+        "name": "GTG Lava",
+        "access_rules": [
+          "@ALavaO",
+          "@ALava1",
+          "@ALava2",
+          "@ALava3"
+        ]
+      },
+      {
+        "name": "GTG Maze Right",
+        "access_rules": [
+          "@ARightO",
+          "@ARight1",
+          "@ARight2",
+          "@ARight3"
+        ]
+      },
+      {
+        "name": "GTG Hammer",
+        "access_rules": [
+          "@AHammerO",
+          "@AHammer1",
+          "@AHammer2",
+          "@AHammer3"
+        ]
+      },
+      {
+        "name": "GTG Eye Low",
+        "access_rules": [
+          "@AEyeLowO",
+          "@AEyeLow1",
+          "@AEyeLow2",
+          "@AEyeLow3"
+        ]
+      },
+
+      {
         "name": "Lobby Chests",
         "access_rules": [
-          "bow"
+          "erd_gtg_a,bow",
+          "erd_gtg_c,sling"
         ],
         "sections": [
           {
@@ -3078,14 +3150,19 @@
           {
             "map": "gerudotraininggrounds",
             "x": 945,
-            "y": 885
+            "y": 885,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Beamos Chest",
         "access_rules": [
-          "$has_explosives"
+          "erd_gtg_a,$has_explosives",
+          "sword1,$has_explosives",
+          "sticks,[sword1],$has_explosives"
         ],
         "sections": [
           {
@@ -3097,12 +3174,19 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1485,
-            "y": 1130
+            "y": 1130,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Stalfos Chest",
+        "access_rules": [
+          "erd_gtg_a",
+          "sword1"
+        ],
         "sections": [
           {
             "name": "Chest",
@@ -3113,14 +3197,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 300,
-            "y": 675
+            "y": 675,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Before Heavy Block Chest",
         "access_rules": [
-          "[hookshot]"
+          "@GTG Heavy Block"
         ],
         "sections": [
           {
@@ -3132,16 +3219,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1415,
-            "y": 265
+            "y": 265,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Heavy Block Chests",
         "access_rules": [
-          "hookshot,lift2,$can_see_with_lens",
-          "bombs,shield2,[hookshot],lift2,$can_see_with_lens",
-          "bombs,shield3,[hookshot],lift2,$can_see_with_lens"
+          "@GTG Heavy Block,erd_gtg_a,lift2,$can_see_with_lens"
         ],
         "sections": [
           {
@@ -3153,18 +3241,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1690,
-            "y": 125
+            "y": 125,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Eye Statue Chest",
         "access_rules": [
-          "hookshot,bow,$can_see_with_lens",
-          "bombs,shield2,[hookshot],bow,$can_see_with_lens",
-          "bombs,shield3,[hookshot],bow,$can_see_with_lens",
-          "$has_explosives,hookshot,hammer,bow",
-          "gtg_small_keys:2,[gtg_small_keys:9],hookshot,hammer,bow"
+          "@GTG Eye Low,bow"
         ],
         "sections": [
           {
@@ -3176,16 +3263,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 2005,
-            "y": 590
+            "y": 590,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Near Scarecrow Chest",
         "access_rules": [
-          "hookshot,bow,$can_see_with_lens",
-          "bombs,shield2,[hookshot],bow,$can_see_with_lens",
-          "bombs,shield3,[hookshot],bow,$can_see_with_lens"
+          "@GTG Eye Upper,bow"
         ],
         "sections": [
           {
@@ -3197,18 +3285,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1415,
-            "y": 495
+            "y": 495,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Hammer Room Clear Chest",
         "access_rules": [
-          "hookshot,$can_see_with_lens",
-          "bombs,shield2,[hookshot],$can_see_with_lens",
-          "bombs,shield3,[hookshot],$can_see_with_lens",
-          "$has_explosives,hookshot",
-          "gtg_small_keys:2,[gtg_small_keys:9],hookshot"
+          "@GTG Hammer"
         ],
         "sections": [
           {
@@ -3220,18 +3307,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 2645,
-            "y": 745
+            "y": 745,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Hammer Room Switch Chest",
         "access_rules": [
-          "hookshot,$can_see_with_lens,[hammer]",
-          "bombs,shield2,[hookshot],[hammer],$can_see_with_lens",
-          "bombs,shield3,[hookshot],[hammer],$can_see_with_lens",
-          "$has_explosives,hookshot,[hammer]",
-          "gtg_small_keys:2,[gtg_small_keys:9],hookshot,[hammer]"
+          "@GTG Hammer,[hammer]"
         ],
         "sections": [
           {
@@ -3243,18 +3329,63 @@
           {
             "map": "gerudotraininggrounds",
             "x": 2560,
-            "y": 755
+            "y": 755,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Maze Right Chest 1",
+        "access_rules": [
+          "@GTG Maze Right",
+          "gtg_small_keys:2,[gtg_small_keys:9]",
+          "erd_gtg_c,@Beamos Chest"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "gerudotraininggrounds",
+            "x": 1483,
+            "y": 773,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Maze Right Chest 2",
+        "access_rules": [
+          "@Maze Right Chest 1"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "gerudotraininggrounds",
+            "x": 1570,
+            "y": 770,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Freestanding Key",
         "access_rules": [
-          "hookshot,$can_see_with_lens,ocarina,time",
-          "{hookshot,$can_see_with_lens}",
-          "$has_explosives,ocarina,time",
-          "{$has_explosives}",
-          "gtg_small_keys:2,[gtg_small_keys:9]"
+          "@Maze Right Chest 1"
         ],
         "sections": [
           {
@@ -3269,38 +3400,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1895,
-            "y": 915
-          }
-        ]
-      },
-      {
-        "name": "Maze Right Chests",
-        "access_rules": [
-          "hookshot,$can_see_with_lens,ocarina,time",
-          "$has_explosives,ocarina,time",
-          "gtg_small_keys:2,[gtg_small_keys:9]"
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "item_count": 2
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "gerudotraininggrounds",
-            "x": 1595,
-            "y": 785
+            "y": 915,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Underwater Silver Rupee Chest",
         "access_rules": [
-          "hookshot,$can_see_with_lens,ocarina,time,ironboots,$has_zora_tunic",
-          "$has_explosives,hookshot,ocarina,time,ironboots,$has_zora_tunic",
-          "gtg_small_keys:2,[gtg_small_keys:9],hookshot,ocarina,time,ironboots,$has_zora_tunic",
-          "{$hintable}"
+          "@GTG Lava,hookshot,ocarina,time,ironboots,$has_zora_tunic"
         ],
         "sections": [
           {
@@ -3313,7 +3423,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 2410,
-            "y": 1140
+            "y": 1140,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3332,7 +3445,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1315,
-            "y": 515
+            "y": 515,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3351,7 +3467,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1245,
-            "y": 690
+            "y": 690,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3370,7 +3489,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1445,
-            "y": 660
+            "y": 660,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3389,7 +3511,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1480,
-            "y": 675
+            "y": 675,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3410,7 +3535,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1430,
-            "y": 730
+            "y": 730,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       }

@@ -2994,11 +2994,54 @@
   },
   {
     "name": "Gerudo Training Grounds MQ",
-    "parent": "Gerudo Fortress",
+    "parent": "World",
+    "color": "#a09509",
     "access_rules": [
       "erd_gtg,gtg_mq"
     ],
     "children": [
+      {
+        "name": "GTGMQ Left",
+        "access_rules": [
+          "erd_gtg_a,bow,magic,firearrow",
+          "magic,dins"
+        ]
+      },
+      {
+        "name": "GTGMQ Stalfos",
+        "access_rules": [
+          "@GTGMQ Left,erd_gtg_a,hookshot,[longshot]"
+        ]
+      },
+      {
+        "name": "GTGMQ Back",
+        "access_rules": [
+          "@GTGMQ Stalfos,ocarina,time,$can_see_with_lens"
+        ]
+      },
+      {
+        "name": "GTGMQ Maze Right",
+        "access_rules": [
+          "@GTGMQ Back,hammer"
+        ]
+      },
+      {
+        "name": "GTGMQ Right",
+        "access_rules": [
+          "erd_gtg_a,bow",
+          "erd_gtg_c,sling",
+          "@GTGMQ Back,erd_gtg_a,longshot",
+          "@GTGMQ Maze Right"
+        ]
+      },
+      {
+        "name": "GTGMQ Underwater",
+        "access_rules": [
+          "@GTGMQ Right,erd_gtg_a,hoverboots",
+          "@GTGMQ Maze Right,erd_gtg_a,longshot",
+          "@GTGMQ Maze Right,erd_gtg_a,bow"
+        ]
+      },
       {
         "name": "Lobby Chests",
         "sections": [
@@ -3010,8 +3053,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 778,
-            "y": 571,
+            "x": 945,
+            "y": 885,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3021,8 +3064,7 @@
       {
         "name": "Dinolfos Chest",
         "access_rules": [
-          "bow",
-          "@Second Iron Knuckle Chest"
+          "@GTGMQ Right,erd_gtg_a"
         ],
         "sections": [
           {
@@ -3033,8 +3075,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 861,
-            "y": 224,
+            "x": 1485,
+            "y": 1130,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3044,7 +3086,11 @@
       {
         "name": "First Iron Knuckle Chest",
         "access_rules": [
-          "$has_fire"
+          "@GTGMQ Left,erd_gtg_a",
+          "@GTGMQ Left,sword1",
+          "@GTGMQ Left,$has_explosives",
+          "@GTGMQ Left,sticks,[sword1]",
+          "@GTGMQ Left,sticks,[$has_explosives]"
         ],
         "sections": [
           {
@@ -3055,8 +3101,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 293,
-            "y": 838,
+            "x": 300,
+            "y": 675,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3066,7 +3112,7 @@
       {
         "name": "Before Heavy Block Chest",
         "access_rules": [
-          "@First Iron Knuckle Chest,hookshot,[longshot]"
+          "@GTGMQ Stalfos"
         ],
         "sections": [
           {
@@ -3077,8 +3123,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 849,
-            "y": 21,
+            "x": 1415,
+            "y": 265,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3088,7 +3134,7 @@
       {
         "name": "Heavy Block Chest",
         "access_rules": [
-          "@Before Heavy Block Chest,lift2"
+          "@GTGMQ Stalfos,erd_gtg_a,lift2"
         ],
         "sections": [
           {
@@ -3099,8 +3145,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 779,
-            "y": 875,
+            "x": 1715,
+            "y": 80,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3110,7 +3156,7 @@
       {
         "name": "Eye Statue Chest",
         "access_rules": [
-          "@Before Heavy Block Chest,[ocarina],[time],$can_see_with_lens,$has_bottle,bow"
+          "@GTGMQ Back,erd_gtg_a,bow"
         ],
         "sections": [
           {
@@ -3121,8 +3167,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 330,
-            "y": 918,
+            "x": 2075,
+            "y": 500,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3132,7 +3178,7 @@
       {
         "name": "Second Iron Knuckle Chest",
         "access_rules": [
-          "@Before Heavy Block Chest,[ocarina],[time],$can_see_with_lens,$has_bottle"
+          "@GTGMQ Back"
         ],
         "sections": [
           {
@@ -3143,8 +3189,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 410,
-            "y": 410,
+            "x": 2645,
+            "y": 745,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3154,7 +3200,7 @@
       {
         "name": "Flame Circle Chest",
         "access_rules": [
-          "@Second Iron Knuckle Chest"
+          "@GTGMQ Back"
         ],
         "sections": [
           {
@@ -3165,8 +3211,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 562,
-            "y": 855,
+            "x": 2560,
+            "y": 755,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3174,21 +3220,43 @@
         ]
       },
       {
-        "name": "Maze Right Chests",
+        "name": "Maze Right Chest 1 MQ",
         "access_rules": [
-          "@Second Iron Knuckle Chest,hammer"
+          "@GTGMQ Maze Right"
         ],
         "sections": [
           {
             "name": "Chest",
-            "item_count": 2
+            "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 708,
-            "y": 577,
+            "x": 1483,
+            "y": 773,
+            "visibility_rules": [
+              "gtg_mq"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Maze Right Chest 2 MQ",
+        "access_rules": [
+          "@Maze Right Chest 1 MQ"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "gerudotraininggrounds",
+            "x": 1570,
+            "y": 770,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3198,10 +3266,8 @@
       {
         "name": "Underwater Silver Rupee Chest",
         "access_rules": [
-          "@Dinolfos Chest,hoverboots,$has_fire,ironboots,$has_zora_tunic",
-          "@Maze Right Chests,longshot,$has_fire,ironboots,$has_zora_tunic",
-          "@Maze Right Chests,bow,$has_fire,ironboots,$has_zora_tunic",
-          "{$hintable}"
+          "@GTGMQ Underwater,ironboots,$has_zora_tunic,magic,dins",
+          "@GTGMQ Underwater,ironboots,$has_zora_tunic,erd_gtg_a,bow,firearrow,magic"
         ],
         "sections": [
           {
@@ -3213,8 +3279,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 57,
-            "y": 17,
+            "x": 2410,
+            "y": 1140,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3235,8 +3301,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 310,
-            "y": 314,
+            "x": 1315,
+            "y": 515,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3254,8 +3320,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 168,
-            "y": 632,
+            "x": 1245,
+            "y": 690,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3273,8 +3339,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 316,
-            "y": 172,
+            "x": 1445,
+            "y": 660,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3295,8 +3361,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 803,
-            "y": 347,
+            "x": 1480,
+            "y": 675,
             "visibility_rules": [
               "gtg_mq"
             ]
@@ -3306,7 +3372,7 @@
       {
         "name": "Ice Arrows Chest",
         "access_rules": [
-          "@Maze Right Chests,gtg_small_keys:3",
+          "@Maze Right Chest 1 MQ,gtg_small_keys:3",
           "{$hintable}"
         ],
         "sections": [
@@ -3319,8 +3385,8 @@
         "map_locations": [
           {
             "map": "gerudotraininggrounds",
-            "x": 659,
-            "y": 466,
+            "x": 1520,
+            "y": 460,
             "visibility_rules": [
               "gtg_mq"
             ]
