@@ -2863,8 +2863,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 428,
-            "y": 565,
+            "x": 940,
+            "y": 970,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -2885,8 +2885,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 5,
-            "y": 401,
+            "x": 875,
+            "y": 1095,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -2907,8 +2907,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 314,
-            "y": 628,
+            "x": 895,
+            "y": 1150,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -2929,8 +2929,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 135,
-            "y": 77,
+            "x": 1465,
+            "y": 895,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -2955,8 +2955,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 564,
-            "y": 998,
+            "x": 1548,
+            "y": 624,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -2978,8 +2978,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 442,
-            "y": 834,
+            "x": 1935,
+            "y": 633,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -3000,8 +3000,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 895,
-            "y": 41,
+            "x": 360,
+            "y": 656,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -3022,8 +3022,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 834,
-            "y": 908,
+            "x": 285,
+            "y": 665,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -3044,8 +3044,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 197,
-            "y": 388,
+            "x": 315,
+            "y": 715,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -3066,8 +3066,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 488,
-            "y": 366,
+            "x": 549,
+            "y": 594,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -3077,8 +3077,8 @@
       {
         "name": "Castle Tower",
         "access_rules": [
-          "gc_small_keys:3,$can_LA,lift3,ocarina,time,$has_goron_tunic,$has_bottle,$can_see_with_lens,hammer,bombchu,shield3,firearrow,longshot",
-          "gc_small_keys:3,$can_LA,lift3,ocarina,time,$has_goron_tunic,$has_bottle,$can_see_with_lens,hammer,bombchu,shield3,firearrow,hookshot,hoverboots"
+          "[gc_small_keys:3],[$can_LA],[lift3],[ocarina],[time],[$has_goron_tunic],[$has_bottle],[$can_see_with_lens],[hammer],[bombchu],[shield3],[firearrow],[longshot]",
+          "[gc_small_keys:3],[$can_LA],[lift3],[ocarina],[time],[$has_goron_tunic],[$has_bottl]e,[$can_see_with_lens],[hammer],[bombchu],[shield3],[firearrow],[hookshot],[hoverboots]"
         ],
         "sections": [
           {
@@ -3091,8 +3091,8 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 302,
-            "y": 917,
+            "x": 2529,
+            "y": 705,
             "visibility_rules": [
               "gc_mq"
             ]
@@ -3121,8 +3121,8 @@
             "map_locations": [
               {
                 "map": "ganonscastle",
-                "x": 504,
-                "y": 419,
+                "x": 735,
+                "y": 939,
                 "visibility_rules": [
                   "setting_scrub_shuffle_yes, gc_mq"
                 ]
