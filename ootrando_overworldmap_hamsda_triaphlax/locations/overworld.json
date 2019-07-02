@@ -6165,6 +6165,9 @@
               },
               {
                 "name": "Desert Colossus",
+                "access_rules": [
+                  "$colossus"
+                ],
                 "children": [
                   {
                     "name": "Spirit Temple Entrance",
@@ -6174,14 +6177,14 @@
                       {
                         "name": "CHILD",
                         "access_rules": [
-                          "ocarina,requiem"
+                          "$colossus|child"
                         ],
                         "item_count": 1
                       },
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "$colossus,sword2"
+                          "$colossus|adult,sword2"
                         ],
                         "item_count": 1
                       }
@@ -6190,7 +6193,7 @@
                       {
                         "map": "child",
                         "visibility_rules": [
-                          "ocarina,requiem"
+                          "$colossus|child"
                         ],
                         "x": 85,
                         "y": 301
@@ -6198,7 +6201,7 @@
                       {
                         "map": "adult",
                         "visibility_rules": [
-                          "$colossus,sword2"
+                          "$colossus|adult,sword2"
                         ],
                         "x": 85,
                         "y": 301
@@ -6213,14 +6216,14 @@
                       {
                         "name": "CHILD",
                         "access_rules": [
-                          "ocarina,requiem,$has_explosives"
+                          "$colossus|child,$has_explosives"
                         ],
                         "item_count": 1
                       },
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "$colossus,sword2,$has_explosives"
+                          "$colossus|adult,sword2,$has_explosives"
                         ],
                         "item_count": 1
                       }
@@ -6229,15 +6232,15 @@
                       {
                         "map": "child",
                         "visibility_rules": [
-                          "ocarina,requiem,$has_explosives"
+                          "$colossus|child,$has_explosives"
                         ],
                         "x": 276,
                         "y": 297
                       },
                       {
                         "map": "adult",
-                        "access_rules": [
-                          "$colossus,sword2,$has_explosives"
+                        "visibility_rules": [
+                          "$colossus|adult,sword2,$has_explosives"
                         ],
                         "x": 276,
                         "y": 297
@@ -6252,8 +6255,8 @@
                         "name": "Freestanding PoH",
                         "short_name": "HP",
                         "access_rules": [
-                          "ocarina,requiem,setting_plant_no,beans,sword2",
-                          "ocarina,requiem,bean_colossus_yes,sword2",
+                          "$colossus|child,setting_plant_no,beans,$colossus|adult,sword2",
+                          "$colossus|child,bean_colossus_yes,$colossus|adult,sword2",
                           "{$hintable}",
                           "{$colossus}"
                         ],
@@ -6307,7 +6310,7 @@
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "$colossus, lift2"
+                          "$colossus|adult, lift2"
                         ],
                         "item_count": 1
                       }
@@ -6323,7 +6326,7 @@
                   {
                     "name": "Desert Colossus Bean Patch",
                     "access_rules": [
-                      "ocarina,requiem"
+                      "$colossus|child"
                     ],
                     "sections": [
                       {
@@ -6364,10 +6367,10 @@
                       {
                         "name": "GS94 (N)",
                         "access_rules": [
-                          "$colossus,sword2,hookshot",
-                          "{$colossus,sword2,bow}",
-                          "{$colossus,sword2,$has_explosives}",
-                          "{$colossus,sword2,dinsfire,magic}"
+                          "$colossus|adult,sword2,hookshot",
+                          "{$colossus|adult,sword2,bow}",
+                          "{$colossus|adult,sword2,$has_explosives}",
+                          "{$colossus|adult,sword2,dinsfire,magic}"
                         ],
                         "visibility_rules": [
                           "setting_skulltulas_all"
@@ -6396,10 +6399,10 @@
                       {
                         "name": "GS95 (N)",
                         "access_rules": [
-                          "ocarina,requiem,setting_plant_no,beans,sword2",
-                          "ocarina,requiem,bean_colossus_yes,sword2",
-                          "$colossus,sword2,hookshot,[longshot]",
-                          "{$colossus,sword2,bow}"
+                          "$colossus|child,setting_plant_no,beans,$colossus|adult,sword2",
+                          "$colossus|child,bean_colossus_yes,$colossus|adult,sword2",
+                          "$colossus|adult,sword2,hookshot,[longshot]",
+                          "{$colossus|adult,sword2,bow}"
                         ],
                         "visibility_rules": [
                           "setting_skulltulas_all"

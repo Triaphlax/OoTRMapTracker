@@ -8,6 +8,16 @@ function has(item, amount)
   end
 end
 
+function has_at_least(item, amount)
+  local count = Tracker:ProviderCountForCode(item)
+  amount = tonumber(amount)
+  if not amount then
+    return count > 0
+  else
+    return count >= amount
+  end
+end
+
 function has_bombchus()
   if has("setting_logic_chus_yes") then
     return Tracker:ProviderCountForCode("bombchu")
@@ -94,7 +104,7 @@ function can_see_with_lens()
   if has("setting_lens_wasteland") 
   or has("lens") 
   and has("magic") then
-    return 1
+    return 1, AccessibilityLevel.Normal
   else
     return 1, AccessibilityLevel.SequenceBreak
   end
@@ -161,14 +171,126 @@ function wasteland()
   return count, level
 end
 
-function colossus()
+function colossus(age)
   if has("ocarina")
   and has("requiem")
   then
     return 1
-  elseif has("sword2", 0) then
-    return 0
+  end
+
+  local c_sptreg, l_sptreg = colossus_through_sptreg(age)
+  if l_sptreg == AccessibilityLevel.Normal then
+    return 1
+  end
+
+  local c_sptmq, l_sptmq = colossus_through_sptmq(age)
+  if l_sptmq == AccessibilityLevel.Normal then
+    return 1
+  end
+
+  local c_fortress, l_fortress = colossus_through_fortress(age)
+  if l_fortress == AccessibilityLevel.Normal then
+    return 1
+  end
+
+  if c_sptreg == 1 or c_sptmq == 1 or c_fortress == 1 then
+    return 1, AccessibilityLevel.SequenceBreak
   else
+    return 0
+  end
+end
+
+function colossus_through_sptreg(age)
+  local level
+  local bombcount, bomblevel = has_explosives()
+  if has("spirit_reg") then
+    if has("erd_spirit_c") and not (age == "adult") then
+      if bombcount == 1 then
+        if has_at_least("spirit_small_keys", 5) then
+          if bomblevel == AccessibilityLevel.SequenceBreak then
+            level = AccessibilityLevel.SequenceBreak
+          else
+            return 1, AccessibilityLevel.Normal
+          end
+        end
+        if has_at_least("spirit_small_keys", 2) then
+          level = AccessibilityLevel.SequenceBreak
+        end
+      end
+    end
+    if has("erd_spirit_a") and not (age == "child") then
+      if has("lift2") and bombcount == 1 then
+        if has_at_least("spirit_small_keys", 5) then
+          return 1, AccessibilityLevel.Normal
+        end
+        if has_at_least("spirit_small_keys", 4) and has("lift2") then
+          if bomblevel == AccessibilityLevel.SequenceBreak then
+            level = AccessibilityLevel.SequenceBreak
+          else
+            return 1, AccessibilityLevel.Normal
+          end
+        end
+        if has_at_least("spirit_small_keys", 3) and has("longshot") then
+          if bomblevel == AccessibilityLevel.SequenceBreak then
+            level = AccessibilityLevel.SequenceBreak
+          else
+            return 1, AccessibilityLevel.Normal
+          end
+        end
+        if has_at_least("spirit_small_keys", 2) then
+          level = AccessibilityLevel.SequenceBreak
+        end
+      end
+    end
+  end
+  if level == AccessibilityLevel.SequenceBreak then
+    return 1, level
+  else
+    return 0
+  end
+end
+
+function colossus_through_sptmq(age)
+  local level
+  local lenscount, lenslevel = can_see_with_lens()
+  if has("spirit_mq") then
+    if has("erd_spirit_c") and not (age == "adult") then
+      if has("bombchu") and has("ocarina") and has("time") then
+        if has_at_least("spirit_small_keys", 7) then
+          return 1, AccessibilityLevel.Normal
+        end
+        if has_at_least("spirit_small_keys", 3) then
+          level = AccessibilityLevel.SequenceBreak
+        end
+      end
+    end
+    if has ("erd_spirit_a") and not (age == "child") then
+      if has("bombchu") and has("longshot") and has("lift2") then
+        if has_at_least("spirit_small_keys", 7) then
+          return 1, AccessibilityLevel.Normal
+        end
+        if has_at_least("spirit_small_keys", 4) and has("ocarina") and has("time") then
+          if lenslevel == AccessibilityLevel.Normal then
+            return 1, AccessibilityLevel.Normal
+          else
+            level = AccessibilityLevel.SequenceBreak
+          end
+        end
+        if has_at_least("spirit_small_keys", 1) then
+          level = AccessibilityLevel.SequenceBreak
+        end
+      end
+    end
+  end
+  if level == AccessibilityLevel.SequenceBreak then
+    return 1, level
+  else
+    return 0
+  end
+end
+
+function colossus_through_fortress(age)
+  if has("sword2", 1) and not (age == "child") then
     local bridge = gerudo_bridge()
     if bridge == 0 then
       return 0
@@ -190,6 +312,8 @@ function colossus()
       end
       return 1, level
     end
+  else
+    return 0
   end
 end
 
