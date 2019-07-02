@@ -1957,11 +1957,63 @@
   },
   {
     "name": "Spirit Temple MQ",
-    "parent": "Desert Colossus",
+    "parent": "World",
+    "color": "#a09509",
     "access_rules": [
       "erd_spirit,spirit_mq"
     ],
     "children": [
+      {
+        "name": "SpTMQ Child",
+        "access_rules": [
+          "erd_spirit_c"
+        ]
+      },
+      {
+        "name": "SpTMQ Adult",
+        "access_rules": [
+          "erd_spirit_a,longshot,bombchu,lift2"
+        ]
+      },
+      {
+        "name": "SpTMQ Shared as Child",
+        "access_rules": [
+          "@SpTMQ Child,bombchu,spirit_small_keys:1,[spirit_small_keys:2]"
+        ]
+      },
+      {
+        "name": "SpTMQ Shared as Adult",
+        "access_rules": [
+          "@SpTMQ Adult"
+        ]
+      },
+      {
+        "name": "SpTMQ Lower Adult",
+        "access_rules": [
+          "@SpTMQ Adult,magic,firearrow,bow",
+          "@SpTMQ Adult,dins,magic,[firearrow],bow"
+        ]
+      },
+      {
+        "name": "SpTMQ Boss",
+        "access_rules": [
+          "@SpTMQ Adult,spirit_small_keys:2,[spirit_small_keys:6],ocarina,lullaby,hammer"
+        ]
+      },
+      {
+        "name": "SpTMQ Silver Gauntlets",
+        "access_rules": [
+          "@SpTMQ Shared as Child,spirit_small_keys:3,[spirit_small_keys:7],time,ocarina",
+          "@SpTMQ Shared as Adult,spirit_small_keys:1,[spirit_small_keys:7],longshot,lift2",
+          "@SpTMQ Shared as Adult,spirit_small_keys:1,[spirit_small_keys:4],ocarina,time,$can_see_with_lens"
+        ]
+      },
+      {
+        "name": "SpTMQ Mirror Shield",
+        "access_rules": [
+          "@SpTMQ Adult,spirit_small_keys:1,[spirit_small_keys:5],ocarina,time,$can_see_with_lens"
+        ]
+      },
       {
         "name": "Entrance Front Left Chest",
         "sections": [
@@ -1973,8 +2025,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 564,
-            "y": 360,
+            "x": 1190,
+            "y": 1430,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -1983,21 +2035,21 @@
       },
       {
         "name": "Entrance Back Left Chest",
-        "access_rules": [
-          "$can_blast,ocarina,requiem,sling",
-          "$can_blast,sword2,bow"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "erd_spirit_a,$can_blast|adult,bow",
+              "erd_spirit_c,$can_blast|child,sling"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 41,
-            "y": 456,
+            "x": 1240,
+            "y": 1410,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2006,24 +2058,24 @@
       },
       {
         "name": "Entrance Back Right Chest",
-        "access_rules": [
-          "bombchu",
-          "sword2,bow",
-          "sword2,hookshot",
-          "ocarina,requiem,sling",
-          "ocarina,requiem,boomerang"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "bombchu",
+              "erd_spirit_a,bow",
+              "erd_spirit_a,hookshot",
+              "erd_spirit_c,sling",
+              "erd_spirit_c,boomerang"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 367,
-            "y": 946,
+            "x": 1306,
+            "y": 1430,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2032,21 +2084,21 @@
       },
       {
         "name": "Child Left Chest",
-        "access_rules": [
-          "ocarina,requiem,bombchu,sling,dinsfire,magic,sticks",
-          "ocarina,requiem,bombchu,sling,dinsfire,magic,sword1"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@SpTMQ Child,sticks,bombchu,sling,magic,dins",
+              "@SpTMQ Child,sword1,bombchu,sling,magic,dins"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 663,
-            "y": 762,
+            "x": 660,
+            "y": 910,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2056,9 +2108,9 @@
       {
         "name": "Map Chest",
         "access_rules": [
-          "ocarina,requiem,sticks",
-          "ocarina,requiem,sword1",
-          "ocarina,requiem,$has_explosives"
+          "@SpTMQ Child,sticks",
+          "@SpTMQ Child,sword1",
+          "@SpTMQ Child,$has_explosives"
         ],
         "sections": [
           {
@@ -2069,8 +2121,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 346,
-            "y": 40,
+            "x": 580,
+            "y": 940,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2080,9 +2132,9 @@
       {
         "name": "Silver Block Hallway Chest",
         "access_rules": [
-          "ocarina,requiem,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling,dinsfire,magic",
-          "ocarina,requiem,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling,sword2,longshot,lift2,bow,firearrow,magic",
-          "ocarina,requiem,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling,sword2,longshot,lift2,bow,[firearrow],[magic],time"
+          "@SpTMQ Child,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling,dinsfire,magic",
+          "@SpTMQ Child,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling,erd_spirit_a,longshot,lift2,bow,firearrow,magic",
+          "@SpTMQ Child,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling,erd_spirit_a,longshot,lift2,bow,[firearrow],[magic],ocarina,time"
         ],
         "sections": [
           {
@@ -2093,8 +2145,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 494,
-            "y": 547,
+            "x": 1385,
+            "y": 1045,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2104,7 +2156,7 @@
       {
         "name": "Child Center Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,ocarina,requiem,hammer,spirit_small_keys:2,[spirit_small_keys:7]",
+          "@SpTMQ Adult,@SpTMQ Child,hammer,spirit_small_keys:2,[spirit_small_keys:7]",
           "{$hintable}"
         ],
         "sections": [
@@ -2117,8 +2169,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 98,
-            "y": 979,
+            "x": 635,
+            "y": 1210,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2128,7 +2180,7 @@
       {
         "name": "Child Climb South Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:7]"
+          "@SpTMQ Adult,spirit_small_keys:1,[spirit_small_keys:7]"
         ],
         "sections": [
           {
@@ -2139,8 +2191,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 16,
-            "y": 619,
+            "x": 1230,
+            "y": 650,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2150,7 +2202,7 @@
       {
         "name": "Lower NE Main Room Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,ocarina,lullaby"
+          "@SpTMQ Adult,ocarina,lullaby"
         ],
         "sections": [
           {
@@ -2161,8 +2213,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 163,
-            "y": 410,
+            "x": 1965,
+            "y": 956,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2172,7 +2224,7 @@
       {
         "name": "Upper NE Main Room Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,$can_see_with_lens"
+          "@SpTMQ Adult,$can_see_with_lens"
         ],
         "sections": [
           {
@@ -2183,8 +2235,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 690,
-            "y": 66,
+            "x": 1960,
+            "y": 830,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2194,7 +2246,7 @@
       {
         "name": "Beamos Room Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:5]"
+          "@SpTMQ Adult,spirit_small_keys:1,[spirit_small_keys:5]"
         ],
         "sections": [
           {
@@ -2205,8 +2257,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 588,
-            "y": 175,
+            "x": 2850,
+            "y": 1430,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2227,8 +2279,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 550,
-            "y": 956,
+            "x": 3185,
+            "y": 1575,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2251,8 +2303,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 678,
-            "y": 119,
+            "x": 3430,
+            "y": 1455,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2262,8 +2314,8 @@
       {
         "name": "Child Climb North Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:7]",
-          "ocarina,requiem,bombchu,spirit_small_keys:1,[spirit_small_keys:7]"
+          "@SpTMQ Shared as Child,spirit_small_keys:1,[spirit_small_keys:6]",
+          "@SpTMQ Shared as Adult,spirit_small_keys:1,[spirit_small_keys:6]",
         ],
         "sections": [
           {
@@ -2274,8 +2326,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 547,
-            "y": 168,
+            "x": 1412,
+            "y": 680,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2285,8 +2337,10 @@
       {
         "name": "Compass Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,bow",
-          "ocarina,requiem,bombchu,spirit_small_keys:2,[spirit_small_keys:7],sling"
+          "@SpTMQ Shared as Child,spirit_small_keys:2,[spirit_small_keys:7],sling",
+          "@SpTMQ Shared as Adult,bow",
+          "@SpTMQ Shared as Child,sling,bow",
+          "@SpTMQ Shared as Adult,sling,bow"
         ],
         "sections": [
           {
@@ -2297,8 +2351,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 229,
-            "y": 145,
+            "x": 1720,
+            "y": 944,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2308,8 +2362,9 @@
       {
         "name": "Sun Block Room Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu",
-          "ocarina,requiem,bombchu,spirit_small_keys:2,time"
+          "@SpTMQ Shared as Adult,longshot,lift2",
+          "@SpTMQ Shared as Adult,ocarina,time",
+          "@SpTMQ Shared as Child,ocarina,time",
         ],
         "sections": [
           {
@@ -2320,8 +2375,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 14,
-            "y": 200,
+            "x": 1070,
+            "y": 700,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2331,8 +2386,7 @@
       {
         "name": "Lower Adult Left Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,bow,firearrow,magic,shield3",
-          "sword2,lift2,longshot,bombchu,bow,[firearrow],dinsfire,magic,shield3"
+          "@SpTMQ Lower Adult"
         ],
         "sections": [
           {
@@ -2343,8 +2397,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 39,
-            "y": 327,
+            "x": 1580,
+            "y": 1235,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2354,7 +2408,7 @@
       {
         "name": "Lower Adult Right Chest",
         "access_rules": [
-          "@Lower Adult Left Chest,spirit_small_keys:1,[spirit_small_keys:7],hammer,ocarina,time,epona,sun,storm,lullaby",
+          "@SpTMQ Lower Adult,spirit_small_keys:1,[spirit_small_keys:7],hammer,ocarina,time,lullaby,epona,sun,storm",
           "{$hintable}"
         ],
         "sections": [
@@ -2367,8 +2421,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 829,
-            "y": 976,
+            "x": 2345,
+            "y": 1430,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2378,7 +2432,7 @@
       {
         "name": "Entrance Front Right Chest",
         "access_rules": [
-          "@Lower Adult Left Chest,hammer"
+          "@SpTMQ Lower Adult,hammer"
         ],
         "sections": [
           {
@@ -2389,8 +2443,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 700,
-            "y": 413,
+            "x": 1260,
+            "y": 1450,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2400,7 +2454,7 @@
       {
         "name": "Mirror Puzzle Invisible Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,spirit_small_keys:2,[spirit_small_keys:6],ocarina,lullaby,hammer,$can_see_with_lens"
+          "@SpTMQ Boss,$can_see_with_lens"
         ],
         "sections": [
           {
@@ -2411,8 +2465,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 617,
-            "y": 519,
+            "x": 2500,
+            "y": 820,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2422,7 +2476,7 @@
       {
         "name": "Mirror Shield Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:5],ocarina,time,$can_see_with_lens"
+          "@SpTMQ Mirror Shield"
         ],
         "sections": [
           {
@@ -2433,8 +2487,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 862,
-            "y": 642,
+            "x": 2292,
+            "y": 1536,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2444,9 +2498,7 @@
       {
         "name": "Silver Gauntlets Chest",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:7]",
-          "sword2,lift2,longshot,bombchu,spirit_small_keys:1,[spirit_small_keys:4],ocarina,time,$can_see_with_lens",
-          "ocarina,requiem,bombchu,spirit_small_keys:3,[spirit_small_keys:7],time"
+          "@SpTMQ Silver Gauntlets"
         ],
         "sections": [
           {
@@ -2457,8 +2509,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 348,
-            "y": 890,
+            "x": 480,
+            "y": 1000,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2468,11 +2520,11 @@
       {
         "name": "Twinrova",
         "access_rules": [
-          "sword2,lift2,longshot,bombchu,spirit_small_keys:2,[spirit_small_keys:6],ocarina,lullaby,hammer,shield3,spirit_boss_key"
+          "@SpTMQ Boss,shield3,spirit_boss_key"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "spirit",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -2482,8 +2534,8 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 581,
-            "y": 711,
+            "x": 2768,
+            "y": 332,
             "visibility_rules": [
               "spirit_mq"
             ]
@@ -2499,8 +2551,8 @@
           {
             "name": "Sun Block Room",
             "access_rules": [
-              "sword2,lift2,longshot,bombchu",
-              "[sword2],[lift2],[longshot],ocarina,requiem,bombchu,spirit_small_keys:2,time,boomerang"
+              "@SpTMQ Shared as Adult,longshot,lift2",
+              "@SpTMQ Shared as Child,[@SpTMQ Shared as Adult],[sword2],[lift2],[longshot],ocarina,bombchu,spirit_small_keys:2,time,boomerang"
             ],
             "sections": [
               {
@@ -2513,8 +2565,8 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 623,
-                "y": 714,
+                "x": 875,
+                "y": 690,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, spirit_mq"
                 ]
@@ -2537,8 +2589,8 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 617,
-                "y": 131,
+                "x": 1525,
+                "y": 1185,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, spirit_mq"
                 ]
@@ -2562,8 +2614,8 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 573,
-                "y": 351,
+                "x": 2305,
+                "y": 1415,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, spirit_mq"
                 ]
@@ -2573,7 +2625,7 @@
           {
             "name": "Iron Knuckle North",
             "access_rules": [
-              "sword2,lift2,longshot,bombchu,spirit_small_keys:3,[spirit_small_keys:7]"
+              "@SpTMQ Adult,spirit_small_keys:3,[spirit_small_keys:7]"
             ],
             "sections": [
               {
@@ -2586,8 +2638,8 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 598,
-                "y": 890,
+                "x": 3085,
+                "y": 860,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, spirit_mq"
                 ]
@@ -2597,7 +2649,7 @@
           {
             "name": "Iron Knuckle West",
             "access_rules": [
-              "sword2,lift2,longshot,bombchu,spirit_small_keys:3,[spirit_small_keys:7]"
+              "@SpTMQ Adult,spirit_small_keys:3,[spirit_small_keys:7]"
             ],
             "sections": [
               {
@@ -2610,8 +2662,8 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 552,
-                "y": 560,
+                "x": 2965,
+                "y": 865,
                 "visibility_rules": [
                   "setting_skulltulas_dungeons, spirit_mq"
                 ]
