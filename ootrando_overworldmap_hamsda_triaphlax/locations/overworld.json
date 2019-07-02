@@ -360,6 +360,33 @@
                     "y": 900
                   }
                 ]
+              },
+              {
+                "name": "Deku Tree Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "access_rules": [
+                  "open_forest",
+                  "sword1,shield1"
+                ],
+                "sections": [
+                  {
+                    "name": "CHILD & ADULT",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "x": 2426,
+                    "y": 870
+                  },
+                  {
+                    "map": "adult",
+                    "x": 2426,
+                    "y": 870
+                  }
+                ]
               }
             ]
           },
@@ -855,6 +882,28 @@
                     "map": "adult",
                     "x": 2155,
                     "y": 635
+                  }
+                ]
+              },
+              {
+                "name": "Forest Temple Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "sections": [
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,hookshot,[ocarina],[saria]",
+                      "sword2,hookshot,[ocarina],[minuet]"
+                    ],
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "adult",
+                    "x": 2148,
+                    "y": 596
                   }
                 ]
               },
@@ -1440,6 +1489,28 @@
                 "name": "Lake Hylia",
                 "color": "#0936a0",
                 "children": [
+                  {
+                    "name": "Water Temple Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "sections": [
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2,hookshot,irons",
+                          "sword2,longshot,scale2"
+                        ],
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "adult",
+                        "x": 1015,
+                        "y": 1380
+                      }
+                    ]
+                  },
                   {
                     "name": "Underwater Bottle",
                     "sections": [
@@ -2069,6 +2140,32 @@
             "color": "#6909a0",
             "children": [
               {
+                "name": "Bottom of the Well Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "sections": [
+                  {
+                    "name": "CHILD & ADULT",
+                    "access_rules": [
+                      "ocarina,lullaby,eri_mill_c"
+                    ],
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "x": 1890,
+                    "y": 383
+                  },
+                  {
+                    "map": "adult",
+                    "x": 1890,
+                    "y": 383
+                  }
+                ]
+              },
+              {
                 "name": "Kakariko Bombable Grotto Entrance",
                 "short_name": "Center Grotto",
                 "chest_unopened_img": "images/unknown.png",
@@ -2616,6 +2713,32 @@
               {
                 "name": "Graveyard",
                 "children": [
+                  {
+                    "name": "Shadow Temple Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "sections": [
+                      {
+                        "name": "CHILD & ADULT",
+                        "access_rules": [
+                          "ocarina,nocturne,magic,dins"
+                        ],
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "child",
+                        "x": 2144,
+                        "y": 361
+                      },
+                      {
+                        "map": "adult",
+                        "x": 2144,
+                        "y": 361
+                      }
+                    ]
+                  },
                   {
                     "name": "Dampe",
                     "sections": [
@@ -3258,6 +3381,47 @@
                 "name": "Death Mountain Trail",
                 "children": [
                   {
+                    "name": "Dodongo's Cavern Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "sections": [
+                      {
+                        "name": "CHILD",
+                        "access_rules": [
+                          "$has_explosives",
+                          "lift1"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "child",
+                        "visibility_rules": [
+                          "$has_explosives",
+                          "lift1"
+                        ],
+                        "x": 1684,
+                        "y": 220
+                      },
+                      {
+                        "map": "adult",
+                        "visibility_rules": [
+                          "sword2"
+                        ],
+                        "x": 1684,
+                        "y": 220
+                      }
+                    ]
+                  },
+                  {
                     "name": "Top of DC",
                     "sections": [
                       {
@@ -3880,40 +4044,6 @@
                     ]
                   },
                   {
-                    "name": "Mountain Crater Bean Patch",
-                    "access_rules": [
-                      "ocarina,bolero"
-                    ],
-                    "sections": [
-                      {
-                        "name": "Plant Bean",
-                        "access_rules": [
-                          "beans,setting_plant_yes,bean_crater_no"
-                        ],
-                        "hosted_item": "bean_crater_yes"
-                      },
-                      {
-                        "name": "GS37",
-                        "access_rules": [
-                          "setting_skulltulas_all,$has_bottle,$can_child_attack"
-                        ],
-                        "visibility_rules": [
-                          "setting_skulltulas_all"
-                        ],
-                        "chest_unopened_img": "images/skulltula.png",
-                        "chest_opened_img": "images/skulltula_token.png",
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "child",
-                        "x": 1871,
-                        "y": 66
-                      }
-                    ]
-                  },
-                  {
                     "name": "Death Mountain Crater Gossip Stone",
                     "short_name": "DMC Gossip Stone",
                     "access_rules": [
@@ -3944,6 +4074,79 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "name": "Fire Temple Entrance",
+            "chest_unopened_img": "images/unknown.png",
+            "chest_opened_img": "images/map.png",
+            "sections": [
+              {
+                "name": "CHILD",
+                "access_rules": [
+                  "ocarina,bolero"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "ADULT",
+                "access_rules": [
+                  "$dmc_central,$has_goron_tunic"
+                ],
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "child",
+                "visibility_rules": [
+                  "ocarina,bolero"
+                ],
+                "x": 1912,
+                "y": 80
+              },
+              {
+                "map": "adult",
+                "visibility_rules": [
+                  "$dmc_central,$has_goron_tunic"
+                ],
+                "x": 1912,
+                "y": 80
+              }
+            ]
+          },
+          {
+            "name": "Mountain Crater Bean Patch",
+            "access_rules": [
+              "ocarina,bolero"
+            ],
+            "sections": [
+              {
+                "name": "Plant Bean",
+                "access_rules": [
+                  "beans,setting_plant_yes,bean_crater_no"
+                ],
+                "hosted_item": "bean_crater_yes"
+              },
+              {
+                "name": "GS37",
+                "access_rules": [
+                  "setting_skulltulas_all,$has_bottle,$can_child_attack"
+                ],
+                "visibility_rules": [
+                  "setting_skulltulas_all"
+                ],
+                "chest_unopened_img": "images/skulltula.png",
+                "chest_opened_img": "images/skulltula_token.png",
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "child",
+                "x": 1871,
+                "y": 66
               }
             ]
           },
@@ -5117,6 +5320,48 @@
                 "name": "Zoras Fountain",
                 "children": [
                   {
+                    "name": "Jabu-Jabu's Belly Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "access_rules": [
+                      "$child_fountain,bottle"
+                    ],
+                    "sections": [
+                      {
+                        "name": "CHILD",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "child",
+                        "x": 2488,
+                        "y": 328
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Ice Cavern Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "access_rules": [
+                      "$adult_fountain"
+                    ],
+                    "sections": [
+                      {
+                        "name": "ADULT",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "adult",
+                        "x": 2501,
+                        "y": 276
+                      }
+                    ]
+                  },
+                  {
                     "name": "Zoras Fountain Fairy Entrance",
                     "chest_unopened_img": "images/unknown.png",
                     "chest_opened_img": "images/map.png",
@@ -5701,6 +5946,28 @@
                     "name": "Gerudo Fortress",
                     "children": [
                       {
+                        "name": "Gerudo Traning Grounds Entrance",
+                        "chest_unopened_img": "images/unknown.png",
+                        "chest_opened_img": "images/map.png",
+                        "sections": [
+                          {
+                            "name": "ADULT",
+                            "access_rules": [
+                              "[carpenter_rescue],$gtg_card",
+                              "gerudo_fortress_open,$gtg_card"
+                            ],
+                            "item_count": 1
+                          }
+                        ],
+                        "map_locations": [
+                          {
+                            "map": "adult",
+                            "x": 481,
+                            "y": 444
+                          }
+                        ]
+                      },
+                      {
                         "name": "Rooftop Chest",
                         "sections": [
                           {
@@ -5898,23 +6165,26 @@
               },
               {
                 "name": "Desert Colossus",
+                "access_rules": [
+                  "$colossus"
+                ],
                 "children": [
                   {
-                    "name": "Colossus Fairy Entrance",
+                    "name": "Spirit Temple Entrance",
                     "chest_unopened_img": "images/unknown.png",
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
                         "name": "CHILD",
                         "access_rules": [
-                          "$colossus,ocarina,requiem,$has_explosives"
+                          "$colossus|child"
                         ],
                         "item_count": 1
                       },
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "$colossus,sword2,$has_explosives"
+                          "$colossus|adult,sword2"
                         ],
                         "item_count": 1
                       }
@@ -5923,15 +6193,54 @@
                       {
                         "map": "child",
                         "visibility_rules": [
-                          "$colossus,ocarina,requiem,$has_explosives"
+                          "$colossus|child"
+                        ],
+                        "x": 85,
+                        "y": 301
+                      },
+                      {
+                        "map": "adult",
+                        "visibility_rules": [
+                          "$colossus|adult,sword2"
+                        ],
+                        "x": 85,
+                        "y": 301
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Colossus Fairy Entrance",
+                    "chest_unopened_img": "images/unknown.png",
+                    "chest_opened_img": "images/map.png",
+                    "sections": [
+                      {
+                        "name": "CHILD",
+                        "access_rules": [
+                          "$colossus|child,$has_explosives"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "$colossus|adult,sword2,$has_explosives"
+                        ],
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "child",
+                        "visibility_rules": [
+                          "$colossus|child,$has_explosives"
                         ],
                         "x": 276,
                         "y": 297
                       },
                       {
                         "map": "adult",
-                        "access_rules": [
-                          "$colossus,sword2,$has_explosives"
+                        "visibility_rules": [
+                          "$colossus|adult,sword2,$has_explosives"
                         ],
                         "x": 276,
                         "y": 297
@@ -5946,8 +6255,8 @@
                         "name": "Freestanding PoH",
                         "short_name": "HP",
                         "access_rules": [
-                          "ocarina,requiem,setting_plant_no,beans,sword2",
-                          "ocarina,requiem,bean_colossus_yes,sword2",
+                          "$colossus|child,setting_plant_no,beans,$colossus|adult,sword2",
+                          "$colossus|child,bean_colossus_yes,$colossus|adult,sword2",
                           "{$hintable}",
                           "{$colossus}"
                         ],
@@ -6001,7 +6310,7 @@
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "$colossus, lift2"
+                          "$colossus|adult, lift2"
                         ],
                         "item_count": 1
                       }
@@ -6017,7 +6326,7 @@
                   {
                     "name": "Desert Colossus Bean Patch",
                     "access_rules": [
-                      "ocarina,requiem"
+                      "$colossus|child"
                     ],
                     "sections": [
                       {
@@ -6058,10 +6367,10 @@
                       {
                         "name": "GS94 (N)",
                         "access_rules": [
-                          "$colossus,sword2,hookshot",
-                          "{$colossus,sword2,bow}",
-                          "{$colossus,sword2,$has_explosives}",
-                          "{$colossus,sword2,dinsfire,magic}"
+                          "$colossus|adult,sword2,hookshot",
+                          "{$colossus|adult,sword2,bow}",
+                          "{$colossus|adult,sword2,$has_explosives}",
+                          "{$colossus|adult,sword2,dinsfire,magic}"
                         ],
                         "visibility_rules": [
                           "setting_skulltulas_all"
@@ -6090,10 +6399,10 @@
                       {
                         "name": "GS95 (N)",
                         "access_rules": [
-                          "ocarina,requiem,setting_plant_no,beans,sword2",
-                          "ocarina,requiem,bean_colossus_yes,sword2",
-                          "$colossus,sword2,hookshot,[longshot]",
-                          "{$colossus,sword2,bow}"
+                          "$colossus|child,setting_plant_no,beans,$colossus|adult,sword2",
+                          "$colossus|child,bean_colossus_yes,$colossus|adult,sword2",
+                          "$colossus|adult,sword2,hookshot,[longshot]",
+                          "{$colossus|adult,sword2,bow}"
                         ],
                         "visibility_rules": [
                           "setting_skulltulas_all"

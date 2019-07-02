@@ -47,8 +47,8 @@ else
   Tracker:AddLocations("locations/indoors.json")
   Tracker:AddLocations("locations/dung_reg.json")
   Tracker:AddLocations("locations/dung_reg_keys.json")
-  --Tracker:AddLocations("locations/dung_mq.json")
-  --Tracker:AddLocations("locations/dung_mq_keys.json")
+  Tracker:AddLocations("locations/dung_mq.json")
+  Tracker:AddLocations("locations/dung_mq_keys.json")
 
   Tracker:AddLayouts("layouts/item_grids.json")
   Tracker:AddLayouts("layouts/entrance_grid.json")

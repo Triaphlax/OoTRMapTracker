@@ -1,12 +1,121 @@
 [
   {
     "name": "Forest Temple",
-    "parent": "Sacred Forest Meadow",
+    "parent": "World",
+    "color": "#18a50e",
     "access_rules": [
-      "forest_reg,sword2,hookshot,[ocarina],[saria]",
-      "forest_reg,sword2,hookshot,[ocarina],[minuet]"
+      "erd_forest,forest_reg"
     ],
     "children": [
+      {
+        "name": "FoT Block Push",
+        "access_rules": [
+          "forest_small_keys:1"
+        ]
+      },
+      {
+        "name": "FoT Bow",
+        "access_rules": [
+          "@FoT Block Push,lift1,forest_small_keys:3,erd_forest_a"
+        ]
+      },
+      {
+        "name": "FoT Falling",
+        "access_rules": [
+          "@FoT Bow,forest_small_keys:5,bow,erd_forest_a",
+          "@FoT Bow,forest_small_keys:5,magic,dins"
+        ]
+      },
+      {
+        "name": "FoT Poes 1",
+        "access_rules": [
+          "@FoT Bow,bow,erd_forest_a"
+        ]
+      },
+      {
+        "name": "FoT Poes 2",
+        "access_rules": [
+          "@FoT Falling,erd_forest_a,bow"
+        ]
+      },
+      {
+        "name": "FoT Boss",
+        "access_rules": [
+          "@FoT Poes 1,@FoT Poes 2"
+        ]
+      },
+      {
+        "name": "FoT Straight Hall",
+        "access_rules": [
+          "@FoT Block Push,lift1,forest_small_keys:2,bow,erd_forest_a"
+        ]
+      },
+      {
+        "name": "FoT Ledge",
+        "access_rules": [
+          "@FoT Block Push,hoverboots,erd_forest_a",
+          "@FoT Straight Hall"
+        ]
+      },
+
+      {"name":"ANWO","access_rules":["erd_forest_a,ocarina,time","@FoT Ledge,erd_forest_a"]},
+      {"name":"ANEO","access_rules":["erd_forest_a,bow","@FoT Falling,erd_forest_a"]},
+      {"name":"ABalcO","access_rules":["false"]},
+
+      {"name":"ANW1","access_rules":["@ANEO,ironboots","@ANEO,scale2","@ABalcO"]},
+      {"name":"ANE1","access_rules":["@ABalcO"]},
+      {"name":"ABalc1","access_rules":["@ANWO","@ANEO,longshot","@ANEO,hookshot,[longshot]"]},
+
+      {"name":"ANW2","access_rules":["@ANE1,ironboots","@ANE1,scale2","@ABalc1"]},
+      {"name":"ANE2","access_rules":["@ABalc1"]},
+      {"name":"ABalc2","access_rules":["@ANW1","@ANE1,longshot","@ANE1,hookshot,[longshot]"]},
+
+      {
+        "name": "FoT NE Outdoors as Adult",
+        "access_rules": [
+          "@ANEO",
+          "@ANE1",
+          "@ANE2"
+        ]
+      },
+      {
+        "name": "FoT NW Outdoors as Adult",
+        "access_rules": [
+          "@ANWO",
+          "@ANW1",
+          "@ANW2"
+        ]
+      },
+      {
+        "name": "FoT Balconies as Adult",
+        "access_rules": [
+          "@ABalcO",
+          "@ABalc1",
+          "@ABalc2"
+        ]
+      },
+
+      {"name":"CNWO","access_rules":["erd_forest_c"]},
+      {"name":"CNEO","access_rules":["erd_forest_c,sling"]},
+      {"name":"CBalcO","access_rules":["false"]},
+
+      {"name":"CNW1","access_rules":["@CNEO,scale2","@CBalcO"]},
+      {"name":"CNE1","access_rules":["@CBalcO"]},
+      {"name":"CBalc1","access_rules":["@CNWO,$has_explosives","@CNWO,boomerang,sticks","@CNWO,boomerang,sword1","@CNWO,boomerang,sling","@CNWO,nuts,sticks","@CNWO,nuts,sword1","@CNWO,nuts,sling","@CNWO,shield1,sticks","@CNWO,shield1,sword1","@CNWO,shield1,sling"]},
+
+      {"name":"CNW2","access_rules":["@CNE1,scale2","@CBalc1"]},
+      {"name":"CNE2","access_rules":["@CBalc1"]},
+      {"name":"CBalc2","access_rules":["@CNW1,$has_explosives","@CNW1,boomerang,sticks","@CNW1,boomerang,sword2","@CNW1,boomerang,sling","@CNW1,nuts,sticks","@CNW1,nuts,sword2","@CNW1,nuts,sling","@CNW1,shield2,sticks","@CNW1,shield2,sword2","@CNW1,shield2,sling"]},
+
+      {
+        "name": "FoT Balconies as Child",
+        "access_rules": [
+          "@CBalcO",
+          "@CBalc1",
+          "@CBalc2"
+        ]
+      },
+
       {
         "name": "First Chest",
         "sections": [
@@ -18,8 +127,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 183,
-            "y": 1853
+            "x": 146,
+            "y": 1482,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -28,25 +140,29 @@
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "erd_forest_a",
+              "sword1"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1740,
-            "y": 1525
+            "x": 1392,
+            "y": 1220,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Map Chest",
         "access_rules": [
-          "ocarina,time",
-          "bow,[ironboots]",
-          "bow,[scale2]",
-          "forest_small_keys:1,hoverboots",
-          "forest_small_keys:5,lift1,dinsfire,magic"
+          "@FoT Balconies as Adult",
+          "@FoT Balconies as Child"
         ],
         "sections": [
           {
@@ -57,79 +173,92 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1515,
-            "y": 1085
+            "x": 1212,
+            "y": 868,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Outside Hookshot Chest",
-        "access_rules": [
-          "ocarina,time",
-          "bow",
-          "forest_small_keys:1,hoverboots",
-          "forest_small_keys:5,lift1,dinsfire,magic"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT NE Outdoors as Adult,hookshot",
+              "@FoT Falling",
+              "@FoT Balconies as Adult,hoverboots,[hookshot]"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 2345,
-            "y": 1745
+            "x": 1876,
+            "y": 1396,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Well Chest",
-        "access_rules": [
-          "@Map Chest"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Balconies as Adult",
+              "@FoT Balconies as Child"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1500,
-            "y": 2275
+            "x": 1200,
+            "y": 1820,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Block Push Chest",
-        "access_rules": [
-          "forest_small_keys:1,lift1,bow"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Block Push,erd_forest_a,lift1,bow",
+              "@FoT Block Push,erd_forest_c,lift1,sling"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 325,
-            "y": 1410
+            "x": 260,
+            "y": 1128,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Boss Key Chest",
-        "access_rules": [
-          "forest_small_keys:2,bow,lift1"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Straight Hall"
+            ],
             "chest_unopened_img": "images/chest_golden_closed.png",
             "chest_opened_img": "images/chest_golden_open.png",
             "item_count": 1
@@ -138,21 +267,23 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1350,
-            "y": 570
+            "x": 1080,
+            "y": 456,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Floormaster Chest",
-        "access_rules": [
-          "@Boss Key Chest",
-          "forest_small_keys:1,hoverboots",
-          "{$hintable}"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Ledge",
+              "{$hintable}"
+            ],
             "capture_item": true,
             "item_count": 1
           }
@@ -160,118 +291,132 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 490,
-            "y": 1000
+            "x": 392,
+            "y": 800,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Bow Chest",
-        "access_rules": [
-          "forest_small_keys:3,lift1"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Bow"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 2010,
-            "y": 610
+            "x": 1608,
+            "y": 488,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Red Poe Chest",
-        "access_rules": [
-          "@Bow Chest,bow"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Bow,bow"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1780,
-            "y": 495
+            "x": 1424,
+            "y": 396,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Blue Poe Chest",
-        "access_rules": [
-          "@Bow Chest,bow"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Bow,bow"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 2255,
-            "y": 650
+            "x": 1804,
+            "y": 520,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Falling Room Chest",
-        "access_rules": [
-          "forest_small_keys:5,lift1,bow",
-          "forest_small_keys:5,lift1,dinsfire,magic",
-          "forest_small_keys:1,hoverboots,ocarina,[scarecrow],[forest_small_keys:5],[lift1],[bow]",
-          "hoverboots,ocarina,time,[scarecrow],[forest_small_keys:5],[lift1],[bow]",
-          "bow,hoverboots,ocarina,[scarecrow],[forest_small_keys:5],[lift1],[longshot]"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Falling"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 2440,
-            "y": 2030
+            "x": 1952,
+            "y": 1624,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Near Boss Chest",
-        "access_rules": [
-          "@Falling Room Chest"
-        ],
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@FoT Boss"
+            ],
             "item_count": 1
           }
         ],
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 315,
-            "y": 2560
+            "x": 252,
+            "y": 2048,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
       {
         "name": "Phantom Ganon",
-        "access_rules": [
-          "@Near Boss Chest,forest_boss_key"
-        ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
+            "access_rules": [
+              "@FoT Boss,forest_boss_key"
+            ],
             "hosted_item": "forest",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -281,8 +426,11 @@
         "map_locations": [
           {
             "map": "foresttemple",
-            "x": 1215,
-            "y": 2300
+            "x": 972,
+            "y": 1840,
+            "visibility_rules": [
+              "forest_reg"
+            ]
           }
         ]
       },
@@ -297,6 +445,10 @@
             "sections": [
               {
                 "name": "GS60",
+                "access_rules": [
+                  "magic,dins",
+                  "$has_projectile"
+                ],
                 "chest_unopened_img": "images/skulltula.png",
                 "chest_opened_img": "images/skulltula_token.png",
                 "item_count": 1
@@ -305,10 +457,10 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 340,
-                "y": 1855,
+                "x": 272,
+                "y": 1484,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]
@@ -318,6 +470,10 @@
             "sections": [
               {
                 "name": "GS61",
+                "access_rules": [
+                  "erd_forest_c,boomerang",
+                  "erd_forest_a,hookshot"
+                ],
                 "chest_unopened_img": "images/skulltula.png",
                 "chest_opened_img": "images/skulltula_token.png",
                 "item_count": 1
@@ -326,22 +482,25 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 1405,
-                "y": 1665,
+                "x": 1124,
+                "y": 1332,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]
           },
           {
             "name": "Outdoor East",
-            "access_rules": [
-              "@Outside Hookshot Chest"
-            ],
             "sections": [
               {
                 "name": "GS62",
+                "access_rules": [
+                  "@FoT NE Outdoors as Adult,hookshot",
+                  "@FoT Falling,bow",
+                  "@FoT Falling,dins,magic",
+                  "@FoT Falling,$has_explosives"
+                ],
                 "chest_unopened_img": "images/skulltula.png",
                 "chest_opened_img": "images/skulltula_token.png",
                 "item_count": 1
@@ -350,24 +509,25 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 1130,
-                "y": 920,
+                "x": 1892,
+                "y": 1356,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]
           },
           {
             "name": "Outdoor West",
-            "access_rules": [
-              "@Map Chest,longshot",
-              "{@Map Chest,bow}",
-              "@Floormaster Chest,hookshot"
-            ],
             "sections": [
               {
                 "name": "GS63",
+                "access_rules": [
+                  "@FoT NW Outdoors as Adult,longshot",
+                  "{@FoT NW Outdoors as Adult,bow}",
+                  "{erd_forest_c,@FoT NW Outdoors as Child,sling}",
+                  "@FoT Ledge,hookshot"
+                ],
                 "capture_item": true,
                 "chest_unopened_img": "images/skulltula.png",
                 "chest_opened_img": "images/skulltula_token.png",
@@ -377,22 +537,23 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 2365,
-                "y": 1695,
+                "x": 904,
+                "y": 736,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]
           },
           {
             "name": "Basement",
-            "access_rules": [
-              "@Near Boss Chest"
-            ],
             "sections": [
               {
                 "name": "GS64",
+                "access_rules": [
+                  "@FoT Boss,erd_forest_a,hookshot",
+                  "@FoT Boss,erd_forest_c,boomerang"
+                ],
                 "chest_unopened_img": "images/skulltula.png",
                 "chest_opened_img": "images/skulltula_token.png",
                 "item_count": 1
@@ -401,10 +562,10 @@
             "map_locations": [
               {
                 "map": "foresttemple",
-                "x": 355,
-                "y": 2480,
+                "x": 284,
+                "y": 1984,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,forest_reg"
                 ]
               }
             ]
@@ -415,13 +576,17 @@
   },
   {
     "name": "Fire Temple",
-    "parent": "Death Mountain Crater",
+    "parent": "World",
+    "color": "#a01009",
     "access_rules": [
-      "fire_reg,$dmc_central,$has_goron_tunic"
+      "erd_fire,fire_reg"
     ],
     "children": [
       {
         "name": "Chest Near Boss",
+        "access_rules": [
+          "$has_goron_tunic,[erd_fire_a]"
+        ],
         "sections": [
           {
             "name": "Chest",
@@ -431,15 +596,18 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 965,
-            "y": 2425
+            "x": 579,
+            "y": 1455,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
       {
         "name": "Fire Dancer Chest",
         "access_rules": [
-          "fire_small_keys:1,[fire_small_keys:8],hammer"
+          "fire_small_keys:1,[fire_small_keys:8],hammer,erd_fire_a"
         ],
         "sections": [
           {
@@ -450,15 +618,18 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 2220,
-            "y": 2045
+            "x": 1332,
+            "y": 1227,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
       {
         "name": "Boss Key Chest",
         "access_rules": [
-          "fire_small_keys:1,[fire_small_keys:8],hammer"
+          "fire_small_keys:1,[fire_small_keys:8],hammer,erd_fire_a"
         ],
         "sections": [
           {
@@ -471,15 +642,18 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 1915,
-            "y": 2180
+            "x": 1149,
+            "y": 1308,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
       {
         "name": "Big Lava Room Open Chest",
         "access_rules": [
-          "fire_small_keys:1,[fire_small_keys:2]"
+          "fire_small_keys:1,[fire_small_keys:2],$has_goron_tunic"
         ],
         "sections": [
           {
@@ -490,15 +664,18 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 3325,
-            "y": 2640
+            "x": 1995,
+            "y": 1584,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
       {
         "name": "Big Lava Room Bombable Chest",
         "access_rules": [
-          "fire_small_keys:1,[fire_small_keys:2],$has_explosives"
+          "fire_small_keys:1,[fire_small_keys:2],$has_explosives,erd_fire_a"
         ],
         "sections": [
           {
@@ -509,8 +686,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 1880,
-            "y": 3020
+            "x": 1128,
+            "y": 1812,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -530,8 +710,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 2800,
-            "y": 1890
+            "x": 1680,
+            "y": 1134,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -549,8 +732,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 3475,
-            "y": 1490
+            "x": 2085,
+            "y": 894,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -569,8 +755,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 2000,
-            "y": 1495
+            "x": 1200,
+            "y": 897,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -588,8 +777,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 2640,
-            "y": 1815
+            "x": 1584,
+            "y": 1089,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -607,8 +799,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 3120,
-            "y": 2240
+            "x": 1872,
+            "y": 1344,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -628,8 +823,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 3240,
-            "y": 810
+            "x": 1944,
+            "y": 486,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -647,8 +845,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 1560,
-            "y": 1125
+            "x": 936,
+            "y": 675,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -668,8 +869,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 900,
-            "y": 1645
+            "x": 540,
+            "y": 987,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -690,8 +894,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 135,
-            "y": 275
+            "x": 81,
+            "y": 165,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -704,7 +911,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "fire",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -714,8 +921,11 @@
         "map_locations": [
           {
             "map": "firetemple",
-            "x": 510,
-            "y": 2125
+            "x": 306,
+            "y": 1275,
+            "visibility_rules": [
+              "fire_reg"
+            ]
           }
         ]
       },
@@ -728,7 +938,7 @@
           {
             "name": "Song of Time Room",
             "access_rules": [
-              "@Big Lava Room Open Chest,[ocarina],[time]"
+              "@Big Lava Room Open Chest,erd_fire_a,[ocarina],[time]"
             ],
             "sections": [
               {
@@ -741,10 +951,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 2950,
-                "y": 2420,
+                "x": 1770,
+                "y": 1452,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
@@ -765,10 +975,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 3470,
-                "y": 1630,
+                "x": 2082,
+                "y": 978,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
@@ -789,10 +999,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 3060,
-                "y": 1120,
+                "x": 1836,
+                "y": 672,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
@@ -813,10 +1023,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 3090,
-                "y": 836,
+                "x": 1854,
+                "y": 501,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
@@ -837,10 +1047,10 @@
             "map_locations": [
               {
                 "map": "firetemple",
-                "x": 2615,
-                "y": 2125,
+                "x": 1569,
+                "y": 1275,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,fire_reg"
                 ]
               }
             ]
@@ -851,17 +1061,37 @@
   },
   {
     "name": "Water Temple",
-    "parent": "Lake Hylia",
+    "parent": "World",
+    "color": "#0936a0",
     "access_rules": [
-      "water_reg,sword2,ironboots,hookshot,$has_zora_tunic",
-      "water_reg,sword2,scale2,[ironboots],hookshot,$has_zora_tunic"
+      "erd_water_a,water_reg"
     ],
     "children": [
       {
+        "name": "WT Dive",
+        "access_rules": [
+          "$has_zora_tunic,ironboots"
+        ]
+      },
+      {
+        "name": "WT Dark Link",
+        "access_rules": [
+          "water_small_keys:1,[water_small_keys:5],hookshot"
+        ]
+      },
+      {
+        "name": "WT Middle Water",
+        "access_rules": [
+          "@WT Dive,ocarina,lullaby,bow",
+          "@WT Dive,ocarina,lullaby,magic,dins",
+          "@WT Dive,ocarina,lullaby,erd_water_c,sticks",
+          "@WT Dive,ocarina,lullaby,water_small_keys:2,[water_small_keys:6],hookshot"
+        ]
+      },
+      {
         "name": "Map Chest",
         "access_rules": [
-          "ironboots",
-          "[ironboots],longshot"
+          "@WT Dive,[hookshot]"
         ],
         "sections": [
           {
@@ -872,16 +1102,19 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2690,
-            "y": 1965
+            "x": 1882,
+            "y": 1375,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Compass Chest",
         "access_rules": [
-          "ironboots",
-          "[ironboots],longshot,ocarina,lullaby"
+          "@WT Dive,ironboots,hookshot",
+          "@WT Dive,ocarina,lullaby,hookshot"
         ],
         "sections": [
           {
@@ -892,18 +1125,20 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2915,
-            "y": 1695
+            "x": 2040,
+            "y": 1186,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Torches Chest",
         "access_rules": [
-          "ironboots,ocarina,lullaby,bow",
-          "ironboots,ocarina,lullaby,dinsfire,magic",
-          "[ironboots],longshot,ocarina,lullaby,bow",
-          "[ironboots],longshot,ocarina,lullaby,dinsfire,magic"
+          "@WT Dive,ocarina,lullaby,bow",
+          "@WT Dive,ocarina,lullaby,magic,dins",
+          "@WT Dive,ocarina,lullaby,erd_water_c,sticks,sword1,magic"
         ],
         "sections": [
           {
@@ -914,17 +1149,20 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2550,
-            "y": 2220
+            "x": 1785,
+            "y": 1554,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Dragon Chest",
         "access_rules": [
-          "ironboots,ocarina,lullaby,lift1",
-          "[ironboots],longshot,ocarina,lullaby,lift1,bombchu",
-          "[ironboots],water_small_keys:2,[water_small_keys:5],ocarina,time,bow"
+          "@WT Dive,ironboots,hookshot,ocarina,lullaby,lift1",
+          "@WT Dive,ironboots,[hookshot],bombchu,ocarina,lullaby,lift1",
+          "@WT Dive,ironboots,hookshot,water_small_keys:2,[water_small_keys:6],ocarina,time,bow"
         ],
         "sections": [
           {
@@ -935,65 +1173,20 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 1430,
-            "y": 880
+            "x": 1000,
+            "y": 616,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Central Pillar Chest",
         "access_rules": [
-          "ironboots,ocarina,lullaby,water_small_keys:1,[water_small_keys:5],[bluetunic]",
-          "ironboots,ocarina,lullaby,bow,[bluetunic]",
-          "ironboots,ocarina,lullaby,dinsfire,magic,[bluetunic]"
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "item_count": 1
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "watertemple",
-            "x": 2000,
-            "y": 2635
-          }
-        ]
-      },
-      {
-        "name": "Cracked Wall Chest",
-        "access_rules": [
-          "$has_explosives,ironboots,ocarina,lullaby,water_small_keys:1,[water_small_keys:5]",
-          "$has_explosives,ironboots,ocarina,lullaby,bow",
-          "$has_explosives,ironboots,ocarina,lullaby,dinsfire,magic",
-          "$has_explosives,ironboots,ocarina,lullaby,hoverboots,[bow]",
-          "$has_explosives,[ironboots],longshot,ocarina,lullaby,water_small_keys:1,[water_small_keys:5]",
-          "$has_explosives,[ironboots],longshot,ocarina,lullaby,bow",
-          "$has_explosives,[ironboots],longshot,ocarina,lullaby,dinsfire,magic",
-          "$has_explosives,[ironboots],longshot,ocarina,lullaby,hoverboots,[bow]",
-          "bombchu,[bombs],ironboots,[ocarina],[lullaby],[bow]"
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "item_count": 1
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "watertemple",
-            "x": 2380,
-            "y": 1990
-          }
-        ]
-      },
-      {
-        "name": "Central Bow Target Chest",
-        "access_rules": [
-          "ironboots,ocarina,lullaby,bow,lift1,[hoverboots]",
-          "ironboots,ocarina,lullaby,bow,lift1,[longshot]",
-          "[ironboots],longshot,ocarina,lullaby,bow,lift1"
+          "@WT Middle Water,ironboots,bluetunic,hookshot,water_small_keys:1,[water_small_keys:6]",
+          "@WT Middle Water,ironboots,bluetunic,hookshot,bow",
+          "@WT Middle Water,ironboots,bluetunic,hookshot,magic,dins"
         ],
         "sections": [
           {
@@ -1005,14 +1198,18 @@
           {
             "map": "watertemple",
             "x": 1400,
-            "y": 2275
+            "y": 1844,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
-        "name": "Dark Link Chest",
+        "name": "Cracked Wall Chest",
         "access_rules": [
-          "water_small_keys:2,[water_small_keys:5]"
+          "@WT Middle Water,$has_explosives",
+          "@WT Dive,ocarina,lullaby,hoverboots,$has_explosives,[@WT Middle Water]"
         ],
         "sections": [
           {
@@ -1023,15 +1220,63 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 1695,
-            "y": 170
+            "x": 1666,
+            "y": 1393,
+            "visibility_rules": [
+              "water_reg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Central Bow Target Chest",
+        "access_rules": [
+          "@WT Dive,bow,lift1,ocarina,lullaby,hoverboots",
+          "@WT Dive,bow,lift1,ocarina,lullaby,longshot"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "watertemple",
+            "x": 979,
+            "y": 1592,
+            "visibility_rules": [
+              "water_reg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dark Link Chest",
+        "access_rules": [
+          "@WT Dark Link,water_small_keys:2,[water_small_keys:6]"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "watertemple",
+            "x": 1186,
+            "y": 118,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "River Chest",
         "access_rules": [
-          "water_small_keys:2,[water_small_keys:5],ocarina,time,bow",
+          "@WT Dark Link,water_small_keys:2,[water_small_keys:6],ocarina,time,bow",
           "{$hintable}"
         ],
         "sections": [
@@ -1044,19 +1289,20 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 1935,
-            "y": 760
+            "x": 1354,
+            "y": 532,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
       {
         "name": "Boss Key Chest",
         "access_rules": [
-          "water_small_keys:2,[water_small_keys:5],ironboots,longshot,$has_explosives,lift1",
-          "water_small_keys:2,[water_small_keys:5],ironboots,longshot,[hoverboots]",
-          "water_small_keys:2,[water_small_keys:5],ironboots,hoverboots,[longshot]",
-          "water_small_keys:2,[water_small_keys:5],[ironboots],longshot,ocarina,lullaby,$has_explosives,lift1",
-          "water_small_keys:2,[water_small_keys:5],[ironboots],longshot,ocarina,lullaby,[hoverboots]",
+          "@WT Dive,water_small_keys:2,[water_small_keys:6],longshot,$has_explosives,lift1",
+          "@WT Dive,water_small_keys:2,[water_small_keys:6],hoverboots,[longshot],$has_explosives,lift1",
+          "@WT Dive,water_small_keys:2,[water_small_keys:6],longshot,hoverboots",
           "{$hintable}"
         ],
         "sections": [
@@ -1071,8 +1317,11 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2380,
-            "y": 1288
+            "x": 1666,
+            "y": 901,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
@@ -1093,8 +1342,11 @@
         "map_locations": [
           {
             "map": "watertemple",
-            "x": 2756,
-            "y": 935
+            "x": 1929,
+            "y": 654,
+            "visibility_rules": [
+              "water_reg"
+            ]
           }
         ]
       },
@@ -1107,8 +1359,8 @@
           {
             "name": "South Basement",
             "access_rules": [
-              "$has_explosives,ocarina,lullaby,ironboots",
-              "$has_explosives,ocarina,lullaby,[ironboots],scale2,longshot"
+              "@WT Dive,hookshot,$has_explosives,ocarina,lullaby",
+              "@WT Dive,hoverboots,$has_explosives,ocarina,lullaby"
             ],
             "sections": [
               {
@@ -1121,10 +1373,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 835,
-                "y": 1595,
+                "x": 584,
+                "y": 1116,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]
@@ -1132,7 +1384,7 @@
           {
             "name": "Serpent River",
             "access_rules": [
-              "water_small_keys:2,[water_small_keys:5],ocarina,time"
+              "@WT Dark Link,water_small_keys:2,[water_small_keys:6],ocarina,time,ironboots"
             ],
             "sections": [
               {
@@ -1145,10 +1397,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 1965,
-                "y": 585,
+                "x": 1375,
+                "y": 409,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]
@@ -1156,12 +1408,14 @@
           {
             "name": "Central Room",
             "access_rules": [
-              "[ironboots],ocarina,lullaby,water_small_keys:1,[water_small_keys:5],longshot",
-              "ironboots,ocarina,lullaby,water_small_keys:1,[water_small_keys:5],faroreswind,magic",
-              "[ironboots],ocarina,lullaby,bow,longshot",
-              "ironboots,ocarina,lullaby,bow,faroreswind,magic",
-              "[ironboots],ocarina,lullaby,dinsfire,magic,longshot",
-              "ironboots,ocarina,lullaby,dinsfire,magic,faroreswind",
+              "@WT Middle Water,longshot,water_small_keys:1,[water_small_keys:6]",
+              "@WT Middle Water,magic,faroreswind,hookshot,water_small_keys:1,[water_small_keys:6]",
+              "@WT Middle Water,longshot,bow",
+              "@WT Middle Water,magic,faroreswind,hookshot,bow",
+              "@WT Middle Water,longshot,dins,magic",
+              "@WT Middle Water,magic,faroreswind,hookshot,dins",
+              "@WT Middle Water,erd_water_c,boomerang,faroreswind,magic,dins",
+              "@WT Middle Water,erd_water_c,boomerang,faroreswind,magic,sticks",
               "{ironboots,ocarina,lullaby,bow}"
             ],
             "sections": [
@@ -1176,10 +1430,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 1900,
-                "y": 1965,
+                "x": 1330,
+                "y": 1375,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]
@@ -1187,9 +1441,8 @@
           {
             "name": "Falling Platform Room",
             "access_rules": [
-              "water_small_keys:1,[water_small_keys:4],longshot",
-              "water_small_keys:1,[water_small_keys:4],[longshot],hookshot",
-              "{water_small_keys:1,bow}"
+              "@WT Dark Link,longshot",
+              "@WT Dark Link,hookshot,[longshot]"
             ],
             "sections": [
               {
@@ -1203,10 +1456,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 935,
-                "y": 930,
+                "x": 654,
+                "y": 651,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]
@@ -1214,9 +1467,8 @@
           {
             "name": "Near Boss Key Chest",
             "access_rules": [
-              "water_small_keys:1,[water_small_keys:4],ironboots,longshot",
-              "water_small_keys:1,[water_small_keys:4],[ironboots],longshot,ocarina,lullaby",
-              "water_small_keys:1,[water_small_keys:4],ironboots,[longshot],hoverboots"
+              "@WT Dive,water_small_keys:1,[water_small_keys:5],longshot",
+              "@WT Dive,water_small_keys:1,[water_small_keys:5],hoverboots,[longshot]"
             ],
             "sections": [
               {
@@ -1229,10 +1481,10 @@
             "map_locations": [
               {
                 "map": "watertemple",
-                "x": 2205,
-                "y": 1385,
+                "x": 1543,
+                "y": 969,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,water_reg"
                 ]
               }
             ]
@@ -1245,10 +1497,8 @@
     "name": "Shadow Temple",
     "parent": "Graveyard",
     "access_rules": [
-      "shadow_reg,ocarina,nocturne,dinsfire,magic,$can_see_with_lens,sword2,hoverboots",
-      "shadow_reg,ocarina,nocturne,dinsfire,magic,$can_see_with_lens,sword2,hookshot",
-      "shadow_reg,ocarina,nocturne,bow,firearrow,[dinsfire],magic,$can_see_with_lens,sword2,hoverboots",
-      "shadow_reg,ocarina,nocturne,bow,firearrow,[dinsfire],magic,$can_see_with_lens,sword2,hookshot"
+      "erd_shadow_a,hoverboots,$can_see_with_lens,shadow_reg",
+      "erd_shadow_a,hookshot,$can_see_with_lens,shadow_reg"
     ],
     "children": [
       {
@@ -1262,8 +1512,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 3130,
-            "y": 545
+            "x": 1878,
+            "y": 327,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1278,8 +1531,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 2700,
-            "y": 850
+            "x": 1620,
+            "y": 510,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1297,8 +1553,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 5025,
-            "y": 545
+            "x": 3015,
+            "y": 327,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1316,8 +1575,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4540,
-            "y": 200
+            "x": 2724,
+            "y": 120,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1335,8 +1597,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 5935,
-            "y": 735
+            "x": 3561,
+            "y": 441,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1354,8 +1619,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4785,
-            "y": 1725
+            "x": 2871,
+            "y": 1035,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1373,8 +1641,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4830,
-            "y": 1735
+            "x": 2898,
+            "y": 1041,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1392,8 +1663,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4980,
-            "y": 1605
+            "x": 2988,
+            "y": 963,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1411,19 +1685,22 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4050,
-            "y": 1420
+            "x": 2430,
+            "y": 852,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
       {
-        "name": "Freestanding Key",
+        "name": "Freestanding Key (Single Pot)",
         "access_rules": [
           "@Invisible Spikes Chest,hookshot"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
             "item_count": 1
@@ -1432,8 +1709,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 3650,
-            "y": 1570
+            "x": 2190,
+            "y": 942,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1451,8 +1731,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 4435,
-            "y": 970
+            "x": 2661,
+            "y": 582,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1470,8 +1753,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 3635,
-            "y": 910
+            "x": 2181,
+            "y": 546,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1489,8 +1775,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 3805,
-            "y": 940
+            "x": 2283,
+            "y": 564,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1510,8 +1799,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 435,
-            "y": 1995
+            "x": 261,
+            "y": 1197,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1529,8 +1821,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 235,
-            "y": 2060
+            "x": 141,
+            "y": 1236,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1550,8 +1845,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 1215,
-            "y": 2330
+            "x": 729,
+            "y": 1398,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1574,8 +1872,11 @@
         "map_locations": [
           {
             "map": "shadowtemple",
-            "x": 2925,
-            "y": 2255
+            "x": 1755,
+            "y": 1353,
+            "visibility_rules": [
+              "shadow_reg"
+            ]
           }
         ]
       },
@@ -1601,10 +1902,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 5975,
-                "y": 710,
+                "x": 3585,
+                "y": 426,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -1627,10 +1928,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 4980,
-                "y": 1725,
+                "x": 2988,
+                "y": 1035,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -1638,7 +1939,7 @@
           {
             "name": "Single Giant Pot",
             "access_rules": [
-              "@Freestanding Key"
+              "@Freestanding Key (Single Pot)"
             ],
             "sections": [
               {
@@ -1651,10 +1952,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 3590,
-                "y": 1585,
+                "x": 2154,
+                "y": 951,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -1677,10 +1978,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 3235,
-                "y": 1180,
+                "x": 1941,
+                "y": 708,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -1688,7 +1989,7 @@
           {
             "name": "Triple Giant Pot",
             "access_rules": [
-              "@Boss Key Chest (Spike Walls)"
+              "@Wind Hint Chest,shadow_small_keys:4,ocarina,lullaby"
             ],
             "sections": [
               {
@@ -1701,10 +2002,10 @@
             "map_locations": [
               {
                 "map": "shadowtemple",
-                "x": 170,
-                "y": 2360,
+                "x": 102,
+                "y": 1416,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,shadow_reg"
                 ]
               }
             ]
@@ -1715,18 +2016,19 @@
   },
   {
     "name": "Spirit Temple",
-    "parent": "Desert Colossus",
+    "parent": "World",
+    "color": "#a09509",
     "access_rules": [
-      "spirit_reg,$colossus"
+      "erd_spirit,spirit_reg"
     ],
     "children": [
       {
         "name": "Child Left Chest",
         "access_rules": [
-          "ocarina,requiem,boomerang",
-          "ocarina,requiem,sling",
-          "ocarina,requiem,bombchu,[boomerang]",
-          "ocarina,requiem,bombchu,[sling]"
+          "erd_spirit_c,boomerang",
+          "erd_spirit_c,sling",
+          "erd_spirit_c,bombchu,[boomerang]",
+          "erd_spirit_c,bombchu,[sling]"
         ],
         "sections": [
           {
@@ -1737,8 +2039,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 875,
-            "y": 1100
+            "x": 700,
+            "y": 880,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -1757,17 +2062,20 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 1445,
-            "y": 1465
+            "x": 1156,
+            "y": 1172,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
       {
         "name": "Child Climb Enemies Chest",
         "access_rules": [
-          "spirit_small_keys:1,ocarina,requiem,sword2,lift2,$has_projectile|both",
-          "spirit_small_keys:1,[spirit_small_keys:5],ocarina,requiem,$has_projectile|child",
-          "spirit_small_keys:1,[spirit_small_keys:2],sword2,lift2,$has_projectile|adult"
+          "spirit_small_keys:1,erd_spirit_c,erd_spirit_a,$has_projectile|both",
+          "spirit_small_keys:1,[spirit_small_keys:5],erd_spirit_c,$has_projectile|child",
+          "spirit_small_keys:1,[spirit_small_keys:2],erd_spirit_a,$has_projectile|adult"
         ],
         "sections": [
           {
@@ -1778,8 +2086,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 1765,
-            "y": 850
+            "x": 1412,
+            "y": 680,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -1797,18 +2108,21 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 1740,
-            "y": 815
+            "x": 1392,
+            "y": 652,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
       {
         "name": "Sun Block Room Chest",
         "access_rules": [
-          "spirit_small_keys:1,[spirit_small_keys:5],ocarina,requiem,$has_explosives,sticks",
-          "spirit_small_keys:1,[spirit_small_keys:3],ocarina,requiem,$has_explosives,dinsfire,magic",
-          "spirit_small_keys:1,[spirit_small_keys:3],sword2,lift2,$has_fire",
-          "spirit_small_keys:1,[spirit_small_keys:3],sword2,lift2,bow,[$has_fire]"
+          "spirit_small_keys:1,[spirit_small_keys:5],erd_spirit_c,$has_explosives,sticks",
+          "spirit_small_keys:1,[spirit_small_keys:3],erd_spirit_c,$has_explosives,dinsfire,magic",
+          "spirit_small_keys:1,[spirit_small_keys:3],erd_spirit_a,$has_fire",
+          "spirit_small_keys:1,[spirit_small_keys:3],erd_spirit_a,bow,[$has_fire]"
         ],
         "sections": [
           {
@@ -1819,18 +2133,21 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 1035,
-            "y": 940
+            "x": 828,
+            "y": 752,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
       {
         "name": "Silver Gauntlets Chest",
         "access_rules": [
-          "spirit_small_keys:2,[spirit_small_keys:3],ocarina,requiem,$has_explosives,[longshot]",
-          "spirit_small_keys:2,[spirit_small_keys:5],ocarina,requiem,$has_explosives",
-          "spirit_small_keys:2,[spirit_small_keys:3],sword2,lift2,[$has_explosives],[longshot]",
-          "spirit_small_keys:2,[spirit_small_keys:5],sword2,lift2",
+          "spirit_small_keys:2,[spirit_small_keys:3],erd_spirit_c,$has_explosives,[longshot]",
+          "spirit_small_keys:2,[spirit_small_keys:5],erd_spirit_c,$has_explosives",
+          "spirit_small_keys:2,[spirit_small_keys:3],erd_spirit_a,[$has_explosives],[longshot]",
+          "spirit_small_keys:2,[spirit_small_keys:5],erd_spirit_a",
           "{$hintable}"
         ],
         "sections": [
@@ -1843,15 +2160,18 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 600,
-            "y": 1250
+            "x": 480,
+            "y": 1000,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
       {
         "name": "Compass Chest",
         "access_rules": [
-          "sword2,lift2,ocarina,lullaby,hookshot"
+          "erd_spirit_a,ocarina,lullaby,hookshot"
         ],
         "sections": [
           {
@@ -1862,17 +2182,20 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 1975,
-            "y": 1540
+            "x": 1580,
+            "y": 1232,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
       {
         "name": "Early Adult Right Chest",
         "access_rules": [
-          "sword2,lift2,hookshot",
-          "sword2,lift2,bow",
-          "sword2,lift2,bombchu"
+          "erd_spirit_a,hookshot",
+          "erd_spirit_a,bow",
+          "erd_spirit_a,bombchu"
         ],
         "sections": [
           {
@@ -1883,15 +2206,18 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 2890,
-            "y": 1800
+            "x": 2312,
+            "y": 1440,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
       {
         "name": "First Mirror Chests",
         "access_rules": [
-          "sword2,lift2,spirit_small_keys:1,[spirit_small_keys:3]"
+          "erd_spirit_a,spirit_small_keys:1,[spirit_small_keys:3]"
         ],
         "sections": [
           {
@@ -1902,8 +2228,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 2510,
-            "y": 1520
+            "x": 2008,
+            "y": 1216,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -1921,8 +2250,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 2150,
-            "y": 1180
+            "x": 1720,
+            "y": 944,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -1940,8 +2272,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 2080,
-            "y": 1020
+            "x": 1664,
+            "y": 816,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -1960,8 +2295,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 2395,
-            "y": 1060
+            "x": 1916,
+            "y": 848,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -1979,8 +2317,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 4285,
-            "y": 1815
+            "x": 3428,
+            "y": 1452,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -1998,8 +2339,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 3615,
-            "y": 2040
+            "x": 2892,
+            "y": 1632,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -2019,8 +2363,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 2865,
-            "y": 1920
+            "x": 2292,
+            "y": 1536,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -2040,8 +2387,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 3840,
-            "y": 1100
+            "x": 3072,
+            "y": 880,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -2059,8 +2409,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 3030,
-            "y": 910
+            "x": 2424,
+            "y": 728,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -2071,7 +2424,7 @@
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "spirit",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -2081,8 +2434,11 @@
         "map_locations": [
           {
             "map": "spirittemple",
-            "x": 3460,
-            "y": 415
+            "x": 2768,
+            "y": 332,
+            "visibility_rules": [
+              "spirit_reg"
+            ]
           }
         ]
       },
@@ -2108,10 +2464,10 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 1390,
-                "y": 1450,
+                "x": 1112,
+                "y": 1160,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,spirit_reg"
                 ]
               }
             ]
@@ -2132,10 +2488,10 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 1175,
-                "y": 1210,
+                "x": 940,
+                "y": 968,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,spirit_reg"
                 ]
               }
             ]
@@ -2143,8 +2499,8 @@
           {
             "name": "Hall to West Iron Knuckle",
             "access_rules": [
-              "ocarina,requiem,spirit_small_keys:1,[spirit_small_keys:5],$has_explosives,boomerang",
-              "{ocarina,requiem,spirit_small_keys:1,$has_explosives,sling}",
+              "erd_spirit_c,spirit_small_keys:1,[spirit_small_keys:5],$has_explosives,boomerang",
+              "{erd_spirit_c,spirit_small_keys:1,$has_explosives,sling}",
               "@First Mirror Chests,hookshot",
               "{@First Mirror Chests,bow}"
             ],
@@ -2160,10 +2516,10 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 805,
-                "y": 885,
+                "x": 644,
+                "y": 708,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,spirit_reg"
                 ]
               }
             ]
@@ -2184,10 +2540,10 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 2500,
-                "y": 1820,
+                "x": 2000,
+                "y": 1456,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,spirit_reg"
                 ]
               }
             ]
@@ -2199,8 +2555,8 @@
               "@First Mirror Chests,longshot",
               "@First Mirror Chests,hoverboots",
               "{@First Mirror Chests,bow}",
-              "ocarina,requiem,spirit_small_keys:1,[spirit_small_keys:5],$has_explosives,boomerang,[@First Mirror Chests],[hoverboots]",
-              "{ocarina,requiem,spirit_small_keys:1,$has_explosives,sling}"
+              "erd_spirit_c,spirit_small_keys:1,[spirit_small_keys:5],$has_explosives,boomerang,[@First Mirror Chests],[hoverboots]",
+              "{erd_spirit_c,spirit_small_keys:1,$has_explosives,sling}"
             ],
             "sections": [
               {
@@ -2214,10 +2570,10 @@
             "map_locations": [
               {
                 "map": "spirittemple",
-                "x": 2080,
-                "y": 900,
+                "x": 1664,
+                "y": 720,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,spirit_reg"
                 ]
               }
             ]
@@ -2228,10 +2584,10 @@
   },
   {
     "name": "Bottom of the Well",
-    "parent": "Kakariko Village",
+    "parent": "World",
+    "color": "#6909a0",
     "access_rules": [
-      "botw_reg,ocarina,storm,$can_child_attack",
-      "botw_reg,ocarina,storm,nuts"
+      "erd_botw_c,botw_reg"
     ],
     "children": [
       {
@@ -2249,7 +2605,10 @@
           {
             "map": "bottomofthewell",
             "x": 675,
-            "y": 435
+            "y": 435,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2268,7 +2627,10 @@
           {
             "map": "bottomofthewell",
             "x": 925,
-            "y": 520
+            "y": 520,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2287,7 +2649,10 @@
           {
             "map": "bottomofthewell",
             "x": 780,
-            "y": 420
+            "y": 420,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2306,7 +2671,10 @@
           {
             "map": "bottomofthewell",
             "x": 975,
-            "y": 490
+            "y": 490,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2325,7 +2693,10 @@
           {
             "map": "bottomofthewell",
             "x": 1420,
-            "y": 620
+            "y": 620,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2344,15 +2715,21 @@
           {
             "map": "bottomofthewell",
             "x": 1270,
-            "y": 525
+            "y": 525,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
       {
         "name": "Freestanding Key",
+        "access_rules": [
+          "sticks,magic,dins"
+        ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
             "item_count": 1
@@ -2362,7 +2739,10 @@
           {
             "map": "bottomofthewell",
             "x": 155,
-            "y": 165
+            "y": 165,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2381,7 +2761,10 @@
           {
             "map": "bottomofthewell",
             "x": 805,
-            "y": 745
+            "y": 745,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2400,7 +2783,10 @@
           {
             "map": "bottomofthewell",
             "x": 865,
-            "y": 235
+            "y": 235,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2422,7 +2808,10 @@
           {
             "map": "bottomofthewell",
             "x": 930,
-            "y": 1155
+            "y": 1155,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2441,7 +2830,10 @@
           {
             "map": "bottomofthewell",
             "x": 665,
-            "y": 560
+            "y": 560,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2460,7 +2852,10 @@
           {
             "map": "bottomofthewell",
             "x": 575,
-            "y": 365
+            "y": 365,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2481,7 +2876,10 @@
           {
             "map": "bottomofthewell",
             "x": 1160,
-            "y": 740
+            "y": 740,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2500,7 +2898,10 @@
           {
             "map": "bottomofthewell",
             "x": 1250,
-            "y": 770
+            "y": 770,
+            "visibility_rules": [
+              "botw_reg"
+            ]
           }
         ]
       },
@@ -2532,7 +2933,7 @@
                 "x": 1285,
                 "y": 490,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,botw_reg"
                 ]
               }
             ]
@@ -2540,9 +2941,9 @@
           {
             "name": "West Inner Room",
             "access_rules": [
-              "botw_small_keys:1,[botw_small_keys:3],boomerang",
-              "{botw_small_keys:1,sling}",
-              "{botw_small_keys:1,$has_explosives}"
+              "botw_small_keys:1,[botw_small_keys:3],boomerang,$can_see_with_lens",
+              "{botw_small_keys:1,sling,$can_see_with_lens}",
+              "{botw_small_keys:1,$has_explosives,$can_see_with_lens}"
             ],
             "sections": [
               {
@@ -2559,7 +2960,7 @@
                 "x": 1025,
                 "y": 60,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,botw_reg"
                 ]
               }
             ]
@@ -2586,7 +2987,7 @@
                 "x": 1130,
                 "y": 75,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,botw_reg"
                 ]
               }
             ]
@@ -2618,8 +3019,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 1585,
-            "y": 1635
+            "x": 951,
+            "y": 981,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2634,8 +3038,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 2485,
-            "y": 1545
+            "x": 1491,
+            "y": 927,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2656,8 +3063,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 2580,
-            "y": 1040
+            "x": 1548,
+            "y": 624,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2677,8 +3087,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 3225,
-            "y": 1055
+            "x": 1935,
+            "y": 633,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2696,8 +3109,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 1070,
-            "y": 1070
+            "x": 642,
+            "y": 642,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2715,8 +3131,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 1105,
-            "y": 1080
+            "x": 663,
+            "y": 648,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2734,8 +3153,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 915,
-            "y": 990
+            "x": 549,
+            "y": 594,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2753,8 +3175,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 600,
-            "y": 1095
+            "x": 360,
+            "y": 657,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2772,8 +3197,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 435,
-            "y": 1105
+            "x": 261,
+            "y": 663,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2794,8 +3222,11 @@
         "map_locations": [
           {
             "map": "ganonscastle",
-            "x": 4215,
-            "y": 1175
+            "x": 2529,
+            "y": 705,
+            "visibility_rules": [
+              "gc_reg"
+            ]
           }
         ]
       },
@@ -2821,10 +3252,10 @@
             "map_locations": [
               {
                 "map": "ganonscastle",
-                "x": 1225,
-                "y": 1565,
+                "x": 735,
+                "y": 939,
                 "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
+                  "setting_scrub_shuffle_yes,gc_reg"
                 ]
               }
             ]
@@ -2881,16 +3312,87 @@
   },
   {
     "name": "Gerudo Training Grounds",
-    "parent": "Gerudo Fortress",
+    "parent": "World",
+    "color": "#a09509",
     "access_rules": [
-      "gtg_reg,[carpenter_rescue],$gtg_card",
-      "gtg_reg,gerudo_fortress_open,$gtg_card"
+      "erd_gtg,gtg_reg"
     ],
     "children": [
       {
+        "name": "GTG Heavy Block",
+        "access_rules": [
+          "erd_gtg_a,hookshot"
+        ]
+      },
+      {
+        "name": "GTG Eye Upper",
+        "access_rules": [
+          "@GTG Heavy Block,hookshot,$can_see_with_lens"
+        ]
+      },
+
+      {"name":"ALavaO","access_rules":["erd_gtg_a,$has_explosives"]},
+      {"name":"ARightO","access_rules":["erd_gtg_a,gtg_small_keys:2,[gtg_small_keys:9]"]},
+      {"name":"AHammerO","access_rules":["false"]},
+      {"name":"AEyeLowO","access_rules":["erd_gtg_a,@GTG Eye Upper"]},
+
+      {"name":"ALava1","access_rules":["@ARightO","@AHammerO"]},
+      {"name":"ARight1","access_rules":["@ALavaO,ocarina,time"]},
+      {"name":"AHammer1","access_rules":["@ARightO,hookshot","@ALavaO,longshot","@ALavaO,hookshot,hoverboots","@AEyeLowO"]},
+      {"name":"AEyeLow1","access_rules":["@AHammerO,hammer,bow"]},
+
+      {"name":"ALava2","access_rules":["@ARight1","@AHammer1"]},
+      {"name":"ARight2","access_rules":["@ALava1,ocarina,time"]},
+      {"name":"AHammer2","access_rules":["@ARight1,hookshot","@ALava1,longshot","@ALava1,hookshot,hoverboots","@AEyeLow1"]},
+      {"name":"AEyeLow2","access_rules":["@AHammer1,hammer,bow"]},
+
+      {"name":"ALava3","access_rules":["@ARight2","@AHammer2"]},
+      {"name":"ARight3","access_rules":["@ALava2,ocarina,time"]},
+      {"name":"AHammer3","access_rules":["@ARight2,hookshot","@ALava2,longshot","@ALava2,hookshot,hoverboots","@AEyeLow2"]},
+      {"name":"AEyeLow3","access_rules":["@AHammer2,hammer,bow"]},
+
+      {
+        "name": "GTG Lava",
+        "access_rules": [
+          "@ALavaO",
+          "@ALava1",
+          "@ALava2",
+          "@ALava3"
+        ]
+      },
+      {
+        "name": "GTG Maze Right",
+        "access_rules": [
+          "@ARightO",
+          "@ARight1",
+          "@ARight2",
+          "@ARight3"
+        ]
+      },
+      {
+        "name": "GTG Hammer",
+        "access_rules": [
+          "@AHammerO",
+          "@AHammer1",
+          "@AHammer2",
+          "@AHammer3"
+        ]
+      },
+      {
+        "name": "GTG Eye Low",
+        "access_rules": [
+          "@AEyeLowO",
+          "@AEyeLow1",
+          "@AEyeLow2",
+          "@AEyeLow3"
+        ]
+      },
+
+      {
         "name": "Lobby Chests",
         "access_rules": [
-          "bow"
+          "erd_gtg_a,bow",
+          "erd_gtg_c,sling"
         ],
         "sections": [
           {
@@ -2902,14 +3404,19 @@
           {
             "map": "gerudotraininggrounds",
             "x": 945,
-            "y": 885
+            "y": 885,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Beamos Chest",
         "access_rules": [
-          "$has_explosives"
+          "erd_gtg_a,$has_explosives",
+          "sword1,$has_explosives",
+          "sticks,[sword1],$has_explosives"
         ],
         "sections": [
           {
@@ -2921,12 +3428,19 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1485,
-            "y": 1130
+            "y": 1130,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Stalfos Chest",
+        "access_rules": [
+          "erd_gtg_a",
+          "sword1"
+        ],
         "sections": [
           {
             "name": "Chest",
@@ -2937,14 +3451,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 300,
-            "y": 675
+            "y": 675,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Before Heavy Block Chest",
         "access_rules": [
-          "[hookshot]"
+          "@GTG Heavy Block"
         ],
         "sections": [
           {
@@ -2956,16 +3473,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1415,
-            "y": 265
+            "y": 265,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Heavy Block Chests",
         "access_rules": [
-          "hookshot,lift2,$can_see_with_lens",
-          "bombs,shield2,[hookshot],lift2,$can_see_with_lens",
-          "bombs,shield3,[hookshot],lift2,$can_see_with_lens"
+          "@GTG Heavy Block,erd_gtg_a,lift2,$can_see_with_lens"
         ],
         "sections": [
           {
@@ -2977,18 +3495,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1690,
-            "y": 125
+            "y": 125,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Eye Statue Chest",
         "access_rules": [
-          "hookshot,bow,$can_see_with_lens",
-          "bombs,shield2,[hookshot],bow,$can_see_with_lens",
-          "bombs,shield3,[hookshot],bow,$can_see_with_lens",
-          "$has_explosives,hookshot,hammer,bow",
-          "gtg_small_keys:2,[gtg_small_keys:9],hookshot,hammer,bow"
+          "@GTG Eye Low,bow"
         ],
         "sections": [
           {
@@ -3000,16 +3517,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 2005,
-            "y": 590
+            "y": 590,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Near Scarecrow Chest",
         "access_rules": [
-          "hookshot,bow,$can_see_with_lens",
-          "bombs,shield2,[hookshot],bow,$can_see_with_lens",
-          "bombs,shield3,[hookshot],bow,$can_see_with_lens"
+          "@GTG Eye Upper,bow"
         ],
         "sections": [
           {
@@ -3021,18 +3539,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1415,
-            "y": 495
+            "y": 495,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Hammer Room Clear Chest",
         "access_rules": [
-          "hookshot,$can_see_with_lens",
-          "bombs,shield2,[hookshot],$can_see_with_lens",
-          "bombs,shield3,[hookshot],$can_see_with_lens",
-          "$has_explosives,hookshot",
-          "gtg_small_keys:2,[gtg_small_keys:9],hookshot"
+          "@GTG Hammer"
         ],
         "sections": [
           {
@@ -3044,18 +3561,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 2645,
-            "y": 745
+            "y": 745,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Hammer Room Switch Chest",
         "access_rules": [
-          "hookshot,$can_see_with_lens,[hammer]",
-          "bombs,shield2,[hookshot],[hammer],$can_see_with_lens",
-          "bombs,shield3,[hookshot],[hammer],$can_see_with_lens",
-          "$has_explosives,hookshot,[hammer]",
-          "gtg_small_keys:2,[gtg_small_keys:9],hookshot,[hammer]"
+          "@GTG Hammer,[hammer]"
         ],
         "sections": [
           {
@@ -3067,22 +3583,67 @@
           {
             "map": "gerudotraininggrounds",
             "x": 2560,
-            "y": 755
+            "y": 755,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Maze Right Chest 1",
+        "access_rules": [
+          "@GTG Maze Right",
+          "gtg_small_keys:2,[gtg_small_keys:9]",
+          "erd_gtg_c,@Beamos Chest"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "gerudotraininggrounds",
+            "x": 1483,
+            "y": 773,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Maze Right Chest 2",
+        "access_rules": [
+          "@Maze Right Chest 1"
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "gerudotraininggrounds",
+            "x": 1570,
+            "y": 770,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Freestanding Key",
         "access_rules": [
-          "hookshot,$can_see_with_lens,ocarina,time",
-          "{hookshot,$can_see_with_lens}",
-          "$has_explosives,ocarina,time",
-          "{$has_explosives}",
-          "gtg_small_keys:2,[gtg_small_keys:9]"
+          "@Maze Right Chest 1"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Freestanding Key",
             "capture_item": true,
             "chest_unopened_img": "images/small_key.png",
             "chest_opened_img": "images/small_key_check.png",
@@ -3093,38 +3654,17 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1895,
-            "y": 915
-          }
-        ]
-      },
-      {
-        "name": "Maze Right Chests",
-        "access_rules": [
-          "hookshot,$can_see_with_lens,ocarina,time",
-          "$has_explosives,ocarina,time",
-          "gtg_small_keys:2,[gtg_small_keys:9]"
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "item_count": 2
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "gerudotraininggrounds",
-            "x": 1595,
-            "y": 785
+            "y": 915,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
       {
         "name": "Underwater Silver Rupee Chest",
         "access_rules": [
-          "hookshot,$can_see_with_lens,ocarina,time,ironboots,$has_zora_tunic",
-          "$has_explosives,hookshot,ocarina,time,ironboots,$has_zora_tunic",
-          "gtg_small_keys:2,[gtg_small_keys:9],hookshot,ocarina,time,ironboots,$has_zora_tunic",
-          "{$hintable}"
+          "@GTG Lava,hookshot,ocarina,time,ironboots,$has_zora_tunic"
         ],
         "sections": [
           {
@@ -3137,7 +3677,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 2410,
-            "y": 1140
+            "y": 1140,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3156,7 +3699,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1315,
-            "y": 515
+            "y": 515,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3175,7 +3721,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1245,
-            "y": 690
+            "y": 690,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3194,7 +3743,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1445,
-            "y": 660
+            "y": 660,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3213,7 +3765,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1480,
-            "y": 675
+            "y": 675,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       },
@@ -3234,7 +3789,10 @@
           {
             "map": "gerudotraininggrounds",
             "x": 1430,
-            "y": 730
+            "y": 730,
+            "visibility_rules": [
+              "gtg_reg"
+            ]
           }
         ]
       }

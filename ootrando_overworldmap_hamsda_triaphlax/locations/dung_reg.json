@@ -3,8 +3,7 @@
     "name": "Deku Tree",
     "parent": "Kokiri Forest",
     "access_rules": [
-      "deku_reg,open_forest",
-      "deku_reg,sword1,shield1"
+      "erd_deku,deku_reg"
     ],
     "children": [
       {
@@ -19,14 +18,18 @@
           {
             "map": "dekutree",
             "x": "1280",
-            "y": "565"
+            "y": "565",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
       {
         "name": "Slingshot Chest",
         "access_rules": [
-          "shield1"
+          "erd_deku_c,shield1",
+          "erd_deku_a,shield2"
         ],
         "sections": [
           {
@@ -38,14 +41,18 @@
           {
             "map": "dekutree",
             "x": "365",
-            "y": "470"
+            "y": "470",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
       {
         "name": "Slingshot Room Small Chest",
         "access_rules": [
-          "shield1"
+          "erd_deku_c,shield1",
+          "erd_deku_a,shield2"
         ],
         "sections": [
           {
@@ -57,7 +64,10 @@
           {
             "map": "dekutree",
             "x": "390",
-            "y": "445"
+            "y": "445",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
@@ -73,7 +83,10 @@
           {
             "map": "dekutree",
             "x": "745",
-            "y": "155"
+            "y": "155",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
@@ -89,7 +102,10 @@
           {
             "map": "dekutree",
             "x": "755",
-            "y": "240"
+            "y": "240",
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
@@ -98,6 +114,11 @@
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "erd_deku_c,$can_child_attack",
+              "erd_deku_c,nuts",
+              "erd_deku_a"
+            ],
             "item_count": 1
           }
         ],
@@ -105,18 +126,24 @@
           {
             "map": "dekutree",
             "x": 1350,
-            "y": 1275
+            "y": 1275,
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
       {
         "name": "Queen Gohma",
         "access_rules": [
-          "[sling],shield1"
+          "erd_deku_c,sticks,[sling],shield1",
+          "erd_deku_c,dinsfire,magic,[sling],shield1,sword1",
+          "erd_deku_a,magic,bow,firearrow,shield2",
+          "erd_deku_a,dinsfire,magic,shield2"
         ],
         "sections": [
           {
-            "name": "Heart Container",
+            "name": "Heart Container (2-3-1)",
             "capture_item": true,
             "hosted_item": "deku",
             "chest_unopened_img": "images/HC.png",
@@ -128,7 +155,10 @@
           {
             "map": "dekutree",
             "x": 1650,
-            "y": 1530
+            "y": 1530,
+            "visibility_rules": [
+              "deku_reg"
+            ]
           }
         ]
       },
@@ -141,6 +171,7 @@
           {
             "name": "Compass Room",
             "access_rules": [
+              "erd_deku_a",
               "$can_child_attack"
             ],
             "sections": [
@@ -157,7 +188,7 @@
                 "x": "725",
                 "y": "245",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,deku_reg"
                 ]
               }
             ]
@@ -165,17 +196,23 @@
           {
             "name": "Basement Vines",
             "access_rules": [
-              "sticks,[sling]",
-              "sticks,[$has_explosives]",
-              "sticks,[boomerang]",
-              "sticks,[dinsfire],[magic]",
-              "sword1,[sling]",
-              "sword1,[$has_explosives]",
-              "sword1,[boomerang]",
-              "sword1,[dinsfire],[magic]",
-              "sling",
+              "erd_deku_c,sticks,[sling]",
+              "erd_deku_c,sticks,[boomerang]",
+              "erd_deku_c,sticks,[$has_explosives]",
+              "erd_deku_c,sticks,[dinsfire],[magic]",
+              "erd_deku_c,sword1,[sling]",
+              "erd_deku_c,sword1,[boomerang]",
+              "erd_deku_c,sword1,[$has_explosives]",
+              "erd_deku_c,sword1,[dinsfire],[magic]",
+              "erd_deku_c,sling",
+              "erd_deku_c,boomerang",
+              "erd_deku_a,[bow]",
+              "erd_deku_a,[$has_explosives]",
+              "erd_deku_a,[hookshot]",
+              "erd_deku_a,[dinsfire],[magic]",
+              "erd_deku_a,bow",
+              "erd_deku_a,hookshot",
               "$has_explosives",
-              "boomerang",
               "dinsfire,magic"
             ],
             "sections": [
@@ -192,7 +229,7 @@
                 "x": "1300",
                 "y": "1260",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,deku_reg"
                 ]
               }
             ]
@@ -200,6 +237,7 @@
           {
             "name": "Basement Gate",
             "access_rules": [
+              "erd_deku_a",
               "$can_child_attack"
             ],
             "sections": [
@@ -216,7 +254,7 @@
                 "x": "1300",
                 "y": "1220",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,deku_reg"
                 ]
               }
             ]
@@ -224,10 +262,16 @@
           {
             "name": "Basement Back Room",
             "access_rules": [
-              "sticks,$has_explosives,boomerang,[sling]",
-              "dinsfire,magic,$has_explosives,boomerang,[sling]",
-              "{sticks,$has_explosives,sling}",
-              "{dinsfire,magic,$has_explosives,sling}"
+              "erd_deku_c,sticks,[sling],$has_explosives,boomerang",
+              "erd_deku_c,dinsfire,magic,[sling],$has_explosives,boomerang",
+              "erd_deku_a,bow,magic,firearrow,$can_blast,hookshot",
+              "erd_deku_a,dinsfire,magic,bow,$can_blast,hookshot",
+              "erd_deku_c,erd_deku_a,$has_explosives,boomerang,sticks",
+              "erd_deku_c,erd_deku_a,$has_explosives,boomerang,dinsfire,magic",
+              "{erd_deku_c,sticks,$has_explosives,sling}",
+              "{erd_deku_c,dinsfire,magic,$has_explosives,sling}",
+              "{erd_deku_a,bow,magic,firearrow,$can_blast}",
+              "{erd_deku_a,dinsfire,magic,$can_blast,bow}"
             ],
             "sections": [
               {
@@ -244,7 +288,7 @@
                 "x": "490",
                 "y": "750",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,deku_reg"
                 ]
               }
             ]
@@ -255,17 +299,38 @@
   },
   {
     "name": "Dodongos Cavern",
-    "parent": "Death Mountain",
+    "parent": "World",
+    "color": "#a01009",
     "access_rules": [
-      "dodongo_reg,$can_blast",
-      "dodongo_reg,lift1"
+      "erd_dodongo,dodongo_reg"
     ],
     "children": [
+      {
+        "name": "Dodongos Cavern Lobby",
+        "access_rules": [
+          "erd_dodongo_a,hammer,sword2",
+          "$has_explosives",
+          "lift1"
+        ]
+      },
+      {
+        "name": "Dodongos Cavern Ledge",
+        "access_rules": [
+          "@Dodongos Cavern Lobby,erd_dodongo_a,sword2",
+          "@Dodongos Cavern Lobby,erd_dodongo_c,sticks",
+          "@Dodongos Cavern Lobby,erd_dodongo_c,dinsfire,magic,sling",
+          "@Dodongos Cavern Lobby,erd_dodongo_c,dinsfire,magic,sword1",
+          "@Dodongos Cavern Lobby,dinsfire,magic,$has_explosives"
+        ]
+      },
       {
         "name": "Map Chest",
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "@Dodongos Cavern Lobby"
+            ],
             "item_count": 1
           }
         ],
@@ -273,18 +338,17 @@
           {
             "map": "dodongoscavern",
             "x": "920",
-            "y": "1525"
+            "y": "1525",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "Compass Chest",
         "access_rules": [
-          "sword2",
-          "sticks",
-          "dinsfire,magic,sling",
-          "dinsfire,magic,sword1",
-          "dinsfire,magic,$has_explosives"
+          "@Dodongos Cavern Ledge"
         ],
         "sections": [
           {
@@ -296,17 +360,20 @@
           {
             "map": "dodongoscavern",
             "x": "100",
-            "y": "1450"
+            "y": "1450",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "Bomb Flower Platform",
         "access_rules": [
-          "@Compass Chest,$has_explosives",
-          "@Compass Chest,lift1",
-          "@Compass Chest,dinsfire,magic",
-          "@Compass Chest,sword2,bow,[lift1]"
+          "@Dodongos Cavern Ledge,$has_explosives",
+          "@Dodongos Cavern Ledge,lift1",
+          "@Dodongos Cavern Ledge,dinsfire,magic",
+          "@Dodongos Cavern Ledge,erd_dodongo_a,sword2,bow,[lift1]"
         ],
         "sections": [
           {
@@ -318,18 +385,20 @@
           {
             "map": "dodongoscavern",
             "x": "1470",
-            "y": "793"
+            "y": "793",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "Bomb Bag Chest",
         "access_rules": [
-          "@Bomb Flower Platform,$has_explosives,[sling]",
-          "@Bomb Flower Platform,lift1,[sling]",
-          "@Bomb Flower Platform,sword2,[bow]",
-          "@Bomb Flower Platform,sword2,[hoverboots]",
-          "@Bomb Flower Platform,sword2,[longshot]"
+          "@Bomb Flower Platform,erd_dodongo_c,sling",
+          "@Bomb Flower Platform,erd_dodongo_a,sword2,[bow]",
+          "@Bomb Flower Platform,erd_dodongo_a,sword2,[hoverboots]",
+          "@Bomb Flower Platform,erd_dodongo_a,sword2,[longshot]"
         ],
         "sections": [
           {
@@ -341,14 +410,18 @@
           {
             "map": "dodongoscavern",
             "x": "1685",
-            "y": "630"
+            "y": "630",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "End of Bridge Chest",
         "access_rules": [
-          "@Bomb Bag Chest,$can_blast"
+          "@Bomb Bag Chest,$has_explosives",
+          "@Bomb Bag Chest,erd_dodongo_a,hammer"
         ],
         "sections": [
           {
@@ -360,7 +433,10 @@
           {
             "map": "dodongoscavern",
             "x": "1060",
-            "y": "360"
+            "y": "360",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
@@ -379,22 +455,25 @@
           {
             "map": "dodongoscavern",
             "x": "1450",
-            "y": "1200"
+            "y": "1200",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
       {
         "name": "King Dodongo",
         "access_rules": [
-          "@Chest Above King Dodongo,lift1,sticks",
-          "@Chest Above King Dodongo,lift1,sword1",
-          "@Chest Above King Dodongo,lift1,sword2",
-          "@Chest Above King Dodongo,bombs,sticks",
-          "@Chest Above King Dodongo,bombs,sword1",
-          "@Chest Above King Dodongo,bombs,sword2",
-          "@Chest Above King Dodongo,bombchu,[bombs],sticks",
-          "@Chest Above King Dodongo,bombchu,[bombs],sword1",
-          "@Chest Above King Dodongo,bombchu,[bombs],sword2"
+          "@Chest Above King Dodongo,erd_dodongo_c,lift1,sticks",
+          "@Chest Above King Dodongo,erd_dodongo_c,lift1,sword1",
+          "@Chest Above King Dodongo,erd_dodongo_a,lift1,sword2",
+          "@Chest Above King Dodongo,erd_dodongo_c,bombs,sticks",
+          "@Chest Above King Dodongo,erd_dodongo_c,bombs,sword1",
+          "@Chest Above King Dodongo,erd_dodongo_a,bombs,sword2",
+          "@Chest Above King Dodongo,erd_dodongo_c,bombchu,[bombs],sticks",
+          "@Chest Above King Dodongo,erd_dodongo_c,bombchu,[bombs],sword1",
+          "@Chest Above King Dodongo,erd_dodongo_a,bombchu,[bombs],sword2"
         ],
         "sections": [
           {
@@ -409,7 +488,10 @@
           {
             "map": "dodongoscavern",
             "x": "1035",
-            "y": "1080"
+            "y": "1080",
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
@@ -422,8 +504,7 @@
           {
             "name": "Check it",
             "access_rules": [
-              "$can_blast",
-              "lift1"
+              "@Dodongos Cavern Lobby"
             ],
             "chest_unopened_img": "images/gossip_stone.png",
             "chest_opened_img": "images/gossip_stone.png",
@@ -434,7 +515,10 @@
           {
             "map": "dodongoscavern",
             "x": 1610,
-            "y": 1655
+            "y": 1655,
+            "visibility_rules": [
+              "dodongo_reg"
+            ]
           }
         ]
       },
@@ -447,12 +531,12 @@
           {
             "name": "East Side Room",
             "access_rules": [
-              "$has_explosives",
-              "sword2",
-              "sling",
-              "boomerang",
-              "sticks",
-              "sword1"
+              "@Dodongos Cavern Lobby,$has_explosives",
+              "@Dodongos Cavern Lobby,erd_dodongo_a,sword2",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sling",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,boomerang",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sticks",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sword1"
             ],
             "sections": [
               {
@@ -468,7 +552,7 @@
                 "x": "1300",
                 "y": "2350",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -492,7 +576,7 @@
                 "x": "520",
                 "y": "135",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -516,7 +600,7 @@
                 "x": "2990",
                 "y": "1250",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -524,7 +608,7 @@
           {
             "name": "Alcove Above Stairs",
             "access_rules": [
-              "@Bomb Bag Chest,boomerang,$has_explosives",
+              "@Bomb Bag Chest,erd_dodongo_c,boomerang",
               "@Bomb Bag Chest,boomerang,lift1",
               "@Bomb Bag Chest,sword2,hookshot",
               "{@Bomb Flower Platform,sling}",
@@ -545,7 +629,7 @@
                 "x": "735",
                 "y": "85",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -553,9 +637,10 @@
           {
             "name": "Scarecrow",
             "access_rules": [
-              "sword2,[ocarina],[scarecrow],[hookshot]",
-              "sword2,longshot",
-              "{sling}"
+              "@Dodongos Cavern Lobby,erd_dodongo_a,sword2,[ocarina],[scarecrow],[hookshot]",
+              "@Dodongos Cavern Lobby,erd_dodongo_a,sword2,longshot",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,{sling}",
+              "@Dodongos Cavern Lobby,erd_dodongo_a,{bow}"
             ],
             "sections": [
               {
@@ -572,7 +657,7 @@
                 "x": "1720",
                 "y": "2057",
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,dodongo_reg"
                 ]
               }
             ]
@@ -587,6 +672,9 @@
         "children": [
           {
             "name": "Lobby",
+            "access_rules": [
+              "@Dodongos Cavern Lobby"
+            ],
             "sections": [
               {
                 "name": "Deku Shield",
@@ -601,7 +689,7 @@
                 "x": "745",
                 "y": "1590",
                 "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
+                  "setting_scrub_shuffle_yes,dodongo_reg"
                 ]
               }
             ]
@@ -609,11 +697,11 @@
           {
             "name": "East Side",
             "access_rules": [
-              "sword2",
-              "sword1",
-              "sticks",
-              "sling",
-              "$has_explosives"
+              "@Dodongos Cavern Lobby,erd_dodongo_a,sword2",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sword1",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sticks",
+              "@Dodongos Cavern Lobby,erd_dodongo_c,sling",
+              "@Dodongos Cavern Lobby,$has_explosives"
             ],
             "sections": [
               {
@@ -629,7 +717,7 @@
                 "x": "2760",
                 "y": "1630",
                 "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
+                  "setting_scrub_shuffle_yes,dodongo_reg"
                 ]
               }
             ]
@@ -637,7 +725,8 @@
           {
             "name": "Near Bombs",
             "access_rules": [
-              "@Bomb Flower Platform,$can_blast"
+              "@Bomb Flower Platform,$has_explosives",
+              "@Bomb Flower Platform,erd_dodongo_a,hammer"
             ],
             "sections": [
               {
@@ -653,7 +742,7 @@
                 "x": "2030",
                 "y": "635",
                 "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
+                  "setting_scrub_shuffle_yes,dodongo_reg"
                 ]
               }
             ]
@@ -664,11 +753,11 @@
   },
   {
     "name": "Jabu Jabus Belly",
-    "parent": "Zoras Fountain",
+    "parent": "World",
+    "color": "#0936a0",
     "access_rules": [
-      "jabu_reg,$child_fountain,bottle,sling",
-      "jabu_reg,$child_fountain,bottle,$has_explosives",
-      "jabu_reg,$child_fountain,bottle,boomerang"
+      "erd_jabu_c,$has_projectile|child,jabu_reg",
+      "erd_jabu_a,$has_projectile|adult,jabu_reg"
     ],
     "children": [
       {
@@ -682,6 +771,9 @@
         "map_locations": [
           {
             "map": "jabujabu",
+            "visibility_rules": [
+              "jabu_reg"
+            ],
             "x": 2600,
             "y": 835
           }
@@ -690,7 +782,7 @@
       {
         "name": "Map Chest",
         "access_rules": [
-          "boomerang"
+          "erd_jabu_c,boomerang"
         ],
         "sections": [
           {
@@ -701,6 +793,9 @@
         "map_locations": [
           {
             "map": "jabujabu",
+            "visibility_rules": [
+              "jabu_reg"
+            ],
             "x": 1440,
             "y": 445
           }
@@ -709,7 +804,7 @@
       {
         "name": "Compass Chest",
         "access_rules": [
-          "boomerang"
+          "erd_jabu_c,boomerang"
         ],
         "sections": [
           {
@@ -720,6 +815,9 @@
         "map_locations": [
           {
             "map": "jabujabu",
+            "visibility_rules": [
+              "jabu_reg"
+            ],
             "x": 2155,
             "y": 450
           }
@@ -728,12 +826,12 @@
       {
         "name": "Barinade",
         "access_rules": [
-          "boomerang,sword1",
-          "boomerang,sticks"
+          "erd_jabu_c,boomerang,sword1",
+          "erd_jabu_c,boomerang,sticks"
         ],
         "sections": [
           {
-            "name": "Chest",
+            "name": "Heart Container",
             "hosted_item": "jabu",
             "chest_unopened_img": "images/HC.png",
             "chest_opened_img": "images/HC_grey.png",
@@ -743,6 +841,9 @@
         "map_locations": [
           {
             "map": "jabujabu",
+            "visibility_rules": [
+              "jabu_reg"
+            ],
             "x": 2195,
             "y": 1045
           }
@@ -770,7 +871,7 @@
                 "x": 2160,
                 "y": 1865,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,jabu_reg"
                 ]
               }
             ]
@@ -778,8 +879,10 @@
           {
             "name": "Lobby Basement Lower",
             "access_rules": [
-              "boomerang",
-              "{sling}",
+              "erd_jabu_c,boomerang",
+              "erd_jabu_a,hookshot",
+              "{erd_jabu_c,sling}",
+              "{erd_jabu_a,bow}",
               "{$has_explosives}"
             ],
             "sections": [
@@ -797,7 +900,7 @@
                 "x": 2165,
                 "y": 1475,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,jabu_reg"
                 ]
               }
             ]
@@ -805,8 +908,10 @@
           {
             "name": "Lobby Basement Upper",
             "access_rules": [
-              "boomerang",
-              "{sling}",
+              "erd_jabu_c,boomerang",
+              "erd_jabu_a,hookshot",
+              "{erd_jabu_c,sling}",
+              "{erd_jabu_a,bow}",
               "{$has_explosives}"
             ],
             "sections": [
@@ -824,7 +929,7 @@
                 "x": 2065,
                 "y": 1455,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,jabu_reg"
                 ]
               }
             ]
@@ -848,7 +953,7 @@
                 "x": 1695,
                 "y": 1265,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,jabu_reg"
                 ]
               }
             ]
@@ -863,6 +968,11 @@
         "children": [
           {
             "name": "B1 Dive",
+            "access_rules": [
+              "erd_jabu_c",
+              "erd_jabu_a,scale1",
+              "erd_jabu_a,ironboots,[scale1]"
+            ],
             "sections": [
               {
                 "name": "Deku Nuts",
@@ -877,7 +987,7 @@
                 "x": 730,
                 "y": 1255,
                 "visibility_rules": [
-                  "setting_scrub_shuffle_yes"
+                  "setting_scrub_shuffle_yes,jabu_reg"
                 ]
               }
             ]
@@ -888,9 +998,12 @@
   },
   {
     "name": "Ice Cavern",
-    "parent": "Zoras Fountain",
+    "parent": "World",
+    "color": "#0936a0",
     "access_rules": [
-      "ice_reg,$adult_fountain,$has_bottle"
+      "erd_ice_a,ice_reg",
+      "erd_ice_c,$has_explosives,ice_reg",
+      "erd_ice_c,magic,dins,ice_reg"
     ],
     "children": [
       {
@@ -898,6 +1011,9 @@
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "erd_ice_a,$has_bottle"
+            ],
             "item_count": 1
           }
         ],
@@ -905,7 +1021,10 @@
           {
             "map": "icecavern",
             "x": 1990,
-            "y": 250
+            "y": 250,
+            "visibility_rules": [
+              "ice_reg"
+            ]
           }
         ]
       },
@@ -914,6 +1033,9 @@
         "sections": [
           {
             "name": "Chest",
+            "access_rules": [
+              "$has_bottle"
+            ],
             "item_count": 1
           }
         ],
@@ -921,7 +1043,10 @@
           {
             "map": "icecavern",
             "x": 1530,
-            "y": 1070
+            "y": 1070,
+            "visibility_rules": [
+              "ice_reg"
+            ]
           }
         ]
       },
@@ -930,6 +1055,9 @@
         "sections": [
           {
             "name": "Heart Piece",
+            "access_rules": [
+              "$has_bottle"
+            ],
             "chest_unopened_img": "images/HP.png",
             "chest_opened_img": "images/HP_grey.png",
             "item_count": 1
@@ -939,12 +1067,22 @@
           {
             "map": "icecavern",
             "x": 1720,
-            "y": 1020
+            "y": 1020,
+            "visibility_rules": [
+              "ice_reg"
+            ]
           }
         ]
       },
       {
         "name": "Final Room",
+        "access_rules": [
+          "erd_ice_a,$has_bottle",
+          "erd_ice_c,$has_bottle,sling",
+          "erd_ice_c,$has_bottl0,sticks",
+          "erd_ice_c,$has_bottle,sword1",
+          "erd_ice_c,$has_bottle,magic,dins"
+        ],
         "sections": [
           {
             "name": "Iron Boots Chest",
@@ -953,7 +1091,6 @@
           {
             "name": "Sheik in Ice Cavern",
             "access_rules": [
-              "$has_bottle",
               "{$hintable}"
             ],
             "capture_item": true,
@@ -966,7 +1103,10 @@
           {
             "map": "icecavern",
             "x": 510,
-            "y": 615
+            "y": 615,
+            "visibility_rules": [
+              "ice_reg"
+            ]
           }
         ]
       },
@@ -979,9 +1119,11 @@
           {
             "name": "Heart Piece Room",
             "access_rules": [
-              "hookshot",
-              "{bow}",
-              "{$has_explosives}"
+              "erd_ice_a,$has_bottle,hookshot",
+              "{erd_ice_a,$has_bottle,bow}",
+              "erd_ice_c,$has_bottle,boomerang",
+              "{erd_ice_c,$has_bottle,sling}",
+              "{$has_bottle,$has_explosives}"
             ],
             "sections": [
               {
@@ -998,7 +1140,7 @@
                 "x": 1715,
                 "y": 970,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,ice_reg"
                 ]
               }
             ]
@@ -1006,8 +1148,10 @@
           {
             "name": "Spinning Scythe Room",
             "access_rules": [
-              "hookshot",
-              "{bow}",
+              "erd_ice_a,hookshot",
+              "{erd_ice_a,bow}",
+              "erd_ice_c,boomerang",
+              "{erd_ice_c,sling}",
               "{$has_explosives}"
             ],
             "sections": [
@@ -1025,7 +1169,7 @@
                 "x": 1415,
                 "y": 675,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,ice_reg"
                 ]
               }
             ]
@@ -1033,9 +1177,11 @@
           {
             "name": "Push Block Room",
             "access_rules": [
-              "hookshot",
-              "{bow}",
-              "{$has_explosives}"
+              "erd_ice_a,$has_bottle,hookshot",
+              "{erd_ice_a,$has_bottle,bow}",
+              "erd_ice_c,$has_bottle,boomerang",
+              "{erd_ice_c,$has_bottle,sling}",
+              "{$has_bottle,$has_explosives}"
             ],
             "sections": [
               {
@@ -1052,7 +1198,7 @@
                 "x": 1180,
                 "y": 285,
                 "visibility_rules": [
-                  "setting_skulltulas_dungeons"
+                  "setting_skulltulas_dungeons,ice_reg"
                 ]
               }
             ]

@@ -567,5 +567,236 @@
     "type": "toggle",
     "img": "images/eri/zorsh.png",
     "codes": "eri_zorsh"
+  },
+  {
+    "name": "Deku Tree",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/deku.png",
+        "codes": "erd_deku,erd_deku_c,erd_deku_a"
+      },
+      {
+        "img": "images/erd/deku.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_deku,erd_deku_c"
+      },
+      {
+        "img": "images/erd/deku.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_deku,erd_deku_a"
+      }
+    ]
+  },
+  {
+    "name": "Dodongo's Cavern",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/dodongo.png",
+        "codes": "erd_dodongo,erd_dodongo_c,erd_dodongo_a"
+      },
+      {
+        "img": "images/erd/dodongo.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_dodongo,erd_dodongo_c"
+      },
+      {
+        "img": "images/erd/dodongo.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_dodongo,erd_dodongo_a"
+      }
+    ]
+  },
+  {
+    "name": "Jabu-Jabu's Belly",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/jabu.png",
+        "codes": "erd_jabu,erd_jabu_c,erd_jabu_a"
+      },
+      {
+        "img": "images/erd/jabu.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_jabu,erd_jabu_c"
+      },
+      {
+        "img": "images/erd/jabu.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_jabu,erd_jabu_a"
+      }
+    ]
+  },
+  {
+    "name": "Ice Cavern",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/ice.png",
+        "codes": "erd_ice,erd_ice_c,erd_ice_a"
+      },
+      {
+        "img": "images/erd/ice.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_ice,erd_ice_c"
+      },
+      {
+        "img": "images/erd/ice.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_ice,erd_ice_a"
+      }
+    ]
+  },
+  {
+    "name": "Forest Temple",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/forest.png",
+        "codes": "erd_forest,erd_forest_c,erd_forest_a"
+      },
+      {
+        "img": "images/erd/forest.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_forest,erd_forest_c"
+      },
+      {
+        "img": "images/erd/forest.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_forest,erd_forest_a"
+      }
+    ]
+  },
+  {
+    "name": "Fire Temple",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/fire.png",
+        "codes": "erd_fire,erd_fire_c,erd_fire_a"
+      },
+      {
+        "img": "images/erd/fire.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_fire,erd_fire_c"
+      },
+      {
+        "img": "images/erd/fire.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_fire,erd_fire_a"
+      }
+    ]
+  },
+  {
+    "name": "Water Temple",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/water.png",
+        "codes": "erd_water,erd_water_c,erd_water_a"
+      },
+      {
+        "img": "images/erd/water.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_water,erd_water_c"
+      },
+      {
+        "img": "images/erd/water.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_water,erd_water_a"
+      }
+    ]
+  },
+  {
+    "name": "Shadow Temple",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/shadow.png",
+        "codes": "erd_shadow,erd_shadow_c,erd_shadow_a"
+      },
+      {
+        "img": "images/erd/shadow.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_shadow,erd_shadow_c"
+      },
+      {
+        "img": "images/erd/shadow.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_shadow,erd_shadow_a"
+      }
+    ]
+  },
+  {
+    "name": "Spirit Temple",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/spirit.png",
+        "codes": "erd_spirit,erd_spirit_c,erd_spirit_a"
+      },
+      {
+        "img": "images/erd/spirit.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_spirit,erd_spirit_c"
+      },
+      {
+        "img": "images/erd/spirit.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_spirit,erd_spirit_a"
+      }
+    ]
+  },
+  {
+    "name": "Bottom of the Well",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/botw.png",
+        "codes": "erd_botw,erd_botw_c,erd_botw_a"
+      },
+      {
+        "img": "images/erd/botw.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_botw,erd_botw_c"
+      },
+      {
+        "img": "images/erd/botw.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_botw,erd_botw_a"
+      }
+    ]
+  },
+  {
+    "name": "Gerudo Training Grounds",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/erd/gtg.png",
+        "codes": "erd_gtg,erd_gtg_c,erd_gtg_a"
+      },
+      {
+        "img": "images/erd/gtg.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "erd_gtg,erd_gtg_c"
+      },
+      {
+        "img": "images/erd/gtg.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "erd_gtg,erd_gtg_a"
+      }
+    ]
   }
 ]

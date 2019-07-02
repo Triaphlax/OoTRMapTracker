@@ -345,6 +345,97 @@
             "height": 24
           }
         ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "5,0",
+        "content": [
+          {
+            "type": "item",
+            "item": "erd_deku",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erd_dodongo",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erd_jabu",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erd_botw",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "5,0",
+        "content": [
+          {
+            "type": "item",
+            "item": "erd_forest",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erd_fire",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erd_water",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erd_shadow",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erd_spirit",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erd_ice",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "erd_gtg",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          }
+        ]
       }
     ]
   }
