@@ -375,7 +375,7 @@ function child_fountain()
     level = AccessibilityLevel.SequenceBreak
   end
 
-  if has("scale1") then
+  if has("scale1") or has("setting_lh_location_zora") then
     return 1, level
   else
     local explo_count, explo_level = has_explosives()

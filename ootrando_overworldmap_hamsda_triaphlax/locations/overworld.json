@@ -3032,7 +3032,9 @@
               "postzelda",
               "sword2",
               "$has_explosives",
-              "dinsfire,magic"
+              "dinsfire,magic",
+              "setting_lh_location_goron",
+              "setting_lh_location_dms"
             ],
             "children": [
               {
@@ -3274,7 +3276,8 @@
                           "lift1",
                           "dinsfire,magic",
                           "ocarina,lullaby,sticks,postzelda",
-                          "ocarina,lullaby,sticks,sword2,hammer"
+                          "ocarina,lullaby,sticks,sword2,hammer",
+                          "setting_lh_location_goron"
                         ],
                         "item_count": 1
                       },
@@ -3296,7 +3299,8 @@
                           "lift1",
                           "dinsfire,magic",
                           "ocarina,lullaby,sticks,postzelda",
-                          "ocarina,lullaby,sticks,sword2,hammer"
+                          "ocarina,lullaby,sticks,sword2,hammer",
+                          "setting_lh_location_goron"
                         ],
                         "x": 1646,
                         "y": 128
@@ -3492,7 +3496,9 @@
                         "access_rules": [
                           "postzelda",
                           "$has_explosives",
-                          "dinsfire,magic"
+                          "dinsfire,magic",
+                          "setting_lh_location_goron",
+                          "setting_lh_location_dms"
                         ],
                         "item_count": 1
                       },
@@ -3510,7 +3516,9 @@
                         "visibility_rules": [
                           "postzelda",
                           "$has_explosives",
-                          "dinsfire,magic"
+                          "dinsfire,magic",
+                          "setting_lh_location_goron",
+                          "setting_lh_location_dms"
                         ],
                         "x": 1705,
                         "y": 158
@@ -3533,7 +3541,8 @@
                       {
                         "name": "CHILD",
                         "access_rules": [
-                          "$has_explosives"
+                          "$has_explosives",
+                          "setting_lh_location_dms"
                         ],
                         "item_count": 1
                       },
@@ -3549,7 +3558,8 @@
                       {
                         "map": "child",
                         "visibility_rules": [
-                          "$has_explosives"
+                          "$has_explosives",
+                          "setting_lh_location_dms"
                         ],
                         "x": 1764,
                         "y": 66
@@ -3781,6 +3791,7 @@
                         "name": "Check it",
                         "access_rules": [
                           "$can_blast",
+                          "setting_lh_location_dms",
                           "$link_the_goron",
                           "ocarina,bolero,setting_plant_no,beans",
                           "ocarina,bolero,bean_crater_yes",
@@ -3863,6 +3874,7 @@
                           "ocarina,bolero,sword2,hoverboots",
                           "sword2,lift1",
                           "sword2,bow",
+                          "setting_lh_location_dms",
                           "{ocarina,bolero}"
                         ],
                         "capture_item": true,
@@ -3900,6 +3912,7 @@
                           "sword2,hammer,hoverboots,[ocarina],[bolero],[setting_plant_no],[beans]",
                           "sword2,hammer,hoverboots,[ocarina],[bolero],[bean_crater_yes]",
                           "{$hintable}",
+                          "{setting_lh_location_dms}",
                           "{ocarina,bolero}",
                           "{$link_the_goron}",
                           "{sword2,hammer}"
@@ -3996,6 +4009,9 @@
                           "$can_blast,$can_child_attack",
                           "$can_blast,nuts",
                           "$can_blast,shield1",
+                          "setting_lh_location_dms,$can_child_attack",
+                          "setting_lh_location_dms,nuts",
+                          "setting_lh_location_dms,shield1",
                           "{$hintable}"
                         ],
                         "visibility_rules": [
@@ -4025,7 +4041,8 @@
                       {
                         "name": "GS36",
                         "access_rules": [
-                          "$can_blast,$can_child_attack"
+                          "$can_blast,$can_child_attack",
+                          "setting_lh_location_dms,$can_child_attack"
                         ],
                         "visibility_rules": [
                           "setting_skulltulas_all"
@@ -4639,6 +4656,7 @@
                   {
                     "name": "Frogs",
                     "access_rules": [
+                      "setting_lh_location_zora",
                       "$has_explosives",
                       "scale1",
                       "{$hintable}"
@@ -4673,7 +4691,8 @@
                     "name": "Magic Bean Salesman",
                     "access_rules": [
                       "$has_explosives",
-                      "scale1"
+                      "scale1",
+                      "setting_lh_location_zora"
                     ],
                     "sections": [
                       {
@@ -4700,7 +4719,8 @@
                         "name": "CHILD",
                         "access_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "item_count": 1
                       },
@@ -4717,7 +4737,8 @@
                         "map": "child",
                         "visibility_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "x": 2092,
                         "y": 540
@@ -4781,7 +4802,8 @@
                         "access_rules": [
                           "$has_explosives",
                           "scale1",
-                          "sword2,[hoverboots]"
+                          "sword2,[hoverboots]",
+                          "setting_lh_location_zora"
                         ],
                         "chest_unopened_img": "images/HP.png",
                         "chest_opened_img": "images/HP_grey.png",
@@ -4793,7 +4815,8 @@
                         "map": "child",
                         "visibility_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "x": 2037,
                         "y": 474
@@ -4817,7 +4840,8 @@
                         "access_rules": [
                           "$has_explosives",
                           "scale1",
-                          "sword2,[hoverboots]"
+                          "sword2,[hoverboots]",
+                          "setting_lh_location_zora"
                         ],
                         "chest_unopened_img": "images/HP.png",
                         "chest_opened_img": "images/HP_grey.png",
@@ -4829,7 +4853,8 @@
                         "map": "child",
                         "visibility_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "x": 2347,
                         "y": 425
@@ -4856,7 +4881,8 @@
                         "name": "CHILD",
                         "access_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "item_count": 1
                       },
@@ -4873,7 +4899,8 @@
                         "map": "child",
                         "visibility_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "x": 1940,
                         "y": 505
@@ -4922,7 +4949,8 @@
                         "name": "GS44 (N)",
                         "access_rules": [
                           "$has_explosives",
-                          "scale1,$can_child_attack"
+                          "scale1,$can_child_attack",
+                          "setting_lh_location_zora,$can_child_attack"
                         ],
                         "visibility_rules": [
                           "setting_skulltulas_all"
@@ -5061,6 +5089,7 @@
               {
                 "name": "Zoras Domain",
                 "access_rules": [
+                  "setting_lh_location_zora",
                   "$has_explosives,[ocarina],[lullaby]",
                   "scale1"
                 ],
@@ -5250,7 +5279,8 @@
                     "name": "CHILD",
                     "access_rules": [
                       "$has_explosives,[ocarina],[lullaby]",
-                      "scale1"
+                      "scale1",
+                      "setting_lh_location_zora"
                     ],
                     "item_count": 1
                   },
@@ -5284,7 +5314,8 @@
                     "map": "child",
                     "visibility_rules": [
                       "$has_explosives,[ocarina],[lullaby]",
-                      "scale1"
+                      "scale1",
+                      "setting_lh_location_zora"
                     ],
                     "x": 2619,
                     "y": 499
