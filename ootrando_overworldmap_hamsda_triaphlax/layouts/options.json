@@ -79,9 +79,9 @@
         "setting_fewer_tunics",
         "setting_hints",
         "setting_plant",
-        "",
-        "",
-        "",
+        "setting_lh_location_dflt",
+        "setting_tot_location_dflt",
+        "setting_wm_location_dflt",
         ""
       ]
     ]
