@@ -895,7 +895,7 @@
           {
             "name": "Big Lava Room",
             "access_rules": [
-              "hammer"
+              "erd_fire_a,hammer"
             ],
             "sections": [
               {
