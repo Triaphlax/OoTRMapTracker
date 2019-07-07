@@ -2725,7 +2725,10 @@
       {
         "name": "Freestanding Key",
         "access_rules": [
-          "sticks,magic,dins"
+          "sticks",
+          "magic,dins",
+          "boomerang,[sticks]",
+          "boomerang,[magic],[dins]"
         ],
         "sections": [
           {
