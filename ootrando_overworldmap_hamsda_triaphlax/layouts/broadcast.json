@@ -17,7 +17,7 @@
       },
       {
           "type": "group",
-          "header": "Entrances",
+          "header": "Locations",
           "dock": "top",
           "content": {
             "type": "layout",
