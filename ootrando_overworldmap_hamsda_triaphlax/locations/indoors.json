@@ -296,7 +296,7 @@
             "name": "Links House Cow",
             "short_name": "Cow",
             "access_rules": [
-              "sword2,ocarina,epona,setting_cowsanity_yes,eri_link_a"
+              "epona_race_yes,setting_cowsanity_yes,eri_link_a"
             ],
             "visibility_rules": [
               "setting_cowsanity_yes"
@@ -709,6 +709,25 @@
         ]
       },
       {
+        "name": "Windmill",
+        "sections": [
+          {
+            "name": "Play Song of Storms",
+            "access_rules": [
+              "sos_played_no,ocarina,storm,eri_mill_c"
+            ],
+            "hosted_item": "sos_played_yes"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1580,
+            "y": 1510
+          }
+        ]
+      },
+      {
         "name": "Talon House",
         "sections": [
           {
@@ -985,6 +1004,25 @@
             "map": "indoors1",
             "x": 660,
             "y": 1435
+          }
+        ]
+      },
+      {
+        "name": "Talon",
+        "sections": [
+          {
+            "name": "Wake him up",
+            "access_rules": [
+              "sword2,adultegg,eri_talon_a"
+            ],
+            "hosted_item": "adultcucco"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 515,
+            "y": 490
           }
         ]
       }
