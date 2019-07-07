@@ -971,7 +971,7 @@
             "access_rules": [
               "erd_jabu_c",
               "erd_jabu_a,scale1",
-              "erd_jabu_a,ironboots,[scale1]"
+              "erd_jabu_a,ironboots"
             ],
             "sections": [
               {
