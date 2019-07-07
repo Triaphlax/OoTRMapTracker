@@ -1,7 +1,29 @@
 {
-  "tracker_broadcast": {
-    "type": "layout",
-    "key": "item_grid_wide",
-    "margin": "5,5,5,5"
+  "tracker_broadcast":
+  {
+    "type": "dock",
+    "dock": "left",
+    "v_alignment": "stretch",
+    "margin": "0,0,3,0",
+    "content": [
+      {
+        "type": "group",
+        "header": "Items",
+        "dock": "top",
+        "content": {
+          "type": "layout",
+          "key": "item_grid_wide"
+        }
+      },
+      {
+          "type": "group",
+          "header": "Entrances",
+          "dock": "top",
+          "content": {
+            "type": "layout",
+            "key": "entrance_grid_tall"
+          }
+      }
+    ]
   }
 }
