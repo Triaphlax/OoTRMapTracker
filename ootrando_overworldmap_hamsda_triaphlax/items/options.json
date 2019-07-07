@@ -460,6 +460,11 @@
         "img": "images/setting_wm_location_foun.png",
         "codes": "setting_wm_location,setting_wm_location_foun",
         "inherit_codes": false
+      },
+      {
+        "img": "images/setting_lh_location_dms.png",
+        "codes": "setting_wm_location,setting_wm_location_dc",
+        "inherit_codes": false
       }
     ]
   }

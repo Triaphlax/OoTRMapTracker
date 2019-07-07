@@ -185,6 +185,13 @@ function colossus(age)
     return 1
   end
 
+  if has("setting_wm_location_dc", 1)
+  and access_through_mill()
+  and not (age == "child")
+  then
+    return 1
+  end
+
   local c_sptreg, l_sptreg = colossus_through_sptreg(age)
   if l_sptreg == AccessibilityLevel.Normal then
     return 1
@@ -334,6 +341,17 @@ function gtg_card()
   end
 end
 
+function access_through_mill()
+  if has("sword2", 1)
+  and has("erg_dampe_a", 1)
+  and has("ocarina", 1)
+  and has("time", 1)
+  then
+    return 1
+  end
+  return 0
+end
+
 function link_the_goron()
   if has("sword2") then
     if 
@@ -357,6 +375,8 @@ function dmc_central()
     has("ocarina") and has("bolero")
     or
     has("hammer") and has("hoverboots")
+    or
+    has("setting_wm_location_dms") and access_through_mill() and has("hoverboots")
     then
       return 1
     else
@@ -406,6 +426,12 @@ end
 function adult_fountain()
   if has("sword2", 0) then
     return 0
+  end
+
+  if has("setting_wm_location_foun", 1)
+  and access_through_mill()
+  then
+    return 1
   end
 
   local level = AccessibilityLevel.Normal
