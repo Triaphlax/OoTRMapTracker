@@ -3214,9 +3214,7 @@
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "ocarina,time,redtunic",
-                          "ocarina,time,longshot",
-                          "ocarina,time,nayruslove,magic",
+                          "ocarina,time",
                           "hookshot,redtunic",
                           "hookshot,nayruslove,magic"
                         ],
