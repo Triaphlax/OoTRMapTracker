@@ -62,7 +62,6 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
-    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_gerudo_fortress_normal.png",
@@ -85,7 +84,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
-    "initial_stage_idx": 3,
+    "initial_stage_idx": 2,
     "stages": [
       {
         "img": "images/setting_bridge_open.png",
@@ -144,7 +143,6 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
-    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_fewer_tunics_no.png",
@@ -179,6 +177,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
+    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_scrub_shuffle_no.png",
@@ -196,6 +195,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
+    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_shopsanity_no.png",
@@ -213,6 +213,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
+    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_cowsanity_no.png",
@@ -230,6 +231,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
+    "initial_stage_idx": 2,
     "stages": [
       {
         "img": "images/setting_skulltulas_off.png",
@@ -241,7 +243,7 @@
       },
       {
         "img": "images/setting_skulltulas_all.png",
-        "codes": "setting_skulltulas_all"
+        "codes": "setting_skulltulas_all,setting_skulltulas_dungeons"
       }
     ]
   },
@@ -267,7 +269,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
-    "initial_stage_idx": 3,
+    "initial_stage_idx": 2,
     "stages": [
       {
         "img": "images/setting_hints_off.png",
@@ -313,6 +315,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
+    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_shuffle_ocarinas_no.png",
@@ -330,6 +333,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
+    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_shuffle_egg_no.png",
@@ -347,6 +351,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
+    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_shuffle_card_no.png",
@@ -364,6 +369,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
+    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_shuffle_beans_no.png",
@@ -372,6 +378,92 @@
       {
         "img": "images/setting_shuffle_beans_yes.png",
         "codes": "setting_shuffle_beans,setting_shuffle_beans_yes",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Links House Location",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/setting_lh_location.png",
+        "codes": "setting_lh_location,setting_lh_location_dflt"
+      },
+      {
+        "img": "images/setting_lh_location_goron.png",
+        "codes": "setting_lh_location,setting_lh_location_goron",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_lh_location_dms.png",
+        "codes": "setting_lh_location,setting_lh_location_dms",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_lh_location_zora.png",
+        "codes": "setting_lh_location,setting_lh_location_zora",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Temple of Time Location",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/setting_tot_location.png",
+        "codes": "setting_tot_location,setting_tot_location_dflt"
+      },
+      {
+        "img": "images/setting_tot_location_goron.png",
+        "codes": "setting_tot_location,setting_tot_location_goron",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_tot_location_dms.png",
+        "codes": "setting_tot_location,setting_tot_location_dms",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_tot_location_zora.png",
+        "codes": "setting_tot_location,setting_tot_location_zora",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Windmill Location",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/setting_wm_location.png",
+        "codes": "setting_wm_location,setting_wm_location_dflt"
+      },
+      {
+        "img": "images/setting_wm_location_goron.png",
+        "codes": "setting_wm_location,setting_wm_location_goron",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_wm_location_dms.png",
+        "codes": "setting_wm_location,setting_wm_location_dms",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_wm_location_zora.png",
+        "codes": "setting_wm_location,setting_wm_location_zora",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_wm_location_foun.png",
+        "codes": "setting_wm_location,setting_wm_location_foun",
         "inherit_codes": false
       }
     ]
