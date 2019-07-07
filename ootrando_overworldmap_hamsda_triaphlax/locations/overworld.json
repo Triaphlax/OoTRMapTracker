@@ -1421,7 +1421,7 @@
                   {
                     "name": "ADULT",
                     "access_rules": [
-                      "sword2,hammer,$has_explosives"
+                      "sword2,hammer"
                     ],
                     "item_count": 1
                   }
@@ -1438,7 +1438,7 @@
                   {
                     "map": "adult",
                     "visibility_rules": [
-                      "sword2,hammer,$has_explosives"
+                      "sword2,hammer"
                     ],
                     "x": 972,
                     "y": 658
