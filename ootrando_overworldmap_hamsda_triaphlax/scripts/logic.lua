@@ -178,6 +178,13 @@ function colossus(age)
     return 1
   end
 
+  if has("setting_tot_location_dc", 1)
+  and has("sword2", 1)
+  and not (age == "child")
+  then
+    return 1
+  end
+
   local c_sptreg, l_sptreg = colossus_through_sptreg(age)
   if l_sptreg == AccessibilityLevel.Normal then
     return 1
@@ -402,13 +409,15 @@ function adult_fountain()
   end
 
   local level = AccessibilityLevel.Normal
-  if has("ocarina", 0)
-  or has("lullaby", 0)
-  then
-    if has("hoverboots", 0) then
-      return 0
-    else
-      level = AccessibilityLevel.SequenceBreak
+  if has("setting_tot_location_zora", 0) then
+    if has("ocarina", 0)
+    or has("lullaby", 0)
+    then
+      if has("hoverboots", 0) then
+        return 0
+      else
+        level = AccessibilityLevel.SequenceBreak
+      end
     end
   end
 

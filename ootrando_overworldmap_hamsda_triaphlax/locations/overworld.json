@@ -5202,7 +5202,8 @@
                 "name": "Zoras Domain Frozen",
                 "access_rules": [
                   "sword2,ocarina,lullaby",
-                  "sword2,hoverboots,[ocarina],[lullaby]"
+                  "sword2,hoverboots,[ocarina],[lullaby]",
+                  "sword2,setting_tot_location_zora"
                 ],
                 "children": [
                   {
@@ -5304,7 +5305,8 @@
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
-                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]"
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,setting_tot_location_zora"
                     ],
                     "item_count": 1
                   }
@@ -5340,7 +5342,8 @@
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
-                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]"
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,setting_tot_location_zora"
                     ],
                     "x": 2619,
                     "y": 499
