@@ -1006,6 +1006,25 @@
             "y": 1435
           }
         ]
+      },
+      {
+        "name": "Talon",
+        "sections": [
+          {
+            "name": "Wake him up",
+            "access_rules": [
+              "sword2,adultegg,eri_talon_a"
+            ],
+            "hosted_item": "adultcucco"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 515,
+            "y": 490
+          }
+        ]
       }
     ]
   }
