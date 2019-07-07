@@ -143,5 +143,21 @@
         "codes": "sos_played_yes"
       }
     ]
+  },
+  {
+    "name": "Epona Race",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/epona_race.png",
+        "img_mods": "@disabled",
+        "codes": "epona_race_no"
+      },
+      {
+        "img": "images/epona_race.png",
+        "codes": "epona_race_yes"
+      }
+    ]
   }
 ]

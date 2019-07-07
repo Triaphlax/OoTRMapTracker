@@ -296,7 +296,7 @@
             "name": "Links House Cow",
             "short_name": "Cow",
             "access_rules": [
-              "sword2,ocarina,epona,setting_cowsanity_yes,eri_link_a"
+              "epona_race_yes,setting_cowsanity_yes,eri_link_a"
             ],
             "visibility_rules": [
               "setting_cowsanity_yes"

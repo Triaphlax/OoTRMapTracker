@@ -2130,6 +2130,25 @@
                         "y": 663
                       }
                     ]
+                  },
+                  {
+                    "name": "Epona Race",
+                    "sections": [
+                      {
+                        "name": "Get Sub-0:50",
+                        "access_rules": [
+                          "epona_race_no,ocarina,epona,sword2"
+                        ],
+                        "hosted_item": "epona_race_yes"
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "adult",
+                        "x": 1300,
+                        "y": 630
+                      }
+                    ]
                   }
                 ]
               }
