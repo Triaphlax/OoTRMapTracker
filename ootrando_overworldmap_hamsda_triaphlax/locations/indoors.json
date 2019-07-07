@@ -709,6 +709,25 @@
         ]
       },
       {
+        "name": "Windmill",
+        "sections": [
+          {
+            "name": "Play Song of Storms",
+            "access_rules": [
+              "sos_played_no,ocarina,storm,eri_mill_c"
+            ],
+            "hosted_item": "sos_played_yes"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1580,
+            "y": 1510
+          }
+        ]
+      },
+      {
         "name": "Talon House",
         "sections": [
           {

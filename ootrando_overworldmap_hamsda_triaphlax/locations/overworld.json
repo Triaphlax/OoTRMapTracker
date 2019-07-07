@@ -2147,7 +2147,7 @@
                   {
                     "name": "CHILD & ADULT",
                     "access_rules": [
-                      "ocarina,lullaby,eri_mill_c"
+                      "sos_played_yes"
                     ],
                     "item_count": 1
                   }
