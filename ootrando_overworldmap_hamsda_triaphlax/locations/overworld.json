@@ -3032,7 +3032,10 @@
               "postzelda",
               "sword2",
               "$has_explosives",
-              "dinsfire,magic"
+              "dinsfire,magic",
+              "setting_lh_location_goron",
+              "setting_lh_location_dms",
+              "setting_wm_location_dms,$access_through_mill"
             ],
             "children": [
               {
@@ -3274,7 +3277,8 @@
                           "lift1",
                           "dinsfire,magic",
                           "ocarina,lullaby,sticks,postzelda",
-                          "ocarina,lullaby,sticks,sword2,hammer"
+                          "ocarina,lullaby,sticks,sword2,hammer",
+                          "setting_lh_location_goron"
                         ],
                         "item_count": 1
                       },
@@ -3283,7 +3287,8 @@
                         "access_rules": [
                           "sword2,$has_explosives",
                           "sword2,lift1",
-                          "sword2,bow"
+                          "sword2,bow",
+                          "setting_wm_location_dms,$access_through_mill"
                         ],
                         "item_count": 1
                       }
@@ -3296,7 +3301,8 @@
                           "lift1",
                           "dinsfire,magic",
                           "ocarina,lullaby,sticks,postzelda",
-                          "ocarina,lullaby,sticks,sword2,hammer"
+                          "ocarina,lullaby,sticks,sword2,hammer",
+                          "setting_lh_location_goron"
                         ],
                         "x": 1646,
                         "y": 128
@@ -3306,7 +3312,8 @@
                         "visibility_rules": [
                           "sword2,$has_explosives",
                           "sword2,lift1",
-                          "sword2,bow"
+                          "sword2,bow",
+                          "setting_wm_location_dms,$access_through_mill"
                         ],
                         "x": 1646,
                         "y": 128
@@ -3492,7 +3499,9 @@
                         "access_rules": [
                           "postzelda",
                           "$has_explosives",
-                          "dinsfire,magic"
+                          "dinsfire,magic",
+                          "setting_lh_location_goron",
+                          "setting_lh_location_dms"
                         ],
                         "item_count": 1
                       },
@@ -3510,7 +3519,9 @@
                         "visibility_rules": [
                           "postzelda",
                           "$has_explosives",
-                          "dinsfire,magic"
+                          "dinsfire,magic",
+                          "setting_lh_location_goron",
+                          "setting_lh_location_dms"
                         ],
                         "x": 1705,
                         "y": 158
@@ -3533,14 +3544,16 @@
                       {
                         "name": "CHILD",
                         "access_rules": [
-                          "$has_explosives"
+                          "$has_explosives",
+                          "setting_lh_location_dms"
                         ],
                         "item_count": 1
                       },
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "sword2,$can_blast"
+                          "sword2,$can_blast",
+                          "setting_wm_location_dms,$access_through_mill"
                         ],
                         "item_count": 1
                       }
@@ -3549,7 +3562,8 @@
                       {
                         "map": "child",
                         "visibility_rules": [
-                          "$has_explosives"
+                          "$has_explosives",
+                          "setting_lh_location_dms"
                         ],
                         "x": 1764,
                         "y": 66
@@ -3557,7 +3571,8 @@
                       {
                         "map": "adult",
                         "visibility_rules": [
-                          "sword2,$can_blast"
+                          "sword2,$can_blast",
+                          "setting_wm_location_dms,$access_through_mill"
                         ],
                         "x": 1764,
                         "y": 66
@@ -3573,7 +3588,8 @@
                       "sword2,ocarina,bolero,hoverboots",
                       "sword2,ocarina,bolero,hookshot",
                       "$link_the_goron",
-                      "{$hintable}"
+                      "{$hintable}",
+                      "setting_wm_location_dms,$access_through_mill"
                     ],
                     "sections": [
                       {
@@ -3781,11 +3797,13 @@
                         "name": "Check it",
                         "access_rules": [
                           "$can_blast",
+                          "setting_lh_location_dms",
                           "$link_the_goron",
                           "ocarina,bolero,setting_plant_no,beans",
                           "ocarina,bolero,bean_crater_yes",
                           "ocarina,bolero,hoverboots",
-                          "ocarina,bolero,hookshot"
+                          "ocarina,bolero,hookshot",
+                          "setting_wm_location_dms,$access_through_mill"
                         ],
                         "chest_unopened_img": "images/gossip_stone.png",
                         "chest_opened_img": "images/gossip_stone.png",
@@ -3863,7 +3881,9 @@
                           "ocarina,bolero,sword2,hoverboots",
                           "sword2,lift1",
                           "sword2,bow",
-                          "{ocarina,bolero}"
+                          "setting_lh_location_dms",
+                          "{ocarina,bolero}",
+                          "setting_wm_location_dms,$access_through_mill"
                         ],
                         "capture_item": true,
                         "chest_unopened_img": "images/HP.png",
@@ -3895,11 +3915,14 @@
                           "sword2,ocarina,bolero,bean_crater_yes",
                           "sword2,ocarina,bolero,hoverboots,[setting_plant_no],[beans]",
                           "sword2,ocarina,bolero,hoverboots,[bean_crater_yes]",
+                          "setting_wm_location_dms,$access_through_mill,hoverboots,[ocarina],[bolero],[setting_plant_no],[beans]",
+                          "setting_wm_location_dms,$access_through_mill,hoverboots,[ocarina],[bolero],[bean_crater_yes]",
                           "$link_the_goron,hoverboots,[ocarina],[bolero],[setting_plant_no],[beans]",
                           "$link_the_goron,hoverboots,[ocarina],[bolero],[bean_crater_yes]",
                           "sword2,hammer,hoverboots,[ocarina],[bolero],[setting_plant_no],[beans]",
                           "sword2,hammer,hoverboots,[ocarina],[bolero],[bean_crater_yes]",
                           "{$hintable}",
+                          "{setting_lh_location_dms}",
                           "{ocarina,bolero}",
                           "{$link_the_goron}",
                           "{sword2,hammer}"
@@ -3996,6 +4019,9 @@
                           "$can_blast,$can_child_attack",
                           "$can_blast,nuts",
                           "$can_blast,shield1",
+                          "setting_lh_location_dms,$can_child_attack",
+                          "setting_lh_location_dms,nuts",
+                          "setting_lh_location_dms,shield1",
                           "{$hintable}"
                         ],
                         "visibility_rules": [
@@ -4025,7 +4051,8 @@
                       {
                         "name": "GS36",
                         "access_rules": [
-                          "$can_blast,$can_child_attack"
+                          "$can_blast,$can_child_attack",
+                          "setting_lh_location_dms,$can_child_attack"
                         ],
                         "visibility_rules": [
                           "setting_skulltulas_all"
@@ -4639,6 +4666,7 @@
                   {
                     "name": "Frogs",
                     "access_rules": [
+                      "setting_lh_location_zora",
                       "$has_explosives",
                       "scale1",
                       "{$hintable}"
@@ -4673,7 +4701,8 @@
                     "name": "Magic Bean Salesman",
                     "access_rules": [
                       "$has_explosives",
-                      "scale1"
+                      "scale1",
+                      "setting_lh_location_zora"
                     ],
                     "sections": [
                       {
@@ -4700,7 +4729,8 @@
                         "name": "CHILD",
                         "access_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "item_count": 1
                       },
@@ -4717,7 +4747,8 @@
                         "map": "child",
                         "visibility_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "x": 2092,
                         "y": 540
@@ -4781,7 +4812,8 @@
                         "access_rules": [
                           "$has_explosives",
                           "scale1",
-                          "sword2,[hoverboots]"
+                          "sword2,[hoverboots]",
+                          "setting_lh_location_zora"
                         ],
                         "chest_unopened_img": "images/HP.png",
                         "chest_opened_img": "images/HP_grey.png",
@@ -4793,7 +4825,8 @@
                         "map": "child",
                         "visibility_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "x": 2037,
                         "y": 474
@@ -4817,7 +4850,8 @@
                         "access_rules": [
                           "$has_explosives",
                           "scale1",
-                          "sword2,[hoverboots]"
+                          "sword2,[hoverboots]",
+                          "setting_lh_location_zora"
                         ],
                         "chest_unopened_img": "images/HP.png",
                         "chest_opened_img": "images/HP_grey.png",
@@ -4829,7 +4863,8 @@
                         "map": "child",
                         "visibility_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "x": 2347,
                         "y": 425
@@ -4856,7 +4891,8 @@
                         "name": "CHILD",
                         "access_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "item_count": 1
                       },
@@ -4873,7 +4909,8 @@
                         "map": "child",
                         "visibility_rules": [
                           "$has_explosives",
-                          "scale1"
+                          "scale1",
+                          "setting_lh_location_zora"
                         ],
                         "x": 1940,
                         "y": 505
@@ -4922,7 +4959,8 @@
                         "name": "GS44 (N)",
                         "access_rules": [
                           "$has_explosives",
-                          "scale1,$can_child_attack"
+                          "scale1,$can_child_attack",
+                          "setting_lh_location_zora,$can_child_attack"
                         ],
                         "visibility_rules": [
                           "setting_skulltulas_all"
@@ -5061,6 +5099,7 @@
               {
                 "name": "Zoras Domain",
                 "access_rules": [
+                  "setting_lh_location_zora",
                   "$has_explosives,[ocarina],[lullaby]",
                   "scale1"
                 ],
@@ -5173,7 +5212,9 @@
                 "name": "Zoras Domain Frozen",
                 "access_rules": [
                   "sword2,ocarina,lullaby",
-                  "sword2,hoverboots,[ocarina],[lullaby]"
+                  "sword2,hoverboots,[ocarina],[lullaby]",
+                  "sword2,setting_tot_location_zora",
+                  "sword2,setting_wm_location_zora,$access_through_mill"
                 ],
                 "children": [
                   {
@@ -5250,7 +5291,8 @@
                     "name": "CHILD",
                     "access_rules": [
                       "$has_explosives,[ocarina],[lullaby]",
-                      "scale1"
+                      "scale1",
+                      "setting_lh_location_zora"
                     ],
                     "item_count": 1
                   },
@@ -5274,7 +5316,9 @@
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
-                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]"
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,setting_tot_location_zora",
+                      "sword2,setting_wm_location_zora,$access_through_mill"
                     ],
                     "item_count": 1
                   }
@@ -5284,7 +5328,8 @@
                     "map": "child",
                     "visibility_rules": [
                       "$has_explosives,[ocarina],[lullaby]",
-                      "scale1"
+                      "scale1",
+                      "setting_lh_location_zora"
                     ],
                     "x": 2619,
                     "y": 499
@@ -5309,7 +5354,9 @@
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
-                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]"
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,setting_tot_location_zora",
+                      "sword2,setting_wm_location_zora,$access_through_mill"
                     ],
                     "x": 2619,
                     "y": 499
@@ -5366,20 +5413,20 @@
                     "chest_unopened_img": "images/unknown.png",
                     "chest_opened_img": "images/map.png",
                     "access_rules": [
-                      "$has_explosives"
                     ],
                     "sections": [
                       {
                         "name": "CHILD",
                         "access_rules": [
-                          "$child_fountain"
+                          "$child_fountain,$has_explosives"
                         ],
                         "item_count": 1
                       },
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "$adult_fountain"
+                          "$adult_fountain,$has_explosives",
+                          "setting_wm_location_foun,$access_through_mill"
                         ],
                         "item_count": 1
                       }
@@ -5388,7 +5435,7 @@
                       {
                         "map": "child",
                         "visibility_rules": [
-                          "$child_fountain"
+                          "$child_fountain,$has_explosives"
                         ],
                         "x": 2553,
                         "y": 333
@@ -5396,7 +5443,8 @@
                       {
                         "map": "adult",
                         "visibility_rules": [
-                          "$adult_fountain"
+                          "$adult_fountain,$has_explosives",
+                          "setting_wm_location_foun,$access_through_mill"
                         ],
                         "x": 2553,
                         "y": 333
@@ -6223,7 +6271,8 @@
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "$colossus|adult,sword2,$has_explosives"
+                          "$colossus|adult,sword2,$has_explosives",
+                          "setting_wm_location_dc,$access_through_mill"
                         ],
                         "item_count": 1
                       }
@@ -6240,7 +6289,8 @@
                       {
                         "map": "adult",
                         "visibility_rules": [
-                          "$colossus|adult,sword2,$has_explosives"
+                          "$colossus|adult,sword2,$has_explosives",
+                          "setting_wm_location_dc,$access_through_mill"
                         ],
                         "x": 276,
                         "y": 297

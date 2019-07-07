@@ -420,18 +420,13 @@
         "codes": "setting_tot_location,setting_tot_location_dflt"
       },
       {
-        "img": "images/setting_tot_location_goron.png",
-        "codes": "setting_tot_location,setting_tot_location_goron",
-        "inherit_codes": false
-      },
-      {
-        "img": "images/setting_tot_location_dms.png",
-        "codes": "setting_tot_location,setting_tot_location_dms",
-        "inherit_codes": false
-      },
-      {
         "img": "images/setting_tot_location_zora.png",
         "codes": "setting_tot_location,setting_tot_location_zora",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_tot_location_dc.png",
+        "codes": "setting_tot_location,setting_tot_location_dc",
         "inherit_codes": false
       }
     ]
@@ -464,6 +459,11 @@
       {
         "img": "images/setting_wm_location_foun.png",
         "codes": "setting_wm_location,setting_wm_location_foun",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_lh_location_dc.png",
+        "codes": "setting_wm_location,setting_wm_location_dc",
         "inherit_codes": false
       }
     ]
