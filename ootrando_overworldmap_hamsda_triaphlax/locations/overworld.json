@@ -5240,9 +5240,17 @@
                     "name": "King Zora",
                     "access_rules": [
                       "$has_bottle,[wallet2]",
-                      "$has_bottle,$adult_fountain",
-                      "$has_bottle,@Ganons Castle/Water Trial",
-                      "$has_bottle,@Gerudo Training Grounds MQ/Before Heavy Block Chest"
+                      "$has_bottle,erd_ice_a,ice_reg",
+                      "$has_bottle,erd_ice_a,ice_mq",
+                      "$has_bottle,erd_ice_c,ice_mq,$has_explosives,sticks",
+                      "$has_bottle,erd_ice_c,ice_mq,$has_explosives,sling",
+                      "$has_bottle,erd_ice_c,ice_mq,$has_explosives,sword1",
+                      "$has_bottle,erd_ice_c,ice_mq,magic,dins,sword1",
+                      "$has_bottle,erd_ice_c,ice_mq,magic,dins,sticks",
+                      "$has_bottle,erd_ice_c,ice_mq,magic,dins,$has_projectile|child",
+                      "$has_bottle,$rainbow_bridge",
+                      "$has_bottle,erd_gtg_a,gtg_mq,bow,firearrow,magic,hookshot,[longshot]",
+                      "$has_bottle,erd_gtg_a,gtg_mq,bow,firearrow,magic,hookshot,[longshot]"
                     ],
                     "sections": [
                       {

@@ -456,6 +456,28 @@ function adult_fountain()
   end
 end
 
+function rainbow_bridge()
+  if has("sword2", 0) then
+    return 0
+  elseif has("bridge_open", 1)
+  or (has("bridge_vanilla", 1) and has("lacs_meds", 2) and has("lightarrow", 1))
+  or (has("bridge_stones", 1) and has("stones", 3))
+  or (has("bridge_medallions", 1) and medallions())
+  or (has("bridge_dungeons", 1) and medallions() and has("stones", 3))
+  or (has("bridge_100gs", 1) and has("token", 100))
+  then
+    return 1
+  end
+  return 0
+end
+
+function medallions()
+  if has("forestmed", 1) and has("noct_meds:2", 1) and has("lacs_meds", 2) and has("lightmed", 1) then
+    return 1
+  end
+  return 0
+end
+
 function has_bottle()
   local bottles = Tracker:ProviderCountForCode("bottle")
   local ruto = Tracker:ProviderCountForCode("ruto")
