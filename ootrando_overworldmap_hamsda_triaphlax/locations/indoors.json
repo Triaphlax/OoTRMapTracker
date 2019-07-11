@@ -320,7 +320,7 @@
           {
             "name": "Get Mask",
             "access_rules": [
-              "soldout","eri_hms"
+              "soldout,eri_hms"
             ],
             "hosted_item": "keaton"
           }
