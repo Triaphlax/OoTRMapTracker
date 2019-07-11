@@ -391,17 +391,11 @@ function dmc_central()
 end
 
 function child_fountain()
-  if has("ruto", 0) 
-  and has("open_fountain", 0) 
-  then
-    return 0
-  end
-
   local level = AccessibilityLevel.Normal
   if has("king_zora_moved_yes", 0) 
   and has("open_fountain", 0) 
   then
-    level = AccessibilityLevel.SequenceBreak
+    return 0
   end
 
   if has("scale1") or has("setting_lh_location_zora") then
