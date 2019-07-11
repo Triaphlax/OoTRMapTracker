@@ -233,26 +233,28 @@ function colossus_through_sptreg(age)
       end
     end
     if has("erd_spirit_a") and not (age == "child") then
-      if has("lift2") and bombcount == 1 then
+      if has("lift2") then
         if has_at_least("spirit_small_keys", 5) then
           return 1, AccessibilityLevel.Normal
         end
-        if has_at_least("spirit_small_keys", 4) and has("lift2") then
-          if bomblevel == AccessibilityLevel.SequenceBreak then
-            level = AccessibilityLevel.SequenceBreak
-          else
-            return 1, AccessibilityLevel.Normal
+        if bombcount == 1 then
+          if has_at_least("spirit_small_keys", 4) and has("lift2") then
+            if bomblevel == AccessibilityLevel.SequenceBreak then
+              level = AccessibilityLevel.SequenceBreak
+            else
+              return 1, AccessibilityLevel.Normal
+            end
           end
-        end
-        if has_at_least("spirit_small_keys", 3) and has("longshot") then
-          if bomblevel == AccessibilityLevel.SequenceBreak then
-            level = AccessibilityLevel.SequenceBreak
-          else
-            return 1, AccessibilityLevel.Normal
+          if has_at_least("spirit_small_keys", 3) and has("longshot") then
+            if bomblevel == AccessibilityLevel.SequenceBreak then
+              level = AccessibilityLevel.SequenceBreak
+            else
+              return 1, AccessibilityLevel.Normal
+            end
           end
-        end
-        if has_at_least("spirit_small_keys", 2) then
-          level = AccessibilityLevel.SequenceBreak
+          if has_at_least("spirit_small_keys", 2) then
+            level = AccessibilityLevel.SequenceBreak
+          end
         end
       end
     end
