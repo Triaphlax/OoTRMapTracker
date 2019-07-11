@@ -2023,6 +2023,12 @@
     ],
     "children": [
       {
+        "name": "SpT Adult",
+        "access_rules": [
+          "erd_spirit_a,lift2"
+        ]
+      },
+      {
         "name": "Child Left Chest",
         "access_rules": [
           "erd_spirit_c,boomerang",
@@ -2073,9 +2079,9 @@
       {
         "name": "Child Climb Enemies Chest",
         "access_rules": [
-          "spirit_small_keys:1,erd_spirit_c,erd_spirit_a,$has_projectile|both",
+          "spirit_small_keys:1,erd_spirit_c,@SpT Adult,$has_projectile|both",
           "spirit_small_keys:1,[spirit_small_keys:5],erd_spirit_c,$has_projectile|child",
-          "spirit_small_keys:1,[spirit_small_keys:2],erd_spirit_a,$has_projectile|adult"
+          "spirit_small_keys:1,[spirit_small_keys:2],@SpT Adult,$has_projectile|adult"
         ],
         "sections": [
           {
@@ -2121,8 +2127,8 @@
         "access_rules": [
           "spirit_small_keys:1,[spirit_small_keys:5],erd_spirit_c,$has_explosives,sticks",
           "spirit_small_keys:1,[spirit_small_keys:3],erd_spirit_c,$has_explosives,dinsfire,magic",
-          "spirit_small_keys:1,[spirit_small_keys:3],erd_spirit_a,$has_fire",
-          "spirit_small_keys:1,[spirit_small_keys:3],erd_spirit_a,bow,[$has_fire]"
+          "spirit_small_keys:1,[spirit_small_keys:3],@SpT Adult,$has_fire",
+          "spirit_small_keys:1,[spirit_small_keys:3],@SpT Adult,bow,[$has_fire]"
         ],
         "sections": [
           {
@@ -2146,8 +2152,8 @@
         "access_rules": [
           "spirit_small_keys:2,[spirit_small_keys:3],erd_spirit_c,$has_explosives,[longshot]",
           "spirit_small_keys:2,[spirit_small_keys:5],erd_spirit_c,$has_explosives",
-          "spirit_small_keys:2,[spirit_small_keys:3],erd_spirit_a,[$has_explosives],[longshot]",
-          "spirit_small_keys:2,[spirit_small_keys:5],erd_spirit_a",
+          "spirit_small_keys:2,[spirit_small_keys:3],@SpT Adult,[$has_explosives],[longshot]",
+          "spirit_small_keys:2,[spirit_small_keys:5],@SpT Adult",
           "{$hintable}"
         ],
         "sections": [
@@ -2171,7 +2177,7 @@
       {
         "name": "Compass Chest",
         "access_rules": [
-          "erd_spirit_a,ocarina,lullaby,hookshot"
+          "@SpT Adult,ocarina,lullaby,hookshot"
         ],
         "sections": [
           {
@@ -2193,9 +2199,9 @@
       {
         "name": "Early Adult Right Chest",
         "access_rules": [
-          "erd_spirit_a,hookshot",
-          "erd_spirit_a,bow",
-          "erd_spirit_a,bombchu"
+          "@SpT Adult,hookshot",
+          "@SpT Adult,bow",
+          "@SpT Adult,bombchu"
         ],
         "sections": [
           {
@@ -2217,7 +2223,7 @@
       {
         "name": "First Mirror Chests",
         "access_rules": [
-          "erd_spirit_a,spirit_small_keys:1,[spirit_small_keys:3]"
+          "@SpT Adult,spirit_small_keys:1,[spirit_small_keys:3]"
         ],
         "sections": [
           {
