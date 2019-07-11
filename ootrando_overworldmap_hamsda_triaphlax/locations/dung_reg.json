@@ -1076,21 +1076,26 @@
       },
       {
         "name": "Final Room",
-        "access_rules": [
-          "erd_ice_a,$has_bottle",
-          "erd_ice_c,$has_bottle,sling",
-          "erd_ice_c,$has_bottl0,sticks",
-          "erd_ice_c,$has_bottle,sword1",
-          "erd_ice_c,$has_bottle,magic,dins"
-        ],
         "sections": [
           {
             "name": "Iron Boots Chest",
+            "access_rules": [
+              "erd_ice_a,$has_bottle",
+              "erd_ice_c,$has_bottle,sling",
+              "erd_ice_c,$has_bottl0,sticks",
+              "erd_ice_c,$has_bottle,sword1",
+              "erd_ice_c,$has_bottle,magic,dins"
+            ],
             "item_count": 1
           },
           {
             "name": "Sheik in Ice Cavern",
             "access_rules": [
+              "erd_ice_a,$has_bottle",
+              "erd_ice_c,$has_bottle,sling",
+              "erd_ice_c,$has_bottl0,sticks",
+              "erd_ice_c,$has_bottle,sword1",
+              "erd_ice_c,$has_bottle,magic,dins",
               "{$hintable}"
             ],
             "capture_item": true,
