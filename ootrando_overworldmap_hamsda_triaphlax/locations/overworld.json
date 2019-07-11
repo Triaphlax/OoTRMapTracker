@@ -1053,6 +1053,16 @@
                 "sections": [
                   {
                     "name": "Check it",
+                    "access_rules": [
+                      "sling",
+                      "sticks",
+                      "$has_explosives",
+                      "sword1",
+                      "dinsfire,magic",
+                      "minuet",
+                      "sword2,[minuet]",
+                      "sword2,[saria]"
+                    ],
                     "chest_unopened_img": "images/gossip_stone.png",
                     "chest_opened_img": "images/gossip_stone.png",
                     "clear_as_group": false,
@@ -1081,6 +1091,16 @@
                 "sections": [
                   {
                     "name": "Check it",
+                    "access_rules": [
+                      "sling",
+                      "sticks",
+                      "$has_explosives",
+                      "sword1",
+                      "dinsfire,magic",
+                      "minuet",
+                      "sword2,[minuet]",
+                      "sword2,[saria]"
+                    ],
                     "chest_unopened_img": "images/gossip_stone.png",
                     "chest_opened_img": "images/gossip_stone.png",
                     "item_count": 1
@@ -5068,6 +5088,12 @@
                     "sections": [
                       {
                         "name": "Check it",
+                        "access_rules": [
+                          "scale1",
+                          "$has_explosives",
+                          "setting_lh_location_zora",
+                          "sword2"
+                        ],
                         "chest_unopened_img": "images/gossip_stone.png",
                         "chest_opened_img": "images/gossip_stone.png",
                         "item_count": 1
@@ -5095,6 +5121,12 @@
                     "sections": [
                       {
                         "name": "Check it",
+                        "access_rules": [
+                          "scale1",
+                          "$has_explosives",
+                          "setting_lh_location_zora",
+                          "sword2"
+                        ],
                         "chest_unopened_img": "images/gossip_stone.png",
                         "chest_opened_img": "images/gossip_stone.png",
                         "item_count": 1
