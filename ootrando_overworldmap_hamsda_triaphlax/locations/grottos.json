@@ -88,7 +88,6 @@
             "sections": [
               {
                 "name": "DMT Grotto Cow",
-                "short_name": "Cow",
                 "access_rules": [
                   "erg_cow,ocarina,epona,setting_cowsanity_yes"
                 ],
@@ -161,7 +160,6 @@
           },
           {
             "name": "Composer Grave Song",
-            "short_name": "Royal Tomb",
             "sections": [
               {
                 "name": "Song",
@@ -190,7 +188,6 @@
           },
           {
             "name": "Composer Grave Chest",
-            "short_name": "Royal Tomb",
             "sections": [
               {
                 "name": "Torches",
@@ -214,7 +211,6 @@
           },
           {
             "name": "Heart Piece Grave",
-            "short_name": "Redead Grave",
             "sections": [
               {
                 "name": "Play Suns Song",
@@ -321,7 +317,6 @@
           },
           {
             "name": "Webs Grotto Cow",
-            "short_name": "Field Valley Grotto Cow",
             "access_rules": [
               "setting_cowsanity_yes"
             ],
@@ -350,7 +345,6 @@
           },
           {
             "name": "Webs Grotto Gossip Stone",
-            "short_name": "Field Valley Grotto Gossip Stone",
             "access_rules": [
               "$hintable"
             ],
