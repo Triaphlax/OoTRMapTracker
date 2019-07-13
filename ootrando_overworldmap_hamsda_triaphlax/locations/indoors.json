@@ -691,7 +691,7 @@
             "name": "Song",
             "access_rules": [
               "eri_mill_a,sword2,ocarina",
-              "erg_dampe_a,sword2,ocarina",
+              "erg_dampe_a,sword2,ocarina,time",
               "{$hintable}"
             ],
             "capture_item": true,
@@ -724,6 +724,27 @@
             "map": "indoors1",
             "x": 1580,
             "y": 1510
+          }
+        ]
+      },
+      {
+        "name": "Windmill Entrance from Inside",
+        "chest_unopened_img": "images/unknown.png",
+        "chest_opened_img": "images/map.png",
+        "sections": [
+          {
+            "name": "ADULT",
+            "access_rules": [
+              "erg_dampe_a,sword2,ocarina,time"
+            ],
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "x": 1495,
+            "y": 1545
           }
         ]
       },
