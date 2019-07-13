@@ -186,7 +186,7 @@ function colossus(age)
   end
 
   if has("setting_wm_location_dc", 1)
-  and access_through_mill()
+  and access_through_mill() == 1
   and not (age == "child")
   then
     return 1

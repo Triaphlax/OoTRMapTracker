@@ -462,7 +462,7 @@
         "inherit_codes": false
       },
       {
-        "img": "images/setting_lh_location_dc.png",
+        "img": "images/setting_wm_location_dc.png",
         "codes": "setting_wm_location,setting_wm_location_dc",
         "inherit_codes": false
       }
