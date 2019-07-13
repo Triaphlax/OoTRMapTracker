@@ -1978,7 +1978,7 @@
       {
         "name": "SpTMQ Shared as Child",
         "access_rules": [
-          "@SpTMQ Child,bombchu,spirit_small_keys:1,[spirit_small_keys:2]"
+          "@SpTMQ Child,bombchu,spirit_small_keys:2"
         ]
       },
       {
@@ -2362,9 +2362,8 @@
       {
         "name": "Sun Block Room Chest",
         "access_rules": [
-          "@SpTMQ Shared as Adult,longshot,lift2",
-          "@SpTMQ Shared as Adult,ocarina,time",
-          "@SpTMQ Shared as Child,ocarina,time",
+          "@SpTMQ Shared as Adult",
+          "@SpTMQ Shared as Child,ocarina,time"
         ],
         "sections": [
           {
