@@ -895,7 +895,7 @@
           {
             "name": "Big Lava Room",
             "access_rules": [
-              "hammer"
+              "erd_fire_a,hammer"
             ],
             "sections": [
               {
@@ -1978,7 +1978,7 @@
       {
         "name": "SpTMQ Shared as Child",
         "access_rules": [
-          "@SpTMQ Child,bombchu,spirit_small_keys:1,[spirit_small_keys:2]"
+          "@SpTMQ Child,bombchu,spirit_small_keys:2"
         ]
       },
       {
@@ -2362,9 +2362,8 @@
       {
         "name": "Sun Block Room Chest",
         "access_rules": [
-          "@SpTMQ Shared as Adult,longshot,lift2",
-          "@SpTMQ Shared as Adult,ocarina,time",
-          "@SpTMQ Shared as Child,ocarina,time",
+          "@SpTMQ Shared as Adult",
+          "@SpTMQ Shared as Child,ocarina,time"
         ],
         "sections": [
           {
@@ -2889,12 +2888,7 @@
     "name": "Ganons Castle MQ",
     "parent": "Ganons Castle Grounds",
     "access_rules": [
-      "gc_mq,bridge_open,sword2",
-      "gc_mq,bridge_vanilla,sword2,lacs_meds:2,lightarrow",
-      "gc_mq,bridge_stones,sword2,stones:3",
-      "gc_mq,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
-      "gc_mq,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
-      "gc_mq,bridge_100gs,sword2,token:100"
+      "gc_mq,$rainbow_bridge"
     ],
     "children": [
       {

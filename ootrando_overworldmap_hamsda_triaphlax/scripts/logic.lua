@@ -186,7 +186,7 @@ function colossus(age)
   end
 
   if has("setting_wm_location_dc", 1)
-  and access_through_mill()
+  and access_through_mill() == 1
   and not (age == "child")
   then
     return 1
@@ -233,26 +233,28 @@ function colossus_through_sptreg(age)
       end
     end
     if has("erd_spirit_a") and not (age == "child") then
-      if has("lift2") and bombcount == 1 then
+      if has("lift2") then
         if has_at_least("spirit_small_keys", 5) then
           return 1, AccessibilityLevel.Normal
         end
-        if has_at_least("spirit_small_keys", 4) and has("lift2") then
-          if bomblevel == AccessibilityLevel.SequenceBreak then
-            level = AccessibilityLevel.SequenceBreak
-          else
-            return 1, AccessibilityLevel.Normal
+        if bombcount == 1 then
+          if has_at_least("spirit_small_keys", 4) and has("lift2") then
+            if bomblevel == AccessibilityLevel.SequenceBreak then
+              level = AccessibilityLevel.SequenceBreak
+            else
+              return 1, AccessibilityLevel.Normal
+            end
           end
-        end
-        if has_at_least("spirit_small_keys", 3) and has("longshot") then
-          if bomblevel == AccessibilityLevel.SequenceBreak then
-            level = AccessibilityLevel.SequenceBreak
-          else
-            return 1, AccessibilityLevel.Normal
+          if has_at_least("spirit_small_keys", 3) and has("longshot") then
+            if bomblevel == AccessibilityLevel.SequenceBreak then
+              level = AccessibilityLevel.SequenceBreak
+            else
+              return 1, AccessibilityLevel.Normal
+            end
           end
-        end
-        if has_at_least("spirit_small_keys", 2) then
-          level = AccessibilityLevel.SequenceBreak
+          if has_at_least("spirit_small_keys", 2) then
+            level = AccessibilityLevel.SequenceBreak
+          end
         end
       end
     end
@@ -389,17 +391,11 @@ function dmc_central()
 end
 
 function child_fountain()
-  if has("ruto", 0) 
-  and has("open_fountain", 0) 
-  then
-    return 0
-  end
-
   local level = AccessibilityLevel.Normal
   if has("king_zora_moved_yes", 0) 
   and has("open_fountain", 0) 
   then
-    level = AccessibilityLevel.SequenceBreak
+    return 0
   end
 
   if has("scale1") or has("setting_lh_location_zora") then
@@ -458,6 +454,28 @@ function adult_fountain()
     end
     return 1, level
   end
+end
+
+function rainbow_bridge()
+  if has("sword2", 0) then
+    return 0
+  elseif has("bridge_open", 1)
+  or (has("bridge_vanilla", 1) and has("lacs_meds", 2) and has("lightarrow", 1))
+  or (has("bridge_stones", 1) and has("stones", 3))
+  or (has("bridge_medallions", 1) and medallions())
+  or (has("bridge_dungeons", 1) and medallions() and has("stones", 3))
+  or (has("bridge_100gs", 1) and has("token", 100))
+  then
+    return 1
+  end
+  return 0
+end
+
+function medallions()
+  if has("forestmed", 1) and has("noct_meds:2", 1) and has("lacs_meds", 2) and has("lightmed", 1) then
+    return 1
+  end
+  return 0
 end
 
 function has_bottle()

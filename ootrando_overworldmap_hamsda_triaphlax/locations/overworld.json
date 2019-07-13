@@ -1053,6 +1053,16 @@
                 "sections": [
                   {
                     "name": "Check it",
+                    "access_rules": [
+                      "sling",
+                      "sticks",
+                      "$has_explosives",
+                      "sword1",
+                      "dinsfire,magic",
+                      "minuet",
+                      "sword2,[minuet]",
+                      "sword2,[saria]"
+                    ],
                     "chest_unopened_img": "images/gossip_stone.png",
                     "chest_opened_img": "images/gossip_stone.png",
                     "clear_as_group": false,
@@ -1081,6 +1091,16 @@
                 "sections": [
                   {
                     "name": "Check it",
+                    "access_rules": [
+                      "sling",
+                      "sticks",
+                      "$has_explosives",
+                      "sword1",
+                      "dinsfire,magic",
+                      "minuet",
+                      "sword2,[minuet]",
+                      "sword2,[saria]"
+                    ],
                     "chest_unopened_img": "images/gossip_stone.png",
                     "chest_opened_img": "images/gossip_stone.png",
                     "item_count": 1
@@ -1421,7 +1441,7 @@
                   {
                     "name": "ADULT",
                     "access_rules": [
-                      "sword2,hammer,$has_explosives"
+                      "sword2,hammer"
                     ],
                     "item_count": 1
                   }
@@ -1438,7 +1458,7 @@
                   {
                     "map": "adult",
                     "visibility_rules": [
-                      "sword2,hammer,$has_explosives"
+                      "sword2,hammer"
                     ],
                     "x": 972,
                     "y": 658
@@ -3214,9 +3234,7 @@
                       {
                         "name": "ADULT",
                         "access_rules": [
-                          "ocarina,time,redtunic",
-                          "ocarina,time,longshot",
-                          "ocarina,time,nayruslove,magic",
+                          "ocarina,time",
                           "hookshot,redtunic",
                           "hookshot,nayruslove,magic"
                         ],
@@ -4125,6 +4143,7 @@
           },
           {
             "name": "Fire Temple Entrance",
+            "color": "#a01009",
             "chest_unopened_img": "images/unknown.png",
             "chest_opened_img": "images/map.png",
             "sections": [
@@ -4164,6 +4183,7 @@
           },
           {
             "name": "Mountain Crater Bean Patch",
+            "color": "#a01009",
             "access_rules": [
               "ocarina,bolero"
             ],
@@ -5068,6 +5088,12 @@
                     "sections": [
                       {
                         "name": "Check it",
+                        "access_rules": [
+                          "scale1",
+                          "$has_explosives",
+                          "setting_lh_location_zora",
+                          "sword2"
+                        ],
                         "chest_unopened_img": "images/gossip_stone.png",
                         "chest_opened_img": "images/gossip_stone.png",
                         "item_count": 1
@@ -5095,6 +5121,12 @@
                     "sections": [
                       {
                         "name": "Check it",
+                        "access_rules": [
+                          "scale1",
+                          "$has_explosives",
+                          "setting_lh_location_zora",
+                          "sword2"
+                        ],
                         "chest_unopened_img": "images/gossip_stone.png",
                         "chest_opened_img": "images/gossip_stone.png",
                         "item_count": 1
@@ -5159,27 +5191,6 @@
                     ]
                   },
                   {
-                    "name": "Zoras Domain Storms Grotto Entrance",
-                    "chest_unopened_img": "images/unknown.png",
-                    "chest_opened_img": "images/map.png",
-                    "access_rules": [
-                      "ocarina, storm"
-                    ],
-                    "sections": [
-                      {
-                        "name": "CHILD",
-                        "item_count": 1
-                      }
-                    ],
-                    "map_locations": [
-                      {
-                        "map": "child",
-                        "x": 2540,
-                        "y": 480
-                      }
-                    ]
-                  },
-                  {
                     "name": "King Zora Moves",
                     "sections": [
                       {
@@ -5240,9 +5251,17 @@
                     "name": "King Zora",
                     "access_rules": [
                       "$has_bottle,[wallet2]",
-                      "$has_bottle,$adult_fountain",
-                      "$has_bottle,@Ganons Castle/Water Trial",
-                      "$has_bottle,@Gerudo Training Grounds MQ/Before Heavy Block Chest"
+                      "$has_bottle,erd_ice_a,ice_reg",
+                      "$has_bottle,erd_ice_a,ice_mq",
+                      "$has_bottle,erd_ice_c,ice_mq,$has_explosives,sticks",
+                      "$has_bottle,erd_ice_c,ice_mq,$has_explosives,sling",
+                      "$has_bottle,erd_ice_c,ice_mq,$has_explosives,sword1",
+                      "$has_bottle,erd_ice_c,ice_mq,magic,dins,sword1",
+                      "$has_bottle,erd_ice_c,ice_mq,magic,dins,sticks",
+                      "$has_bottle,erd_ice_c,ice_mq,magic,dins,$has_projectile|child",
+                      "$has_bottle,$rainbow_bridge",
+                      "$has_bottle,erd_gtg_a,gtg_mq,bow,firearrow,magic,hookshot,[longshot]",
+                      "$has_bottle,erd_gtg_a,gtg_mq,bow,firearrow,magic,hookshot,[longshot]"
                     ],
                     "sections": [
                       {
@@ -5379,6 +5398,58 @@
                     ],
                     "x": 2619,
                     "y": 499
+                  }
+                ]
+              },
+              {
+                "name": "Zoras Domain Storms Grotto Entrance",
+                "chest_unopened_img": "images/unknown.png",
+                "chest_opened_img": "images/map.png",
+                "access_rules": [
+                  "ocarina, storm"
+                ],
+                "sections": [
+                  {
+                    "name": "CHILD",
+                    "access_rules": [
+                      "$has_explosives,[ocarina],[lullaby]",
+                      "scale1",
+                      "setting_lh_location_zora"
+                    ],
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2,ocarina,lullaby",
+                      "sword2,hoverboots,[ocarina],[lullaby]",
+                      "sword2,setting_tot_location_zora",
+                      "sword2,setting_wm_location_zora,$access_through_mill"
+                    ],
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "child",
+                    "visibility_rules": [
+                      "$has_explosives,[ocarina],[lullaby]",
+                      "scale1",
+                      "setting_lh_location_zora"
+                    ],
+                    "x": 2540,
+                    "y": 480
+                  },
+                  {
+                    "map": "adult",
+                    "visibilty_rules": [
+                      "sword2,ocarina,lullaby",
+                      "sword2,hoverboots,[ocarina],[lullaby]",
+                      "sword2,setting_tot_location_zora",
+                      "sword2,setting_wm_location_zora,$access_through_mill"
+                    ],
+                    "x": 2540,
+                    "y": 480
                   }
                 ]
               },

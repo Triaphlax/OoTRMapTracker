@@ -383,6 +383,9 @@
         "sections": [
           {
             "name": "Check it",
+            "access_rules": [
+              "$hintable"
+            ],
             "chest_unopened_img": "images/gossip_stone.png",
             "chest_opened_img": "images/gossip_stone.png",
             "item_count": 1
