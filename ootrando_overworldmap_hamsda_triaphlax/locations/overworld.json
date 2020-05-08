@@ -35,7 +35,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -57,11 +64,18 @@
                 "short_name": "Kokiri Storms Grotto",
                 "chest_unopened_img": "images/unknown.png",
                 "chest_opened_img": "images/map.png",
+                "access_rules": [
+                  "ocarina,storm"
+                ],
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
                     "access_rules": [
-                      "ocarina,storm"
+                      "sword2"
                     ],
                     "item_count": 1
                   }
@@ -85,7 +99,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -108,7 +129,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -159,7 +187,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -182,7 +217,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -205,7 +247,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -371,7 +420,17 @@
                 ],
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "access_rules": [
+                      "sword1,shield1"
+                    ],
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -1312,7 +1371,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -1646,7 +1712,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -1708,7 +1781,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -1957,7 +2037,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -1980,7 +2067,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -2003,7 +2097,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -2182,11 +2283,18 @@
                 "name": "Bottom of the Well Entrance",
                 "chest_unopened_img": "images/unknown.png",
                 "chest_opened_img": "images/map.png",
+                "access_rules": [
+                  "sos_played_yes"
+                ],
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
                     "access_rules": [
-                      "sos_played_yes"
+                      "sword2"
                     ],
                     "item_count": 1
                   }
@@ -2251,7 +2359,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -2274,7 +2389,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -2297,7 +2419,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -2320,7 +2449,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -2385,7 +2521,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -2517,7 +2660,14 @@
                 "chest_opened_img": "images/map.png",
                 "sections": [
                   {
-                    "name": "CHILD & ADULT",
+                    "name": "CHILD",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "ADULT",
+                    "access_rules": [
+                      "sword2"
+                    ],
                     "item_count": 1
                   }
                 ],
@@ -2756,11 +2906,18 @@
                     "name": "Shadow Temple Entrance",
                     "chest_unopened_img": "images/unknown.png",
                     "chest_opened_img": "images/map.png",
+                    "access_rules": [
+                      "ocarina,nocturne,magic,dins"
+                    ],
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
                         "access_rules": [
-                          "ocarina,nocturne,magic,dins"
+                          "sword2"
                         ],
                         "item_count": 1
                       }
@@ -2823,7 +2980,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -2847,7 +3011,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -2908,7 +3079,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -2950,7 +3128,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -4392,7 +4577,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
@@ -4416,7 +4608,14 @@
                     "chest_opened_img": "images/map.png",
                     "sections": [
                       {
-                        "name": "CHILD & ADULT",
+                        "name": "CHILD",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "ADULT",
+                        "access_rules": [
+                          "sword2"
+                        ],
                         "item_count": 1
                       }
                     ],
