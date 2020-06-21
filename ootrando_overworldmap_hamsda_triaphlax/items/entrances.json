@@ -252,11 +252,6 @@
         "img": "images/eri/link.png",
         "img_mods": "overlay|images/er_child.png",
         "codes": "eri_link,eri_link_c"
-      },
-      {
-        "img": "images/eri/link.png",
-        "img_mods": "overlay|images/er_adult.png",
-        "codes": "eri_link,eri_link_a"
       }
     ]
   },
