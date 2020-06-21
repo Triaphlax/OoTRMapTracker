@@ -421,9 +421,6 @@
                 "sections": [
                   {
                     "name": "CHILD",
-                    "access_rules": [
-                      "sword1,shield1"
-                    ],
                     "item_count": 1
                   },
                   {
