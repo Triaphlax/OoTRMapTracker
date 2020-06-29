@@ -75,7 +75,45 @@
             "visibility_rules": [
               "setting_shopsanity_yes"
             ],
-            "x": 1337,
+            "x": 1257,
+            "y": 160
+          }
+        ]
+      },
+      {
+        "name": "Adult Bazaar",
+        "access_rules": [
+          "setting_shopsanity_yes,eri_adbaz"
+        ],
+        "sections": [
+          {
+            "name": "Item 1",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 2",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 3",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 4",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "visibility_rules": [
+              "setting_shopsanity_yes"
+            ],
+            "x": 1387,
             "y": 155
           }
         ]
@@ -119,6 +157,44 @@
         ]
       },
       {
+        "name": "Adult Potion Shop",
+        "access_rules": [
+          "setting_shopsanity_yes,eri_adpot_a"
+        ],
+        "sections": [
+          {
+            "name": "Item 1",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 2",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 3",
+            "capture_item": true,
+            "item_count": 1
+          },
+          {
+            "name": "Item 4",
+            "capture_item": true,
+            "item_count": 1
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "indoors1",
+            "visibility_rules": [
+              "setting_shopsanity_yes"
+            ],
+            "x": 1000,
+            "y": 530
+          }
+        ]
+      },
+      {
         "name": "Bombchu Shop",
         "access_rules": [
           "setting_shopsanity_yes,eri_chush"
@@ -153,44 +229,6 @@
             ],
             "x": 2145,
             "y": 145
-          }
-        ]
-      },
-      {
-        "name": "Adult Bazaar",
-        "access_rules": [
-          "setting_shopsanity_yes,eri_adbaz"
-        ],
-        "sections": [
-          {
-            "name": "Item 1",
-            "capture_item": true,
-            "item_count": 1
-          },
-          {
-            "name": "Item 2",
-            "capture_item": true,
-            "item_count": 1
-          },
-          {
-            "name": "Item 3",
-            "capture_item": true,
-            "item_count": 1
-          },
-          {
-            "name": "Item 4",
-            "capture_item": true,
-            "item_count": 1
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "indoors1",
-            "visibility_rules": [
-              "setting_shopsanity_yes"
-            ],
-            "x": 950,
-            "y": 500
           }
         ]
       },

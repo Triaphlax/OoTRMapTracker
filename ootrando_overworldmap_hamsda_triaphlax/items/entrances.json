@@ -234,12 +234,6 @@
     "codes": "erg_hpgr"
   },
   {
-    "name": "House of Skulltula",
-    "type": "toggle",
-    "img": "images/eri/hos.png",
-    "codes": "eri_hos"
-  },
-  {
     "name": "Link's House",
     "type": "progressive_toggle",
     "loop": true,
@@ -562,6 +556,33 @@
     "type": "toggle",
     "img": "images/eri/zorsh.png",
     "codes": "eri_zorsh"
+  },
+  {
+    "name": "House of Skulltula",
+    "type": "toggle",
+    "img": "images/eri/hos.png",
+    "codes": "eri_hos"
+  },
+  {
+    "name": "Adult Potion Shop",
+    "type": "progressive_toggle",
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/eri/adpot.png",
+        "codes": "eri_adpot,eri_adpot_c,eri_adpot_a"
+      },
+      {
+        "img": "images/eri/adpot.png",
+        "img_mods": "overlay|images/er_child.png",
+        "codes": "eri_adpot,eri_adpot_c"
+      },
+      {
+        "img": "images/eri/adpot.png",
+        "img_mods": "overlay|images/er_adult.png",
+        "codes": "eri_adpot,eri_adpot_a"
+      }
+    ]
   },
   {
     "name": "Deku Tree",
