@@ -6287,8 +6287,7 @@
                           {
                             "name": "ADULT",
                             "access_rules": [
-                              "[carpenter_rescue],$gtg_card",
-                              "gerudo_fortress_open,$gtg_card"
+                              "$gerudo_card"
                             ],
                             "item_count": 1
                           }
