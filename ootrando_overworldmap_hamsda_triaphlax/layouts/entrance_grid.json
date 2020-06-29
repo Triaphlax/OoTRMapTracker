@@ -126,13 +126,6 @@
             "margin": "1,2",
             "width": 32,
             "height": 24
-          },
-          {
-            "type": "item",
-            "item": "eri_hos",
-            "margin": "1,2",
-            "width": 32,
-            "height": 24
           }
         ]
       },
@@ -340,6 +333,27 @@
           {
             "type": "item",
             "item": "eri_zorsh",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "5,0",
+        "content": [
+          {
+            "type": "item",
+            "item": "eri_hos",
+            "margin": "1,2",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "type": "item",
+            "item": "eri_adpot",
             "margin": "1,2",
             "width": 32,
             "height": 24
