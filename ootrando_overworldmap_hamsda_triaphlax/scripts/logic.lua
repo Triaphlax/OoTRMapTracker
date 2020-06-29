@@ -130,6 +130,16 @@ function has_zora_tunic()
   end
 end
 
+function gerudo_card()
+local card = has("card")
+if has("setting_shuffle_card_yes") then
+  return card and 1 or 0
+else
+  local level = card and AccessibilityLevel.Normal or AccessibilityLevel.SequenceBreak
+  return 1, level
+end
+end
+
 function can_leave_forest()
   if has("open_forest")
   or has("closed_deku")
@@ -159,15 +169,32 @@ function gerudo_bridge()
 end
 
 function wasteland()
-  local count, level = gerudo_bridge()
-  if has("carpenter_rescue", 0) then
-    level = AccessibilityLevel.SequenceBreak
-  end
-  if has("hoverboots", 0)
-  and has("longshot", 0)
+  local count = 0
+  local level = AccessibilityLevel.Normal
+  
+  local bridge_count, bridge_level = gerudo_bridge()
+  local card_count, card_level = gerudo_card()
+
+  if bridge_count > 0
+  and card_count > 0
   then
-    level = AccessibilityLevel.SequenceBreak
+    count = 1
+
+    if bridge_level == AccessibilityLevel.SequenceBreak
+    or card_level == AccessibilityLevel.SequenceBreak
+    or has("hoverboots", 0) and has("longshot", 0)
+    then
+      level = AccessibilityLevel.SequenceBreak
+    end
   end
+
+  if count == 0
+  and has("ocarina")
+  and has("requiem")
+  then
+    return 1, AccessibilityLevel.SequenceBreak
+  end
+
   return count, level
 end
 
@@ -310,26 +337,27 @@ function colossus_through_fortress(age)
     local bridge = gerudo_bridge()
     if bridge == 0 then
       return 0
-    else
-      local level = AccessibilityLevel.Normal
-      if has("carpenter_rescue", 0) then
-        level = AccessibilityLevel.SequenceBreak
-      end
-      if has("hoverboots", 0)
-      and has("longshot", 0)
-      then
-        level = AccessibilityLevel.SequenceBreak
-      end
-      if has("setting_lens_chest", 0) 
-      and (has("lens", 0) 
-      or has("magic", 0)) 
-      then
-        level = AccessibilityLevel.SequenceBreak
-      end
-      return 1, level
     end
-  else
-    return 0
+    local card_count, card_level = gerudo_card()
+    if card_count == 0 then
+      return 0
+    end
+    level = card_level
+
+    if has("hoverboots", 0)
+    and has("longshot", 0)
+    then
+      level = AccessibilityLevel.SequenceBreak
+    end
+
+    if has("setting_lens_chest", 0) 
+    and (has("lens", 0) 
+    or has("magic", 0)) 
+    then
+      level = AccessibilityLevel.SequenceBreak
+    end
+
+    return 1, level
   end
 end
 
