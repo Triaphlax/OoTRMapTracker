@@ -983,8 +983,8 @@
                   {
                     "name": "ADULT",
                     "access_rules": [
-                      "sword2,[minuet]",
-                      "sword2,[saria]"
+                      "sword2,[ocarina],[minuet]",
+                      "sword2,[ocarina],[saria]"
                     ],
                     "item_count": 1
                   }
