@@ -121,10 +121,27 @@
         ]
       },
       {
+        "name": "Ledge Access as Adult",
+        "access_rules": [
+          "erd_deku_a"
+        ]
+      },
+      {
+        "name": "Ledge Access as Child",
+        "access_rules": [
+          "erd_deku_c,sling,sticks",
+          "erd_deku_c,sling,dinsfire,magic",
+          "@Ledge Access as Adult"
+        ]
+      },
+      {
         "name": "Before Spinning Log",
         "access_rules": [
           "@Slingshot Room Back,erd_deku_c,sling",
-          "@Slingshot Room Back,erd_deku_a,bow"
+          "@Slingshot Room Back,erd_deku_a,bow",
+          "@Ledge Access as Child,nuts,sticks",
+          "@Ledge Access as Child,sword1",
+          "@Ledge Access as Child,$has_projectile|child"
         ],
         "sections": [
           {
@@ -164,19 +181,6 @@
               "deku_mq"
             ]
           }
-        ]
-      },
-      {
-        "name": "Ledge Access as Child",
-        "access_rules": [
-          "erd_deku_c,sling,sticks",
-          "erd_deku_c,sling,dinsfire,magic"
-        ]
-      },
-      {
-        "name": "Ledge Access as Adult",
-        "access_rules": [
-          "erd_deku_a"
         ]
       },
       {
