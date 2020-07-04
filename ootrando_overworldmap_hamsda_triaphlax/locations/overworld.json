@@ -5503,7 +5503,7 @@
                       "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
                       "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
                       "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
-                      "sword2,ocarina,lullaby,$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,ocarina,lullaby,$has_bottle,gtg_mq,[carpenter_rescue],$gerudo_card,$has_fire,hookshot,[longshot]",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,[wallet2]",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,$adult_fountain",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_open,sword2",
@@ -5512,7 +5512,7 @@
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
-                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gerudo_card,$has_fire,hookshot,[longshot]",
                       "sword2,setting_tot_location_zora",
                       "sword2,setting_wm_location_zora,$access_through_mill"
                     ],
@@ -5541,7 +5541,7 @@
                       "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
                       "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
                       "sword2,ocarina,lullaby,$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
-                      "sword2,ocarina,lullaby,$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,ocarina,lullaby,$has_bottle,gtg_mq,[carpenter_rescue],$gerudo_card,$has_fire,hookshot,[longshot]",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,[wallet2]",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,$adult_fountain",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_open,sword2",
@@ -5550,7 +5550,7 @@
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_medallions,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_dungeons,sword2,forestmed,noct_meds:2,lacs_meds:2,lightmed,stones:3",
                       "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gc_reg,bridge_100gs,sword2,token:100",
-                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gtg_card,$has_fire,hookshot,[longshot]",
+                      "sword2,hoverboots,[ocarina],[lullaby],$has_bottle,gtg_mq,[carpenter_rescue],$gerudo_card,$has_fire,hookshot,[longshot]",
                       "sword2,setting_tot_location_zora",
                       "sword2,setting_wm_location_zora,$access_through_mill"
                     ],
@@ -6242,7 +6242,7 @@
                     "name": "Gerudo Fortress",
                     "children": [
                       {
-                        "name": "Gerudo Traning Grounds Entrance",
+                        "name": "Gerudo Training Grounds Entrance",
                         "chest_unopened_img": "images/unknown.png",
                         "chest_opened_img": "images/map.png",
                         "sections": [

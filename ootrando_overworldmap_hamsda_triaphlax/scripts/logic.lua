@@ -130,16 +130,6 @@ function has_zora_tunic()
   end
 end
 
-function gerudo_card()
-local card = has("card")
-if has("setting_shuffle_card_yes") then
-  return card and 1 or 0
-else
-  local level = card and AccessibilityLevel.Normal or AccessibilityLevel.SequenceBreak
-  return 1, level
-end
-end
-
 function can_leave_forest()
   if has("open_forest")
   or has("closed_deku")
@@ -168,23 +158,63 @@ function gerudo_bridge()
   end
 end
 
+function gerudo_card()
+  if has("gerudocard")
+  then
+    return 1, AccessibilityLevel.Normal
+  end
+  return 0
+  -- if has("setting_shuffle_card_yes") then
+  --   return card
+  -- else
+  --   local level = (card and AccessibilityLevel.Normal) or AccessibilityLevel.SequenceBreak
+  --   return 1, level
+  -- end
+end
+
+function quicksand()
+  if has("longshot")
+  or has("hoverboots")
+  then
+    return 1, AccessibilityLevel.Normal
+  else
+    return 1, AccessibilityLevel.SequenceBreak
+  end
+end
+
+function wasteland_forward()
+  if has("setting_lens_chest")
+  or has("lens") and has("magic")
+  then
+    return 1
+  else
+    return 1, AccessibilityLevel.SequenceBreak
+  end
+end
+
+function wasteland_reverse()
+  return 1, AccessibilityLevel.SequenceBreak
+end
+
 function wasteland()
   local count = 0
   local level = AccessibilityLevel.Normal
   
   local bridge_count, bridge_level = gerudo_bridge()
   local card_count, card_level = gerudo_card()
+  local _, quicksand_level = quicksand()
 
-  if bridge_count > 0
-  and card_count > 0
+  if card_count > 0 and bridge_count > 0
   then
     count = 1
 
     if bridge_level == AccessibilityLevel.SequenceBreak
     or card_level == AccessibilityLevel.SequenceBreak
-    or has("hoverboots", 0) and has("longshot", 0)
+    or quicksand_level == AccessibilityLevel.SequenceBreak
     then
       level = AccessibilityLevel.SequenceBreak
+    else
+      return 1, AccessibilityLevel.Normal
     end
   end
 
@@ -192,7 +222,7 @@ function wasteland()
   and has("ocarina")
   and has("requiem")
   then
-    return 1, AccessibilityLevel.SequenceBreak
+    return wasteland_reverse()
   end
 
   return count, level
@@ -357,16 +387,6 @@ function colossus_through_fortress(age)
       level = AccessibilityLevel.SequenceBreak
     end
 
-    return 1, level
-  end
-end
-
-function gtg_card()
-  local card = has("card")
-  if has("setting_shuffle_card_yes") then
-    return card and 1 or 0
-  else
-    local level = card and AccessibilityLevel.Normal or AccessibilityLevel.SequenceBreak
     return 1, level
   end
 end
