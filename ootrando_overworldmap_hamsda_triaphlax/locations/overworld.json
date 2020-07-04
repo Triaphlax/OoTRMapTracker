@@ -3429,7 +3429,7 @@
                     ],
                     "sections": [
                       {
-                        "name": "GS35 (N)",
+                        "name": "GS35",
                         "visibility_rules": [
                           "setting_skulltulas_all"
                         ],
