@@ -502,6 +502,7 @@ function adult_fountain()
     end
     return 1, level
   end
+  return 0
 end
 
 function rainbow_bridge()
